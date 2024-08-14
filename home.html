@@ -354,6 +354,28 @@
 				<script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=007cae&w=268&t=tt&d=ZxBzmQb8IynmXTzEd2BG4A4DGw62VHbc9ud-bYvVuhM&co=f0f0f0&cmo=bf1717&cmn=fca70b&ct=007cae'></script>
 
 				-->
+				
+			<div align="center">
+                Page已运行 <span class="odometer" id="runtime_days" ></span> 天 <span class="odometer" id="runtime_hours"></span> 小时 <span class="odometer" id="runtime_minutes"></span> 分钟 <span class="odometer" id="runtime_seconds"></span> 秒
+            </div>
+        
+        
+            <script data-swup-reload-script>
+                try {
+                    function odometer_init() {
+                    const elements = document.querySelectorAll('.odometer');
+                    elements.forEach(el => {
+                        new Odometer({
+                            el,
+                            format: '( ddd).dd',
+                            duration: 200
+                        });
+                    });
+                    }
+                    odometer_init();
+                } catch (error) {}
+            </script>
+			
 			</div>
 		
 		<!-- Scripts -->
@@ -380,7 +402,10 @@
 			<!--
 			<script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
 			-->
-	
+			
+			<!--odometer：博客运行时间-->
+			<script src="assets/odometer/odometer.min.js"></script>
+			<link rel="stylesheet" href="assets/odometer/odometer-theme-minimal.css">
 
 </body>
 
