@@ -355,27 +355,10 @@
 
 				-->
 				
-			<div align="center">
-                Page已运行 <span class="odometer" id="runtime_days" ></span> 天 <span class="odometer" id="runtime_hours"></span> 小时 <span class="odometer" id="runtime_minutes"></span> 分钟 <span class="odometer" id="runtime_seconds"></span> 秒
-            </div>
-        
-        
-            <script data-swup-reload-script>
-                try {
-                    function odometer_init() {
-                    const elements = document.querySelectorAll('.odometer');
-                    elements.forEach(el => {
-                        new Odometer({
-                            el,
-                            format: '( ddd).dd',
-                            duration: 200
-                        });
-                    });
-                    }
-                    odometer_init();
-                } catch (error) {}
-            </script>
-			
+			<script async src="assets/busuanzi/busuanzi.pure.mini.js"></script>
+			<center>
+            <span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+			</center>
 			</div>
 		
 		<!-- Scripts -->
@@ -403,9 +386,10 @@
 			<script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
 			-->
 			
-			<!--odometer：博客运行时间-->
+			<!--odometer：博客运行时间
 			<script src="assets/odometer/odometer.min.js"></script>
 			<link rel="stylesheet" href="assets/odometer/odometer-theme-minimal.css">
+			-->
 
 </body>
 
