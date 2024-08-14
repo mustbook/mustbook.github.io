@@ -54,7 +54,7 @@
 		<!-- Header -->
 			<header id="header" style="background-position: left 0px;">
 				<div class="inner" style="text-align:center;">  <!--左侧内容居中代码leftSide setup-->
-					<a href="#" class="image avatar">
+					<a href="index.html" class="image avatar">
 						<img src="images/avatar2.png" alt="">
 					</a>
 					
@@ -359,6 +359,75 @@
 			<center>
             <span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span>
 			</center>
+			
+			
+			
+				<div style="float:left; font-size:18px;margin-top:30px; width:130px; margin-top:5px">
+					<!-- InstanceBeginEditable name="EditRegion5" -->
+					<script language="JavaScript">
+
+					var caution = false
+
+					function setCookie(name, value, expires, path, domain, secure) {
+							var curCookie = name + "=" + escape(value) +
+									((expires) ? "; expires=" + expires.toGMTString() : "") +
+									((path) ? "; path=" + path : "") +
+									((domain) ? "; domain=" + domain : "") +
+									((secure) ? "; secure" : "")
+							if (!caution || (name + "=" + escape(value)).length <= 1000)
+									document.cookie = curCookie
+							else
+									if (confirm("Cookie exceeds 1KB and will be cut!"))
+											document.cookie = curCookie
+					}
+					function getCookie(name) {
+							var prefix = name + "="
+							var cookieStartIndex = document.cookie.indexOf(prefix)
+							if (cookieStartIndex == -1)
+									return null
+							var cookieEndIndex = document.cookie.indexOf(";", cookieStartIndex + prefix.length)
+							if (cookieEndIndex == -1)
+									cookieEndIndex = document.cookie.length
+							return unescape(document.cookie.substring(cookieStartIndex + prefix.length, cookieEndIndex))
+					}
+
+
+						
+					function deleteCookie(name, path, domain) {
+							if (getCookie(name)) {
+									document.cookie = name + "=" + 
+									((path) ? "; path=" + path : "") +
+									((domain) ? "; domain=" + domain : "") +
+									"; expires=Thu, 01-Jan-70 00:00:01 GMT"
+							}
+					}
+					function fixDate(date) {
+							var base = new Date(0)
+							var skew = base.getTime()
+							if (skew > 0)
+									date.setTime(date.getTime() - skew)
+					}
+					var now = new Date()
+					fixDate(now)
+					now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000)
+					var visits = getCookie("counter")
+
+					if (!visits)
+							visits = 1
+					else 
+						visits = parseInt(visits)+1
+						
+					setCookie("counter", visits, now)
+
+					document.write("<font size = 2px >第 <font color= blue> " + visits + "</font> 位访客</font>")
+
+					</script>
+
+
+
+					<!-- InstanceEndEditable -->
+
+				</div>
 			</div>
 		
 		<!-- Scripts -->
