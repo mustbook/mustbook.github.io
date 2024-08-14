@@ -1,0 +1,203 @@
+
+/*★*/
+.site-title {
+	font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+	font-size: 2rem;
+	font-weight: 700;
+	line-height: 1.25;
+}
+/*★*/
+.site-description {
+	font-size: 0.9375rem;
+	margin: 5px 0 0;
+	color: #888;
+	line-height: 1.25;
+}
+
+/*★*/
+.site-title a {
+	color: #222222;
+	transition: all 0.3s ease-in-out 0s;
+}
+
+/*★*/
+.site-branding {
+	padding: 30px 0;
+}
+
+
+/* Header Image */
+/*★*/
+.header-image {
+	position: relative;
+	width: 100%;
+	height: 140px;
+	padding: 20px 0;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+/*★*/
+.has-header-image .header-image {
+	display: block;
+	margin: 15px 0 0;
+}
+/*★*/
+.has-header-image .header-image a {
+	padding: 0;
+	width: 30px;
+    height: 30px;
+    line-height: 30px;
+	background-color: rgba(0,0,0, .3);
+	-webkit-border-radius: 64px;
+    border-radius: 64px;
+    color: #fff;
+}
+/*★*/
+.has-header-image .header-image a:hover {
+	color: #fff;
+	background-color: rgba(0,0,0, .8);
+}
+/*★*/
+.has-header-image .header-image a:before {
+	vertical-align: -10%;
+}
+
+
+/* Site Title Centered */
+/*★*/
+.home-site-title-centered .site-branding {
+	position: relative;
+}
+/*★*/
+.home-site-title-centered .site-title {
+	text-align: center;
+	margin: auto;
+	padding: 0 10px;
+}
+/*★*/
+.home-site-title-centered .site-description {
+	max-width: 760px;
+	margin: 15px auto 0;
+	padding: 0 20px;
+	text-align: center;
+	font-size: 14px;
+}
+/*★*/
+.home-site-title-centered .header-image .site-branding {
+	padding: 0;
+}
+/*★*/
+.home-site-title-centered .header-image .site-description {
+	font-weight: 700;
+}
+/*★*/
+.home-site-title-centered .search-form {
+	border: 1px solid #eee;
+}
+/*★*/
+.home-site-title-centered .header-image {
+	display: table;
+}
+/*★*/
+.home-site-title-centered .header-image .header-image-container {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+/* Site Title Left */
+/*★*/
+.site-title-left {
+	padding: 10px 20px;
+	position: relative;
+	text-align: center;
+}
+/*★*/
+.site-title-left {
+	border: 1px solid #eee;
+}
+
+
+@media screen and (min-width: 600px) {
+	
+/*★*/
+	.site-title {
+	font-size: 2.5rem;
+	}
+	
+}
+
+@media screen and (min-width: 720px) {
+	
+/*★*/
+	/* Header */
+	.header-image {
+	height: 200px;
+	}
+	
+}
+
+@media screen and (min-width: 960px) {
+	
+/*★*/
+	.site-branding {
+	display: block;
+	margin: 10px auto 0;
+	}
+	.site-description {
+	font-size: 14px;
+	}
+	/* Site Title Centered */
+/*★*/
+	.home-site-title-centered .site-branding {
+	padding: 50px 0;
+	}
+	.home-site-title-centered {
+	margin: 0;
+	float: none;
+	}
+/*★*/
+	.home-site-title-centered .site-title {
+	font-size: 48px;
+	}
+	/* Site Title Left */
+	.site-title-left {
+	border-bottom: 1px solid rgba(0,0,0,.07);
+	}
+	.site-title-left .site-title {
+	font-size: 32px;
+	}
+/*★*/
+	.site-title-left .site-branding {
+	padding: 0;
+	}
+	.site-title-left {
+	margin-top: 5px;
+	}
+/*★*/
+	.site-title-left .site-branding {
+	text-align: left;
+	}
+/*★*/
+	.has-header-image {
+	border: 0;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, .1);
+	}
+}
+
+/*★*/
+@media screen and (min-width: 1440px) {
+	/* Header */
+	.header-image {
+	height: 240px;
+	}
+/*★*/
+	.site-title-left {
+	padding-left: 30px;
+	padding-right: 30px;
+	}
+}
+
