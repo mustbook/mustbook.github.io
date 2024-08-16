@@ -63,6 +63,12 @@
 						<br>
 					</h1>
 					
+					<!-- QRCode 主页跳出二维码：二维码弹出后的背景Box-->
+					<div id="QRBox">			
+						<!-- QRCode 主页跳出二维码：包裹二维码的Box-->
+						<div id="MainBox" style="border-radius: 10px; border-top: 1px solid #695a51; border-bottom: 1px solid #695a51; border-left: 1px solid #695a51; border-right: 1px solid #695a51;"></div>	
+					</div>
+					
 					<h3><i>Life Designer</i></h3>
 					
 					<h3>
@@ -302,14 +308,18 @@
 								<table>
 									<tbody>
 										<tr>
-											<td>
-												<li>
+											<!-- QRCode 主页跳出二维码 id="contactBox1" -->
+											<td id="contactBox1">
+												<!-- QRCode 主页跳出二维码 id="WeChat" -->
+												<li id="WeChat">
 													<h3 class="icon fa-wechat" style="color:#04BE02"><span class="label">WeChat</span></h3>
-													MustBook
+													MustBook	
 												</li>
 											</td>
-											<td>									
-												<li>
+											<!-- QRCode 主页跳出二维码 id="contactBox2" -->
+											<td id="contactBox2">	
+												<!-- QRCode 主页跳出二维码 id="RedBook" -->
+												<li id="RedBook">
 													<h3 class="icon fa-book" style="color:red"><span class="label">小红书</span></h3>
 													mustbook
 												</li>
@@ -460,6 +470,10 @@
 			<script src="assets/odometer/odometer.min.js"></script>
 			<link rel="stylesheet" href="assets/odometer/odometer-theme-minimal.css">
 			-->
+			<!-- QRCode 主页跳出二维码 start -->
+			<link rel="stylesheet" href="./assets/home_popPic/style.css">
+			<script src="./assets/home_popPic/script.js"></script>
+			<!-- QRCode 主页跳出二维码 end -->
 
 </body>
 
