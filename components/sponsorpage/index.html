@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<title>Buy me a [Coffee/Book]</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0, minimal-ui" /><!--禁止缩放-->
+	<link rel="stylesheet" href="style.css">
+	<link rel="icon" href="./images/like.svg">
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.0.3.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.10/clipboard.min.js"></script>
+	<!-- clipboard.js 是 JS 复制文本的库 -->
+	<script src="script.js"></script>
+</head>
+<body style="background:transparent;">
+	<div  style="width: 100%; height: 100%;" id="app">
+	</div>
+	<a id="github" href="https://github.com/mustbook" target="_blank" class="pos-f tr3" title="Github"></a>
+		<div id="DonateText" class="tr3">Coffee/Book</div>
+		<ul id="donateBox" class="list pos-f tr3">
+			<li id="WeChat" data-footnote="点击查看微信肯定码"><a  title="微信肯定码">WeChat</a></li>
+			<li id="AliPay" data-footnote="点击查看支付宝肯定码"><a  title="支付宝肯定码">AliPay</a></li>
+			<li id="PayPal"><a href="https://www.paypal.me/mustbook" target="_blank" title="PayPal肯定页">PayPal</a></li>		
+		</ul>
+		<div id="QRBox" class="pos-f left-100">
+			<div id="MainBox"></div>
+		</div>
+	<!-- <script alpha="0.3" src="https://unpkg.com/ribbon.js@1.0.2/dist/ribbon.min.js"></script> -->
+	<script src="https://cdn.jsdelivr.net/npm/janvas"></script>
+	<script src="ribbonsAnimation.js"></script>
+</body>
+</html>
