@@ -9,8 +9,24 @@
 
 @font-face {
 	font-family: 'Aa漫语手写体（简繁）';
-	src:url('../assets/self_fonts/AaManYuShouXieTi（JianFan）-2.ttf');
+	src:url('../self_fonts/AaManYuShouXieTi（JianFan）-2.ttf');
 }
+
+@font-face {
+	font-family: 'Ubuntu Mono';
+	src:url('../self_fonts/UbuntuMono-Bold.ttf');
+	src:url('../self_fonts/UbuntuMono-BoldItalic.ttf');
+	src:url('../self_fonts/UbuntuMono-Italic.ttf');
+	src:url('../self_fonts/UbuntuMono-Regular.ttf');
+}
+
+@font-face {
+	font-family: 'Whitney';
+	src:url('../self_fonts/Whitney-Bold.otf');
+	src:url('../self_fonts/Whitney-Semibold.otf');
+}
+
+
 
 
 .material-icons {
