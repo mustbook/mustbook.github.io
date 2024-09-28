@@ -21,9 +21,37 @@
 }
 
 @font-face {
+	font-family: 'Comic Sans MS';
+	src:url('../self_fonts/comic.ttf');
+	src:url('../self_fonts/comicbd.ttf');
+	src:url('../self_fonts/comici.ttf');
+	src:url('../self_fonts/comicz.ttf');
+}
+
+@font-face {
 	font-family: 'Whitney';
 	src:url('../self_fonts/Whitney-Bold.otf');
 	src:url('../self_fonts/Whitney-Semibold.otf');
+}
+
+@font-face {
+	font-family: '华文新魏';
+	src:url('../self_fonts/STXINWEI.TTF');
+}
+
+@font-face {
+	font-family: '华文隶书';
+	src:url('../self_fonts/STLITI.TTF');
+}
+
+@font-face {
+	font-family: '楷体';
+	src:url('../self_fonts/simkai.ttf');
+}
+
+@font-face {
+	font-family: '仿宋';
+	src:url('../self_fonts/simfang.ttf');
 }
 
 
