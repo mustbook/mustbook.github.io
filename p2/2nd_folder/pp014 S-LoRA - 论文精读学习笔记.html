@@ -1,0 +1,783 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<link rel="stylesheet" type="text/css" href="../../assets/markdownStyle/iconSetup.css">
+	
+	<!--右边底部的向上箭头，能够返回到文章最开始的地方2/2 动态效果-->
+	<script type="text/javascript" src="../../assets/blogJS/wp-includes.js.jquery.jquery.js"></script>
+	<script type="text/javascript" src="../../assets/blogJS/wp-content.themes.type-plus.js.main.js"></script>
+	
+	
+	<!--https://www.dofactory.com/html/rel/icon-->
+	<link rel="icon" href="../../images/ico/signature.png" sizes="32x32">
+	<link rel="icon" href="../../images/ico/signature.png" sizes="192x192">
+	<link rel="apple-touch-icon" href="../../images/ico/signature.png">
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; --title-bar-height:20px; }
+.mac-os-11 { --title-bar-height:28px; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+h1, h2, h3, h4, h5 { white-space: pre-wrap; }
+body { margin: 0px; padding: 0px; height: auto; inset: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+.typora-export .task-list-item input { pointer-events: none; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+thead, tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror-linenumber { user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-fences-adv-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+svg { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li blockquote { margin: 1rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; border-color: transparent !important; padding-top: 0px !important; padding-bottom: 0px !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  .typora-export #write { break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+  #write > p:nth-child(1) { margin-top: 0px; }
+  .typora-export-show-outline .typora-export-sidebar { display: none; }
+  figure { overflow-x: visible; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+.MathJax_ref { fill: currentcolor; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.reversefootnote { font-family: ui-monospace, sans-serif; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.6; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+.md-expand mark .md-meta { opacity: 0.3 !important; }
+mark .md-meta { color: rgb(0, 0, 0); }
+@media print {
+  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+}
+.md-diagram-panel .messageText { stroke: none !important; }
+.md-diagram-panel .start-state { fill: var(--node-fill); }
+.md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
+.md-fences.md-fences-math { font-size: 1em; }
+.md-fences-advanced:not(.md-focus) { padding: 0px; white-space: nowrap; border: 0px; }
+.md-fences-advanced:not(.md-focus) { background: inherit; }
+.typora-export-show-outline .typora-export-content { max-width: 1440px; margin: auto; display: flex; flex-direction: row; }
+.typora-export-sidebar { width: 300px; font-size: 0.8rem; margin-top: 80px; margin-right: 18px; }
+.typora-export-show-outline #write { --webkit-flex:2; flex: 2 1 0%; }
+.typora-export-sidebar .outline-content { position: fixed; top: 0px; max-height: 100%; overflow: hidden auto; padding-bottom: 30px; padding-top: 60px; width: 300px; }
+@media screen and (max-width: 1024px) {
+  .typora-export-sidebar, .typora-export-sidebar .outline-content { width: 240px; }
+}
+@media screen and (max-width: 800px) {
+  .typora-export-sidebar { display: none; }
+}
+.outline-content li, .outline-content ul { margin-left: 0px; margin-right: 0px; padding-left: 0px; padding-right: 0px; list-style: none; overflow-wrap: anywhere; }
+.outline-content ul { margin-top: 0px; margin-bottom: 0px; }
+.outline-content strong { font-weight: 400; }
+.outline-expander { width: 1rem; height: 1.42857rem; position: relative; display: table-cell; vertical-align: middle; cursor: pointer; padding-left: 4px; }
+.outline-expander::before { content: ""; position: relative; font-family: Ionicons; display: inline-block; font-size: 8px; vertical-align: middle; }
+.outline-item { padding-top: 3px; padding-bottom: 3px; cursor: pointer; }
+.outline-expander:hover::before { content: ""; }
+.outline-h1 > .outline-item { padding-left: 0px; }
+.outline-h2 > .outline-item { padding-left: 1em; }
+.outline-h3 > .outline-item { padding-left: 2em; }
+.outline-h4 > .outline-item { padding-left: 3em; }
+.outline-h5 > .outline-item { padding-left: 4em; }
+.outline-h6 > .outline-item { padding-left: 5em; }
+.outline-label { cursor: pointer; display: table-cell; vertical-align: middle; text-decoration: none; color: inherit; }
+.outline-label:hover { text-decoration: underline; }
+.outline-item:hover { border-color: rgb(245, 245, 245); background-color: var(--item-hover-bg-color); }
+.outline-item:hover { margin-left: -28px; margin-right: -28px; border-left: 28px solid transparent; border-right: 28px solid transparent; }
+.outline-item-single .outline-expander::before, .outline-item-single .outline-expander:hover::before { display: none; }
+.outline-item-open > .outline-item > .outline-expander::before { content: ""; }
+.outline-children { display: none; }
+.info-panel-tab-wrapper { display: none; }
+.outline-item-open > .outline-children { display: block; }
+.typora-export .outline-item { padding-top: 1px; padding-bottom: 1px; }
+.typora-export .outline-item:hover { margin-right: -8px; border-right: 8px solid transparent; }
+.typora-export .outline-expander::before { content: "+"; font-family: inherit; top: -1px; }
+.typora-export .outline-expander:hover::before, .typora-export .outline-item-open > .outline-item > .outline-expander::before { content: "−"; }
+.typora-export-collapse-outline .outline-children { display: none; }
+.typora-export-collapse-outline .outline-item-open > .outline-children, .typora-export-no-collapse-outline .outline-children { display: block; }
+.typora-export-no-collapse-outline .outline-expander::before { content: "" !important; }
+.typora-export-show-outline .outline-item-active > .outline-item .outline-label { font-weight: 700; }
+.md-inline-math-container mjx-container { zoom: 0.95; }
+mjx-container { break-inside: avoid; }
+
+
+:root {
+    --side-bar-bg-color: #fafafa;
+    --control-text-color: #777;
+}
+
+@include-when-export url(https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext);
+
+/* open-sans-regular - latin-ext_latin */
+  /* open-sans-italic - latin-ext_latin */
+    /* open-sans-700 - latin-ext_latin */
+    /* open-sans-700italic - latin-ext_latin */
+  html {
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    font-family: "Open Sans","Clear Sans", "Helvetica Neue", Helvetica, Arial, 'Segoe UI Emoji', sans-serif;
+    color: rgb(51, 51, 51);
+    line-height: 1.6;
+}
+
+#write {
+    max-width: 860px;
+  	margin: 0 auto;
+  	padding: 30px;
+    padding-bottom: 100px;
+}
+
+@media only screen and (min-width: 1400px) {
+	#write {
+		max-width: 1024px;
+	}
+}
+
+@media only screen and (min-width: 1800px) {
+	#write {
+		max-width: 1200px;
+	}
+}
+
+#write > ul:first-child,
+#write > ol:first-child{
+    margin-top: 30px;
+}
+
+a {
+    color: #4183C4;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    line-height: 1.4;
+    cursor: text;
+}
+h1:hover a.anchor,
+h2:hover a.anchor,
+h3:hover a.anchor,
+h4:hover a.anchor,
+h5:hover a.anchor,
+h6:hover a.anchor {
+    text-decoration: none;
+}
+h1 tt,
+h1 code {
+    font-size: inherit;
+}
+h2 tt,
+h2 code {
+    font-size: inherit;
+}
+h3 tt,
+h3 code {
+    font-size: inherit;
+}
+h4 tt,
+h4 code {
+    font-size: inherit;
+}
+h5 tt,
+h5 code {
+    font-size: inherit;
+}
+h6 tt,
+h6 code {
+    font-size: inherit;
+}
+h1 {
+    font-size: 2.25em;
+    line-height: 1.2;
+    border-bottom: 1px solid #eee;
+}
+h2 {
+    font-size: 1.75em;
+    line-height: 1.225;
+    border-bottom: 1px solid #eee;
+}
+
+/*@media print {
+    .typora-export h1,
+    .typora-export h2 {
+        border-bottom: none;
+        padding-bottom: initial;
+    }
+
+    .typora-export h1::after,
+    .typora-export h2::after {
+        content: "";
+        display: block;
+        height: 100px;
+        margin-top: -96px;
+        border-top: 1px solid #eee;
+    }
+}*/
+
+h3 {
+    font-size: 1.5em;
+    line-height: 1.43;
+}
+h4 {
+    font-size: 1.25em;
+}
+h5 {
+    font-size: 1em;
+}
+h6 {
+   font-size: 1em;
+    color: #777;
+}
+p,
+blockquote,
+ul,
+ol,
+dl,
+table{
+    margin: 0.8em 0;
+}
+li>ol,
+li>ul {
+    margin: 0 0;
+}
+hr {
+    height: 2px;
+    padding: 0;
+    margin: 16px 0;
+    background-color: #e7e7e7;
+    border: 0 none;
+    overflow: hidden;
+    box-sizing: content-box;
+}
+
+li p.first {
+    display: inline-block;
+}
+ul,
+ol {
+    padding-left: 30px;
+}
+ul:first-child,
+ol:first-child {
+    margin-top: 0;
+}
+ul:last-child,
+ol:last-child {
+    margin-bottom: 0;
+}
+blockquote {
+    border-left: 4px solid #ec962a;
+    padding: 0 15px;
+    color: #777777;
+}
+blockquote blockquote {
+    padding-right: 0;
+}
+table {
+    padding: 0;
+    word-break: initial;
+}
+table tr {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 0;
+}
+table tr:nth-child(2n),
+thead {
+    background-color: #f8f8f8;
+}
+table th {
+    font-weight: bold;
+    border: 1px solid #dfe2e5;
+    border-bottom: 0;
+    margin: 0;
+    padding: 6px 13px;
+}
+table td {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 6px 13px;
+}
+table th:first-child,
+table td:first-child {
+    margin-top: 0;
+}
+table th:last-child,
+table td:last-child {
+    margin-bottom: 0;
+}
+
+.CodeMirror-lines {
+    padding-left: 4px;
+}
+
+.code-tooltip {
+    box-shadow: 0 1px 1px 0 rgba(0,28,36,.3);
+    border-top: 1px solid #eef2f2;
+}
+
+.md-fences,
+code,
+tt {
+    border: 1px solid #e7eaed;
+    background-color: #f8f8f8;
+    border-radius: 3px;
+    padding: 0;
+    padding: 2px 4px 0px 4px;
+    font-size: 0.9em;
+}
+
+code {
+	color: red;
+    background-color: rgb(255, 255, 0)
+    padding: 0 2px 0 2px;
+}
+
+.md-fences {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding-top: 8px;
+    padding-bottom: 6px;
+}
+
+
+.md-task-list-item > input {
+  margin-left: -1.3em;
+}
+
+@media print {
+    html {
+        font-size: 13px;
+    }
+    pre {
+        page-break-inside: avoid;
+        word-wrap: break-word;
+    }
+}
+
+.md-fences {
+	background-color: #f8f8f8;
+}
+#write pre.md-meta-block {
+	padding: 1rem;
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: #f7f7f7;
+    border: 0;
+    border-radius: 3px;
+    color: #777777;
+    margin-top: 0 !important;
+}
+
+.mathjax-block>.code-tooltip {
+	bottom: .375rem;
+}
+
+.md-mathjax-midline {
+    background: #fafafa;
+}
+
+#write>h3.md-focus:before{
+	left: -1.5625rem;
+	top: .375rem;
+}
+#write>h4.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h5.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h6.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+.md-image>.md-meta {
+    /*border: 1px solid #ddd;*/
+    border-radius: 3px;
+    padding: 2px 0px 0px 4px;
+    font-size: 0.9em;
+    color: inherit;
+}
+
+.md-tag {
+    color: #a7a7a7;
+    opacity: 1;
+}
+
+.md-toc { 
+    margin-top:20px;
+    padding-bottom:20px;
+}
+
+.sidebar-tabs {
+    border-bottom: none;
+}
+
+#typora-quick-open {
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+}
+
+#typora-quick-open-item {
+    background-color: #FAFAFA;
+    border-color: #FEFEFE #e5e5e5 #e5e5e5 #eee;
+    border-style: solid;
+    border-width: 1px;
+}
+
+/** focus mode */
+.on-focus-mode blockquote {
+    border-left-color: rgba(85, 85, 85, 0.12);
+}
+
+header, .context-menu, .megamenu-content, footer{
+    font-family: "Segoe UI", "Arial", sans-serif;
+}
+
+.file-node-content:hover .file-node-icon,
+.file-node-content:hover .file-node-open-state{
+    visibility: visible;
+}
+
+.mac-seamless-mode #typora-sidebar {
+    background-color: #fafafa;
+    background-color: var(--side-bar-bg-color);
+}
+
+.md-lang {
+    color: #b4654d;
+}
+
+/*.html-for-mac {
+    --item-hover-bg-color: #E6F0FE;
+}*/
+
+#md-notification .btn {
+    border: 0;
+}
+
+.dropdown-menu .divider {
+    border-color: #e5e5e5;
+    opacity: 0.4;
+}
+
+.ty-preferences .window-content {
+    background-color: #fafafa;
+}
+
+.ty-preferences .nav-group-item.active {
+    color: white;
+    background: #999;
+}
+
+.menu-item-container a.menu-style-btn {
+    background-color: #f5f8fa;
+    background-image: linear-gradient( 180deg , hsla(0, 0%, 100%, 0.8), hsla(0, 0%, 100%, 0)); 
+}
+
+u {
+    text-decoration: red underline; 
+	text-decoration-thickness: 15%;
+  }
+  
+em {
+	font-weight: bold;
+    font-style: italic;
+}
+  
+
+
+mjx-container[jax="SVG"] {
+  direction: ltr;
+}
+
+mjx-container[jax="SVG"] > svg {
+  overflow: visible;
+  min-height: 1px;
+  min-width: 1px;
+}
+
+mjx-container[jax="SVG"] > svg a {
+  fill: blue;
+  stroke: blue;
+}
+
+mjx-assistive-mml {
+  position: absolute !important;
+  top: 0px;
+  left: 0px;
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 1px 0px 0px 0px !important;
+  border: 0px !important;
+  display: block !important;
+  width: auto !important;
+  overflow: hidden !important;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+mjx-assistive-mml[display="block"] {
+  width: 100% !important;
+}
+
+mjx-container[jax="SVG"][display="true"] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+mjx-container[jax="SVG"][display="true"][width="full"] {
+  display: flex;
+}
+
+mjx-container[jax="SVG"][justify="left"] {
+  text-align: left;
+}
+
+mjx-container[jax="SVG"][justify="right"] {
+  text-align: right;
+}
+
+g[data-mml-node="merror"] > g {
+  fill: red;
+  stroke: red;
+}
+
+g[data-mml-node="merror"] > rect[data-background] {
+  fill: yellow;
+  stroke: none;
+}
+
+g[data-mml-node="mtable"] > line[data-line], svg[data-table] > g > line[data-line] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > rect[data-frame], svg[data-table] > g > rect[data-frame] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > .mjx-dashed, svg[data-table] > g > .mjx-dashed {
+  stroke-dasharray: 140;
+}
+
+g[data-mml-node="mtable"] > .mjx-dotted, svg[data-table] > g > .mjx-dotted {
+  stroke-linecap: round;
+  stroke-dasharray: 0,140;
+}
+
+g[data-mml-node="mtable"] > g > svg {
+  overflow: visible;
+}
+
+[jax="SVG"] mjx-tool {
+  display: inline-block;
+  position: relative;
+  width: 0;
+  height: 0;
+}
+
+[jax="SVG"] mjx-tool > mjx-tip {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+mjx-tool > mjx-tip {
+  display: inline-block;
+  padding: .2em;
+  border: 1px solid #888;
+  font-size: 70%;
+  background-color: #F8F8F8;
+  color: black;
+  box-shadow: 2px 2px 5px #AAAAAA;
+}
+
+g[data-mml-node="maction"][data-toggle] {
+  cursor: pointer;
+}
+
+mjx-status {
+  display: block;
+  position: fixed;
+  left: 1em;
+  bottom: 1em;
+  min-width: 25%;
+  padding: .2em .4em;
+  border: 1px solid #888;
+  font-size: 90%;
+  background-color: #F8F8F8;
+  color: black;
+}
+
+foreignObject[data-mjx-xml] {
+  font-family: initial;
+  line-height: normal;
+  overflow: visible;
+}
+
+mjx-container[jax="SVG2"] path[data-c], mjx-container[jax="SVG2"] use[data-c] {
+  stroke-width: 3;
+}
+
+g[data-mml-node="xypic"] path {
+  stroke-width: inherit;
+}
+
+.MathJax g[data-mml-node="xypic"] path {
+  stroke-width: inherit;
+}
+mjx-container[jax="SVG"] path[data-c], mjx-container[jax="SVG"] use[data-c] {
+							stroke-width: 0;
+						}
+</style><title>pp014 S-LoRA - 论文精读学习笔记</title>
+</head>
+<body class='typora-export os-windows'><div class='typora-export-content'>
+<div id='write'  class=''><h1 id='s-lora2023---论文精读学习笔记'><span>S-LoRA</span><sup class='md-footnote'><a href='#dfref-footnote-1' name='ref-footnote-1'>1</a></sup><span> - 论文精读学习笔记</span></h1><details style="background: none; padding: 20px; border: 2px solid #990000;border-radius: 25px; line-height:150%;"> <summary>S-LoRA: Serving Thousands of Concurrent LoRA Adapters
+</summary>标签：<kbd style="background:yellow; color:green">Parameter-Efficient Fine-Tuning</kbd><br/>论文链接：<a href="https://arxiv.org/abs/2311.03285">S-LoRA: Serving Thousands of Concurrent LoRA Adapters
+</a><br/>官方项目/代码：<a href="https://github.com/S-LoRA/S-LoRA">S-LoRA</a><br/><span style="color:red">发表时间：</span><span style="color:blue; font-family:Comic Sans MS">2023</span></details><div style="text-align:center; font-size:1em" >
+    <a href="https://mustbook.github.io/" style="color:#990000; font-weight:bold" >Cook</a><br/>
+    <span style="color:#990000; font-family:Comic Sans MS; font-size:13px">Published: 2024.09.10</span><span style="color:blue"> | </span><span style="color:#990000; font-family:Comic Sans MS; font-size:13px">Last Updated: 2024.09.22</span>
+</div><blockquote><p><i style="color:#990000; font-family:"><span>You are what you eat.</span><br/><span> And I&#39;m cooking what I eat!  </span></i><span> </span><strong><span>:)</span></strong><span> </span></p><p><span style="color:blue; font-family:Comic Sans MS"><a href='https://mustbook.github.io/p2/2nd_paper.html'><span>More food...</span></a></span>🍜<span> </span></p></blockquote><p style="text-align:center; font-size:20px; font-weight:bold;"> 目录 </p> <div class='md-toc' mdtype='toc'><p class="md-toc-content" role="list"><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n0"><a class="md-toc-inner" href="#s-lora2023---论文精读学习笔记">S-LoRA - 论文精读学习笔记</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n13"><a class="md-toc-inner" href="#背景">背景</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n21"><a class="md-toc-inner" href="#摘要">摘要</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n32"><a class="md-toc-inner" href="#回顾---lora">回顾 - LoRA</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n35"><a class="md-toc-inner" href="#全文梗概">全文梗概</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n47"><a class="md-toc-inner" href="#s-lora解决了什么问题">S-LoRA解决了什么问题？</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n49"><a class="md-toc-inner" href="#s-lora为什么能做到的">S-LoRA为什么能做到的？</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n51"><a class="md-toc-inner" href="#创新点">创新点</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n69"><a class="md-toc-inner" href="#重点内容">重点内容</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n70"><a class="md-toc-inner" href="#1-批处理">1 批处理</a></span><span role="listitem" class="md-toc-item md-toc-h5" data-ref="n81"><a class="md-toc-inner" href="#-token-level的批处理调度方法">※ token-level的批处理调度方法</a></span><span role="listitem" class="md-toc-item md-toc-h5" data-ref="n83"><a class="md-toc-inner" href="#-对请求按照adapter聚在一起">※ 对请求按照Adapter聚在一起</a></span><span role="listitem" class="md-toc-item md-toc-h5" data-ref="n85"><a class="md-toc-inner" href="#-准入控制">※ 准入控制</a></span><span role="listitem" class="md-toc-item md-toc-h5" data-ref="n87"><a class="md-toc-inner" href="#-新的gpu算子">※ 新的GPU算子</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n93"><a class="md-toc-inner" href="#2-内存管理">2 内存管理</a></span><span role="listitem" class="md-toc-item md-toc-h5" data-ref="n112"><a class="md-toc-inner" href="#unified-paging">Unified Paging</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n116"><a class="md-toc-inner" href="#3-张量并行">3 张量并行</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n126"><a class="md-toc-inner" href="#评估">评估</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n137"><a class="md-toc-inner" href="#补充">补充</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n141"><a class="md-toc-inner" href="#参考博文">参考博文</a></span></p></div><p><span style="color:blue; font-family:仿宋; font-weight:bold"><span>提前说明</span></span><span>：本系列博文主要是对</span><a href='#参考博文'><span>参考博文</span></a><span>的解读与重述（</span><em><span>对重点信息进行标记、或者整段摘录加深自己的记忆和理解、融合多个博文的精髓、统合不同的代表性的案例</span></em><span>），仅做学习记录笔记使用。与君共享，希望一同进步。</span></p><p>&nbsp;</p><h3 id='背景'><span>背景</span></h3><p><span>一般来说，大语言模型的部署都会采用「</span><span style="color:red"><span>先</span></span><span>预训练 — </span><span style="color:red"><span>然后</span></span><span>微调」的模式。但是，当针对众多任务（如个性化助手）对 base 模型进行微调时，训练和服务成本会变得非常高昂。</span></p><p><span>低秩适配（LowRank Adaptation，LoRA）是一种参数效率高的微调方法，通常用于将 base model适配到多种任务中，从而产生了大量从单一 base model衍生出来的 LoRA adapters。</span></p><p><span>这种模式为服务过程中的批量推理（batch inference）提供了大量机会。</span><span style="color:blue; font-family:Comic Sans MS, 微软雅黑"><span>LoRA 的研究表明了一点，只对适配器权重进行微调，就能获得与全权重微调相当的性能</span></span><span>。</span><kbd style="border:1px dotted #990000; font-size:20px; color: red; font-family: comic sans ms, 微软雅黑; font-weight:bold"><span>问题</span></kbd><span> 虽然这种方法可以实现单个适配器的低延迟推理和跨适配器的串行执行，但在同时为多个适配器提供服务时，会显著降低整体服务吞吐量并增加总延迟。</span><strong style="color:red;"><span>总之，如何大规模服务于这些微调变体的问题仍未得到解决</span></strong><span>。</span></p><p><kbd style="background:yellow; color:red"><span>博文3</span></kbd><span> 对于行业大模型来说，仅仅拥有强大的基座大模型是远远不够的。而通过对一个基座模型使用行业数据进行LoRA微调，可以得到多个小型LoRA适配器作为微调结果。这些适配器的参数虽然非常小（例如只有基础模型参数的1%），但却能更好的适用于特定行业。然而在部署上，又会面临一个新的问题：一个base model+几千个lora，怎么serving？</span></p><p><img src=".\pp014_files\image-20240919121645632.png" alt="image-20240919121645632" style="zoom:80%;" /></p><p><kbd style="border:1px double black; font-size:20px; color: #990000; font-family: comic sans ms, 微软雅黑; font-weight:bold; border-bottom: 2px solid black; border-top: 2px solid black;"><span>核心</span></kbd><span> S-LoRA解决的就是如何在单台机器上部署数千个同源的LoRA adapter。当然前提是这些LoRA adapter都是来自同一个base model的权重。</span><strong style="color:#6f0670; font-size:18px"><span>针对从同一基础模型用LoRA微调出来的多个adapter结果，S-Lora的提出者提出了一套高效部署方案</span></strong><span>。通过扩展Batching策略，PageAttention内存管理策略和并行策略，实现单个GPU服务上千个LoRA adapter的效果。</span></p><p><kbd style="background:yellow; color:red"><span>博文4</span></kbd><span> 当base大模型在垂类任务上表现一般，需要少量参数微调时，流行的做法就是对其进行少量参数（LoRA）微调时。这样难免存在每个任务有个单独的adapter ，推理时需要把adapter与base model参数加到一起再推理。这样做的结果是，在推理时依然是一任务一模型，仿佛又回到了BERT时代，但是每个模型的参数却大得多，推理需要的显存更多。既然base模型一样，有没有什么方法能够节省推理的GPU显存，构造一个统一的推理模型，能够满足所有的业务场景呢？S-LoRA为我们提供了一种很好的工程上的解决方案。</span></p><h4 id='摘要'><span>摘要</span></h4><p><span>我们观察到，这种范式在服务期间的batch inference中呈现出重大机遇。为了利用这些机会，我们提出了S-LoRA，一个为可扩展服务许多LoRA adapters而设计的系统。S-LoRA将所有adapters存储在main memory中，并将当前运行查询所使用的adapter提取到GPU memory中。</span></p><ul><li><p><span>为了有效使用GPU memory并减少碎片化，S-LoRA提出了Unified Paging。</span></p><ul><li><p><span>Unified Paging使用统一的memory pool来管理具有不同rank的动态adapters权重和具有不同序列长度的KV cache tensors。</span></p></li></ul></li><li><p><span>此外，S-LoRA采用了一种新颖的张量并行策略和高度优化的自定义CUDA内核，用于LoRA计算的异构批处理。</span></p></li></ul><p><span>总的来说，这些特性使S-LoRA能够在单个GPU或跨多个GPU上以很小的开销服务数千个LoRA adapters。与诸如HuggingFace PEFT和vLLM（具有对LoRA服务的简单支持）等最先进的库相比，S-LoRA可以将吞吐量提高多达4倍，并将服务的适配器数量增加几个数量级。因此，S-LoRA能够可扩展地服务许多特定任务的微调模型，并为大规模定制微调服务提供潜力。</span></p><h4 id='回顾---lora'><span>回顾 - LoRA</span></h4><p><span>LoRA：Low-Rank Adaptation，LoRA冻结预训练模型权重并将可训练的秩分解矩阵注入到 Transformer 架构的每一层中，大大减少了下游任务的可训练参数的数量（推理参数不变）。它基于的假设就是，下游任务需要修改的特征空间是低秩的，即只要针对优化少量参数即可。类似是传统的Adapter思想，但是它的设计比较巧妙，就是用d×r和r×d（r远小于d，r一般又被称为秩）的参数矩阵A×B来做自适应学习的那部分（如下图所示），推理时只要跟base模型的d×d参数矩阵加起来就可以了，不会有额外的推理需求增加。但是这样做有个隐患就是，依然是一任务一模型。</span><strong><span>之前的解决方案是通过对参数矩阵的加减实现一个base模型加载多个adapter，但是这样依然不能实现在一个batch里同时使用多个lora</span></strong><span>。</span></p><p><img src=".\pp014_files\image-20240922104300437.png" referrerpolicy="no-referrer" alt="image-20240922104300437"></p><h3 id='全文梗概'><span>全文梗概</span></h3><p><span>来自 UC 伯克利、斯坦福等高校的研究者提出了一种名为 S-LoRA 的新微调方式。</span></p><p><span>S-LoRA 是专为众多 LoRA 适配程序的可扩展服务而设计的系统，它将所有适配程序存储在主内存中，并将当前运行查询所使用的适配程序取到 GPU 内存中。</span></p><ul><li><p><span>S-LoRA 提出了「统一分页」（</span><kbd style="border:1px dashed #990000; font-size:15px; color: #00b456; font-family: comic sans ms, 微软雅黑; font-weight:bold"><span>Unified Paging</span></kbd><span>）技术，即</span><span style="color:blue; font-family:楷体; font-weight:bold;"><span>使用统一的内存池来管理不同等级的动态适配器权重和不同序列长度的 KV 缓存张量</span></span><span>。</span></p></li><li><p><span>此外，S-LoRA 还采用了新的张量并行策略和高度优化的定制 CUDA 内核，以实现 LoRA 计算的异构批处理。</span></p></li></ul><p><span>这些功能使 S-LoRA 能够以较小的开销在单个 GPU 或多个 GPU 上为数千个 LoRA 适配器提供服务（同时为 2000 个适配器提供服务），并将增加的 LoRA 计算开销降至最低。相比之下，vLLM-packed 需要维护多个权重副本，并且由于 GPU 内存限制，只能为少于 5 个适配器提供服务。</span></p><p><kbd style="border:1px dotted #990000; font-size:20px; color: red; font-family: comic sans ms, 微软雅黑; font-weight:bold"><span>对比</span></kbd><span> 与 HuggingFace PEFT 和 vLLM（仅支持 LoRA 服务）等最先进的库相比，S-LoRA 的吞吐量最多可提高 4 倍，服务的适配器数量可增加几个数量级。</span><span style="border-radius: 10px; border-top: 1px solid red; border-bottom: 1px solid red; border-left: 1px solid red; border-right: 1px solid red; background: yellow"><span>因此，S-LoRA 能够为许多特定任务的微调模型提供可扩展的服务，并为大规模定制微调服务提供了潜力</span></span><span>。</span></p><p><img src=".\pp014_files\image-20240919120837345.png" alt="image-20240919120837345" style="zoom:50%; border-radius:10px; border:2px solid #ab0000;" /></p><p><img src=".\pp014_files\image-20240922103642155.png" alt="image-20240922103642155" style="zoom:60%;" /></p><h4 id='s-lora解决了什么问题'><span>S-LoRA解决了什么问题？</span></h4><p><span>S-LoRA实现了同时用多个LoRA的Adapters并行推理，即1 base model + n Adapters（A×B的部分），相比于n models，在推理时就可以减少显存占用。</span></p><h4 id='s-lora为什么能做到的'><span>S-LoRA为什么能做到的？</span></h4><p><span>S-LoRA在具体实现上有很多细致的设计，能够真正支持多Adapters并行化推理，又能尽量减少推理显存消耗，并减少相比一任务一模型的结构的中间的性能损失。论文主要从3大方面来解释它的做法的，分别是：推理请求的并行化处理、内存管理和张量并行。</span></p><h4 id='创新点'><span>创新点</span></h4><p><span>S-LoRA 包含三个主要创新部分。</span></p><ul><li><p><span>论文的第 4 节介绍了</span><span style="color:blue; font-family:仿宋; font-weight:bold"><span>批处理策略</span></span><span>，该策略分解了 base 模型和 LoRA 适配器之间的计算。此外，研究者还解决了需求调度的难题，包括适配器集群和准入控制等方面。跨并发适配器的批处理能力给内存管理带来了新的挑战。</span></p></li><li><p><span>第 5 节，研究者</span><span style="color:blue; font-family:仿宋; font-weight:bold"><span>将 PagedAttention 推广到 Unfied Paging，支持动态加载 LoRA 适配器</span></span><span>。这种方法使用统一的内存池以分页方式存储 KV 缓存和适配器权重，可以减少碎片并平衡 KV 缓存和适配器权重的动态变化大小。</span></p></li><li><p><span>最后，第 6 节介绍了</span><span style="color:blue; font-family:仿宋; font-weight:bold"><span>新的张量并行策略</span></span><span>，能够高效地解耦 base 模型和 LoRA 适配器。</span></p></li></ul><blockquote><p><strong><span>Contributions</span></strong></p><ul><li><p><span>Unified Paging：为了减少显存碎片和增加batch size，S-LoRA 引入了一个统一内存池。这个内存池通过一个统一页机制管理动态adapters的权重和KV cache tensors。</span></p></li><li><p><span>Heterogenous Batching: 为了最小化latency的overhead，当batching不同rank的adapters时，S-LoRA 实现了高度优化的定制化CUDA kernels。这些kernels直接在非连续内存上运行，并与内存池设计保持一致，有助于 LoRA 的高效批量推理。</span></p></li><li><p><span>S-LoRA TP：为了确保跨多个 GPU 的有效并行化，S-LoRA 引入了一种新颖的张量并行策略。 与基本模型相比，这种方法所增加的 LoRA 计算的通信成本最低。 这是通过在小的中间张量上调度通信并将大的中间张量与基本模型的通信融合来实现的。</span></p></li></ul></blockquote><h3 id='重点内容'><span>重点内容</span></h3><h4 id='1-批处理'><kbd style="background:#f8e272"><span>1</span></kbd><span> 批处理</span></h4><blockquote><p><span>为了减少base model的数量，本文将base模型和adapter分开计算（如 </span><span style="color:blue; font-weight:bold; font-style:italic; font-family:华文新魏; font-size:15px"><span>Figure 1</span></span><span>  所示），而不是直接把参数合在一起了，是在分别计算后再把两个模型输出的结果加起来。</span></p><p><span>道理看起来简单，实际操作却暗含很多需要优化的问题：lora的每个adapter的秩不一定一样，就导致每个批次里请求的adapter参数矩阵大小不一，如何并行化处理？每批次请求用到的adapter都不一样，如何调度？等等问题</span></p></blockquote><p><span>对于单个适配器，Hu et al., 2021 推荐的方法是将适配器权重合并到 base 模型权重中，从而得到一个新模型（见公式 1）。这样做的好处是在推理过程中没有额外的适配器开销，因为新模型的参数数与 base 模型相同。事实上，这也是最初 LoRA 工作的一个突出特点。</span></p><div contenteditable="false" spellcheck="false" class="mathjax-block md-end-block md-math-block md-rawblock" id="mathjax-n75" cid="n75" mdtype="math_block" data-math-tag-before="0" data-math-tag-after="1" data-math-labels="[]"><div class="md-rawblock-container md-math-container" tabindex="-1"><mjx-container class="MathJax" jax="SVG" display="true" width="full" style="min-width: 23.396ex; position: relative;"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="9.183ex" role="img" focusable="false" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" style="vertical-align: -4.026ex; min-width: 23.396ex;"><defs><path id="MJX-943-TEX-I-210E" d="M137 683Q138 683 209 688T282 694Q294 694 294 685Q294 674 258 534Q220 386 220 383Q220 381 227 388Q288 442 357 442Q411 442 444 415T478 336Q478 285 440 178T402 50Q403 36 407 31T422 26Q450 26 474 56T513 138Q516 149 519 151T535 153Q555 153 555 145Q555 144 551 130Q535 71 500 33Q466 -10 419 -10H414Q367 -10 346 17T325 74Q325 90 361 192T398 345Q398 404 354 404H349Q266 404 205 306L198 293L164 158Q132 28 127 16Q114 -11 83 -11Q69 -11 59 -2T48 16Q48 30 121 320L195 616Q195 629 188 632T149 637H128Q122 643 122 645T124 664Q129 683 137 683Z"></path><path id="MJX-943-TEX-N-3D" d="M56 347Q56 360 70 367H707Q722 359 722 347Q722 336 708 328L390 327H72Q56 332 56 347ZM56 153Q56 168 72 173H708Q722 163 722 153Q722 140 707 133H70Q56 140 56 153Z"></path><path id="MJX-943-TEX-I-1D465" d="M52 289Q59 331 106 386T222 442Q257 442 286 424T329 379Q371 442 430 442Q467 442 494 420T522 361Q522 332 508 314T481 292T458 288Q439 288 427 299T415 328Q415 374 465 391Q454 404 425 404Q412 404 406 402Q368 386 350 336Q290 115 290 78Q290 50 306 38T341 26Q378 26 414 59T463 140Q466 150 469 151T485 153H489Q504 153 504 145Q504 144 502 134Q486 77 440 33T333 -11Q263 -11 227 52Q186 -10 133 -10H127Q78 -10 57 16T35 71Q35 103 54 123T99 143Q142 143 142 101Q142 81 130 66T107 46T94 41L91 40Q91 39 97 36T113 29T132 26Q168 26 194 71Q203 87 217 139T245 247T261 313Q266 340 266 352Q266 380 251 392T217 404Q177 404 142 372T93 290Q91 281 88 280T72 278H58Q52 284 52 289Z"></path><path id="MJX-943-TEX-I-1D44A" d="M436 683Q450 683 486 682T553 680Q604 680 638 681T677 682Q695 682 695 674Q695 670 692 659Q687 641 683 639T661 637Q636 636 621 632T600 624T597 615Q597 603 613 377T629 138L631 141Q633 144 637 151T649 170T666 200T690 241T720 295T759 362Q863 546 877 572T892 604Q892 619 873 628T831 637Q817 637 817 647Q817 650 819 660Q823 676 825 679T839 682Q842 682 856 682T895 682T949 681Q1015 681 1034 683Q1048 683 1048 672Q1048 666 1045 655T1038 640T1028 637Q1006 637 988 631T958 617T939 600T927 584L923 578L754 282Q586 -14 585 -15Q579 -22 561 -22Q546 -22 542 -17Q539 -14 523 229T506 480L494 462Q472 425 366 239Q222 -13 220 -15T215 -19Q210 -22 197 -22Q178 -22 176 -15Q176 -12 154 304T131 622Q129 631 121 633T82 637H58Q51 644 51 648Q52 671 64 683H76Q118 680 176 680Q301 680 313 683H323Q329 677 329 674T327 656Q322 641 318 637H297Q236 634 232 620Q262 160 266 136L501 550L499 587Q496 629 489 632Q483 636 447 637Q428 637 422 639T416 648Q416 650 418 660Q419 664 420 669T421 676T424 680T428 682T436 683Z"></path><path id="MJX-943-TEX-V-2032" d="M79 43Q73 43 52 49T30 61Q30 68 85 293T146 528Q161 560 198 560Q218 560 240 545T262 501Q262 496 260 486Q259 479 173 263T84 45T79 43Z"></path><path id="MJX-943-TEX-N-28" d="M94 250Q94 319 104 381T127 488T164 576T202 643T244 695T277 729T302 750H315H319Q333 750 333 741Q333 738 316 720T275 667T226 581T184 443T167 250T184 58T225 -81T274 -167T316 -220T333 -241Q333 -250 318 -250H315H302L274 -226Q180 -141 137 -14T94 250Z"></path><path id="MJX-943-TEX-N-2B" d="M56 237T56 250T70 270H369V420L370 570Q380 583 389 583Q402 583 409 568V270H707Q722 262 722 250T707 230H409V-68Q401 -82 391 -82H389H387Q375 -82 369 -68V230H70Q56 237 56 250Z"></path><path id="MJX-943-TEX-I-1D434" d="M208 74Q208 50 254 46Q272 46 272 35Q272 34 270 22Q267 8 264 4T251 0Q249 0 239 0T205 1T141 2Q70 2 50 0H42Q35 7 35 11Q37 38 48 46H62Q132 49 164 96Q170 102 345 401T523 704Q530 716 547 716H555H572Q578 707 578 706L606 383Q634 60 636 57Q641 46 701 46Q726 46 726 36Q726 34 723 22Q720 7 718 4T704 0Q701 0 690 0T651 1T578 2Q484 2 455 0H443Q437 6 437 9T439 27Q443 40 445 43L449 46H469Q523 49 533 63L521 213H283L249 155Q208 86 208 74ZM516 260Q516 271 504 416T490 562L463 519Q447 492 400 412L310 260L413 259Q516 259 516 260Z"></path><path id="MJX-943-TEX-I-1D435" d="M231 637Q204 637 199 638T194 649Q194 676 205 682Q206 683 335 683Q594 683 608 681Q671 671 713 636T756 544Q756 480 698 429T565 360L555 357Q619 348 660 311T702 219Q702 146 630 78T453 1Q446 0 242 0Q42 0 39 2Q35 5 35 10Q35 17 37 24Q42 43 47 45Q51 46 62 46H68Q95 46 128 49Q142 52 147 61Q150 65 219 339T288 628Q288 635 231 637ZM649 544Q649 574 634 600T585 634Q578 636 493 637Q473 637 451 637T416 636H403Q388 635 384 626Q382 622 352 506Q352 503 351 500L320 374H401Q482 374 494 376Q554 386 601 434T649 544ZM595 229Q595 273 572 302T512 336Q506 337 429 337Q311 337 310 336Q310 334 293 263T258 122L240 52Q240 48 252 48T333 46Q422 46 429 47Q491 54 543 105T595 229Z"></path><path id="MJX-943-TEX-N-29" d="M60 749L64 750Q69 750 74 750H86L114 726Q208 641 251 514T294 250Q294 182 284 119T261 12T224 -76T186 -143T145 -194T113 -227T90 -246Q87 -249 86 -250H74Q66 -250 63 -250T58 -247T55 -238Q56 -237 66 -225Q221 -64 221 250T66 725Q56 737 55 738Q55 746 60 749Z"></path><path id="MJX-943-TEX-N-31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(0.019382,-0.019382) translate(0, -2279.5)"><g data-mml-node="math"><g data-mml-node="mtable" transform="translate(2078,0) translate(-2078,0)"><g transform="translate(0 2279.5) matrix(1 0 0 -1 0 0) scale(51.6)"><svg data-table="true" preserveAspectRatio="xMidYMid" viewBox="3092.6 -2279.5 1 4059"><g transform="matrix(1 0 0 -1 0 0)"><g data-mml-node="mlabeledtr"><g data-mml-node="mtd"><g data-mml-node="mtable"><g data-mml-node="mtr" transform="translate(0,1470.5)"><g data-mml-node="mtd" transform="translate(1161.5,0)"><g data-mml-node="mi"><use data-c="210E" xlink:href="#MJX-943-TEX-I-210E"></use></g><g data-mml-node="mo" transform="translate(853.8,0)"><use data-c="3D" xlink:href="#MJX-943-TEX-N-3D"></use></g><g data-mml-node="mi" transform="translate(1909.6,0)"><use data-c="1D465" xlink:href="#MJX-943-TEX-I-1D465"></use></g><g data-mml-node="msup" transform="translate(2481.6,0)"><g data-mml-node="mi"><use data-c="1D44A" xlink:href="#MJX-943-TEX-I-1D44A"></use></g><g data-mml-node="mo" transform="translate(1136.2,413) scale(0.707)"><use data-c="2032" xlink:href="#MJX-943-TEX-V-2032"></use></g></g></g></g><g data-mml-node="mtr" transform="translate(0,-29.5)"><g data-mml-node="mtd"><g data-mml-node="mo"><use data-c="3D" xlink:href="#MJX-943-TEX-N-3D"></use></g><g data-mml-node="mi" transform="translate(1055.8,0)"><use data-c="1D465" xlink:href="#MJX-943-TEX-I-1D465"></use></g><g data-mml-node="mo" transform="translate(1627.8,0)"><use data-c="28" xlink:href="#MJX-943-TEX-N-28"></use></g><g data-mml-node="mi" transform="translate(2016.8,0)"><use data-c="1D44A" xlink:href="#MJX-943-TEX-I-1D44A"></use></g><g data-mml-node="mo" transform="translate(3287,0)"><use data-c="2B" xlink:href="#MJX-943-TEX-N-2B"></use></g><g data-mml-node="mi" transform="translate(4287.2,0)"><use data-c="1D434" xlink:href="#MJX-943-TEX-I-1D434"></use></g><g data-mml-node="mi" transform="translate(5037.2,0)"><use data-c="1D435" xlink:href="#MJX-943-TEX-I-1D435"></use></g><g data-mml-node="mo" transform="translate(5796.2,0)"><use data-c="29" xlink:href="#MJX-943-TEX-N-29"></use></g></g></g><g data-mml-node="mtr" transform="translate(0,-1529.5)"><g data-mml-node="mtd" transform="translate(103,0)"><g data-mml-node="mo"><use data-c="3D" xlink:href="#MJX-943-TEX-N-3D"></use></g><g data-mml-node="mstyle" fill="red" stroke="red" transform="translate(1055.8,0)"><g data-mml-node="mi"><use data-c="1D465" xlink:href="#MJX-943-TEX-I-1D465"></use></g><g data-mml-node="mi" transform="translate(572,0)"><use data-c="1D44A" xlink:href="#MJX-943-TEX-I-1D44A"></use></g><g data-mml-node="mo" transform="translate(1842.2,0)"><use data-c="2B" xlink:href="#MJX-943-TEX-N-2B"></use></g><g data-mml-node="mi" transform="translate(2842.4,0)"><use data-c="1D465" xlink:href="#MJX-943-TEX-I-1D465"></use></g><g data-mml-node="mi" transform="translate(3414.4,0)"><use data-c="1D434" xlink:href="#MJX-943-TEX-I-1D434"></use></g><g data-mml-node="mi" transform="translate(4164.4,0)"><use data-c="1D435" xlink:href="#MJX-943-TEX-I-1D435"></use></g></g></g></g></g></g></g></g></svg><svg data-labels="true" preserveAspectRatio="xMaxYMid" viewBox="1278 -2279.5 1 4059"><g data-labels="true" transform="matrix(1 0 0 -1 0 0)"><g data-mml-node="mtd" id="mjx-eqn:1"><g data-mml-node="mtext"><use data-c="28" xlink:href="#MJX-943-TEX-N-28"></use><use data-c="31" xlink:href="#MJX-943-TEX-N-31" transform="translate(389,0)"></use><use data-c="29" xlink:href="#MJX-943-TEX-N-29" transform="translate(889,0)"></use></g></g></g></svg></g></g></g></g></svg><mjx-assistive-mml unselectable="on" display="block"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mtable displaystyle="true"><mlabeledtr><mtd><mtext>(1)</mtext></mtd><mtd><mtable rowspacing=".5em" columnspacing="1em" displaystyle="true"><mtr><mtd><mi>h</mi><mo>=</mo><mi>x</mi><msup><mi>W</mi><mo data-mjx-alternate="1">′</mo></msup></mtd></mtr><mtr><mtd><mo>=</mo><mi>x</mi><mo stretchy="false">(</mo><mi>W</mi><mo>+</mo><mi>A</mi><mi>B</mi><mo stretchy="false">)</mo></mtd></mtr><mtr><mtd><mo>=</mo><mstyle mathcolor="red"><mi>x</mi><mi>W</mi><mo>+</mo><mi>x</mi><mi>A</mi><mi>B</mi></mstyle></mtd></mtr></mtable></mtd></mlabeledtr></mtable></math></mjx-assistive-mml></mjx-container></div></div><p><span>本文指出，将 LoRA 适配器合并到 base 模型中对于多 LoRA 高吞吐量服务设置来说效率很低。取而代之的是，研究者建议实时计算 LoRA 计算 </span><mjx-container class="MathJax" jax="SVG" style="position: relative;"><svg xmlns="http://www.w3.org/2000/svg" width="4.708ex" height="1.645ex" role="img" focusable="false" viewBox="0 -716 2081 727" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" style="vertical-align: -0.025ex;"><defs><path id="MJX-947-TEX-I-1D465" d="M52 289Q59 331 106 386T222 442Q257 442 286 424T329 379Q371 442 430 442Q467 442 494 420T522 361Q522 332 508 314T481 292T458 288Q439 288 427 299T415 328Q415 374 465 391Q454 404 425 404Q412 404 406 402Q368 386 350 336Q290 115 290 78Q290 50 306 38T341 26Q378 26 414 59T463 140Q466 150 469 151T485 153H489Q504 153 504 145Q504 144 502 134Q486 77 440 33T333 -11Q263 -11 227 52Q186 -10 133 -10H127Q78 -10 57 16T35 71Q35 103 54 123T99 143Q142 143 142 101Q142 81 130 66T107 46T94 41L91 40Q91 39 97 36T113 29T132 26Q168 26 194 71Q203 87 217 139T245 247T261 313Q266 340 266 352Q266 380 251 392T217 404Q177 404 142 372T93 290Q91 281 88 280T72 278H58Q52 284 52 289Z"></path><path id="MJX-947-TEX-I-1D434" d="M208 74Q208 50 254 46Q272 46 272 35Q272 34 270 22Q267 8 264 4T251 0Q249 0 239 0T205 1T141 2Q70 2 50 0H42Q35 7 35 11Q37 38 48 46H62Q132 49 164 96Q170 102 345 401T523 704Q530 716 547 716H555H572Q578 707 578 706L606 383Q634 60 636 57Q641 46 701 46Q726 46 726 36Q726 34 723 22Q720 7 718 4T704 0Q701 0 690 0T651 1T578 2Q484 2 455 0H443Q437 6 437 9T439 27Q443 40 445 43L449 46H469Q523 49 533 63L521 213H283L249 155Q208 86 208 74ZM516 260Q516 271 504 416T490 562L463 519Q447 492 400 412L310 260L413 259Q516 259 516 260Z"></path><path id="MJX-947-TEX-I-1D435" d="M231 637Q204 637 199 638T194 649Q194 676 205 682Q206 683 335 683Q594 683 608 681Q671 671 713 636T756 544Q756 480 698 429T565 360L555 357Q619 348 660 311T702 219Q702 146 630 78T453 1Q446 0 242 0Q42 0 39 2Q35 5 35 10Q35 17 37 24Q42 43 47 45Q51 46 62 46H68Q95 46 128 49Q142 52 147 61Q150 65 219 339T288 628Q288 635 231 637ZM649 544Q649 574 634 600T585 634Q578 636 493 637Q473 637 451 637T416 636H403Q388 635 384 626Q382 622 352 506Q352 503 351 500L320 374H401Q482 374 494 376Q554 386 601 434T649 544ZM595 229Q595 273 572 302T512 336Q506 337 429 337Q311 337 310 336Q310 334 293 263T258 122L240 52Q240 48 252 48T333 46Q422 46 429 47Q491 54 543 105T595 229Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><use data-c="1D465" xlink:href="#MJX-947-TEX-I-1D465"></use></g><g data-mml-node="mi" transform="translate(572,0)"><use data-c="1D434" xlink:href="#MJX-947-TEX-I-1D434"></use></g><g data-mml-node="mi" transform="translate(1322,0)"><use data-c="1D435" xlink:href="#MJX-947-TEX-I-1D435"></use></g></g></g></svg><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi><mi>A</mi><mi>B</mi></math></mjx-assistive-mml></mjx-container><script type="math/tex">xAB</script><span>（如公式中红色部分所示）。</span></p><p><span>在 S-LoRA 中，计算 base 模型被批处理，然后使用定制的 CUDA 内核分别执行所有适配器的附加 </span><mjx-container class="MathJax" jax="SVG" style="position: relative;"><svg xmlns="http://www.w3.org/2000/svg" width="4.708ex" height="1.645ex" role="img" focusable="false" viewBox="0 -716 2081 727" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" style="vertical-align: -0.025ex;"><defs><path id="MJX-947-TEX-I-1D465" d="M52 289Q59 331 106 386T222 442Q257 442 286 424T329 379Q371 442 430 442Q467 442 494 420T522 361Q522 332 508 314T481 292T458 288Q439 288 427 299T415 328Q415 374 465 391Q454 404 425 404Q412 404 406 402Q368 386 350 336Q290 115 290 78Q290 50 306 38T341 26Q378 26 414 59T463 140Q466 150 469 151T485 153H489Q504 153 504 145Q504 144 502 134Q486 77 440 33T333 -11Q263 -11 227 52Q186 -10 133 -10H127Q78 -10 57 16T35 71Q35 103 54 123T99 143Q142 143 142 101Q142 81 130 66T107 46T94 41L91 40Q91 39 97 36T113 29T132 26Q168 26 194 71Q203 87 217 139T245 247T261 313Q266 340 266 352Q266 380 251 392T217 404Q177 404 142 372T93 290Q91 281 88 280T72 278H58Q52 284 52 289Z"></path><path id="MJX-947-TEX-I-1D434" d="M208 74Q208 50 254 46Q272 46 272 35Q272 34 270 22Q267 8 264 4T251 0Q249 0 239 0T205 1T141 2Q70 2 50 0H42Q35 7 35 11Q37 38 48 46H62Q132 49 164 96Q170 102 345 401T523 704Q530 716 547 716H555H572Q578 707 578 706L606 383Q634 60 636 57Q641 46 701 46Q726 46 726 36Q726 34 723 22Q720 7 718 4T704 0Q701 0 690 0T651 1T578 2Q484 2 455 0H443Q437 6 437 9T439 27Q443 40 445 43L449 46H469Q523 49 533 63L521 213H283L249 155Q208 86 208 74ZM516 260Q516 271 504 416T490 562L463 519Q447 492 400 412L310 260L413 259Q516 259 516 260Z"></path><path id="MJX-947-TEX-I-1D435" d="M231 637Q204 637 199 638T194 649Q194 676 205 682Q206 683 335 683Q594 683 608 681Q671 671 713 636T756 544Q756 480 698 429T565 360L555 357Q619 348 660 311T702 219Q702 146 630 78T453 1Q446 0 242 0Q42 0 39 2Q35 5 35 10Q35 17 37 24Q42 43 47 45Q51 46 62 46H68Q95 46 128 49Q142 52 147 61Q150 65 219 339T288 628Q288 635 231 637ZM649 544Q649 574 634 600T585 634Q578 636 493 637Q473 637 451 637T416 636H403Q388 635 384 626Q382 622 352 506Q352 503 351 500L320 374H401Q482 374 494 376Q554 386 601 434T649 544ZM595 229Q595 273 572 302T512 336Q506 337 429 337Q311 337 310 336Q310 334 293 263T258 122L240 52Q240 48 252 48T333 46Q422 46 429 47Q491 54 543 105T595 229Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><use data-c="1D465" xlink:href="#MJX-947-TEX-I-1D465"></use></g><g data-mml-node="mi" transform="translate(572,0)"><use data-c="1D434" xlink:href="#MJX-947-TEX-I-1D434"></use></g><g data-mml-node="mi" transform="translate(1322,0)"><use data-c="1D435" xlink:href="#MJX-947-TEX-I-1D435"></use></g></g></g></svg><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi><mi>A</mi><mi>B</mi></math></mjx-assistive-mml></mjx-container><script type="math/tex">xAB</script><span>。这一过程 </span><span style="color:blue; font-weight:bold; font-style:italic; font-family:华文新魏; font-size:15px"><span>Figure 1</span></span><span>  所示。研究者没有使用填充和 BLAS 库中的批处理 GEMM 内核来计算 LoRA，而是实施了定制的 CUDA 内核，以便在不使用填充的情况下实现更高效的计算，实施细节在第 5.3 小节中。</span></p><p><img src=".\pp014_files\image-20240919121554672.png" alt="image-20240919121554672" style="zoom:67%;" /></p><p><span>如果将 LoRA 适配器存储在主内存中，它们的数量可能会很大，但当前运行批所需的 LoRA 适配器数量是可控的，因为批大小受 GPU 内存的限制。为了利用这一优势，研究者将所有的 LoRA 适配卡都存储在主内存中，并在为当前正在运行的批进行推理时，仅将该批所需的 LoRA 适配卡取到 GPU RAM 中。在这种情况下，可服务的适配器最大数量受限于主内存大小。</span><span style="color:blue; font-weight:bold; font-style:italic; font-family:华文新魏; font-size:15px"><span>Figure 2</span></span><span> 展示了这一过程。第 5 节也讨论了高效管理内存的技术。</span></p><p><img src=".\pp014_files\image-20240919121645632.png" alt="image-20240919121645632" style="zoom:67%;" /></p><h5 id='-token-level的批处理调度方法'><strong style="color:red"><span>※</span></strong><span> token-level的批处理调度方法</span></h5><p><span>为了实现显存的尽可能高的利用率，这里的batch request调度采用了orca（Yu@OSDI2022, ORCA: A Distributed Serving System for Transformer-Based Generative Models）调度方法，实现token-level的迭代调度。详细讲解可以看作者自己的报告视频（一般的批处理调度-视频第6分钟左右; orca批处理调度-第8分钟左右）：Orca: A Distributed Serving System for Transformer-Based Generative Models | USENIX</span>
+<span>简要来说，就是orca构造了一个请求池，每并行处理完所有序列的一个token长度就把没结束生成的requests放回池子里，新来的requests也按照来的顺序放在一起，等下次生成再从请求池里调度不超过最大batch-size的请求进行处理。</span></p><h5 id='-对请求按照adapter聚在一起'><strong style="color:red"><span>※</span></strong><span> 对请求按照Adapter聚在一起</span></h5><p><span>为了尽量降低推理显存占用，就需要在每个batch的请求里尽量用最少的Adapters，即尽量把相同Adapter的请求放在一个batch里，这样每次需要从内存中取出的adapter的数量就会比较少，减少并行推理时的显存</span></p><h5 id='-准入控制'><strong style="color:red"><span>※</span></strong><span> 准入控制</span></h5><p><span>S-LoRA还介绍了它在请求高并发状态的处理方式。对于每个请求，S-LoRA会预先衡量这个请求在当前状态下的处理时延用户是否能够接受，不能被接受的话，就会被直接抛弃掉。如果一下来的请求过多，它会选择只处理时间顺序相对靠后的满足时延的请求。相比于超时才显示请求失败这种硬性门槛，可以提高响应效率，对于完不成的请求就会直接显示失败，不需要用户等了指定时间超时了才显示。</span></p><h5 id='-新的gpu算子'><strong style="color:red"><span>※</span></strong><span> 新的GPU算子</span></h5><p><span>这一小节主要介绍的是S-LoRA采用的CUDA算子。论文中是放在了内存管理里介绍的，笔者认为这部分对于实现并行推理也很重要，就放在前面了。</span></p><p><span>为什么要用新的CUDA算子？原来我们在GPU中一般用到的矩阵计算算子是GEMM，GEMM是并行化处理矩阵的，我们在推理时，通过paddding把一个batch的所有序列填充到一样长度之后，每批次的输入，模型的各部分计算的矩阵大小是固定的，GEMM就可以实现各部分的并行计算。但是这样GPU的本身利用率就不高，再加上LoRA的Adapter的异构性（秩r的大小不一致），就导致原来的矩阵算子（GEMM）不能实现并行计算。于是，S-LoRA采用的是MBGMM和MBGMV算子，具体介绍读者可以参考下一段。</span></p><p><span>GEMM（通用矩阵乘法，动态计算图）-&gt;MBGMM（输入编码部分，sequence-level，triton）+MBGMV（解码部分，token-level，punica）</span></p><p><img src=".\pp014_files\image-20240919115508243.png" alt="image-20240919115508243" style="zoom:40%;border-radius:10px; border:2px solid #ab0000;" /></p><p><span>上图是Punica论文中的SGMV算子（即这里的MBGMV算子），相比于GEMM的固定矩阵相乘，这里是先把矩阵Gather到一起后，再相乘，即外层的Y+=X@W是一样的逻辑，但是内部的具体参数会随着请求对应的Adapter发生变化。</span></p><h4 id='2-内存管理'><kbd style="background:#a8e195"><span>2</span></kbd><span> 内存管理</span></h4><blockquote><p><span>S-LoRA的内存管理是延续了vLLM的Paged-Attention的页管理思想，用每个block table将逻辑地址和物理地址联系起来。S-LoRA就在Paged-Attention的基础上，在cache中除了Key和Value之外，还增加了对Adapter的参数的管理，如</span><span style="color:blue; font-weight:bold; font-style:italic; font-family:华文新魏; font-size:15px"><span>Figure 2</span></span><span> 所示。</span></p><p><span>之所以可以这么设计，作者主要是认为LoRA的Adapters和Key&amp;Value向量有着两点相似之处：</span></p><ul><li><p><span>两者都是动态的，KV-cache是序列根据请求动态输入，请求结束就被销毁；adapter是每个请求如果用到了某个adapter就加载，下个batch没用到就移除；</span></p></li><li><p><span>两者的矩阵有一维是一样的，KV的矩阵形状是sequence-length×hidden-size，adapter的矩阵形状是rank-size×hidden-size，所以就算合在一起，也相对规整，可以减少显存碎片。</span></p></li></ul><p><span>于是，增加Adapter weights之后的cache如</span><span style="color:blue; font-weight:bold; font-style:italic; font-family:华文新魏; font-size:15px"><span>Figure 3</span></span><span> 所示。</span></p><p><span>此外，为了减少adapter weight从内存到显存的load时间，s-lora有个prefetch机制，就是会根据下一个batch的request中用到adapter，提前取出到cache里，减少loading的时间。</span></p></blockquote><p><span>与为单个 base 模型提供服务相比，同时为多个 LoRA 适配卡提供服务</span><span style="color:blue; font-family:仿宋; font-weight:bold"><span>会带来新的内存管理挑战</span></span><span>。为了支持多个适配器，S-LoRA 将它们存储在主内存中，并将当前运行批所需的适配器权重动态加载到 GPU RAM 中。</span></p><p><span>在这个过程中，有两个明显的挑战。</span></p><ul><li><p><span>首先是内存碎片，这是由于动态加载和卸载不同大小的适配器权重造成的。</span></p></li><li><p><span>其次是适配器加载和卸载带来的延迟开销。</span></p></li></ul><p><span>为了有效解决这些难题，研究者提出了 「Unfied Paging」，并通过预取适配器权重将 I/O 与计算重叠。</span></p><h5 id='unified-paging'><span>Unified Paging</span></h5><p><span>研究者将 PagedAttention 的想法扩展为统一分页（Unified Paging），后者除了管理 KV 缓存外，还管理适配器权重。统一分页使用统一内存池来联合管理 KV 缓存和适配器权重。</span></p><p><kbd style="background:yellow; color:red"><span>方法</span></kbd><span> 为了实现这一点，他们首先为内存池静态分配一个大缓冲区，除了 base 模型权重和临时激活张量占用的空间外，该缓冲区使用所有可用空间。KV 缓存和适配器权重都以分页方式存储在内存池中，每页对应一个 H 向量。因此，序列长度为 S 的 KV 缓存张量占用 S 页，而 R 级的 LoRA 权重张量占用 R 页。</span><span style="color:blue; font-weight:bold; font-style:italic; font-family:华文新魏; font-size:15px"><span>Figure 3</span></span><span> 展示了内存池布局，其中 KV 缓存和适配器权重以交错和非连续方式存储。这种方法大大减少了碎片，确保不同等级的适配器权重能以结构化和系统化的方式与动态 KV 缓存共存。</span></p><p><img src=".\pp014_files\image-20240919121856790.png" alt="image-20240919121856790" style="zoom:67%;" /></p><h4 id='3-张量并行'><kbd style="background:#a5c4ff"><span>3</span></kbd><span> 张量并行</span></h4><blockquote><p><span>为了在显存不够的情况下，实现能够在多GPU上并行推理，又尽量减少通信损失，作者提出了张量并行的方案（类Megatron-LM）如</span><span style="color:blue; font-weight:bold; font-style:italic; font-family:华文新魏; font-size:15px"><span>Figure 4</span></span><span> 所示。</span></p></blockquote><p><span>此外，研究者为批量 LoRA 推断设计了新颖的</span><kbd style="border:1px dashed #990000; font-size:15px; color: #00b456; font-family: comic sans ms, 微软雅黑; font-weight:bold"><span>张量并行策略</span></kbd><span>，以支持大型 Transformer 模型的多 GPU 推断。</span></p><blockquote><p><span>张量并行是应用最广泛的并行方法，因为它的单程序多数据模式简化了其实施和与现有系统的集成。</span></p><p><span>张量并行可以减少为大模型提供服务时每个 GPU 的内存使用量和延迟。</span></p></blockquote><p><span>在本文设置中，额外的 LoRA 适配器引入了新的权重矩阵和矩阵乘法，这就需要为这些新增项目制定新的分区策略。</span></p><p><img src=".\pp014_files\image-20240919122014406.png" referrerpolicy="no-referrer" alt="image-20240919122014406"></p><p>&nbsp;</p><h3 id='评估'><span>评估</span></h3><p><span>最后，研究者通过为 Llama-7B/13B/30B/70B 提供服务来评估 S-LoRA。</span></p><p><img src=".\pp014_files\image-20240919121137263.png" alt="image-20240919121137263" style="zoom:67%;" /></p><p><kbd style="border:1px double black; font-size:20px; color: #990000; font-family: comic sans ms, 微软雅黑; font-weight:bold; border-bottom: 2px solid black; border-top: 2px solid black;"><span>结果</span></kbd><span> </span></p><ul><li><p><span>S-LoRA 可以在单个 GPU 或多个 GPU 上为数千个 LoRA 适配器提供服务，而且开销很小。</span></p></li><li><p><span>与最先进的参数高效微调库 Huggingface PEFT 相比，S-LoRA 的吞吐量最多可提高 30 倍。</span></p></li><li><p><span>与使用支持 LoRA 服务的高吞吐量服务系统 vLLM 相比，S-LoRA 可将吞吐量提高 4 倍，并将服务适配器的数量增加几个数量级。</span></p></li></ul><h3 id='补充'><span>补充</span></h3><p><kbd style="background:yellow; color:red"><span>博文4</span></kbd><span> S-LoRA怎么用？</span></p><blockquote><p><span>调用代码如下：github.com/vllm-projec…</span>
+<span>通过代码可以看出，S-LoRA的调用很简单，处理base模型的常用参数温度等，只要在每个request的时候加上lora地址即可。目前仅支持LLaMa和mistral模型，在vLLM项目上是实验性集成，等待支持更多的大模型以及正式发布~</span></p></blockquote><h3 id='参考博文'><span>参考博文</span></h3><ol start='' ><li><p><a href='https://www.linkresearcher.com/theses/031cabab-332f-4cd6-9c30-de4d6326909d'><span>S-LoRA：一个GPU运行数千大模型成为可能</span></a><span> </span></p><p><span style="color:red"><span>点评：这篇博文主要把文章的创新点进行了概述。详略得当，但是看下来后个人发现似乎更偏向于系统上的创新，目前还比较难理解@2024年9月19日 12:21:13，后面再多看看吧。</span></span><span> </span><span style="border-radius: 10px; border-top: 1px solid red; border-bottom: 1px solid red; border-left: 1px solid red; border-right: 1px solid red; background: yellow; color:red"><span>★★★★☆</span></span><span> </span></p></li><li><p><a href='https://blog.csdn.net/u012679583/article/details/138244987'><span>【论文解读】S-LoRA： Serving thousands of concurrent LoRA Adapters</span></a><span> </span></p><p><span style="color:red"><span>点评：这篇博文没有看完，只看了前面的梗概，等到使用这个技术的时候，再回头看看细节吧</span></span><span>。</span></p></li><li><p><a href='https://blog.csdn.net/QingKeLab/article/details/141363333'><span>S-LoRA：实现多 LoRA 大模型的高效并行化推理</span></a><span> </span></p><p><span style="color:red"><span>点评：★★★☆☆，对文章进行了通俗的要点概述，还不错</span></span><span>。</span></p></li><li><p><a href='https://juejin.cn/post/7331584783611412516'><span>S-LoRA：同时应用多个LoRA模块并行推理</span></a><span> </span></p><p><span style="color:red"><span>点评：比博文1更加详细。</span></span><span> </span><span style="border-radius: 10px; border-top: 1px solid red; border-bottom: 1px solid red; border-left: 1px solid red; border-right: 1px solid red; background: yellow; color:red"><span>★★★★☆</span></span><span> </span></p></li></ol><p>&nbsp;</p><p><kbd style="border:1px double black; font-size:20px; color: #990000; font-family: comic sans ms, 微软雅黑; font-weight:bold; border-bottom: 2px solid black; border-top: 2px solid black;"><span>博文免责声明</span></kbd><span> </span></p><ol start='' ><li><p><span>本条博文信息主要整合自网络，部分内容为自己的理解写出来的，如有断章截句导致不正确或因个人水平有限未能详尽正确描述的地方，敬请各位读者指正；</span></p></li><li><p><span>引用出处可能没有完全追溯到原始来源，如因此冒犯到原创作者，请</span><a href='https://mustbook.github.io/'><span>联系本人</span></a><span>更正/删除；</span></p></li><li><p><span>博文的发布主要用于自我学习，其次希望帮助到有共同疑惑的朋友。</span></p></li></ol><div style="
+    border-radius: 25px; 
+    border: 2px solid #990000;
+    background: #990000;
+    padding: 20px;
+"><center><span style="color:white">欢迎随时联系讨论，一起成长进步。</span></center></div><p>&nbsp;</p><div class='footnotes-area'  ><hr/>
+<div class='footnote-line'><span class='md-fn-count'>1</span> <span>Sheng Y, Cao S, Li D, et al. S-lora: Serving thousands of concurrent lora adapters[J]. arXiv preprint arXiv:2311.03285, 2023.</span> <a name='dfref-footnote-1' href='#ref-footnote-1' title='back to document' class='reversefootnote' >↩</a></div></div></div></div>
+<a href=".typora-export-content" id="scroll-up" style="display: block;">
+		<i class="material-icons md-20 md-middle"></i>
+	</a></body>
+</html>

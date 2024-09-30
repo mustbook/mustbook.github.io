@@ -14,24 +14,24 @@
 
 @font-face {
 	font-family: 'Ubuntu Mono';
-	src:url('../self_fonts/UbuntuMono-Bold.ttf');
-	src:url('../self_fonts/UbuntuMono-BoldItalic.ttf');
-	src:url('../self_fonts/UbuntuMono-Italic.ttf');
-	src:url('../self_fonts/UbuntuMono-Regular.ttf');
+	src:url('../self_fonts/UbuntuMono-Bold.ttf'),
+	url('../self_fonts/UbuntuMono-BoldItalic.ttf'),
+	url('../self_fonts/UbuntuMono-Italic.ttf'),
+	url('../self_fonts/UbuntuMono-Regular.ttf');
 }
 
 @font-face {
 	font-family: 'Comic Sans MS';
-	src:url('../self_fonts/comic.ttf');
-	src:url('../self_fonts/comicbd.ttf');
-	src:url('../self_fonts/comici.ttf');
-	src:url('../self_fonts/comicz.ttf');
+	src:url('../self_fonts/comic.ttf'),
+	url('../self_fonts/comicbd.ttf'),
+	url('../self_fonts/comici.ttf'),
+	url('../self_fonts/comicz.ttf');
 }
 
 @font-face {
 	font-family: 'Whitney';
-	src:url('../self_fonts/Whitney-Bold.otf');
-	src:url('../self_fonts/Whitney-Semibold.otf');
+	src:url('../self_fonts/Whitney-Bold.otf'),
+	url('../self_fonts/Whitney-Semibold.otf');
 }
 
 @font-face {

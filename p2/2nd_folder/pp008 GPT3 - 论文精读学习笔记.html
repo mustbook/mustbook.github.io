@@ -1,0 +1,810 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<link rel="stylesheet" type="text/css" href="../../assets/markdownStyle/iconSetup.css">
+	
+	<!--右边底部的向上箭头，能够返回到文章最开始的地方2/2 动态效果-->
+	<script type="text/javascript" src="../../assets/blogJS/wp-includes.js.jquery.jquery.js"></script>
+	<script type="text/javascript" src="../../assets/blogJS/wp-content.themes.type-plus.js.main.js"></script>
+	
+	
+	<!--https://www.dofactory.com/html/rel/icon-->
+	<link rel="icon" href="../../images/ico/signature.png" sizes="32x32">
+	<link rel="icon" href="../../images/ico/signature.png" sizes="192x192">
+	<link rel="apple-touch-icon" href="../../images/ico/signature.png">
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; --title-bar-height:20px; }
+.mac-os-11 { --title-bar-height:28px; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+h1, h2, h3, h4, h5 { white-space: pre-wrap; }
+body { margin: 0px; padding: 0px; height: auto; inset: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+.typora-export .task-list-item input { pointer-events: none; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+thead, tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror-linenumber { user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-fences-adv-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+svg { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li blockquote { margin: 1rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; border-color: transparent !important; padding-top: 0px !important; padding-bottom: 0px !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  .typora-export #write { break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+  #write > p:nth-child(1) { margin-top: 0px; }
+  .typora-export-show-outline .typora-export-sidebar { display: none; }
+  figure { overflow-x: visible; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+.MathJax_ref { fill: currentcolor; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.reversefootnote { font-family: ui-monospace, sans-serif; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.6; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+.md-expand mark .md-meta { opacity: 0.3 !important; }
+mark .md-meta { color: rgb(0, 0, 0); }
+@media print {
+  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+}
+.md-diagram-panel .messageText { stroke: none !important; }
+.md-diagram-panel .start-state { fill: var(--node-fill); }
+.md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
+.md-fences.md-fences-math { font-size: 1em; }
+.md-fences-advanced:not(.md-focus) { padding: 0px; white-space: nowrap; border: 0px; }
+.md-fences-advanced:not(.md-focus) { background: inherit; }
+.typora-export-show-outline .typora-export-content { max-width: 1440px; margin: auto; display: flex; flex-direction: row; }
+.typora-export-sidebar { width: 300px; font-size: 0.8rem; margin-top: 80px; margin-right: 18px; }
+.typora-export-show-outline #write { --webkit-flex:2; flex: 2 1 0%; }
+.typora-export-sidebar .outline-content { position: fixed; top: 0px; max-height: 100%; overflow: hidden auto; padding-bottom: 30px; padding-top: 60px; width: 300px; }
+@media screen and (max-width: 1024px) {
+  .typora-export-sidebar, .typora-export-sidebar .outline-content { width: 240px; }
+}
+@media screen and (max-width: 800px) {
+  .typora-export-sidebar { display: none; }
+}
+.outline-content li, .outline-content ul { margin-left: 0px; margin-right: 0px; padding-left: 0px; padding-right: 0px; list-style: none; overflow-wrap: anywhere; }
+.outline-content ul { margin-top: 0px; margin-bottom: 0px; }
+.outline-content strong { font-weight: 400; }
+.outline-expander { width: 1rem; height: 1.42857rem; position: relative; display: table-cell; vertical-align: middle; cursor: pointer; padding-left: 4px; }
+.outline-expander::before { content: ""; position: relative; font-family: Ionicons; display: inline-block; font-size: 8px; vertical-align: middle; }
+.outline-item { padding-top: 3px; padding-bottom: 3px; cursor: pointer; }
+.outline-expander:hover::before { content: ""; }
+.outline-h1 > .outline-item { padding-left: 0px; }
+.outline-h2 > .outline-item { padding-left: 1em; }
+.outline-h3 > .outline-item { padding-left: 2em; }
+.outline-h4 > .outline-item { padding-left: 3em; }
+.outline-h5 > .outline-item { padding-left: 4em; }
+.outline-h6 > .outline-item { padding-left: 5em; }
+.outline-label { cursor: pointer; display: table-cell; vertical-align: middle; text-decoration: none; color: inherit; }
+.outline-label:hover { text-decoration: underline; }
+.outline-item:hover { border-color: rgb(245, 245, 245); background-color: var(--item-hover-bg-color); }
+.outline-item:hover { margin-left: -28px; margin-right: -28px; border-left: 28px solid transparent; border-right: 28px solid transparent; }
+.outline-item-single .outline-expander::before, .outline-item-single .outline-expander:hover::before { display: none; }
+.outline-item-open > .outline-item > .outline-expander::before { content: ""; }
+.outline-children { display: none; }
+.info-panel-tab-wrapper { display: none; }
+.outline-item-open > .outline-children { display: block; }
+.typora-export .outline-item { padding-top: 1px; padding-bottom: 1px; }
+.typora-export .outline-item:hover { margin-right: -8px; border-right: 8px solid transparent; }
+.typora-export .outline-expander::before { content: "+"; font-family: inherit; top: -1px; }
+.typora-export .outline-expander:hover::before, .typora-export .outline-item-open > .outline-item > .outline-expander::before { content: "−"; }
+.typora-export-collapse-outline .outline-children { display: none; }
+.typora-export-collapse-outline .outline-item-open > .outline-children, .typora-export-no-collapse-outline .outline-children { display: block; }
+.typora-export-no-collapse-outline .outline-expander::before { content: "" !important; }
+.typora-export-show-outline .outline-item-active > .outline-item .outline-label { font-weight: 700; }
+.md-inline-math-container mjx-container { zoom: 0.95; }
+mjx-container { break-inside: avoid; }
+
+
+:root {
+    --side-bar-bg-color: #fafafa;
+    --control-text-color: #777;
+}
+
+@include-when-export url(https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext);
+
+/* open-sans-regular - latin-ext_latin */
+  /* open-sans-italic - latin-ext_latin */
+    /* open-sans-700 - latin-ext_latin */
+    /* open-sans-700italic - latin-ext_latin */
+  html {
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    font-family: "Open Sans","Clear Sans", "Helvetica Neue", Helvetica, Arial, 'Segoe UI Emoji', sans-serif;
+    color: rgb(51, 51, 51);
+    line-height: 1.6;
+}
+
+#write {
+    max-width: 860px;
+  	margin: 0 auto;
+  	padding: 30px;
+    padding-bottom: 100px;
+}
+
+@media only screen and (min-width: 1400px) {
+	#write {
+		max-width: 1024px;
+	}
+}
+
+@media only screen and (min-width: 1800px) {
+	#write {
+		max-width: 1200px;
+	}
+}
+
+#write > ul:first-child,
+#write > ol:first-child{
+    margin-top: 30px;
+}
+
+a {
+    color: #4183C4;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    line-height: 1.4;
+    cursor: text;
+}
+h1:hover a.anchor,
+h2:hover a.anchor,
+h3:hover a.anchor,
+h4:hover a.anchor,
+h5:hover a.anchor,
+h6:hover a.anchor {
+    text-decoration: none;
+}
+h1 tt,
+h1 code {
+    font-size: inherit;
+}
+h2 tt,
+h2 code {
+    font-size: inherit;
+}
+h3 tt,
+h3 code {
+    font-size: inherit;
+}
+h4 tt,
+h4 code {
+    font-size: inherit;
+}
+h5 tt,
+h5 code {
+    font-size: inherit;
+}
+h6 tt,
+h6 code {
+    font-size: inherit;
+}
+h1 {
+    font-size: 2.25em;
+    line-height: 1.2;
+    border-bottom: 1px solid #eee;
+}
+h2 {
+    font-size: 1.75em;
+    line-height: 1.225;
+    border-bottom: 1px solid #eee;
+}
+
+/*@media print {
+    .typora-export h1,
+    .typora-export h2 {
+        border-bottom: none;
+        padding-bottom: initial;
+    }
+
+    .typora-export h1::after,
+    .typora-export h2::after {
+        content: "";
+        display: block;
+        height: 100px;
+        margin-top: -96px;
+        border-top: 1px solid #eee;
+    }
+}*/
+
+h3 {
+    font-size: 1.5em;
+    line-height: 1.43;
+}
+h4 {
+    font-size: 1.25em;
+}
+h5 {
+    font-size: 1em;
+}
+h6 {
+   font-size: 1em;
+    color: #777;
+}
+p,
+blockquote,
+ul,
+ol,
+dl,
+table{
+    margin: 0.8em 0;
+}
+li>ol,
+li>ul {
+    margin: 0 0;
+}
+hr {
+    height: 2px;
+    padding: 0;
+    margin: 16px 0;
+    background-color: #e7e7e7;
+    border: 0 none;
+    overflow: hidden;
+    box-sizing: content-box;
+}
+
+li p.first {
+    display: inline-block;
+}
+ul,
+ol {
+    padding-left: 30px;
+}
+ul:first-child,
+ol:first-child {
+    margin-top: 0;
+}
+ul:last-child,
+ol:last-child {
+    margin-bottom: 0;
+}
+blockquote {
+    border-left: 4px solid #ec962a;
+    padding: 0 15px;
+    color: #777777;
+}
+blockquote blockquote {
+    padding-right: 0;
+}
+table {
+    padding: 0;
+    word-break: initial;
+}
+table tr {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 0;
+}
+table tr:nth-child(2n),
+thead {
+    background-color: #f8f8f8;
+}
+table th {
+    font-weight: bold;
+    border: 1px solid #dfe2e5;
+    border-bottom: 0;
+    margin: 0;
+    padding: 6px 13px;
+}
+table td {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 6px 13px;
+}
+table th:first-child,
+table td:first-child {
+    margin-top: 0;
+}
+table th:last-child,
+table td:last-child {
+    margin-bottom: 0;
+}
+
+.CodeMirror-lines {
+    padding-left: 4px;
+}
+
+.code-tooltip {
+    box-shadow: 0 1px 1px 0 rgba(0,28,36,.3);
+    border-top: 1px solid #eef2f2;
+}
+
+.md-fences,
+code,
+tt {
+    border: 1px solid #e7eaed;
+    background-color: #f8f8f8;
+    border-radius: 3px;
+    padding: 0;
+    padding: 2px 4px 0px 4px;
+    font-size: 0.9em;
+}
+
+code {
+	color: red;
+    background-color: rgb(255, 255, 0)
+    padding: 0 2px 0 2px;
+}
+
+.md-fences {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding-top: 8px;
+    padding-bottom: 6px;
+}
+
+
+.md-task-list-item > input {
+  margin-left: -1.3em;
+}
+
+@media print {
+    html {
+        font-size: 13px;
+    }
+    pre {
+        page-break-inside: avoid;
+        word-wrap: break-word;
+    }
+}
+
+.md-fences {
+	background-color: #f8f8f8;
+}
+#write pre.md-meta-block {
+	padding: 1rem;
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: #f7f7f7;
+    border: 0;
+    border-radius: 3px;
+    color: #777777;
+    margin-top: 0 !important;
+}
+
+.mathjax-block>.code-tooltip {
+	bottom: .375rem;
+}
+
+.md-mathjax-midline {
+    background: #fafafa;
+}
+
+#write>h3.md-focus:before{
+	left: -1.5625rem;
+	top: .375rem;
+}
+#write>h4.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h5.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h6.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+.md-image>.md-meta {
+    /*border: 1px solid #ddd;*/
+    border-radius: 3px;
+    padding: 2px 0px 0px 4px;
+    font-size: 0.9em;
+    color: inherit;
+}
+
+.md-tag {
+    color: #a7a7a7;
+    opacity: 1;
+}
+
+.md-toc { 
+    margin-top:20px;
+    padding-bottom:20px;
+}
+
+.sidebar-tabs {
+    border-bottom: none;
+}
+
+#typora-quick-open {
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+}
+
+#typora-quick-open-item {
+    background-color: #FAFAFA;
+    border-color: #FEFEFE #e5e5e5 #e5e5e5 #eee;
+    border-style: solid;
+    border-width: 1px;
+}
+
+/** focus mode */
+.on-focus-mode blockquote {
+    border-left-color: rgba(85, 85, 85, 0.12);
+}
+
+header, .context-menu, .megamenu-content, footer{
+    font-family: "Segoe UI", "Arial", sans-serif;
+}
+
+.file-node-content:hover .file-node-icon,
+.file-node-content:hover .file-node-open-state{
+    visibility: visible;
+}
+
+.mac-seamless-mode #typora-sidebar {
+    background-color: #fafafa;
+    background-color: var(--side-bar-bg-color);
+}
+
+.md-lang {
+    color: #b4654d;
+}
+
+/*.html-for-mac {
+    --item-hover-bg-color: #E6F0FE;
+}*/
+
+#md-notification .btn {
+    border: 0;
+}
+
+.dropdown-menu .divider {
+    border-color: #e5e5e5;
+    opacity: 0.4;
+}
+
+.ty-preferences .window-content {
+    background-color: #fafafa;
+}
+
+.ty-preferences .nav-group-item.active {
+    color: white;
+    background: #999;
+}
+
+.menu-item-container a.menu-style-btn {
+    background-color: #f5f8fa;
+    background-image: linear-gradient( 180deg , hsla(0, 0%, 100%, 0.8), hsla(0, 0%, 100%, 0)); 
+}
+
+u {
+    text-decoration: red underline; 
+	text-decoration-thickness: 15%;
+  }
+  
+em {
+	font-weight: bold;
+    font-style: italic;
+}
+  
+
+
+mjx-container[jax="SVG"] {
+  direction: ltr;
+}
+
+mjx-container[jax="SVG"] > svg {
+  overflow: visible;
+  min-height: 1px;
+  min-width: 1px;
+}
+
+mjx-container[jax="SVG"] > svg a {
+  fill: blue;
+  stroke: blue;
+}
+
+mjx-assistive-mml {
+  position: absolute !important;
+  top: 0px;
+  left: 0px;
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 1px 0px 0px 0px !important;
+  border: 0px !important;
+  display: block !important;
+  width: auto !important;
+  overflow: hidden !important;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+mjx-assistive-mml[display="block"] {
+  width: 100% !important;
+}
+
+mjx-container[jax="SVG"][display="true"] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+mjx-container[jax="SVG"][display="true"][width="full"] {
+  display: flex;
+}
+
+mjx-container[jax="SVG"][justify="left"] {
+  text-align: left;
+}
+
+mjx-container[jax="SVG"][justify="right"] {
+  text-align: right;
+}
+
+g[data-mml-node="merror"] > g {
+  fill: red;
+  stroke: red;
+}
+
+g[data-mml-node="merror"] > rect[data-background] {
+  fill: yellow;
+  stroke: none;
+}
+
+g[data-mml-node="mtable"] > line[data-line], svg[data-table] > g > line[data-line] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > rect[data-frame], svg[data-table] > g > rect[data-frame] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > .mjx-dashed, svg[data-table] > g > .mjx-dashed {
+  stroke-dasharray: 140;
+}
+
+g[data-mml-node="mtable"] > .mjx-dotted, svg[data-table] > g > .mjx-dotted {
+  stroke-linecap: round;
+  stroke-dasharray: 0,140;
+}
+
+g[data-mml-node="mtable"] > g > svg {
+  overflow: visible;
+}
+
+[jax="SVG"] mjx-tool {
+  display: inline-block;
+  position: relative;
+  width: 0;
+  height: 0;
+}
+
+[jax="SVG"] mjx-tool > mjx-tip {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+mjx-tool > mjx-tip {
+  display: inline-block;
+  padding: .2em;
+  border: 1px solid #888;
+  font-size: 70%;
+  background-color: #F8F8F8;
+  color: black;
+  box-shadow: 2px 2px 5px #AAAAAA;
+}
+
+g[data-mml-node="maction"][data-toggle] {
+  cursor: pointer;
+}
+
+mjx-status {
+  display: block;
+  position: fixed;
+  left: 1em;
+  bottom: 1em;
+  min-width: 25%;
+  padding: .2em .4em;
+  border: 1px solid #888;
+  font-size: 90%;
+  background-color: #F8F8F8;
+  color: black;
+}
+
+foreignObject[data-mjx-xml] {
+  font-family: initial;
+  line-height: normal;
+  overflow: visible;
+}
+
+mjx-container[jax="SVG2"] path[data-c], mjx-container[jax="SVG2"] use[data-c] {
+  stroke-width: 3;
+}
+
+g[data-mml-node="xypic"] path {
+  stroke-width: inherit;
+}
+
+.MathJax g[data-mml-node="xypic"] path {
+  stroke-width: inherit;
+}
+mjx-container[jax="SVG"] path[data-c], mjx-container[jax="SVG"] use[data-c] {
+							stroke-width: 0;
+						}
+</style><title>pp008 GPT3 - 论文精读学习笔记</title>
+</head>
+<body class='typora-export os-windows'><div class='typora-export-content'>
+<div id='write'  class=''><h1 id='gpt32020---论文精读学习笔记'><span>GPT3</span><sup class='md-footnote'><a href='#dfref-footnote-1' name='ref-footnote-1'>1</a></sup><span> - 论文精读学习笔记</span></h1><p><a href='https://arxiv.org/abs/2005.14165'><span>Language Models are Few-Shot Learners</span></a><span> </span></p><p><kbd style="background:yellow; color:red"><span>Basic Architectures of LLMs</span></kbd><span> </span></p><div style="text-align:center; font-size:1em" >
+    <a href="https://mustbook.github.io/" style="color:brown" >Cook</a>
+    2024.09.02
+</div><blockquote><p><i style="color:brown; font-family:"><span>You are what you eat.</span><br/><span> And I&#39;m cooking what I eat!  </span></i><span> </span><strong><span>:)</span></strong><span> </span></p><p><span style="color:blue; font-family:Comic Sans MS"><a href='https://mustbook.github.io/p2/2nd_paper.html'><span>More food...</span></a></span>🍜<span> </span></p></blockquote><p style="text-align:center; font-size:20px; font-weight:bold;"> 目录 </p> <div class='md-toc' mdtype='toc'><p class="md-toc-content" role="list"><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n0"><a class="md-toc-inner" href="#gpt32020---论文精读学习笔记">GPT3 - 论文精读学习笔记</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n19"><a class="md-toc-inner" href="#背景">背景</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n93"><a class="md-toc-inner" href="#梗概">梗概</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n152"><a class="md-toc-inner" href="#概念">概念</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n208"><a class="md-toc-inner" href="#本文研究内容">本文研究内容</a></span><span role="listitem" class="md-toc-item md-toc-h5" data-ref="n211"><a class="md-toc-inner" href="#关于gpt-3的研究结果">关于GPT-3的研究结果</a></span><span role="listitem" class="md-toc-item md-toc-h5" data-ref="n223"><a class="md-toc-inner" href="#关于data-contamination的研究结果">关于data contamination的研究结果</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n268"><a class="md-toc-inner" href="#方法">方法</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n334"><a class="md-toc-inner" href="#模型和架构">模型和架构</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n347"><a class="md-toc-inner" href="#数据集">数据集</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n348"><a class="md-toc-inner" href="#训练数据">训练数据</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n390"><a class="md-toc-inner" href="#实验">实验</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n399"><a class="md-toc-inner" href="#训练过程">训练过程</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n411"><a class="md-toc-inner" href="#评估">评估</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n420"><a class="md-toc-inner" href="#结论">结论</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n464"><a class="md-toc-inner" href="#思考">思考</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n485"><a class="md-toc-inner" href="#参考博文">参考博文</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n510"><a class="md-toc-inner" href="#原文目录">原文目录</a></span></p></div><p><span style="color:blue; font-family:仿宋; font-weight:bold"><span>提前说明</span></span><span>：本系列博文主要是对</span><a href='#参考博文'><span>参考博文</span></a><span>的解读与重述（</span><em><span>对重点信息进行标记、或者整段摘录加深自己的记忆和理解、融合多个博文的精髓、统合不同的代表性的案例</span></em><span>），仅做学习记录笔记使用。与君共享，希望一同进步。</span></p><p>&nbsp;</p><p><kbd style="border:1px dotted #990000; font-size:20px; color: red; font-family: comic sans ms, 微软雅黑; font-weight:bold"><span>官方项目</span></kbd></p><blockquote><p><span>模型未开源，人造数据集</span></p></blockquote><p><span>地址：</span><a href='https://github.com/openai/gpt-3/tree/master' target='_blank' class='url'>https://github.com/openai/gpt-3/tree/master</a></p><p><span>说明：</span><kbd style="background:yellow; color:red"><span>博文7</span></kbd><span> GPT-3没有开源，只能通过API调用。OpenAI官方没有明确说现在哪些API是GPT-3的，我猜测</span><a href='https://platform.openai.com/docs/models/gpt-base' target='_blank' class='url'>https://platform.openai.com/docs/models/gpt-base</a><span>这两个文本生成模型应该是GPT-3的，但是官方也不建议继续使用GPT-3的API了，建议大家用3.5和4。因此GPT-3的主要价值就是承前启后、了解GPT系列模型的发展史了。</span></p><p>&nbsp;</p><h3 id='背景'><span>背景</span></h3><p><span>OpenAI在18年、19年、20年接连发布了GPT三部曲，其模型分别被称为GPT-1、GPT-2和GPT-3。</span></p><blockquote><p><kbd style="background:yellow; color:red"><span>OpenAI</span></kbd><span> GPT-1, GPT-2, GPT-3</span></p><p><kbd><span style="font-weight:bold"><span style="color:#4285f4"><span>G</span></span><span style="color:#ea4335"><span>o</span></span><span style="color:#fbbc05"><span>o</span></span><span style="color:#4285f4"><span>g</span></span><span style="color:#34a853"><span>l</span></span><span style="color:#ea4335"><span>e</span></span></span></kbd><span> BERT</span></p></blockquote><ul><li><p><kbd style="background:yellow; color:red"><span>GPT-1</span></kbd><span> 其中GPT-1借鉴CV领域的预训练思路，基于Transformer模型的解码器，实现了利用无标签文本预训练再有监督微调以适应下游子任务的语言模型，并在9个子任务上取得最佳得分。</span></p></li><li><p><kbd><span style="font-weight:bold"><span style="color:#4285f4"><span>G</span></span><span style="color:#ea4335"><span>o</span></span><span style="color:#fbbc05"><span>o</span></span><span style="color:#4285f4"><span>g</span></span><span style="color:#34a853"><span>l</span></span><span style="color:#ea4335"><span>e</span></span></span><span> - </span><span style="color:blue; font-family:Comic Sans MS"><span>BERT</span></span></kbd><span> 也许是受其（GPT-1）启发，Google的团队随即发布了BERT与之针锋相对，BERT使用了Transformer的编码器，并增大了预训练数据集，效果也比GPT-1好。</span></p></li><li><p><kbd style="background:yellow; color:red"><span>GPT-2</span></kbd><span> OpenAI在次年继续改进，然而模型结构并无太大变化，且继续增大数据集并没有让精度起飞，效果并不显著。于是GPT-2的文章找了个偏僻的角度看问题，从多任务学习和零样本学习发力，这个方向的其它方案自然比不过砸海量预训练数据的GPT-2了。而从GPT-2开始不再进行有监督微调而强调零样本。</span></p></li><li><p><kbd style="background:yellow; color:red"><span>GPT-3</span></kbd><span> 而20年的GPT-3，也就是本篇论文，其模型方面与GPT-2一致，通篇都在讲结果、讨论，都是各种各样的分析，而其关键的训练部分比较模糊。</span></p></li><li><p><kbd style="background:yellow; color:red"><span>GPT-3</span></kbd><span> vs </span><kbd style="background:yellow; color:red"><span>GPT-2</span></kbd><span> </span></p><ol start='' ><li><p><span>GPT-3在效果上超出GPT-2非常多，能生成人类难以区分的新闻文章；</span></p></li><li><p><span>GPT-3主推few-shot，相比于GPT-2的zero-shot，具有很强的创新性；</span></p></li><li><p><span>GPT-3模型结构略微变化，采用sparse Attention模块；</span></p></li><li><p><span>GPT-3海量训练语料：45TB（清洗后570GB），相比于GPT-2的40GB；</span></p></li><li><p><span>GPT-3海量模型参数，最大模型为1750亿，GPT-2最大为15亿参数。</span></p></li></ol><blockquote><p><span>GPT-1, GPT-2, GPT-3模型参量对比：</span></p><ul><li><p><span>GPT-1 110M 2018年</span></p></li><li><p><span>GPT-2 1.5B 2019年</span></p></li></ul><ul><li><p><span>GPT-3 175B 2020年</span></p></li></ul></blockquote></li></ul><p><span>最近几年语言模型在NLP任务中应用广泛，通常需要在特定任务的数据集上进行微调，而参数巨大的模型在微调时存在较大代价。本文提出使用大模型预训练语言模型，在推理时进行少样本学习，以适应不同任务，减少对特定任务数据集的依赖。</span></p><p>&nbsp;</p><p><span style="border-radius: 10px; border-top: 1px solid red; border-bottom: 1px solid red; border-left: 1px solid red; border-right: 1px solid red; background: yellow"><span>Pre-training和fine-tuning架构存在的问题</span></span><span>：</span></p><ul><li><p><span>对于每个新的任务，都需要大量的标注数据；</span></p><p><kbd style="background:yellow; color:red"><span>博文2</span></kbd><span>对这个内容的进一步阐述：</span></p><blockquote><p><kbd style="border:1px solid #990000; font-size:20px; color: blue; font-family: comic sans ms, 微软雅黑; font-weight:bold"><span>提出问题</span></kbd></p><p><span>最近的许多研究都表明pre-train模型搭配下游任务fine-tune在许多情况下效果显著，</span><span style="color:red"><span>但是微调过程需要大量的样本</span></span><span>。这一框架不符合人类的习惯，</span><span style="border-bottom: 2px dotted FireBrick;"><span>人类只需要少量的示例或说明便能适应一个新的NLP下游任务</span></span><span>。</span></p><p><span>许多基于RNN或Transformer结构的语言模型通过“pre-train + fine-tune”过程在阅读理解、问答系统等任务中有不俗的性能。然而本文认为上述架构</span><span style="color:red"><span>最大的问题在于必须拥有大量的下游任务fine-tune样本</span></span><span>才能取得很好的性能。因此，</span><strong><span>本文基于下述原因认为移除fine-tune是必要的</span></strong><span>：</span></p><ul><li><p><span>每一个新的任务都需要大量的标记数据不利于语言模型的应用的；</span></p></li><li><p><span>提升模型表征能力的同时降低数据分布的复杂度是不合理的；</span></p><p><span>e.g., 大模型并不能在样本外推预测时具有好效果，这说明fine-tune导致模型的泛化性降低了。</span></p></li><li><p><span>人类在接触一个下游语言任务时不需要大量的样本，只需要一句对新任务的描述或者几个案例。</span><span style="color:blue"><span>人类这种无缝融合和切换多个任务的能力</span></span><span>是我们当前自然语言技术所欠缺的。</span></p></li></ul><p><kbd style="border:1px solid #990000; font-size:20px; color: blue; font-family: comic sans ms, 微软雅黑; font-weight:bold"><span>解决方案</span></kbd><span> </span></p><p><span>模型移除fine-tune有2个解决方案</span></p><ol start='' ><li><p><span>meta-learning</span></p><p><span>模型在训练阶段具备了一系列模式识别的能力和方法，并通过在预测过程中利用这些能力和方法以快速适应一个下游任务。最近的一些研究尝试通过称为</span><code>in-context learning</code><span>的方法来实现上述过程，然而效果距离期待的相差甚远。</span></p></li><li><p><span>Large scale Transformer</span></p><p><span>Transformer语言模型参数的每一次增大都会让文本理解能力和其他的NLP下游任务的性能得到提升。</span></p><p><span>此外，有研究指出描述许多下游任务性能的log损失能让模型的性能和参数之间服从一个平滑趋势。考虑到</span><code>in-context learning</code><span>会将学习到的知识和方法存在模型的参数中，</span><strong><span>本文假设</span></strong><span>：</span><span style="border-radius: 10px; border-top: 1px solid red; border-bottom: 1px solid red; border-left: 1px solid red; border-right: 1px solid red; background: yellow"><span>模型的情境学习能力也会随着参数规模的增大而增长。</span></span><span> </span></p></li></ol></blockquote></li><li><p><span>将表达能力更强的模型（</span><span style="color:red"><span>预训练阶段</span></span><span>要求用大模型）在比较窄的数据（</span><span style="color:red"><span>微调阶段</span></span><span>是在narrow数据分布上进行的）上训练是不合理的。</span></p><p><span>大模型的效果并不能泛化到OOD数据上。</span></p></li><li><p><span>人类在接触一个下游任务时不需要大量的训练样本，只需要对任务的描述或者几个例子就可以。</span></p><p><span>我们希望NLP模型也能有这种多任务之间无缝衔接的能力。</span></p></li></ul><p>&nbsp;</p><p>&nbsp;</p><h3 id='梗概'><span>梗概</span></h3><p><kbd style="background:yellow; color:red"><span>博文7</span></kbd><span> GPT-3的框架跟GPT-1、2的差不多，但是扩大了网络参数规模，使用了更多的高质量训练数据，就使得其模型效果实现了显著提升，可以不用微调，直接通过少样本学习/上下文学习的方式，在prompt中给出任务示例，就能在新的预测样例上得到想要的结果。有些少样本学习效果比微调的SOTA模型还好。</span></p><p><span>本文没有做GPT-3微调效果的实验。</span></p><p><span>————————————————</span></p><p>&nbsp;</p><p>&nbsp;</p><p><kbd style="background:yellow; color:red"><span>主要贡献</span></kbd><span> 本文证明了通过增大参数量就能让语言模型显著提高下游任务在Few-Shot（仅给定任务说明和少量示例）设置下的性能。</span></p><blockquote><p><em><kbd style="background:yellow; color:red"><span>博文2</span></kbd><span>作者：</span></em><span> 证明了大规模语言模型使用元学习策略的可能 &amp; fine-tune策略的非必要性。</span></p></blockquote><ul><li><p><span>具体贡献</span></p><ol start='' ><li><p><span>训练了包含175 billion参数（以往非稀疏语言模型的10倍大小）的</span><span style="color:blue; font-family:仿宋; font-weight:bold"><span>GPT-3自回归语言模型</span></span><span>，并在多个数据集上测试没有fine-tuning过程中的性能表现；</span></p><p><span>GPT-3也是一个自回归语言模型，但参数量更大，具有175B参数量，是GPT-2的117倍，大力出奇迹。</span></p></li><li><p><span>虽然GPT3在文本翻译、问答系统、完形填空、新词使用和代数运算等任务表现不错，但在阅读理解和推理任务数据集上的表现仍有待提高；</span></p></li><li><p><span>由于GPT3的训练依赖于大量的网页语料，所以模型在部分测试数据集上可能出现</span><span style="color:red"><span>方法论级别的data contamination问题</span></span><span>；</span></p></li><li><p><span>GPT3</span><span style="text-decoration: underline #990000; text-decoration-style: wavy;"><span>能够编写出人类难以区分的新闻文章</span></span><span>，本文讨论了该能力的社会影响力。</span></p></li></ol></li></ul><p>&nbsp;</p><p><span>作者在大量的NLP任务上进行实验，通过实验发现</span><span style="color:blue; font-family:仿宋; font-weight:bold"><span>预训练后没有微调的GPT-3</span></span><span>可以达到甚至超过</span><span style="color:blue; font-family:仿宋; font-weight:bold"><span>经过微调的BERT模型</span></span><span>的实验结果。</span></p><p>&nbsp;</p><p><span>论文训练了一个175B的模型GPT-3，在</span><span style="color:red"><span>3种设定</span></span><span>下测试GPT-3的性能：</span></p><ul><li><p><span>few-shot learning（in-context learning）：允许一些样例（一般10到100个）出现在模型输入中</span></p></li><li><p><span>one-shot learning：只允许一个样例</span></p></li><li><p><span>zero-shot learning：不允许提供样例，只提供一个自然语言形式的指令。</span></p></li></ul><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p><span>下图展示了在</span><code>移除单词中多余符号任务</code><span>上，模型的表现：</span></p><p><img src=".\pp008_files\image-20240902174739370.png" referrerpolicy="no-referrer" alt="image-20240902174739370"></p><p>&nbsp;</p><ul><li><p><span>GPT-3在zero-shot和one-shot设置下能取得不错的结果，在few-shot设定下有时能比得上甚至超过微调的SOTA模型</span></p></li><li><p><span>zero-shot和one-shot设置的GPT-3能在快速适应和即时推理任务（单词调整、代数运算和利用只出现一次的单词）中拥有卓越表现；</span></p></li><li><p><span>few-shot设定下，GPT-3能生成人类难以区分的新闻稿；</span></p></li><li><p><span>few-shot设定下，GPT-3在一些自然语言推理任务（ANLI dataset），阅读理解（RACE, QuAC）上的性能有待提高；</span></p></li><li><p><span>不同benchmark上的整体表现如下图所示：</span></p><p><img src=".\pp008_files\image-20240902175344032.png" referrerpolicy="no-referrer" alt="image-20240902175344032"></p></li><li><p><span>文章还训练一些小模型（从125 million 到 13 billion），用于和GPT-3对比。</span></p><ul><li><p><span>对于大多数任务，在3种设定下，模型性能随大小相对平滑地增加。</span></p></li><li><p><span>但是随着模型容量增大，few-shot相较于one，zero-shot的领先幅度变得更大，这说明</span><mark style="background:#f8e272;"><span>大模型可能更适合作为meta-learners（larger model are more proficient meta-learners）</span></mark><span>。</span></p></li></ul></li></ul><p>&nbsp;</p><h3 id='概念'><span>概念</span></h3><p><kbd style="border:1px dashed #990000; font-size:20px; color: #00b456; font-family: comic sans ms, 微软雅黑; font-weight:bold"><span>情境学习（in-context learning）</span></kbd><span> - 上下文学习</span></p><blockquote><p><span>优势：</span></p><ul><li><p><span>不用大规模微调数据集。</span></p></li><li><p><span>效果随模型尺寸增长而编号（但是不如微调）。</span></p></li></ul><ul><li><p><span>而且模型不会</span><span style="color:blue; font-family:仿宋; font-weight:bold"><span>产生微调导致的分布局限问题，在通用任务上表现能力不会下降</span></span><span>。</span></p></li></ul><p><span style="border-radius: 10px; border-top: 1px solid red; border-bottom: 1px solid red; border-left: 1px solid red; border-right: 1px solid red; background: yellow"><span>哦？微调会产生问题的吗？额外收获！</span></span></p></blockquote><p>&nbsp;</p><p><span>在被给定的几个任务示例或一个任务说明的情况下，模型应该能通过简单预测以补全任务中其他的实例。即，情境学习要求预训练模型要对任务本身进行理解。情境学习三种分类的定义和示例如下：</span></p><ul><li><p><span>few-shot learning</span></p><ul><li><p><span>定义：允许输入数条范例和一则任务说明</span></p></li><li><p><span>示例：向模型输入“这个任务要求将中文翻译为英文。你好-&gt;hello，再见-&gt;goodbye，购买-&gt;purchase，销售-&gt;”，然后要求模型预测下一个输出应该是什么，正确答案应为“sell”。</span></p></li></ul></li><li><p><span>one-shot learning</span></p><ul><li><p><span>定义：只允许输入一条范例和一则说明任务</span></p></li><li><p><span>示例：向模型输入“这个任务要求将中文翻译为英文。你好-&gt;hello，销售-&gt;”，然后要求模型预测下一个输出应该是什么，正确答案应为“sell”。</span></p></li></ul></li><li><p><span>zero-shot learning</span></p><ul><li><p><span>定义：不允许输入任何范例，只允许输入一则任务说明</span></p></li><li><p><span>示例：向模型输入“这个任务要求将中文翻译为英文。销售-&gt;”，然后要求模型预测下一个输出应该是什么，正确答案应为“sell”。</span></p></li></ul></li></ul><p><span style="border-radius: 10px; border-top: 1px solid red; border-bottom: 1px solid red; border-left: 1px solid red; border-right: 1px solid red;"><span>few-shot相比于zero-shot为什么更有效？</span></span></p><p><span>在few-shot给的几个样例在新任务时会作为条件输入，相当于模型拥有了该任务更多的先验知识。</span></p><p>&nbsp;</p><p><kbd style="border:1px dashed #990000; font-size:20px; color: #00b456; font-family: comic sans ms, 微软雅黑; font-weight:bold"><span>sparse attention</span></kbd></p><p><span>sparse attention 与传统 self-attention（称为 dense attention） 的区别在于：</span></p><blockquote><ul><li><p><span>dense attention：每个token之间两两计算attention，复杂度为 </span><mjx-container class="MathJax" jax="SVG" style="position: relative;"><svg xmlns="http://www.w3.org/2000/svg" width="5.832ex" height="2.452ex" role="img" focusable="false" viewBox="0 -833.9 2577.6 1083.9" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" style="vertical-align: -0.566ex;"><defs><path id="MJX-307-TEX-I-1D442" d="M740 435Q740 320 676 213T511 42T304 -22Q207 -22 138 35T51 201Q50 209 50 244Q50 346 98 438T227 601Q351 704 476 704Q514 704 524 703Q621 689 680 617T740 435ZM637 476Q637 565 591 615T476 665Q396 665 322 605Q242 542 200 428T157 216Q157 126 200 73T314 19Q404 19 485 98T608 313Q637 408 637 476Z"></path><path id="MJX-307-TEX-N-28" d="M94 250Q94 319 104 381T127 488T164 576T202 643T244 695T277 729T302 750H315H319Q333 750 333 741Q333 738 316 720T275 667T226 581T184 443T167 250T184 58T225 -81T274 -167T316 -220T333 -241Q333 -250 318 -250H315H302L274 -226Q180 -141 137 -14T94 250Z"></path><path id="MJX-307-TEX-I-1D45B" d="M21 287Q22 293 24 303T36 341T56 388T89 425T135 442Q171 442 195 424T225 390T231 369Q231 367 232 367L243 378Q304 442 382 442Q436 442 469 415T503 336T465 179T427 52Q427 26 444 26Q450 26 453 27Q482 32 505 65T540 145Q542 153 560 153Q580 153 580 145Q580 144 576 130Q568 101 554 73T508 17T439 -10Q392 -10 371 17T350 73Q350 92 386 193T423 345Q423 404 379 404H374Q288 404 229 303L222 291L189 157Q156 26 151 16Q138 -11 108 -11Q95 -11 87 -5T76 7T74 17Q74 30 112 180T152 343Q153 348 153 366Q153 405 129 405Q91 405 66 305Q60 285 60 284Q58 278 41 278H27Q21 284 21 287Z"></path><path id="MJX-307-TEX-N-32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"></path><path id="MJX-307-TEX-N-29" d="M60 749L64 750Q69 750 74 750H86L114 726Q208 641 251 514T294 250Q294 182 284 119T261 12T224 -76T186 -143T145 -194T113 -227T90 -246Q87 -249 86 -250H74Q66 -250 63 -250T58 -247T55 -238Q56 -237 66 -225Q221 -64 221 250T66 725Q56 737 55 738Q55 746 60 749Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><use data-c="1D442" xlink:href="#MJX-307-TEX-I-1D442"></use></g><g data-mml-node="mo" transform="translate(763,0)"><use data-c="28" xlink:href="#MJX-307-TEX-N-28"></use></g><g data-mml-node="msup" transform="translate(1152,0)"><g data-mml-node="mi"><use data-c="1D45B" xlink:href="#MJX-307-TEX-I-1D45B"></use></g><g data-mml-node="mn" transform="translate(633,363) scale(0.707)"><use data-c="32" xlink:href="#MJX-307-TEX-N-32"></use></g></g><g data-mml-node="mo" transform="translate(2188.6,0)"><use data-c="29" xlink:href="#MJX-307-TEX-N-29"></use></g></g></g></svg><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>O</mi><mo stretchy="false">(</mo><msup><mi>n</mi><mn>2</mn></msup><mo stretchy="false">)</mo></math></mjx-assistive-mml></mjx-container><script type="math/tex">O(n^2)</script><span>；</span></p></li><li><p><span>sparse attention：每个token只与其他token的一个子集计算attention，复杂度为 </span><mjx-container class="MathJax" jax="SVG" style="position: relative;"><svg xmlns="http://www.w3.org/2000/svg" width="11.607ex" height="2.262ex" role="img" focusable="false" viewBox="0 -750 5130.1 1000" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" style="vertical-align: -0.566ex;"><defs><path id="MJX-308-TEX-I-1D442" d="M740 435Q740 320 676 213T511 42T304 -22Q207 -22 138 35T51 201Q50 209 50 244Q50 346 98 438T227 601Q351 704 476 704Q514 704 524 703Q621 689 680 617T740 435ZM637 476Q637 565 591 615T476 665Q396 665 322 605Q242 542 200 428T157 216Q157 126 200 73T314 19Q404 19 485 98T608 313Q637 408 637 476Z"></path><path id="MJX-308-TEX-N-28" d="M94 250Q94 319 104 381T127 488T164 576T202 643T244 695T277 729T302 750H315H319Q333 750 333 741Q333 738 316 720T275 667T226 581T184 443T167 250T184 58T225 -81T274 -167T316 -220T333 -241Q333 -250 318 -250H315H302L274 -226Q180 -141 137 -14T94 250Z"></path><path id="MJX-308-TEX-I-1D45B" d="M21 287Q22 293 24 303T36 341T56 388T89 425T135 442Q171 442 195 424T225 390T231 369Q231 367 232 367L243 378Q304 442 382 442Q436 442 469 415T503 336T465 179T427 52Q427 26 444 26Q450 26 453 27Q482 32 505 65T540 145Q542 153 560 153Q580 153 580 145Q580 144 576 130Q568 101 554 73T508 17T439 -10Q392 -10 371 17T350 73Q350 92 386 193T423 345Q423 404 379 404H374Q288 404 229 303L222 291L189 157Q156 26 151 16Q138 -11 108 -11Q95 -11 87 -5T76 7T74 17Q74 30 112 180T152 343Q153 348 153 366Q153 405 129 405Q91 405 66 305Q60 285 60 284Q58 278 41 278H27Q21 284 21 287Z"></path><path id="MJX-308-TEX-N-2217" d="M229 286Q216 420 216 436Q216 454 240 464Q241 464 245 464T251 465Q263 464 273 456T283 436Q283 419 277 356T270 286L328 328Q384 369 389 372T399 375Q412 375 423 365T435 338Q435 325 425 315Q420 312 357 282T289 250L355 219L425 184Q434 175 434 161Q434 146 425 136T401 125Q393 125 383 131T328 171L270 213Q283 79 283 63Q283 53 276 44T250 35Q231 35 224 44T216 63Q216 80 222 143T229 213L171 171Q115 130 110 127Q106 124 100 124Q87 124 76 134T64 161Q64 166 64 169T67 175T72 181T81 188T94 195T113 204T138 215T170 230T210 250L74 315Q65 324 65 338Q65 353 74 363T98 374Q106 374 116 368T171 328L229 286Z"></path><path id="MJX-308-TEX-N-6C" d="M42 46H56Q95 46 103 60V68Q103 77 103 91T103 124T104 167T104 217T104 272T104 329Q104 366 104 407T104 482T104 542T103 586T103 603Q100 622 89 628T44 637H26V660Q26 683 28 683L38 684Q48 685 67 686T104 688Q121 689 141 690T171 693T182 694H185V379Q185 62 186 60Q190 52 198 49Q219 46 247 46H263V0H255L232 1Q209 2 183 2T145 3T107 3T57 1L34 0H26V46H42Z"></path><path id="MJX-308-TEX-N-6F" d="M28 214Q28 309 93 378T250 448Q340 448 405 380T471 215Q471 120 407 55T250 -10Q153 -10 91 57T28 214ZM250 30Q372 30 372 193V225V250Q372 272 371 288T364 326T348 362T317 390T268 410Q263 411 252 411Q222 411 195 399Q152 377 139 338T126 246V226Q126 130 145 91Q177 30 250 30Z"></path><path id="MJX-308-TEX-N-67" d="M329 409Q373 453 429 453Q459 453 472 434T485 396Q485 382 476 371T449 360Q416 360 412 390Q410 404 415 411Q415 412 416 414V415Q388 412 363 393Q355 388 355 386Q355 385 359 381T368 369T379 351T388 325T392 292Q392 230 343 187T222 143Q172 143 123 171Q112 153 112 133Q112 98 138 81Q147 75 155 75T227 73Q311 72 335 67Q396 58 431 26Q470 -13 470 -72Q470 -139 392 -175Q332 -206 250 -206Q167 -206 107 -175Q29 -140 29 -75Q29 -39 50 -15T92 18L103 24Q67 55 67 108Q67 155 96 193Q52 237 52 292Q52 355 102 398T223 442Q274 442 318 416L329 409ZM299 343Q294 371 273 387T221 404Q192 404 171 388T145 343Q142 326 142 292Q142 248 149 227T179 192Q196 182 222 182Q244 182 260 189T283 207T294 227T299 242Q302 258 302 292T299 343ZM403 -75Q403 -50 389 -34T348 -11T299 -2T245 0H218Q151 0 138 -6Q118 -15 107 -34T95 -74Q95 -84 101 -97T122 -127T170 -155T250 -167Q319 -167 361 -139T403 -75Z"></path><path id="MJX-308-TEX-N-2061" d=""></path><path id="MJX-308-TEX-N-29" d="M60 749L64 750Q69 750 74 750H86L114 726Q208 641 251 514T294 250Q294 182 284 119T261 12T224 -76T186 -143T145 -194T113 -227T90 -246Q87 -249 86 -250H74Q66 -250 63 -250T58 -247T55 -238Q56 -237 66 -225Q221 -64 221 250T66 725Q56 737 55 738Q55 746 60 749Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><use data-c="1D442" xlink:href="#MJX-308-TEX-I-1D442"></use></g><g data-mml-node="mo" transform="translate(763,0)"><use data-c="28" xlink:href="#MJX-308-TEX-N-28"></use></g><g data-mml-node="mi" transform="translate(1152,0)"><use data-c="1D45B" xlink:href="#MJX-308-TEX-I-1D45B"></use></g><g data-mml-node="mo" transform="translate(1974.2,0)"><use data-c="2217" xlink:href="#MJX-308-TEX-N-2217"></use></g><g data-mml-node="mi" transform="translate(2696.4,0)"><use data-c="6C" xlink:href="#MJX-308-TEX-N-6C"></use><use data-c="6F" xlink:href="#MJX-308-TEX-N-6F" transform="translate(278,0)"></use><use data-c="67" xlink:href="#MJX-308-TEX-N-67" transform="translate(778,0)"></use></g><g data-mml-node="mo" transform="translate(3974.4,0)"><use data-c="2061" xlink:href="#MJX-308-TEX-N-2061"></use></g><g data-mml-node="mi" transform="translate(4141.1,0)"><use data-c="1D45B" xlink:href="#MJX-308-TEX-I-1D45B"></use></g><g data-mml-node="mo" transform="translate(4741.1,0)"><use data-c="29" xlink:href="#MJX-308-TEX-N-29"></use></g></g></g></svg><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>O</mi><mo stretchy="false">(</mo><mi>n</mi><mo>∗</mo><mi>log</mi><mo data-mjx-texclass="NONE">⁡</mo><mi>n</mi><mo stretchy="false">)</mo></math></mjx-assistive-mml></mjx-container><script type="math/tex">O(n*\log n)</script></p></li></ul></blockquote><p><span>具体来说：</span></p><p><span>sparse attention除了相对距离不超过k以及相对距离为k, 2k, 3k, ... 的token，其他所有token的注意力都设为0，如下图所示：</span></p><p><img src=".\pp008_files\image-20240903111149400.png" referrerpolicy="no-referrer" alt="image-20240903111149400"></p><p><span>使用sparse attention的好处（主要有2点）：</span></p><p><kbd style="background:#f8e272"><span>1</span></kbd><span> 减少注意力层的计算复杂度，节约显存和耗时，从而能够处理更长的输入序列；</span></p><p><kbd style="background:#a8e195"><span>2</span></kbd><span> 具有“</span><strong style="color:red;"><span>局部紧密相关和远程稀疏相关</span></strong><span>”的特性：</span><span style="color:red"><span>对于距离较近的上下文关注更多，对于距离较远的上下文关注较少</span></span><span>；</span></p><p>&nbsp;</p><p>&nbsp;</p><h4 id='本文研究内容'><span>本文研究内容</span></h4><p><span>本文训练了一个拥有175 billion参数的自回归语言模型（GPT-3），并利用两组NLP数据集和一些全新的数据集评估了模型的情境学习能力和快速适应新任务能力。</span></p><p><span>对于每一个任务，作者都测试了模型“few-shot learning”, “one-shot learning” 和 “zero-shot learning”三种条件的性能。虽然GPT-3也支持fine-tune过程，但文本并未测试。</span></p><h5 id='关于gpt-3的研究结果'><span>关于GPT-3的研究结果</span></h5><ol start='' ><li><p><span>整体上，GPT-3在zero-shot或one-shot设置下能取得尚可的成绩，在few-shot设置下有可能超越基于fine-tune的SOTA模型。</span></p></li><li><p><span>zero-shot和one-shot设置的GPT-3能在快速适应和即时推理任务（单词整理、代数运算和利用只出现过一次的单词）中拥有卓越表现。</span></p></li><li><p><span>few-shot设置的GPT-3能够生成人类难以区分的新闻文章。</span></p></li><li><p><span>通常不同参数的模型在三种条件（zero-shot, one-shot, few-shot）下的性能差异变化较为平稳的，但是参数较多的模型在三种条件下的性能差异较为显著。</span><span style="color:red"><span>本文猜测：大模型更适合于使用“元学习”框架。</span></span><span> </span></p></li><li><p><span>本文发现few-shot设置的模型在自然语言推理任务（如ANLI数据集）上和机器阅读理解（如RACE或QuAC数据集）的性能有待提高。未来的研究可以聚焦于语言模型的few-shot learning部分，并关注哪些发展是最需要的。</span></p></li></ol><h5 id='关于data-contamination的研究结果'><span>关于data contamination的研究结果</span></h5><ol start='' ><li><p><span>问题定义：因为高性能模型的训练依赖于大量的网页语料如Common Crawl数据集，所以</span><span style="color:red"><span>测试集中的语料</span></span><span style="border-bottom: 2px dashed FireBrick;"><span>可能</span></span><span>由于已经在网页中出现过而在训练集中</span><span style="color:red"><span>被模型看到过</span></span><span>。</span></p></li><li><p><span>解决方案：</span><mark style="background:#f8e272;"><strong><span>本文提出了一个系统化的工具来衡量data contamination情况并量化它的影响</span></strong><span>。</span></mark></p></li></ol><p>&nbsp;</p><p><span>解决</span><span style="border-radius: 10px; border-top: 1px solid red; border-bottom: 1px solid red; border-left: 1px solid red; border-right: 1px solid red; background: yellow"><span>Pre-training和fine-tuning架构存在的问题</span></span><span>的可行的方案</span></p><ul><li><p><span>meta-learning</span></p><p><span>模型</span><span style="color:red"><span>在预训练阶段</span></span><span>就学到了一系列方法，具备一系列</span><span style="color:blue; font-family:仿宋; font-weight:bold"><span>能力</span></span><span>。</span></p><p><span style="color:red"><span>在预测阶段</span></span><span>，我们利用</span><span style="color:blue; font-family:仿宋; font-weight:bold"><span>这种能力</span></span><span>来快速适配到下游任务中。</span></p><ul><li><p><span>已经有人通过in-context learning这样做过了，但是效果不好。</span></p><blockquote><p><span>在GPT-3中使用了跟GPT-2一样的方式，这里称为</span><code>in-context learning</code><span>（也就是</span><code>Prompt</code><span>，通过加上了上下文信息来做任务的自动区分）；</span></p><p><span>模型在无监督学习下会有识别不同类型范式（pattern）的能力。类似下图中有三种不同类别的sequence范式，样本中识别完类别后相当于进行该范式的循环学习。</span></p></blockquote></li><li><p><span>在非监督预训练期间，语言模型积累了大量的模式识别能力，并将这些能力用在推理过程中，以求快速适应新的任务。我们用“in-context learning”来描述这个过程中的inner loop，这些inner loop发生在每个序列的正向传递中。</span></p><p><span>下图告诉我们许多时候单一的序列中重复包含多个子任务的嵌入。</span></p><p><img src=".\pp008_files\image-20240902173815099.png" referrerpolicy="no-referrer" alt="image-20240902173815099"></p><center><p>语言学习的meta-learning过程</p></center></li></ul></li><li><p><span>LLM</span></p><p><span>Transformer语言模型</span><span style="color:red"><span>参数的每一次增大</span></span><span>都会让</span><span style="color:blue"><span>文本理解能力和其他NLP下游任务的性能得到提升</span></span><span>，而且有证据显示：</span><span style="border-bottom: 2px dashed FireBrick;"><span>log损失函数，在模型规划增大后，保持平稳趋势</span></span><span>。</span></p><p><span>前人的工作已经证明了log loss随模型变大而下降，交叉熵损失下降也会带来在下游任务上效果的提升。</span></p><p><span>我们认为：in-context learning的能力也会随着模型参数的增大而增强。</span></p></li></ul><p>&nbsp;</p><p>&nbsp;</p><p><span>测试发现当模型越大对于测试的zero-shot/one-shot/few-shot相关的效果越好。</span></p><p><img src=".\pp008_files\image-20240902174739370.png" referrerpolicy="no-referrer" alt="image-20240902174739370"></p><center><p>更大的模型拥有更强的利用情境信息能力</p></center><p><span>我们定义了一个简单的任务，要求模型移除一个单词中的随机符号。</span></p><p><span>图1.2展示了模型在给定或未给定一段文本形式的任务描述下的情境学习性能。</span></p><p><span>那根</span><span style="border-bottom: 2px dashed blue;"><span>陡峭的蓝色线</span></span><span>告诉我们从环境信息中学习任务的能力。不仅在图1.2中明显可以看出</span><span style="color:blue; font-family:楷体; font-weight:bold;"><span>模型的性能随着增加文本形式的任务描述或者增加模型参数而增加</span></span><span>，</span><span style="border-bottom: 2px dashed FireBrick;"><span>模型性能和模型尺寸与情境样本数关系的趋势在许多其他的任务中都有体现</span></span><span>。作者特别强调这几根数据线与fine-tune无任何关系，仅仅将增加示例数量作为限制条件。</span></p><p>&nbsp;</p><p><img src=".\pp008_files\image-20240902175344032.png" referrerpolicy="no-referrer" alt="image-20240902175344032"></p><p><span>图1.3：聚合了模型在42个基准数据集上的性能</span></p><ul><li><p><span>因为zero-shot设置下的模型性能随着模型参数的增加稳定上升，few-shot设置下的模型性能随着模型参数的增加急剧下降，所以本文认为</span><mark style="background:#f8e272;"><span>大模型适合情境学习</span></mark><span>。</span></p></li></ul><p>&nbsp;</p><p>&nbsp;</p><h3 id='方法'><span>方法</span></h3><blockquote><p><kbd style="background:yellow; color:red"><span>博文4</span></kbd></p><ul><li><p><span>训练了8个不同大小的Transformer（解码器部分）语言模型，最大的包含1750亿参数(称为GPT-3)；</span></p></li><li><p><span>在无监督大规模文本数据集上进行预训练；</span></p></li><li><p><span>在推理时，使用0样本(只描述任务)、1样本或少量样本(10-100个)作为任务实例，进行零样本、一样本和少样本学习；</span></p></li><li><p><span>分布式训练、模型分割、数据分割；</span></p></li><li><p><span>训练数据集从各个数据集（含Reddit数据集）进行采样，对较为低质量的Common Crawl进行权重控制，并用LSH算法做文章去重；</span></p></li><li><p><span>GPT-3在应用到子任务时不做任何梯度更新或是微调，主打上下文学习能力。</span></p></li></ul></blockquote><p>&nbsp;</p><p><span>本文的预训练方式GPT-2类似，只不过用了更大的模型，数据量，多样性以及训练时长，in-context learning的方式也相似。</span></p><p><span>本文的实现与GPT-2的方法相似，预训练过程的不同只在于采用了参数更多的模型、更丰富的数据集和更长的训练的过程。</span><strong><span>本文聚焦于系统分析同一下游任务不同设置情况下，模型情境学习能力的差异</span></strong><span>。下游任务的设置有4类。</span></p><p><span>不过本文系统分析了不同设置对利用上下文学习的影响，这些设置可以看作对任务相关数据的依赖程度。</span></p><ol start='' ><li><p><span>Fine-tuning（FT）：本文并没有训练GPT-3的微调版本，因为主要关注的是task-agnostic性能；</span></p><p><span>FT利用成千上万的下游任务标注数据来更新预训练模型中的权重以获得强大的性能。</span><kbd style="background:yellow; color:red"><span>但是</span></kbd><span>，该方法</span><kbd style="background:#f8e272"><span>1</span></kbd><span> 不仅导致</span><span style="color:red"><span>每个新的下游任务都需要大量的标注语料</span></span><span>，</span><kbd style="background:#a8e195"><span>2</span></kbd><span> 还导致模型</span><span style="color:red"><span>在样本外预测的能力很弱</span></span><span>。虽然GPT-3从理论上支持FT，但本文没这么做。</span></p></li><li><p><span>Few-shot（FS）：在预测阶段提供一些样本，但并不进行参数更新。样本的数量是10到100（window size内可容纳的样本数目）</span></p><p><span>模型在推理阶段可以得到少量的下游任务示例作为限制条件，但是不允许更新预训练模型中的权重。</span></p><p><span>FS过程的示例可以看本笔记图2.1点整理的案例。</span></p><ul><li><p><span>FS的</span><mark style="background:#a8e195;"><span>主要优点</span></mark><span>是并不需要大量的下游任务数据，同时也防止了模型在fine-tune阶段的过拟合。</span></p></li><li><p><span>FS的</span><mark style="background:#ffaabf;"><span>主要缺点</span></mark><span>是不仅与fine-tune的SOTA模型性能差距较大且仍需要少量的下游任务数据。</span></p></li></ul></li><li><p><span>One-shot（1S）：仅提供一个样本；</span></p><ul><li><p><span>模型在推理阶段，仅得到1个下游任务示例。</span></p><p><span>把1S独立于few-shot和zero-shot讨论是因为这种方式与人类沟通的方式最相似。</span></p></li></ul></li><li><p><span>Zero-shot（0S）：不提供样本，只给一个用于描述任务的自然语言指令。</span></p><ul><li><p><span>模型在推理阶段仅得到一段以自然语言描述的下游任务说明。</span></p></li><li><p><span>0S的优点是提供了最大程度的方便性、尽可能大的鲁棒性并尽可能避免了伪相关性。</span></p></li><li><p><span>0S的方式是非常具有挑战的，即使是人类有时候也难以仅依赖任务描述而没有示例的情况下理解一个任务。</span></p><p><span>但毫无疑问，0S设置下的性能是最与人类的水平具有可比性的。</span></p></li></ul></li></ol><p><kbd style="border:1px dotted #990000; font-size:20px; color: red; font-family: comic sans ms, 微软雅黑; font-weight:bold"><span>GPT-3评测特点</span></kbd><span> GPT-3在评测过程中没有进行finetune，也就是没有相关的gradient梯度更新。只用到了zero-shot、one-shot、few-shot分别对应在推理时的上下文中增加的prompt样本个数。</span></p><p><span>下图是一个将英文翻译成法语任务的不同设定下的输入形式展示：</span></p><p><img src=".\pp008_files\image-20240902180258026.png" alt="image-20240902180258026" style="zoom: 50%;" /></p><center><p>图2.1 <span style="color:red">Zero-shot, One-shot, Few-shot和Fine-tuning之间的比较</span></p><span style="color:blue">图2.1以英文发育互译作为示例来显示了四种下游任务设置的区别</span></center><p><span>通常，预训练模型对于不同的任务会进行微调，微调过程如下（以机器翻译为例）：</span></p><p><img src=".\pp008_files\image-20240903103709687.png" alt="image-20240903103709687" style="zoom:67%;" /></p><p><span>而作者应用GPT-3模型并没有微调，而是尝试了三种任务：</span></p><p><kbd style="background:#f8e272"><span>1</span></kbd><span> zero-shot：输入问题描述，输出答案；</span></p><p><img src=".\pp008_files\image-20240902180355153.png" alt="image-20240902180355153" style="zoom: 67%;" /></p><center><p>图2.1（分离）</p></center><p><kbd style="background:#a8e195"><span>2</span></kbd><span> one-shot：输入一个问题和答案的例子，再输入一个问题，输出答案；</span></p><p><img src=".\pp008_files\image-20240902180410481.png" alt="image-20240902180410481" style="zoom:67%;" /></p><center><p>图2.1（分离）</p></center><p><kbd style="background:#a5c4ff"><span>3</span></kbd><span> few-shot：输入一些问题和答案的例子，再输入一个问题，输出答案；</span></p><p><img src=".\pp008_files\image-20240902180424163.png" alt="image-20240902180424163" style="zoom:67%;" /></p><center><p>图2.1（分离）</p></center><p><span>本文的不同设定并不是为了相互比较、相互替代。而是在特定基准上，提供</span><span style="border-bottom: 2px solid red; border-left: 2px solid red; border-right: 2px solid red;"><span>性能</span></span><span>与</span><span style="border-bottom: 2px solid red; border-left: 2px solid red; border-right: 2px solid red;"><span>采样效率</span></span><span>之间权衡的不同问题设定。</span></p><h4 id='模型和架构'><span>模型和架构</span></h4><p><span>整体结构和GPT-2一样，但不同的是采用了类似</span><code>Sparse Transformer</code><span>的</span><code>Sparse attention</code><span>，如原文表2.1，测试了不同超参的GPT-3模型。</span></p><p><span>模型结构，初始化方法，预归一化方法（预标准化方法），tokenize方法（分词方法）与GPT-2完全一致，但在Dense层和Locally Banded Sparse Attention层借鉴Sparse Transformer。</span></p><p><span>为了探究机器学习性能和模型参数的关系，我们分别训练了包含1.25亿至1750亿参数的8个模型，</span><span style="color:blue; font-family:Times New Roman, 仿宋; font-weight:bold; font-size:20px"><span>并把1750亿参数的模型命名为GPT-3</span></span><span>。</span></p><p><span>训练了8个不同大小的Transformer（解码器部分）语言模型，最大的包含1750亿参数（称为GPT-3）。</span></p><p><span>作者训练了一个非常大的预训练语言模型GPT-3。其最大参数量可达1750亿。模型继承了GPT-2的结构，使用了更深的层数和更多的自注意力头数。</span></p><p><span>不同模型参数设定如下表所示：</span></p><blockquote><p><span>每列含义</span></p><center>模型名称 | 参数数量 | 模型层数*维度  | 多头数量*维度 | 批样本数 | 学习率</center></blockquote><p><img src=".\pp008_files\image-20240902180915532.png" referrerpolicy="no-referrer" alt="image-20240902180915532"></p><p><span>所有模型的上下文窗口大小都是2048个tokens。</span></p><p>&nbsp;</p><h3 id='数据集'><span>数据集</span></h3><h4 id='训练数据'><span>训练数据</span></h4><p><strong style="color:red;"><span>训练数据</span></strong><span>使用由万亿单词组成的Common Crawl数据集，庞大的语料使得每一个句子只用使用一次。</span></p><p><mark style="background:#f8e272;"><span>原始Common Crawl的不足</span></mark><span>：</span></p><ul><li><p><span>非细致清洗的Common Crawl数据集质量逊于特别设计的数据集。</span></p></li></ul><p><mark style="background:#a8e195;"><span>原始Common Crawl的改进</span></mark><span>：</span></p><ul><li><p><span>根据与高质量引用语料的相似性来筛选Common Crawl的数据</span></p></li><li><p><span>对Common Crawl进行模糊去重处理，以防止验证集出现过拟合</span></p></li><li><p><span>额外加入高质量的语料（拓展版WebText，Books1，Books2和Wikipedia）以增强Common Crawl的丰富性</span></p></li></ul><p>&nbsp;</p><p><span>由于我们的训练集语料来源于网络数据，同时考虑到我们的模型具有很强的性能可能记录任何一条训练数据。所以，</span><strong style="color:red;"><span>为了防止在测试集中出现pre-train阶段的原始数据，我们尝试移除训练集和测试集重复的部分（详见第四章）</span></strong><span>。然而，较高的训练费用导致即使我们发现在数据筛选阶段有一个bug，我们也没有资金重新训练了。</span></p><p>&nbsp;</p><p><span>Common Crawl dataset包含近万亿单词，遍历一遍数据集就足够训练我们最大的模型。</span></p><ul><li><p><span>然而，不进行数据清洗的数据集质量不高，采用以下三步清洗数据（</span><span style="color:red"><span>采用了3步提升训练数据质量</span></span><span>）</span></p><ul><li><p><span>下载数据集的一个版本，根据与一系列高质量参考语料库的相似性过滤掉了部分语料；</span></p><p><kbd style="background:#f8e272"><span>1</span></kbd><span> </span><span style="color:red"><span>采集过滤过的Common Crawl数据</span></span><span>。</span></p></li><li><p><span>在文档级别、数据集内部和数据集之间执行了模糊重复数据消除，以防止冗余，并保持我们的作为过拟合的准确度量的验证集的完整性；</span></p><p><kbd style="background:#a8e195"><span>2</span></kbd><span> </span><span style="color:red"><span>在文档粒度进行了去重操作</span></span><span>。</span></p></li><li><p><span>将已知的高质量参考语料库添加到训练组合中，以增强Common Crawl并增加其多样性。</span></p><p><kbd style="background:#a5c4ff"><span>3</span></kbd><span> </span><span style="color:red"><span>增加了更多的高质量数据语料</span></span><span>。</span></p></li></ul></li></ul><p><span>使用的具体训练数据的比例如下表所示：</span></p><blockquote><p><span>表2.2 实验使用的数据集</span></p><center>数据集 | 单词数量 | 训练集占比</center></blockquote><p><img src=".\pp008_files\image-20240902181428993.png" referrerpolicy="no-referrer" alt="image-20240902181428993"></p><ul><li><p><span>训练时数据不是按比例采样的，高质量的数据集会被采样更多次；</span></p></li><li><p><span>CommonCrawl和Books2采样少于一次，其他数据集被采样2-3次。</span></p></li></ul><p>&nbsp;</p><h3 id='实验'><span>实验</span></h3><ul><li><p><span>在超过20个NLP数据集上测试GPT-3，包括问答、阅读理解、翻译等；</span></p></li><li><p><span>制定了测试GPT-3快速适应能力的新任务，如词汇重排、算术运算等；</span></p></li><li><p><span>测试了不同模型在零样本、一样本和少样本学习上的表现。</span></p></li></ul><p>&nbsp;</p><h4 id='训练过程'><span>训练过程</span></h4><p><span>批训练样本数：相关研究发现更大的模型能够使用更大的batch size。本文使用梯度噪音的大小来选择合适的batch size。</span></p><p><span style="color:red"><span>分布式训练</span></span><span>：本文利用模型在矩阵乘法中和不同隐含层间的并行性以防止训练大模型时用尽内存。</span></p><ul><li><p><span>有研究表明，更大的模型通常用更大的batch size，但是需要更小的学习率。</span></p><p><span>本文在训练中评估梯度噪音的大小来选择batch size。</span></p></li><li><p><span>利用矩阵乘法与网络不同层的并行性来进行</span><span style="color:red"><span>分布式训练</span></span><span>。</span></p></li><li><p><span>训练设备：使用微软提供的V100 GPU训练。</span></p></li></ul><p>&nbsp;</p><h3 id='评估'><span>评估</span></h3><ul><li><p><span>单向任务评估：给定</span><span style="color:red"><span>K个任务示例</span></span><span>和</span><span style="color:red"><span>待测样本的上下文信息</span></span><span>，计算分别选取每个候选词的整个补全样本（K个任务示例+待测样本上下文+待测样本候选词）的</span><strong style="color:red;"><span>似然</span></strong><span>，选择</span><strong style="color:#1E90FF"><span>能产生最大样本似然的候选词</span></strong><span>作为预测。</span></p></li><li><p><span>二分类任务：将候选词从0和1变为False和True等更具有语义性的文本，然后使用上述单项选择任务的方式计算不同候选项补全的样本似然。</span></p></li><li><p><span>无候选词任务：使用和GPT-2完全一样参数设置的beam search方式，选择F1相似度，BLEU和精确匹配等指标作为</span><span style="color:red"><span>评价标准</span></span><span>。</span></p></li></ul><p>&nbsp;</p><h3 id='结论'><span>结论</span></h3><p><span>在多个任务上都取得了SOTA，如下：</span></p><p><img src=".\pp008_files\image-20240903112734744.png" referrerpolicy="no-referrer" alt="image-20240903112734744"></p><p><img src=".\pp008_files\image-20240903112746176.png" referrerpolicy="no-referrer" alt="image-20240903112746176"></p><p>&nbsp;</p><ul><li><p><span>GPT-3在零样本和一样本设置下表现强劲，在少样本设置下的表现在某些任务上接近或超过微调SOTA。</span></p></li><li><p><span>模型规模越大，少样本学习的效果越好。</span></p></li><li><p><span>GPT-3展示出在推理时学习新任务的能力，但某些任务仍然表现欠佳。</span></p></li><li><p><span>这表明大规模预训练语言模型是发展通用语言系统的重要组成部分。</span></p></li></ul><p><span>局限性：</span></p><ul><li><p><span>长文本生成能力弱（比如写小说）</span></p></li><li><p><span>结构和算法上的局限性</span></p><ul><li><p><span>往前看不能反着看；</span></p></li><li><p><span>每次均匀的预测下一个词，没有重点；</span></p></li><li><p><span>只是文本，没有视频或是物理交互；</span></p></li></ul></li><li><p><span>样本有效性不够</span></p></li><li><p><span>是否从头开始学习了？</span></p><ul><li><p><span>是否真正具有泛化性，而非大力出奇迹纯拼训练数据量</span></p></li></ul></li><li><p><span>不可解释性</span></p></li></ul><p><span>影响：</span></p><ul><li><p><span>社会影响；</span></p></li><li><p><span>偏见；</span></p></li></ul><p>&nbsp;</p><p>&nbsp;</p><h3 id='思考'><span>思考</span></h3><blockquote><p><kbd style="background:yellow; color:red"><span>博文4</span></kbd></p><ul><li><p><span>从Transformer一直到GPT-3，模型的结构并不复杂，但其使用的训练数据量越来越大，特别是GPT大模型，词数在亿级，纯纯是力大砖飞。而且GPT-3使用了微软DGX-1集群进行训练，有知乎回答指出其使用费用在百万人民币以上，这并非普通人所能承受。</span></p><p><span style="color:red"><span>因此自己做预训练基本上不太可能了，可能需要转而考虑利用现成的体量较小的预训练模型进行微调</span></span><span>。</span></p></li><li><p><span>如果需要做微调，那么如何获取打了标签的网络设备配置文件。配置文件本身，由于配置文件备份或是版本管理软件，可以从ISP或是企业获取，但数据量可能不够用。对于打标签，这可能需要建立一套配置评估体系，实现对配置文件的自动评估，或是结合网络管理人员的领域知识进行评估。总之，这是一个要解决的问题。</span></p></li></ul><p><span>我的总结：</span></p><ul><li><p><span>训练数据一直在增大；</span></p><p><span>要能获取数据；</span></p></li><li><p><span>训练设备昂贵，个人使用可能还是要在体量小的模型上进行微调；</span></p><p><span>要学微调技术；</span></p><p><span>微调技术需要哪些要素？（see: pp012~pp020）</span></p></li></ul></blockquote><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><h3 id='参考博文'><span>参考博文</span></h3><ol start='' ><li><p><a href='https://blog.csdn.net/qq_52852138/article/details/131135947'><span>【论文阅读】Language Models are Few-Shot Learners(GPT-3)</span></a><span> </span></p><p><span style="color:red"><span>点评：★★★☆☆</span><br/><span>这篇博文主要是对原文的概念进行了解读，但是有点散。无符号序列用的很突兀，没有感觉到行文的逻辑感和层次感。同时给了我一些其他方面的思考：我在写的时候，不能这样记录。要更有层次感才能方便我自己二次观看、复习</span></span><span>。</span></p></li><li><p><a href='https://zhuanlan.zhihu.com/p/200978538'><span>GPT-3阅读笔记：Language Models are Few-Shot Learners</span></a><span> </span></p><p><span style="color:red"><span>点评：★★★★☆</span><br/><span>这篇文章主要对全文的信息有一个整体的梳理，语言通俗易懂，案例也比较好</span></span><span>。</span></p></li><li><p><a href='https://0809zheng.github.io/2020/07/13/gpt3.html'><span>Language Models are Few-Shot Learners</span></a><span> </span></p><p><span style="color:red"><span>点评：★★★☆☆</span><br/><span>这篇文章很短，对整个paper的核心进行了一点点的要点梳理。总的来说有助于理解文章，所以三颗星！</span></span></p></li><li><p><a href='https://ranlychan.top/archives/648.html'><span>阅读笔记｜Language Models are Few-Shot Learners</span></a><span> </span></p><p><span style="color:red"><span>点评：★★★☆☆</span><br/><span>这篇文章主要是对背景和整篇paper的主体进行了文字描述，辅助我理解了更多的背景知识，值得三颗星</span></span><span>。</span></p></li><li><p><a href='https://www.cnblogs.com/xumaomao/p/17928433.html'><span>GPT-3《Language Models are Few-Shot Learners》解读</span></a><span> </span></p><p><span style="color:red"><span>点评：★★★★☆</span><br/><span>虽然这篇文章很短，但是给出了非常干的干货，❶ 有对比描述；❷ 有新概念解释。我觉得很赞，给出四颗星</span></span><span>。</span></p></li><li><p><a href='https://mltalks.medium.com/gpt-3-language-models-are-few-shot-learners-%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB-b10011bdd4d7'><span>GPT-3(Language Models are Few-Shot Learners)论文阅读</span></a><span> </span></p><p><span style="color:red"><span>点评：★★★☆☆</span><br/><span>是对之前博文的一些重述，不过增加了一些新的补充，例如Prompt就是in-context learning，这是之前的几个博文没讲到的，果然，博文看多了是有帮助的</span></span><span>！</span></p></li><li><p><a href='https://blog.csdn.net/PolarisRisingWar/article/details/137507214'><span>Re65：读论文 GPT-3 Language Models are Few-Shot Learners</span></a><span> </span></p><p><span style="color:red"><span>点评：★★★☆☆</span><br/><span>提供了一些背景知识，重要的是有一个git项目的链接和说明，让后期的复现有了基本参考。总体来说，描述的没有太大的逻辑，排版也略差，但是，万千若水，一瓢解渴就好了</span></span><span>。</span></p></li></ol><p>&nbsp;</p><div class='md-toc' mdtype='toc'><p class="md-toc-content" role="list"><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n0"><a class="md-toc-inner" href="#gpt32020---论文精读学习笔记">GPT3 - 论文精读学习笔记</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n19"><a class="md-toc-inner" href="#背景">背景</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n93"><a class="md-toc-inner" href="#梗概">梗概</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n152"><a class="md-toc-inner" href="#概念">概念</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n208"><a class="md-toc-inner" href="#本文研究内容">本文研究内容</a></span><span role="listitem" class="md-toc-item md-toc-h5" data-ref="n211"><a class="md-toc-inner" href="#关于gpt-3的研究结果">关于GPT-3的研究结果</a></span><span role="listitem" class="md-toc-item md-toc-h5" data-ref="n223"><a class="md-toc-inner" href="#关于data-contamination的研究结果">关于data contamination的研究结果</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n268"><a class="md-toc-inner" href="#方法">方法</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n334"><a class="md-toc-inner" href="#模型和架构">模型和架构</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n347"><a class="md-toc-inner" href="#数据集">数据集</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n348"><a class="md-toc-inner" href="#训练数据">训练数据</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n390"><a class="md-toc-inner" href="#实验">实验</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n399"><a class="md-toc-inner" href="#训练过程">训练过程</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n411"><a class="md-toc-inner" href="#评估">评估</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n420"><a class="md-toc-inner" href="#结论">结论</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n464"><a class="md-toc-inner" href="#思考">思考</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n485"><a class="md-toc-inner" href="#参考博文">参考博文</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n510"><a class="md-toc-inner" href="#原文目录">原文目录</a></span></p></div><h4 id='原文目录'><span>原文目录</span></h4><p><span>1 Introduction</span><span>	</span><span>3</span>
+<span>2 Approach</span><span>	</span><span>6</span>
+<span>	</span><span>2.1 Model and Architectures</span><span>	</span><span>8</span>
+<span>	</span><span>2.2 Training Dataset</span><span>	</span><span>8</span>
+<span>	</span><span>2.3 Training Process</span><span>	</span><span>9</span>
+<span>	</span><span>2.4 Evaluation</span><span>	</span><span>10</span>
+<span>3 Results</span><span>	</span><span>10</span>
+<span>	</span><span>3.1 Language Modeling, Cloze, and Completion Tasks</span><span>	</span><span>11</span>
+<span>	</span><span>3.2 Closed Book Question Answering</span><span>	</span><span>13</span>
+<span>	</span><span>3.3 Translation</span><span>	</span><span>14</span>
+<span>	</span><span>3.4 Winograd-Style Tasks</span><span>	</span><span>16</span>
+<span>	</span><span>3.5 Common Sense Reasoning</span><span>	</span><span>17</span>
+<span>	</span><span>3.6 Reading Comprehension</span><span>	</span><span>18</span>
+<span>	</span><span>3.7 SuperGLUE</span><span>	</span><span>18</span>
+<span>	</span><span>3.8 NLI</span><span>	</span><span>20</span>
+<span>	</span><span>3.9 Synthetic and Qualitative Tasks</span><span>	</span><span>21</span>
+<span>4 Measuring and Preventing Memorization Of Benchmarks</span><span>	</span><span>29</span>
+<span>5 Limitations</span><span>	</span><span>33</span>
+<span>6 Broader Impacts</span><span>	</span><span>34</span>
+<span>	</span><span>6.1 Misuse of Language Models</span><span>	</span><span>35</span>
+<span>	</span><span>6.2 Fairness, Bias, and Representation</span><span>	</span><span>36</span>
+<span>	</span><span>6.3 Energy Usage</span><span>	</span><span>39</span>
+<span>7 Related Work</span><span>	</span><span>39</span>
+<span>8 Conclusion</span><span>	</span><span>40</span>
+<span>A Details of Common Crawl Filtering</span><span>	</span><span>43</span>
+<span>B Details of Model Training</span><span>	</span><span>43</span>
+<span>C Details of Test Set Contamination Studies</span><span>	</span><span>43</span>
+<span>D Total Compute Used to Train Language Models</span><span>	</span><span>46</span>
+<span>E Human Quality Assessment of Synthetic News Articles</span><span>	</span><span>46</span>
+<span>F Additional Samples from GPT-3</span><span>	</span><span>48</span>
+<span>G Details of Task Phrasing and Specifications</span><span>	</span><span>50</span>
+<span>H Results on All Tasks for All Model Sizes</span><span>	</span><span>63</span></p><p>&nbsp;</p><p><kbd style="border:1px double black; font-size:20px; color: #990000; font-family: comic sans ms, 微软雅黑; font-weight:bold; border-bottom: 2px solid black; border-top: 2px solid black;"><span>博文免责声明</span></kbd><span> </span></p><ol start='' ><li><p><span>本条博文信息主要整合自网络，部分内容为自己的理解写出来的，如有断章截句导致不正确或因个人水平有限未能详尽正确描述的地方，敬请各位读者指正；</span></p></li><li><p><span>引用出处可能没有完全追溯到原始来源，如因此冒犯到原创作者，请</span><a href='https://mustbook.github.io/'><span>联系本人</span></a><span>更正/删除；</span></p></li><li><p><span>博文的发布主要用于自我学习，其次希望帮助到有共同疑惑的朋友。</span></p></li></ol><div style="
+    border-radius: 25px; 
+    border: 2px solid #990000;
+    background: #990000;
+    padding: 20px;
+"><center><span style="color:white">欢迎随时联系讨论，一起成长进步。</span></center></div><p>&nbsp;</p><div class='footnotes-area'  ><hr/>
+<div class='footnote-line'><span class='md-fn-count'>1</span> <span>Brown T B. Language models are few-shot learners[J]. arXiv preprint arXiv:2005.14165, 2020.</span> <a name='dfref-footnote-1' href='#ref-footnote-1' title='back to document' class='reversefootnote' >↩</a></div></div></div></div>
+<a href=".typora-export-content" id="scroll-up" style="display: block;">
+		<i class="material-icons md-20 md-middle"></i>
+	</a></body>
+</html>

@@ -1,0 +1,643 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<link rel="stylesheet" type="text/css" href="../../assets/markdownStyle/iconSetup.css">
+	
+	<!--右边底部的向上箭头，能够返回到文章最开始的地方2/2 动态效果-->
+	<script type="text/javascript" src="../../assets/blogJS/wp-includes.js.jquery.jquery.js"></script>
+	<script type="text/javascript" src="../../assets/blogJS/wp-content.themes.type-plus.js.main.js"></script>
+	
+	
+	<!--https://www.dofactory.com/html/rel/icon-->
+	<link rel="icon" href="../../images/ico/signature.png" sizes="32x32">
+	<link rel="icon" href="../../images/ico/signature.png" sizes="192x192">
+	<link rel="apple-touch-icon" href="../../images/ico/signature.png">
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; --title-bar-height:20px; }
+.mac-os-11 { --title-bar-height:28px; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+h1, h2, h3, h4, h5 { white-space: pre-wrap; }
+body { margin: 0px; padding: 0px; height: auto; inset: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+.typora-export .task-list-item input { pointer-events: none; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+thead, tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror-linenumber { user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-fences-adv-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+svg { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li blockquote { margin: 1rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; border-color: transparent !important; padding-top: 0px !important; padding-bottom: 0px !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  .typora-export #write { break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+  #write > p:nth-child(1) { margin-top: 0px; }
+  .typora-export-show-outline .typora-export-sidebar { display: none; }
+  figure { overflow-x: visible; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+.MathJax_ref { fill: currentcolor; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.reversefootnote { font-family: ui-monospace, sans-serif; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.6; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+.md-expand mark .md-meta { opacity: 0.3 !important; }
+mark .md-meta { color: rgb(0, 0, 0); }
+@media print {
+  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+}
+.md-diagram-panel .messageText { stroke: none !important; }
+.md-diagram-panel .start-state { fill: var(--node-fill); }
+.md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
+.md-fences.md-fences-math { font-size: 1em; }
+.md-fences-advanced:not(.md-focus) { padding: 0px; white-space: nowrap; border: 0px; }
+.md-fences-advanced:not(.md-focus) { background: inherit; }
+.typora-export-show-outline .typora-export-content { max-width: 1440px; margin: auto; display: flex; flex-direction: row; }
+.typora-export-sidebar { width: 300px; font-size: 0.8rem; margin-top: 80px; margin-right: 18px; }
+.typora-export-show-outline #write { --webkit-flex:2; flex: 2 1 0%; }
+.typora-export-sidebar .outline-content { position: fixed; top: 0px; max-height: 100%; overflow: hidden auto; padding-bottom: 30px; padding-top: 60px; width: 300px; }
+@media screen and (max-width: 1024px) {
+  .typora-export-sidebar, .typora-export-sidebar .outline-content { width: 240px; }
+}
+@media screen and (max-width: 800px) {
+  .typora-export-sidebar { display: none; }
+}
+.outline-content li, .outline-content ul { margin-left: 0px; margin-right: 0px; padding-left: 0px; padding-right: 0px; list-style: none; overflow-wrap: anywhere; }
+.outline-content ul { margin-top: 0px; margin-bottom: 0px; }
+.outline-content strong { font-weight: 400; }
+.outline-expander { width: 1rem; height: 1.42857rem; position: relative; display: table-cell; vertical-align: middle; cursor: pointer; padding-left: 4px; }
+.outline-expander::before { content: ""; position: relative; font-family: Ionicons; display: inline-block; font-size: 8px; vertical-align: middle; }
+.outline-item { padding-top: 3px; padding-bottom: 3px; cursor: pointer; }
+.outline-expander:hover::before { content: ""; }
+.outline-h1 > .outline-item { padding-left: 0px; }
+.outline-h2 > .outline-item { padding-left: 1em; }
+.outline-h3 > .outline-item { padding-left: 2em; }
+.outline-h4 > .outline-item { padding-left: 3em; }
+.outline-h5 > .outline-item { padding-left: 4em; }
+.outline-h6 > .outline-item { padding-left: 5em; }
+.outline-label { cursor: pointer; display: table-cell; vertical-align: middle; text-decoration: none; color: inherit; }
+.outline-label:hover { text-decoration: underline; }
+.outline-item:hover { border-color: rgb(245, 245, 245); background-color: var(--item-hover-bg-color); }
+.outline-item:hover { margin-left: -28px; margin-right: -28px; border-left: 28px solid transparent; border-right: 28px solid transparent; }
+.outline-item-single .outline-expander::before, .outline-item-single .outline-expander:hover::before { display: none; }
+.outline-item-open > .outline-item > .outline-expander::before { content: ""; }
+.outline-children { display: none; }
+.info-panel-tab-wrapper { display: none; }
+.outline-item-open > .outline-children { display: block; }
+.typora-export .outline-item { padding-top: 1px; padding-bottom: 1px; }
+.typora-export .outline-item:hover { margin-right: -8px; border-right: 8px solid transparent; }
+.typora-export .outline-expander::before { content: "+"; font-family: inherit; top: -1px; }
+.typora-export .outline-expander:hover::before, .typora-export .outline-item-open > .outline-item > .outline-expander::before { content: "−"; }
+.typora-export-collapse-outline .outline-children { display: none; }
+.typora-export-collapse-outline .outline-item-open > .outline-children, .typora-export-no-collapse-outline .outline-children { display: block; }
+.typora-export-no-collapse-outline .outline-expander::before { content: "" !important; }
+.typora-export-show-outline .outline-item-active > .outline-item .outline-label { font-weight: 700; }
+.md-inline-math-container mjx-container { zoom: 0.95; }
+mjx-container { break-inside: avoid; }
+
+
+:root {
+    --side-bar-bg-color: #fafafa;
+    --control-text-color: #777;
+}
+
+@include-when-export url(https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext);
+
+/* open-sans-regular - latin-ext_latin */
+  /* open-sans-italic - latin-ext_latin */
+    /* open-sans-700 - latin-ext_latin */
+    /* open-sans-700italic - latin-ext_latin */
+  html {
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    font-family: "Open Sans","Clear Sans", "Helvetica Neue", Helvetica, Arial, 'Segoe UI Emoji', sans-serif;
+    color: rgb(51, 51, 51);
+    line-height: 1.6;
+}
+
+#write {
+    max-width: 860px;
+  	margin: 0 auto;
+  	padding: 30px;
+    padding-bottom: 100px;
+}
+
+@media only screen and (min-width: 1400px) {
+	#write {
+		max-width: 1024px;
+	}
+}
+
+@media only screen and (min-width: 1800px) {
+	#write {
+		max-width: 1200px;
+	}
+}
+
+#write > ul:first-child,
+#write > ol:first-child{
+    margin-top: 30px;
+}
+
+a {
+    color: #4183C4;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    line-height: 1.4;
+    cursor: text;
+}
+h1:hover a.anchor,
+h2:hover a.anchor,
+h3:hover a.anchor,
+h4:hover a.anchor,
+h5:hover a.anchor,
+h6:hover a.anchor {
+    text-decoration: none;
+}
+h1 tt,
+h1 code {
+    font-size: inherit;
+}
+h2 tt,
+h2 code {
+    font-size: inherit;
+}
+h3 tt,
+h3 code {
+    font-size: inherit;
+}
+h4 tt,
+h4 code {
+    font-size: inherit;
+}
+h5 tt,
+h5 code {
+    font-size: inherit;
+}
+h6 tt,
+h6 code {
+    font-size: inherit;
+}
+h1 {
+    font-size: 2.25em;
+    line-height: 1.2;
+    border-bottom: 1px solid #eee;
+}
+h2 {
+    font-size: 1.75em;
+    line-height: 1.225;
+    border-bottom: 1px solid #eee;
+}
+
+/*@media print {
+    .typora-export h1,
+    .typora-export h2 {
+        border-bottom: none;
+        padding-bottom: initial;
+    }
+
+    .typora-export h1::after,
+    .typora-export h2::after {
+        content: "";
+        display: block;
+        height: 100px;
+        margin-top: -96px;
+        border-top: 1px solid #eee;
+    }
+}*/
+
+h3 {
+    font-size: 1.5em;
+    line-height: 1.43;
+}
+h4 {
+    font-size: 1.25em;
+}
+h5 {
+    font-size: 1em;
+}
+h6 {
+   font-size: 1em;
+    color: #777;
+}
+p,
+blockquote,
+ul,
+ol,
+dl,
+table{
+    margin: 0.8em 0;
+}
+li>ol,
+li>ul {
+    margin: 0 0;
+}
+hr {
+    height: 2px;
+    padding: 0;
+    margin: 16px 0;
+    background-color: #e7e7e7;
+    border: 0 none;
+    overflow: hidden;
+    box-sizing: content-box;
+}
+
+li p.first {
+    display: inline-block;
+}
+ul,
+ol {
+    padding-left: 30px;
+}
+ul:first-child,
+ol:first-child {
+    margin-top: 0;
+}
+ul:last-child,
+ol:last-child {
+    margin-bottom: 0;
+}
+blockquote {
+    border-left: 4px solid #ec962a;
+    padding: 0 15px;
+    color: #777777;
+}
+blockquote blockquote {
+    padding-right: 0;
+}
+table {
+    padding: 0;
+    word-break: initial;
+}
+table tr {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 0;
+}
+table tr:nth-child(2n),
+thead {
+    background-color: #f8f8f8;
+}
+table th {
+    font-weight: bold;
+    border: 1px solid #dfe2e5;
+    border-bottom: 0;
+    margin: 0;
+    padding: 6px 13px;
+}
+table td {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 6px 13px;
+}
+table th:first-child,
+table td:first-child {
+    margin-top: 0;
+}
+table th:last-child,
+table td:last-child {
+    margin-bottom: 0;
+}
+
+.CodeMirror-lines {
+    padding-left: 4px;
+}
+
+.code-tooltip {
+    box-shadow: 0 1px 1px 0 rgba(0,28,36,.3);
+    border-top: 1px solid #eef2f2;
+}
+
+.md-fences,
+code,
+tt {
+    border: 1px solid #e7eaed;
+    background-color: #f8f8f8;
+    border-radius: 3px;
+    padding: 0;
+    padding: 2px 4px 0px 4px;
+    font-size: 0.9em;
+}
+
+code {
+	color: red;
+    background-color: rgb(255, 255, 0)
+    padding: 0 2px 0 2px;
+}
+
+.md-fences {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding-top: 8px;
+    padding-bottom: 6px;
+}
+
+
+.md-task-list-item > input {
+  margin-left: -1.3em;
+}
+
+@media print {
+    html {
+        font-size: 13px;
+    }
+    pre {
+        page-break-inside: avoid;
+        word-wrap: break-word;
+    }
+}
+
+.md-fences {
+	background-color: #f8f8f8;
+}
+#write pre.md-meta-block {
+	padding: 1rem;
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: #f7f7f7;
+    border: 0;
+    border-radius: 3px;
+    color: #777777;
+    margin-top: 0 !important;
+}
+
+.mathjax-block>.code-tooltip {
+	bottom: .375rem;
+}
+
+.md-mathjax-midline {
+    background: #fafafa;
+}
+
+#write>h3.md-focus:before{
+	left: -1.5625rem;
+	top: .375rem;
+}
+#write>h4.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h5.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h6.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+.md-image>.md-meta {
+    /*border: 1px solid #ddd;*/
+    border-radius: 3px;
+    padding: 2px 0px 0px 4px;
+    font-size: 0.9em;
+    color: inherit;
+}
+
+.md-tag {
+    color: #a7a7a7;
+    opacity: 1;
+}
+
+.md-toc { 
+    margin-top:20px;
+    padding-bottom:20px;
+}
+
+.sidebar-tabs {
+    border-bottom: none;
+}
+
+#typora-quick-open {
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+}
+
+#typora-quick-open-item {
+    background-color: #FAFAFA;
+    border-color: #FEFEFE #e5e5e5 #e5e5e5 #eee;
+    border-style: solid;
+    border-width: 1px;
+}
+
+/** focus mode */
+.on-focus-mode blockquote {
+    border-left-color: rgba(85, 85, 85, 0.12);
+}
+
+header, .context-menu, .megamenu-content, footer{
+    font-family: "Segoe UI", "Arial", sans-serif;
+}
+
+.file-node-content:hover .file-node-icon,
+.file-node-content:hover .file-node-open-state{
+    visibility: visible;
+}
+
+.mac-seamless-mode #typora-sidebar {
+    background-color: #fafafa;
+    background-color: var(--side-bar-bg-color);
+}
+
+.md-lang {
+    color: #b4654d;
+}
+
+/*.html-for-mac {
+    --item-hover-bg-color: #E6F0FE;
+}*/
+
+#md-notification .btn {
+    border: 0;
+}
+
+.dropdown-menu .divider {
+    border-color: #e5e5e5;
+    opacity: 0.4;
+}
+
+.ty-preferences .window-content {
+    background-color: #fafafa;
+}
+
+.ty-preferences .nav-group-item.active {
+    color: white;
+    background: #999;
+}
+
+.menu-item-container a.menu-style-btn {
+    background-color: #f5f8fa;
+    background-image: linear-gradient( 180deg , hsla(0, 0%, 100%, 0.8), hsla(0, 0%, 100%, 0)); 
+}
+
+u {
+    text-decoration: red underline; 
+	text-decoration-thickness: 15%;
+  }
+  
+em {
+	font-weight: bold;
+    font-style: italic;
+}
+  
+
+
+</style><title>pp019 MLLM Survey - 论文精读学习笔记</title>
+</head>
+<body class='typora-export os-windows'><div class='typora-export-content'>
+<div id='write'  class=''><h1 id='mllm-survey2024---论文精读学习笔记'><span>MLLM Survey</span><sup class='md-footnote'><a href='#dfref-footnote-1' name='ref-footnote-1'>1</a></sup><span> - 论文精读学习笔记</span></h1><details style="background: none; padding: 20px; border: 2px solid #990000;border-radius: 25px; line-height:150%;"> <summary>Efficient Multimodal Large Language Models: A Survey
+</summary>标签：<kbd style="background:yellow; color:#990000">Multimodal Large Language Models</kbd><br/>论文链接：<a href="https://arxiv.org/abs/2405.10739">Efficient Multimodal Large Language Models: A Survey
+</a><br/><span style="color:red">发表时间：</span><span style="color:blue; font-family:Comic Sans MS">2024</span></details><div style="text-align:center; font-size:1em" >
+    <a href="https://mustbook.github.io/" style="color:#990000; font-weight:bold" >Cook</a><br/>
+    <span style="color:#990000; font-family:Comic Sans MS; font-size:13px">Published: 2024.09.10</span><span style="color:blue"> | </span><span style="color:#990000; font-family:Comic Sans MS; font-size:13px">Last Updated: 2024.09.12</span>
+</div><blockquote><p><i style="color:#990000; font-family:"><span>You are what you eat.</span><br/><span> And I&#39;m cooking what I eat!  </span></i><span> </span><strong><span>:)</span></strong><span> </span></p><p><span style="color:blue; font-family:Comic Sans MS"><a href='https://mustbook.github.io/p2/2nd_paper.html'><span>More food...</span></a></span>🍜<span> </span></p></blockquote><p style="text-align:center; font-size:20px; font-weight:bold;"> 目录 </p> <div class='md-toc' mdtype='toc'><p class="md-toc-content" role="list"><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n0"><a class="md-toc-inner" href="#mllm-survey2024---论文精读学习笔记">MLLM Survey - 论文精读学习笔记</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n171"><a class="md-toc-inner" href="#背景">背景</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n175"><a class="md-toc-inner" href="#全文概述">全文概述</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n189"><a class="md-toc-inner" href="#参考博文">参考博文</a></span></p></div><p><span style="color:blue; font-family:仿宋; font-weight:bold"><span>提前说明</span></span><span>：本系列博文主要是对</span><a href='#参考博文'><span>参考博文</span></a><span>的解读与重述（</span><em><span>对重点信息进行标记、或者整段摘录加深自己的记忆和理解、融合多个博文的精髓、统合不同的代表性的案例</span></em><span>），仅做学习记录笔记使用。与君共享，希望一同进步。</span></p><p>&nbsp;</p><p><kbd style="border:1px dotted #990000; font-size:20px; color: red; font-family: comic sans ms, 微软雅黑; font-weight:bold"><span>预备知识</span></kbd><span> </span></p><blockquote><p><span>[1] Baltrušaitis T, Ahuja C, Morency L-P. Multimodal machine learning: A survey and taxonomy[J]. IEEE transactions on pattern analysis and machine intelligence, 2018, 41(2): 423-443.</span></p></blockquote><ul><li><p><span>Modality：模态，某事发生或经历的方式；</span></p></li><li><p><span>Multimodal：多模态</span></p><ul><li><p><span>natural language ：which can be both written or spoken </span><span style="color:red"><span>自然语言</span></span></p></li></ul></li></ul><ul><li><p><span>visual signals： which are often represented with images or videos </span><span style="color:red"><span>视觉图片以及视频</span></span></p></li></ul><ul><li><p><span>vocal signals： which encode sounds and para-verbal information such as prosody and vocal expressions </span><span style="color:red"><span>声音</span></span><span> </span></p></li></ul><p><strong style="color:#6f0670; font-size:18px"><span>多模态面临的挑战</span></strong><span> </span></p><p><kbd style="background:#f8e272"><span>1</span></kbd><span> 表征（Representation）：如何以利用多种模态的互补性和冗余性的方式表示和总结多模态数据；</span></p><p>&nbsp;<span> </span>&nbsp;<span> </span>&nbsp;<span> </span>&nbsp;<span> </span><strong style="color:red"><span>●</span></strong><span> 多模态数据的异质性：语言通常是象征性的，而音频和视觉形式将被表示为信号</span></p><p><kbd style="background:#a8e195"><span>2</span></kbd><span> 翻译（Translation）：如何将数据从一种模态转换（映射）到另一种模态</span></p><p>&nbsp;<span> </span>&nbsp;<span> </span>&nbsp;<span> </span>&nbsp;<span> </span><strong style="color:red"><span>●</span></strong><span> 模态之间的关系通常是开放式的或主观的：存在多种描述图像的正确方法，并且可能不存在一种完美的翻译</span></p><p><kbd style="background:#a5c4ff"><span>3</span></kbd><span> 对齐（Alignment）：从两个或多个不同的模态中识别（子）元素之间的直接关系</span></p><p><kbd style="background:#ffaabf"><span>4</span></kbd><span> 融合（Fusion）：结合来自两种或多种模态的信息来执行预测</span></p><p><kbd style="background:#cebbfc"><span>5</span></kbd><span> 联合学习（Co-learning）：在模态、它们的表示和它们的预测模型之间转移知识</span></p><blockquote><p><span>协同训练co-training     零样本学习zero shot learning</span></p></blockquote><p><strong style="color:#6f0670; font-size:18px"><span>任务</span></strong><span> </span></p><p><img src=".\pp019_files\image-20240913170628305.png" referrerpolicy="no-referrer" alt="image-20240913170628305"></p><p><strong style="color:#6f0670; font-size:18px"><span>表征</span></strong><span> Representation</span></p><p><span>解释：试图通过各模态的信息找到某种对多模态信息的统一表示</span></p><p><kbd style="background:yellow; color:red"><span>难题</span></kbd><span>：如何组合来自异构来源的数据；如何处理不同级别的噪音；以及如何处理丢失的数据。</span></p><p><span style="color:blue; font-family:仿宋; font-weight:bold"><span>好的表征的特点</span></span><span>：</span></p><ul><li><p><span>平滑度 smoothness</span></p></li><li><p><span>时间和空间连贯性 temporal and spatial coherence</span></p></li><li><p><span>稀疏性 sparsity</span></p></li><li><p><span>自然聚类 natural clustering</span></p></li></ul><p><span>两种表征思路：</span></p><ol start='' ><li><p><span>联合 joint</span></p><p><span>单模态的表示联合投影到多模态的联合表示；</span></p><p><span>神经网络模型：通常使用最后或倒数第二个神经层作为单模态数据表示的一种形式，</span><strong style="color:red;"><span>为了使用神经网络构建多模态表示，每个模态都从几个单独的神经层开始，然后是一个隐藏层，将模态投影到联合空间，然后联合多模态表示本身通过多个隐藏层或直接用于预测</span></strong><span>。</span></p><blockquote><p><span>概率图模型 Probabilistic graphical</span></p><p><span>RNN序列模型</span></p><p><span>tips：autoencoder models 自动编码器</span></p></blockquote></li><li><p><span>协调 coordinated</span></p><p><span>每个模态学习单独的表示，并通过约束进行协调；</span></p><ul><li><p><span>基于相似度的模型：最小化协调空间中模态之间的距离。</span></p></li><li><p><span>结构化协调模型：用于跨模态散列——将高维数据压缩成具有相似对象的相似二进制代码的紧凑二进制代码。</span></p></li></ul><p><span>代表：</span></p><p><img src=".\pp019_files\image-20240913171606973.png" referrerpolicy="no-referrer" alt="image-20240913171606973"></p><p><img src=".\pp019_files\image-20240913171633664.png" referrerpolicy="no-referrer" alt="image-20240913171633664"></p></li></ol><p><strong style="color:#6f0670; font-size:18px"><span>翻译 Translation</span></strong></p><blockquote><p><span>解释：将一种模态数据映射为另一种模态数据</span></p></blockquote><p><span>两种思路：</span></p><ol start='' ><li><p><span>example-based 基于示例的</span></p><ul><li><p><span>翻译 跨模式检索 图像描述......</span></p></li></ul></li><li><p><span>generative 生成</span></p><ul><li><p><span>基于语法（grammar-based）, 编码器-解码器模型（encoder-decoder）, 连续生成（continuous generation）【基于源模态输入流连续生成目标模态，最适合在时间序列之间进行转换】</span></p></li></ul></li></ol><p><span>代表：</span></p><p><img src=".\pp019_files\image-20240913171715785.png" alt="image-20240913171715785" style="zoom: 80%;" /></p><p><img src=".\pp019_files\image-20240913171733821.png" alt="image-20240913171733821" style="zoom: 80%;" /></p><p><strong style="color:#6f0670; font-size:18px"><span>对齐 Alignment</span></strong></p><blockquote><p><span>解释：从两个甚至多个模态中寻找事物子成份之间的关系和联系。比如给定一张图片和图片的描述，找到图中的某个区域以及这个区域在描述中对应的表述。又比如给定一个美食制作视频和对应的菜谱，实现菜谱中的步骤描述与视频分段的对应。</span></p></blockquote><p><span>两种思路：</span></p><ol start='' ><li><p><span>显式对齐 explicit</span></p><ul><li><p><span>重点是相似性度量。两种方法：无监督（动态时间扭曲 DTW) 、弱监督</span></p></li></ul></li><li><p><span>隐式对齐 implicit</span></p><ul><li><p><span>学习如何在模型训练期间潜在地对齐数据。</span><kbd style="border:1px dashed #990000; font-size:15px; color: #00b456; font-family: comic sans ms, 微软雅黑; font-weight:bold"><span>两种方法</span></kbd><span>：图模型、神经网络模型（使用attention机制）</span></p></li><li><p><span>图像字幕中，注意力机制将允许解码器（通常是 RNN）在生成每个连续单词时专注于图像的特定部分；</span></p></li><li><p><span>问答任务，允许将问题中的单词与信息源的子组件（例如一段文本[236]、图像[65]或视频序列）对齐。</span></p></li></ul></li></ol><p><img src=".\pp019_files\image-20240913172114173.png" referrerpolicy="no-referrer" alt="image-20240913172114173"></p><p><strong style="color:#6f0670; font-size:18px"><span>融合 Fusion</span></strong></p><blockquote><p><span>解释：从多个模态信息中整合信息来完成分类或回归任务</span></p></blockquote><p><span>融合的价值：</span></p><ul><li><p><span>在观察同一个现象时引入多个模态，可能带来更健壮(robust)的预测；</span></p></li><li><p><span>接触多个模态的信息，可能让我们捕捉到互补的信息（complementary information），尤其是这些信息在单模态下并不&quot;可见&quot;时；</span></p></li><li><p><span>一个多模态系统在缺失某一个模态时依旧能工作；</span></p></li></ul><p><span>两种思路：</span></p><ol start='' ><li><p><span>无模型 model-agnostic</span></p><ul><li><p><span>早期（基于特征，在特征被提取后立即集成（通常通过简单地连接它们的表示），比较简单）</span></p></li><li><p><span>晚期（基于决策，在每种模态做出决定（例如分类或回归）后执行整合，方法包括：平均、投票方案、基于信道噪声的加权、信号方差、学习模型，允许为每个模态使用不同的模型，因为不同的预测器可以更好地对每个单独的模态进行建模，从而提供更大的灵活性；当缺少一种或多种模态时，它可以更轻松地进行预测，甚至可以在没有并行数据时进行训练，然而忽略了模态之间的低级交互）</span></p></li><li><p><span>混合融合（早期融合和单个单峰预测器的输出）</span></p></li></ul></li><li><p><span>基于模型 model-based</span></p><ul><li><p><kbd style="border:1px dashed #990000; font-size:15px; color: #00b456; font-family: comic sans ms, 微软雅黑; font-weight:bold"><span>Multiple Kernel learning(MKL)</span></kbd><span>，多核学习（将不同的核用于不同的数据模态/视图）</span></p></li><li><p><kbd style="border:1px dashed #990000; font-size:15px; color: #00b456; font-family: comic sans ms, 微软雅黑; font-weight:bold"><span>Graphical models</span></kbd><span>，</span><strong style="color:red;"><span>图模型 后续可以看看</span></strong></p></li><li><p><kbd style="border:1px dashed #990000; font-size:15px; color: #00b456; font-family: comic sans ms, 微软雅黑; font-weight:bold"><span>Neural Networks</span></kbd><span>，神经网络 循环神经网路，进行端到端的训练</span></p></li></ul></li></ol><p><img src=".\pp019_files\image-20240913172915852.png" referrerpolicy="no-referrer" alt="image-20240913172915852"></p><p><strong style="color:#6f0670; font-size:18px"><span>共同学习 Co-learning</span></strong><span> </span></p><blockquote><p><span>解释：通过利用来自另一种（资源丰富）模态的知识来帮助（资源贫乏）模态建模；</span></p><p><span>辅助模态（helper modality）通常只参与模型的训练过程，并不参与模型的测试使用过程。</span></p></blockquote><p><span>三种方法：</span></p><ol start='' ><li><p><span>并行</span></p><ul><li><p><span>需要训练数据集，其中来自一种模态的观察结果与来自其他模态的观察结果直接相关；协同训练、表示学习、迁移学习</span></p></li></ul></li><li><p><span>非并行</span></p><ul><li><p><span>不需要来自不同模式的观察之间的直接联系，通常通过使用类别重叠来实现共同学习；零样本学习ZSL。</span></p></li></ul></li><li><p><span>混合</span></p><ul><li><p><span>通过共享模式或数据集桥接</span></p></li></ul></li></ol><p><img src=".\pp019_files\image-20240913173146187.png" alt="image-20240913173146187" style="zoom:80%;" /></p><p><img src=".\pp019_files\image-20240913173229006.png" alt="image-20240913173229006" style="zoom:80%;" /></p><h3 id='背景'><span>背景</span></h3><p><kbd style="background:yellow; color:red"><span>博文1</span></kbd><span> 在当前人工智能发展的浪潮中，多模态大型语言模型（Multimodal Large Language Models, MLLMs）凭借其强大的视觉问答与理解推理能力，正在成为引领科技前沿的关键技术之一。然而，</span><span style="color:blue; font-family:仿宋; font-weight:bold"><span>高昂的训练和推理成本，以及庞大的模型体积限制了这些模型在学术界和工业界的广泛应用，特别是在边缘计算场景下</span></span><span>。今天，我们要为大家介绍的是一个旨在解决这一问题的重要项目——“高效多模态大语言模型综述”（《Efficient Multimodal Large Language Models: A Survey》），由腾讯优图实验室、上海交通大学等多家研究机构共同完成。</span></p><p><strong style="color:#6f0670; font-size:18px"><span>矛盾点</span></strong><span>  </span><span style="border-radius: 10px; border-top: 1px solid red; border-bottom: 1px solid red; border-left: 1px solid red; border-right: 1px solid red;"><span>边缘计算场景下，各端计算能力弱</span></span><span> vs. </span><span style="border-radius: 10px; border-top: 1px solid red; border-bottom: 1px solid red; border-left: 1px solid red; border-right: 1px solid red; background: yellow"><span>大模型体积庞大、训练与推理成本高</span></span><span> </span></p><p>&nbsp;</p><h3 id='全文概述'><span>全文概述</span></h3><div style="
+    border-radius: 25px; 
+    border: 2px solid #990000;
+    background: #990000;
+    padding: 20px;
+"><center><span style="color:white">对17种主流高效的MMLMs进行了总结！</span></center></div><p><kbd style="border:1px double black; font-size:20px; color: #990000; font-family: comic sans ms, 微软雅黑; font-weight:bold; border-bottom: 2px solid black; border-top: 2px solid black;"><span>技术剖析</span></kbd><span>：打造轻量级多模态大模型新路径</span></p><p><span>本项目不仅全面回顾了现有高效MLLMs的发展历程，还深入探讨了各种高效的结构和策略，为未来的科研人员提供了宝贵的参考指南。</span><span style="color:red"><span>通过对比不同模型的设计理念、参数规模、架构特点和技术路线图，读者可以清晰地了解到每个模型的优势和局限性</span></span><span>。</span></p><p><span>例如，在MobileVLM中，采用CLIP ViT-L/14作为视觉编码器，并结合MobileLLaMA小尺寸语言模型，成功实现了模型的高效率与轻量化；而Imp-v1则聚焦于小规模语言模型的实用性和效能评估。</span><span style="border-radius: 10px; border-top: 1px solid red; border-bottom: 1px solid red; border-left: 1px solid red; border-right: 1px solid red; background: yellow"><span>通过对这17种主流高效MMLMs的总结</span></span><span>，我们能够看出研究者们如何从不同的角度探索提升模型性能的同时降低资源消耗的方法。</span></p><p><kbd style="border:1px double black; font-size:20px; color: #990000; font-family: comic sans ms, 微软雅黑; font-weight:bold; border-bottom: 2px solid black; border-top: 2px solid black;"><span>应用场景</span></kbd><span>：从理论到实践的无缝衔接</span></p><p><mark><span>高效MLLMs的应用范围广泛</span></mark><span>，无论是智能客服系统中的快速响应，还是移动设备上的低功耗运行，甚至是嵌入式物联网设备的实时交互，都能找到它们的身影。随着技术的不断进步，这些轻量级模型将更加适应各种复杂环境下的需求，成为AI普及化道路上不可或缺的一环。</span></p><p><span>比如，在边缘计算领域，由于网络连接不稳定或带宽受限，传统的大模型往往无法达到理想的效果。这时，高效MLLMs的低延迟特性和较小的存储需求就显得尤为重要。此外，在智能家居、可穿戴设备等场合，资源约束更是驱动着模型向更小型化方向发展。</span></p><p><kbd style="border:1px double black; font-size:20px; color: #990000; font-family: comic sans ms, 微软雅黑; font-weight:bold; border-bottom: 2px solid black; border-top: 2px solid black;"><span>特色亮点</span></kbd><span>：开拓创新，共绘未来蓝图</span></p><p><span>《Efficient Multimodal Large Language Models: A Survey》不仅仅是一份详尽的技术报告，它更是对未来趋势的一种前瞻性预测。项目团队精心梳理了从2023年至今的多项研究成果，每项成果都代表了研究领域的最新进展。不仅如此，该项目还特别强调了持续更新的原则，承诺将积极跟踪并整合最新的科研信息，确保资料的时效性和完整性。</span></p><p><span>该调查报告不仅涵盖了众多前沿技术细节，如视觉编码器的优化设计、语言模型的小型化策略、跨模态融合方法的革新等，而且还对每一种策略的有效性和适用场景进行了细致分析。对于那些渴望深入了解多模态大模型最新动态的研究者而言，《Efficient Multimodal Large Language Models: A Survey》无疑是不可多得的学习宝库。</span></p><p><span>总之，“高效多模态大语言模型综述”以其详实的内容、专业的视角和前瞻性的思考，成为了推进高效MLLMs研究与发展的重要驱动力。无论你是从事相关技术研发的专业人士，还是对AI领域感兴趣的爱好者，都不应错过这一宝藏资源。</span></p><div style="
+    border-radius: 25px; 
+    border: 2px solid #990000;
+    padding: 20px;
+    text-align:center;
+">让我们一起站在巨人的肩膀上，探索更加广阔的人工智能世界！</div><p>&nbsp;</p><h3 id='参考博文'><span>参考博文</span></h3><ol start='' ><li><p><a href='https://www.cnblogs.com/jiojio-star/p/16077391.html'><span>论文阅读：《Multimodal Machine Learning：A Survey and Taxonomy》</span></a><span>  </span></p><p><span style="color:red"><span>点评：★★★★☆，对于拓展多模态非常重要，这篇文章很赞！</span></span><span>！</span></p></li><li><p><a href='https://blog.csdn.net/gitblog_00086/article/details/139694875'><span>引领高效多模态大语言模型的未来 —— 推荐《Efficient Multimodal Large Language Models: A Survey》</span></a><span> </span></p><p><span style="color:red"><span>点评：★★★★☆，这是对文章的概述，就3段话，已经摘录进博文中，但是从这3段话可以看出，这篇文章值得一读！</span></span><span>！</span></p><center>	<hr style="border-bottom: dashed 1px red; width:70%"></center></li><li><p><a href='https://zhuanlan.zhihu.com/p/701495021'><span>【MLLM研究综述】《Efficient Multimodal Large Language Models: A Survey》——腾讯最新多模态大模型综述</span></a><span> </span></p><p><span style="color:red"><span>点评：★★☆☆☆，内容太多了！</span></span><span>！</span></p><p><span>2024年9月25日 16:05:48看了一遍，真的写的不错！值得再读！！！</span></p></li><li><p><a href='https://juejin.cn/post/7356175306938286116'><span>8.3K Stars!《多模态大语言模型综述》重大升级</span></a><span> </span></p><p><span style="color:#00b456"><span>A Survey on Multimodal Large Language Models</span></span><span> </span></p><p><span style="color:red"><span>点评：★★★☆☆，不是这篇blog题目对应的论文，但是依然值得一看！</span></span><span>！</span></p></li><li><p><a href='https://blog.zhexuan.org/archives/Multimodal-Large-Language-Models.html'><span>多模态大语言模型首篇综述</span></a><span> </span></p><p><span style="color:#00b456"><span>A Survey on Multimodal Large Language Models</span></span><span> </span></p><p><span style="color:red"><span>点评：★★★☆☆，（同</span><kbd style="background:yellow; color:red"><span>博文4</span></kbd><span>）不是这篇blog题目对应的论文，但是依然值得一看！</span></span><span>！</span></p></li><li><p><a href='https://baijiahao.baidu.com/s?id=1793091313508699038&amp;wfr=spider&amp;for=pc'><span>今日arXiv最热NLP大模型论文：一文读懂多模态大模型的进化之路</span></a><span> </span></p><p><a href='https://arxiv.org/pdf/2402.12451.pdf'><span style="color:#00b456"><span>The (R)Evolution of Multimodal Large Language Models ：A Survey</span></span></a><span>(点击直接下载pdf文件)</span></p><p><span style="color:red"><span>点评：★★★☆☆，不是这篇blog题目对应的论文，但是依然值得一看！</span></span><span>！</span></p></li></ol><p>&nbsp;</p><div class='md-toc' mdtype='toc'><p class="md-toc-content" role="list"><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n0"><a class="md-toc-inner" href="#mllm-survey2024---论文精读学习笔记">MLLM Survey - 论文精读学习笔记</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n171"><a class="md-toc-inner" href="#背景">背景</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n175"><a class="md-toc-inner" href="#全文概述">全文概述</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n189"><a class="md-toc-inner" href="#参考博文">参考博文</a></span></p></div><p>&nbsp;</p><p><kbd style="border:1px double black; font-size:20px; color: #990000; font-family: comic sans ms, 微软雅黑; font-weight:bold; border-bottom: 2px solid black; border-top: 2px solid black;"><span>博文免责声明</span></kbd><span> </span></p><ol start='' ><li><p><span>本条博文信息主要整合自网络，部分内容为自己的理解写出来的，如有断章截句导致不正确或因个人水平有限未能详尽正确描述的地方，敬请各位读者指正；</span></p></li><li><p><span>引用出处可能没有完全追溯到原始来源，如因此冒犯到原创作者，请</span><a href='https://mustbook.github.io/'><span>联系本人</span></a><span>更正/删除；</span></p></li><li><p><span>博文的发布主要用于自我学习，其次希望帮助到有共同疑惑的朋友。</span></p></li></ol><div style="
+    border-radius: 25px; 
+    border: 2px solid #990000;
+    background: #990000;
+    padding: 20px;
+"><center><span style="color:white">欢迎随时联系讨论，一起成长进步。</span></center></div><div class='footnotes-area'  ><hr/>
+<div class='footnote-line'><span class='md-fn-count'>1</span> <span>Jin Y, Li J, Liu Y, et al. Efficient multimodal large language models: A survey[J]. arXiv preprint arXiv:2405.10739, 2024.</span> <a name='dfref-footnote-1' href='#ref-footnote-1' title='back to document' class='reversefootnote' >↩</a></div></div></div></div>
+<a href=".typora-export-content" id="scroll-up" style="display: block;">
+		<i class="material-icons md-20 md-middle"></i>
+	</a></body>
+</html>

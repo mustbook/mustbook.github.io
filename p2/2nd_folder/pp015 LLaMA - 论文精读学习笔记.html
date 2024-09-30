@@ -1,0 +1,889 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<link rel="stylesheet" type="text/css" href="../../assets/markdownStyle/iconSetup.css">
+	
+	<!--右边底部的向上箭头，能够返回到文章最开始的地方2/2 动态效果-->
+	<script type="text/javascript" src="../../assets/blogJS/wp-includes.js.jquery.jquery.js"></script>
+	<script type="text/javascript" src="../../assets/blogJS/wp-content.themes.type-plus.js.main.js"></script>
+	
+	
+	<!--https://www.dofactory.com/html/rel/icon-->
+	<link rel="icon" href="../../images/ico/signature.png" sizes="32x32">
+	<link rel="icon" href="../../images/ico/signature.png" sizes="192x192">
+	<link rel="apple-touch-icon" href="../../images/ico/signature.png">
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; --title-bar-height:20px; }
+.mac-os-11 { --title-bar-height:28px; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+h1, h2, h3, h4, h5 { white-space: pre-wrap; }
+body { margin: 0px; padding: 0px; height: auto; inset: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+.typora-export .task-list-item input { pointer-events: none; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+thead, tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror-linenumber { user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-fences-adv-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+svg { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li blockquote { margin: 1rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; border-color: transparent !important; padding-top: 0px !important; padding-bottom: 0px !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  .typora-export #write { break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+  #write > p:nth-child(1) { margin-top: 0px; }
+  .typora-export-show-outline .typora-export-sidebar { display: none; }
+  figure { overflow-x: visible; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+.MathJax_ref { fill: currentcolor; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.reversefootnote { font-family: ui-monospace, sans-serif; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.6; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+.md-expand mark .md-meta { opacity: 0.3 !important; }
+mark .md-meta { color: rgb(0, 0, 0); }
+@media print {
+  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+}
+.md-diagram-panel .messageText { stroke: none !important; }
+.md-diagram-panel .start-state { fill: var(--node-fill); }
+.md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
+.md-fences.md-fences-math { font-size: 1em; }
+.md-fences-advanced:not(.md-focus) { padding: 0px; white-space: nowrap; border: 0px; }
+.md-fences-advanced:not(.md-focus) { background: inherit; }
+.typora-export-show-outline .typora-export-content { max-width: 1440px; margin: auto; display: flex; flex-direction: row; }
+.typora-export-sidebar { width: 300px; font-size: 0.8rem; margin-top: 80px; margin-right: 18px; }
+.typora-export-show-outline #write { --webkit-flex:2; flex: 2 1 0%; }
+.typora-export-sidebar .outline-content { position: fixed; top: 0px; max-height: 100%; overflow: hidden auto; padding-bottom: 30px; padding-top: 60px; width: 300px; }
+@media screen and (max-width: 1024px) {
+  .typora-export-sidebar, .typora-export-sidebar .outline-content { width: 240px; }
+}
+@media screen and (max-width: 800px) {
+  .typora-export-sidebar { display: none; }
+}
+.outline-content li, .outline-content ul { margin-left: 0px; margin-right: 0px; padding-left: 0px; padding-right: 0px; list-style: none; overflow-wrap: anywhere; }
+.outline-content ul { margin-top: 0px; margin-bottom: 0px; }
+.outline-content strong { font-weight: 400; }
+.outline-expander { width: 1rem; height: 1.42857rem; position: relative; display: table-cell; vertical-align: middle; cursor: pointer; padding-left: 4px; }
+.outline-expander::before { content: ""; position: relative; font-family: Ionicons; display: inline-block; font-size: 8px; vertical-align: middle; }
+.outline-item { padding-top: 3px; padding-bottom: 3px; cursor: pointer; }
+.outline-expander:hover::before { content: ""; }
+.outline-h1 > .outline-item { padding-left: 0px; }
+.outline-h2 > .outline-item { padding-left: 1em; }
+.outline-h3 > .outline-item { padding-left: 2em; }
+.outline-h4 > .outline-item { padding-left: 3em; }
+.outline-h5 > .outline-item { padding-left: 4em; }
+.outline-h6 > .outline-item { padding-left: 5em; }
+.outline-label { cursor: pointer; display: table-cell; vertical-align: middle; text-decoration: none; color: inherit; }
+.outline-label:hover { text-decoration: underline; }
+.outline-item:hover { border-color: rgb(245, 245, 245); background-color: var(--item-hover-bg-color); }
+.outline-item:hover { margin-left: -28px; margin-right: -28px; border-left: 28px solid transparent; border-right: 28px solid transparent; }
+.outline-item-single .outline-expander::before, .outline-item-single .outline-expander:hover::before { display: none; }
+.outline-item-open > .outline-item > .outline-expander::before { content: ""; }
+.outline-children { display: none; }
+.info-panel-tab-wrapper { display: none; }
+.outline-item-open > .outline-children { display: block; }
+.typora-export .outline-item { padding-top: 1px; padding-bottom: 1px; }
+.typora-export .outline-item:hover { margin-right: -8px; border-right: 8px solid transparent; }
+.typora-export .outline-expander::before { content: "+"; font-family: inherit; top: -1px; }
+.typora-export .outline-expander:hover::before, .typora-export .outline-item-open > .outline-item > .outline-expander::before { content: "−"; }
+.typora-export-collapse-outline .outline-children { display: none; }
+.typora-export-collapse-outline .outline-item-open > .outline-children, .typora-export-no-collapse-outline .outline-children { display: block; }
+.typora-export-no-collapse-outline .outline-expander::before { content: "" !important; }
+.typora-export-show-outline .outline-item-active > .outline-item .outline-label { font-weight: 700; }
+.md-inline-math-container mjx-container { zoom: 0.95; }
+mjx-container { break-inside: avoid; }
+
+
+.CodeMirror { height: auto; }
+.CodeMirror.cm-s-inner { background: inherit; }
+.CodeMirror-scroll { overflow: auto hidden; z-index: 3; }
+.CodeMirror-gutter-filler, .CodeMirror-scrollbar-filler { background-color: rgb(255, 255, 255); }
+.CodeMirror-gutters { border-right: 1px solid rgb(221, 221, 221); background: inherit; white-space: nowrap; }
+.CodeMirror-linenumber { padding: 0px 3px 0px 5px; text-align: right; color: rgb(153, 153, 153); }
+.cm-s-inner .cm-keyword { color: rgb(119, 0, 136); }
+.cm-s-inner .cm-atom, .cm-s-inner.cm-atom { color: rgb(34, 17, 153); }
+.cm-s-inner .cm-number { color: rgb(17, 102, 68); }
+.cm-s-inner .cm-def { color: rgb(0, 0, 255); }
+.cm-s-inner .cm-variable { color: rgb(0, 0, 0); }
+.cm-s-inner .cm-variable-2 { color: rgb(0, 85, 170); }
+.cm-s-inner .cm-variable-3 { color: rgb(0, 136, 85); }
+.cm-s-inner .cm-string { color: rgb(170, 17, 17); }
+.cm-s-inner .cm-property { color: rgb(0, 0, 0); }
+.cm-s-inner .cm-operator { color: rgb(152, 26, 26); }
+.cm-s-inner .cm-comment, .cm-s-inner.cm-comment { color: rgb(170, 85, 0); }
+.cm-s-inner .cm-string-2 { color: rgb(255, 85, 0); }
+.cm-s-inner .cm-meta { color: rgb(85, 85, 85); }
+.cm-s-inner .cm-qualifier { color: rgb(85, 85, 85); }
+.cm-s-inner .cm-builtin { color: rgb(51, 0, 170); }
+.cm-s-inner .cm-bracket { color: rgb(153, 153, 119); }
+.cm-s-inner .cm-tag { color: rgb(17, 119, 0); }
+.cm-s-inner .cm-attribute { color: rgb(0, 0, 204); }
+.cm-s-inner .cm-header, .cm-s-inner.cm-header { color: rgb(0, 0, 255); }
+.cm-s-inner .cm-quote, .cm-s-inner.cm-quote { color: rgb(0, 153, 0); }
+.cm-s-inner .cm-hr, .cm-s-inner.cm-hr { color: rgb(153, 153, 153); }
+.cm-s-inner .cm-link, .cm-s-inner.cm-link { color: rgb(0, 0, 204); }
+.cm-negative { color: rgb(221, 68, 68); }
+.cm-positive { color: rgb(34, 153, 34); }
+.cm-header, .cm-strong { font-weight: 700; }
+.cm-del { text-decoration: line-through; }
+.cm-em { font-style: italic; }
+.cm-link { text-decoration: underline; }
+.cm-error { color: red; }
+.cm-invalidchar { color: red; }
+.cm-constant { color: rgb(38, 139, 210); }
+.cm-defined { color: rgb(181, 137, 0); }
+div.CodeMirror span.CodeMirror-matchingbracket { color: rgb(0, 255, 0); }
+div.CodeMirror span.CodeMirror-nonmatchingbracket { color: rgb(255, 34, 34); }
+.cm-s-inner .CodeMirror-activeline-background { background: inherit; }
+.CodeMirror { position: relative; overflow: hidden; }
+.CodeMirror-scroll { height: 100%; outline: 0px; position: relative; box-sizing: content-box; background: inherit; }
+.CodeMirror-sizer { position: relative; }
+.CodeMirror-gutter-filler, .CodeMirror-hscrollbar, .CodeMirror-scrollbar-filler, .CodeMirror-vscrollbar { position: absolute; z-index: 6; display: none; outline: 0px; }
+.CodeMirror-vscrollbar { right: 0px; top: 0px; overflow: hidden; }
+.CodeMirror-hscrollbar { bottom: 0px; left: 0px; overflow: auto hidden; }
+.CodeMirror-scrollbar-filler { right: 0px; bottom: 0px; }
+.CodeMirror-gutter-filler { left: 0px; bottom: 0px; }
+.CodeMirror-gutters { position: absolute; left: 0px; top: 0px; padding-bottom: 10px; z-index: 3; overflow-y: hidden; }
+.CodeMirror-gutter { white-space: normal; height: 100%; box-sizing: content-box; padding-bottom: 30px; margin-bottom: -32px; display: inline-block; }
+.CodeMirror-gutter-wrapper { position: absolute; z-index: 4; background: 0px 0px !important; border: none !important; }
+.CodeMirror-gutter-background { position: absolute; top: 0px; bottom: 0px; z-index: 4; }
+.CodeMirror-gutter-elt { position: absolute; cursor: default; z-index: 4; }
+.CodeMirror-lines { cursor: text; }
+.CodeMirror pre { border-radius: 0px; border-width: 0px; background: 0px 0px; font-family: inherit; font-size: inherit; margin: 0px; white-space: pre; overflow-wrap: normal; color: inherit; z-index: 2; position: relative; overflow: visible; }
+.CodeMirror-wrap pre { overflow-wrap: break-word; white-space: pre-wrap; word-break: normal; }
+.CodeMirror-code pre { border-right: 30px solid transparent; width: fit-content; }
+.CodeMirror-wrap .CodeMirror-code pre { border-right: none; width: auto; }
+.CodeMirror-linebackground { position: absolute; inset: 0px; z-index: 0; }
+.CodeMirror-linewidget { position: relative; z-index: 2; overflow: auto; }
+.CodeMirror-wrap .CodeMirror-scroll { overflow-x: hidden; }
+.CodeMirror-measure { position: absolute; width: 100%; height: 0px; overflow: hidden; visibility: hidden; }
+.CodeMirror-measure pre { position: static; }
+.CodeMirror div.CodeMirror-cursor { position: absolute; visibility: hidden; border-right: none; width: 0px; }
+.CodeMirror div.CodeMirror-cursor { visibility: hidden; }
+.CodeMirror-focused div.CodeMirror-cursor { visibility: inherit; }
+.cm-searching { background: rgba(255, 255, 0, 0.4); }
+span.cm-underlined { text-decoration: underline; }
+span.cm-strikethrough { text-decoration: line-through; }
+.cm-tw-syntaxerror { color: rgb(255, 255, 255); background-color: rgb(153, 0, 0); }
+.cm-tw-deleted { text-decoration: line-through; }
+.cm-tw-header5 { font-weight: 700; }
+.cm-tw-listitem:first-child { padding-left: 10px; }
+.cm-tw-box { border-style: solid; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; border-color: inherit; border-top-width: 0px !important; }
+.cm-tw-underline { text-decoration: underline; }
+@media print {
+  .CodeMirror div.CodeMirror-cursor { visibility: hidden; }
+}
+
+
+:root {
+    --side-bar-bg-color: #fafafa;
+    --control-text-color: #777;
+}
+
+@include-when-export url(https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext);
+
+/* open-sans-regular - latin-ext_latin */
+  /* open-sans-italic - latin-ext_latin */
+    /* open-sans-700 - latin-ext_latin */
+    /* open-sans-700italic - latin-ext_latin */
+  html {
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    font-family: "Open Sans","Clear Sans", "Helvetica Neue", Helvetica, Arial, 'Segoe UI Emoji', sans-serif;
+    color: rgb(51, 51, 51);
+    line-height: 1.6;
+}
+
+#write {
+    max-width: 860px;
+  	margin: 0 auto;
+  	padding: 30px;
+    padding-bottom: 100px;
+}
+
+@media only screen and (min-width: 1400px) {
+	#write {
+		max-width: 1024px;
+	}
+}
+
+@media only screen and (min-width: 1800px) {
+	#write {
+		max-width: 1200px;
+	}
+}
+
+#write > ul:first-child,
+#write > ol:first-child{
+    margin-top: 30px;
+}
+
+a {
+    color: #4183C4;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    line-height: 1.4;
+    cursor: text;
+}
+h1:hover a.anchor,
+h2:hover a.anchor,
+h3:hover a.anchor,
+h4:hover a.anchor,
+h5:hover a.anchor,
+h6:hover a.anchor {
+    text-decoration: none;
+}
+h1 tt,
+h1 code {
+    font-size: inherit;
+}
+h2 tt,
+h2 code {
+    font-size: inherit;
+}
+h3 tt,
+h3 code {
+    font-size: inherit;
+}
+h4 tt,
+h4 code {
+    font-size: inherit;
+}
+h5 tt,
+h5 code {
+    font-size: inherit;
+}
+h6 tt,
+h6 code {
+    font-size: inherit;
+}
+h1 {
+    font-size: 2.25em;
+    line-height: 1.2;
+    border-bottom: 1px solid #eee;
+}
+h2 {
+    font-size: 1.75em;
+    line-height: 1.225;
+    border-bottom: 1px solid #eee;
+}
+
+/*@media print {
+    .typora-export h1,
+    .typora-export h2 {
+        border-bottom: none;
+        padding-bottom: initial;
+    }
+
+    .typora-export h1::after,
+    .typora-export h2::after {
+        content: "";
+        display: block;
+        height: 100px;
+        margin-top: -96px;
+        border-top: 1px solid #eee;
+    }
+}*/
+
+h3 {
+    font-size: 1.5em;
+    line-height: 1.43;
+}
+h4 {
+    font-size: 1.25em;
+}
+h5 {
+    font-size: 1em;
+}
+h6 {
+   font-size: 1em;
+    color: #777;
+}
+p,
+blockquote,
+ul,
+ol,
+dl,
+table{
+    margin: 0.8em 0;
+}
+li>ol,
+li>ul {
+    margin: 0 0;
+}
+hr {
+    height: 2px;
+    padding: 0;
+    margin: 16px 0;
+    background-color: #e7e7e7;
+    border: 0 none;
+    overflow: hidden;
+    box-sizing: content-box;
+}
+
+li p.first {
+    display: inline-block;
+}
+ul,
+ol {
+    padding-left: 30px;
+}
+ul:first-child,
+ol:first-child {
+    margin-top: 0;
+}
+ul:last-child,
+ol:last-child {
+    margin-bottom: 0;
+}
+blockquote {
+    border-left: 4px solid #ec962a;
+    padding: 0 15px;
+    color: #777777;
+}
+blockquote blockquote {
+    padding-right: 0;
+}
+table {
+    padding: 0;
+    word-break: initial;
+}
+table tr {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 0;
+}
+table tr:nth-child(2n),
+thead {
+    background-color: #f8f8f8;
+}
+table th {
+    font-weight: bold;
+    border: 1px solid #dfe2e5;
+    border-bottom: 0;
+    margin: 0;
+    padding: 6px 13px;
+}
+table td {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 6px 13px;
+}
+table th:first-child,
+table td:first-child {
+    margin-top: 0;
+}
+table th:last-child,
+table td:last-child {
+    margin-bottom: 0;
+}
+
+.CodeMirror-lines {
+    padding-left: 4px;
+}
+
+.code-tooltip {
+    box-shadow: 0 1px 1px 0 rgba(0,28,36,.3);
+    border-top: 1px solid #eef2f2;
+}
+
+.md-fences,
+code,
+tt {
+    border: 1px solid #e7eaed;
+    background-color: #f8f8f8;
+    border-radius: 3px;
+    padding: 0;
+    padding: 2px 4px 0px 4px;
+    font-size: 0.9em;
+}
+
+code {
+	color: red;
+    background-color: rgb(255, 255, 0)
+    padding: 0 2px 0 2px;
+}
+
+.md-fences {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding-top: 8px;
+    padding-bottom: 6px;
+}
+
+
+.md-task-list-item > input {
+  margin-left: -1.3em;
+}
+
+@media print {
+    html {
+        font-size: 13px;
+    }
+    pre {
+        page-break-inside: avoid;
+        word-wrap: break-word;
+    }
+}
+
+.md-fences {
+	background-color: #f8f8f8;
+}
+#write pre.md-meta-block {
+	padding: 1rem;
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: #f7f7f7;
+    border: 0;
+    border-radius: 3px;
+    color: #777777;
+    margin-top: 0 !important;
+}
+
+.mathjax-block>.code-tooltip {
+	bottom: .375rem;
+}
+
+.md-mathjax-midline {
+    background: #fafafa;
+}
+
+#write>h3.md-focus:before{
+	left: -1.5625rem;
+	top: .375rem;
+}
+#write>h4.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h5.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h6.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+.md-image>.md-meta {
+    /*border: 1px solid #ddd;*/
+    border-radius: 3px;
+    padding: 2px 0px 0px 4px;
+    font-size: 0.9em;
+    color: inherit;
+}
+
+.md-tag {
+    color: #a7a7a7;
+    opacity: 1;
+}
+
+.md-toc { 
+    margin-top:20px;
+    padding-bottom:20px;
+}
+
+.sidebar-tabs {
+    border-bottom: none;
+}
+
+#typora-quick-open {
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+}
+
+#typora-quick-open-item {
+    background-color: #FAFAFA;
+    border-color: #FEFEFE #e5e5e5 #e5e5e5 #eee;
+    border-style: solid;
+    border-width: 1px;
+}
+
+/** focus mode */
+.on-focus-mode blockquote {
+    border-left-color: rgba(85, 85, 85, 0.12);
+}
+
+header, .context-menu, .megamenu-content, footer{
+    font-family: "Segoe UI", "Arial", sans-serif;
+}
+
+.file-node-content:hover .file-node-icon,
+.file-node-content:hover .file-node-open-state{
+    visibility: visible;
+}
+
+.mac-seamless-mode #typora-sidebar {
+    background-color: #fafafa;
+    background-color: var(--side-bar-bg-color);
+}
+
+.md-lang {
+    color: #b4654d;
+}
+
+/*.html-for-mac {
+    --item-hover-bg-color: #E6F0FE;
+}*/
+
+#md-notification .btn {
+    border: 0;
+}
+
+.dropdown-menu .divider {
+    border-color: #e5e5e5;
+    opacity: 0.4;
+}
+
+.ty-preferences .window-content {
+    background-color: #fafafa;
+}
+
+.ty-preferences .nav-group-item.active {
+    color: white;
+    background: #999;
+}
+
+.menu-item-container a.menu-style-btn {
+    background-color: #f5f8fa;
+    background-image: linear-gradient( 180deg , hsla(0, 0%, 100%, 0.8), hsla(0, 0%, 100%, 0)); 
+}
+
+u {
+    text-decoration: red underline; 
+	text-decoration-thickness: 15%;
+  }
+  
+em {
+	font-weight: bold;
+    font-style: italic;
+}
+  
+
+
+mjx-container[jax="SVG"] {
+  direction: ltr;
+}
+
+mjx-container[jax="SVG"] > svg {
+  overflow: visible;
+  min-height: 1px;
+  min-width: 1px;
+}
+
+mjx-container[jax="SVG"] > svg a {
+  fill: blue;
+  stroke: blue;
+}
+
+mjx-assistive-mml {
+  position: absolute !important;
+  top: 0px;
+  left: 0px;
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 1px 0px 0px 0px !important;
+  border: 0px !important;
+  display: block !important;
+  width: auto !important;
+  overflow: hidden !important;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+mjx-assistive-mml[display="block"] {
+  width: 100% !important;
+}
+
+mjx-container[jax="SVG"][display="true"] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+mjx-container[jax="SVG"][display="true"][width="full"] {
+  display: flex;
+}
+
+mjx-container[jax="SVG"][justify="left"] {
+  text-align: left;
+}
+
+mjx-container[jax="SVG"][justify="right"] {
+  text-align: right;
+}
+
+g[data-mml-node="merror"] > g {
+  fill: red;
+  stroke: red;
+}
+
+g[data-mml-node="merror"] > rect[data-background] {
+  fill: yellow;
+  stroke: none;
+}
+
+g[data-mml-node="mtable"] > line[data-line], svg[data-table] > g > line[data-line] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > rect[data-frame], svg[data-table] > g > rect[data-frame] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > .mjx-dashed, svg[data-table] > g > .mjx-dashed {
+  stroke-dasharray: 140;
+}
+
+g[data-mml-node="mtable"] > .mjx-dotted, svg[data-table] > g > .mjx-dotted {
+  stroke-linecap: round;
+  stroke-dasharray: 0,140;
+}
+
+g[data-mml-node="mtable"] > g > svg {
+  overflow: visible;
+}
+
+[jax="SVG"] mjx-tool {
+  display: inline-block;
+  position: relative;
+  width: 0;
+  height: 0;
+}
+
+[jax="SVG"] mjx-tool > mjx-tip {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+mjx-tool > mjx-tip {
+  display: inline-block;
+  padding: .2em;
+  border: 1px solid #888;
+  font-size: 70%;
+  background-color: #F8F8F8;
+  color: black;
+  box-shadow: 2px 2px 5px #AAAAAA;
+}
+
+g[data-mml-node="maction"][data-toggle] {
+  cursor: pointer;
+}
+
+mjx-status {
+  display: block;
+  position: fixed;
+  left: 1em;
+  bottom: 1em;
+  min-width: 25%;
+  padding: .2em .4em;
+  border: 1px solid #888;
+  font-size: 90%;
+  background-color: #F8F8F8;
+  color: black;
+}
+
+foreignObject[data-mjx-xml] {
+  font-family: initial;
+  line-height: normal;
+  overflow: visible;
+}
+
+mjx-container[jax="SVG2"] path[data-c], mjx-container[jax="SVG2"] use[data-c] {
+  stroke-width: 3;
+}
+
+g[data-mml-node="xypic"] path {
+  stroke-width: inherit;
+}
+
+.MathJax g[data-mml-node="xypic"] path {
+  stroke-width: inherit;
+}
+mjx-container[jax="SVG"] path[data-c], mjx-container[jax="SVG"] use[data-c] {
+							stroke-width: 0;
+						}
+</style><title>pp015 LLaMA - 论文精读学习笔记</title>
+</head>
+<body class='typora-export os-windows'><div class='typora-export-content'>
+<div id='write'  class=''><h1 id='llama2023---论文精读学习笔记'><span>LLaMA</span><sup class='md-footnote'><a href='#dfref-footnote-1' name='ref-footnote-1'>1</a></sup><span> - 论文精读学习笔记</span></h1><details style="background: none; padding: 20px; border: 2px solid #990000;border-radius: 25px; line-height:150%;"> <summary>LLaMA: Open and Efficient Foundation Language Models</summary>标签：<kbd style="background:yellow; color:red">Basic Architectures of LLMs</kbd><br/>论文链接：<a href="https://arxiv.org/abs/2302.13971">LLaMA: Open and Efficient Foundation Language Models</a><br/>官方项目/代码：<a href="https://github.com/meta-llama/llama">meta-llama</a>，<a href="https://github.com/meta-llama/llama/blob/main/llama/model.py">llama代码</a></details><div style="text-align:center; font-size:1em" >
+    <a href="https://mustbook.github.io/" style="color:#990000; font-weight:bold" >Cook</a><br/>
+    <span style="color:#990000; font-family:Comic Sans MS; font-size:13px">Published: 2024.09.10</span><span style="color:blue"> | </span><span style="color:#990000; font-family:Comic Sans MS; font-size:13px">Last Updated: 2024.09.12</span>
+</div><blockquote><p><i style="color:#990000; font-family:"><span>You are what you eat.</span><br/><span> And I&#39;m cooking what I eat!  </span></i><span> </span><strong><span>:)</span></strong><span> </span></p><p><span style="color:blue; font-family:Comic Sans MS"><a href='https://mustbook.github.io/p2/2nd_paper.html'><span>More food...</span></a></span>🍜<span> </span></p></blockquote><p style="text-align:center; font-size:20px; font-weight:bold;"> 目录 </p> <div class='md-toc' mdtype='toc'><p class="md-toc-content" role="list"><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n0"><a class="md-toc-inner" href="#llama2023---论文精读学习笔记">LLaMA - 论文精读学习笔记</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n15"><a class="md-toc-inner" href="#全文概述">全文概述</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n23"><a class="md-toc-inner" href="#背景">背景</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n50"><a class="md-toc-inner" href="#方法">方法</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n53"><a class="md-toc-inner" href="#架构">架构</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n76"><a class="md-toc-inner" href="#数据集">数据集</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n77"><a class="md-toc-inner" href="#预训练数据">预训练数据</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n112"><a class="md-toc-inner" href="#优化器">优化器</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n126"><a class="md-toc-inner" href="#高效实现">高效实现</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n135"><a class="md-toc-inner" href="#代码">代码 </a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n138"><a class="md-toc-inner" href="#项目环境依赖">项目环境依赖</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n158"><a class="md-toc-inner" href="#模型细节">模型细节</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n167"><a class="md-toc-inner" href="#代码解读">代码解读</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n180"><a class="md-toc-inner" href="#推理">推理</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n186"><a class="md-toc-inner" href="#主要结果">主要结果</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n219"><a class="md-toc-inner" href="#训练期间的性能评估">训练期间的性能评估</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n224"><a class="md-toc-inner" href="#指令微调">指令微调</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n229"><a class="md-toc-inner" href="#-偏见毒性错误">※ 偏见/毒性/错误</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n232"><a class="md-toc-inner" href="#●-realtoxicityprompts">● RealToxicityPrompts</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n238"><a class="md-toc-inner" href="#●-crows-pairs">● CrowS-Pairs</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n241"><a class="md-toc-inner" href="#●-winogender">● WinoGender</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n246"><a class="md-toc-inner" href="#●-truthfulqa">● TruthfulQA</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n251"><a class="md-toc-inner" href="#补充">补充</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n252"><a class="md-toc-inner" href="#相关工作">相关工作</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n260"><a class="md-toc-inner" href="#结论">结论</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n278"><a class="md-toc-inner" href="#参考博文">参考博文</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n296"><a class="md-toc-inner" href="#原文目录">原文目录</a></span></p></div><p><span style="color:blue; font-family:仿宋; font-weight:bold"><span>提前说明</span></span><span>：本系列博文主要是对</span><a href='#参考博文'><span>参考博文</span></a><span>的解读与重述（</span><em><span>对重点信息进行标记、或者整段摘录加深自己的记忆和理解、融合多个博文的精髓、统合不同的代表性的案例</span></em><span>），仅做学习记录笔记使用。与君共享，希望一同进步。</span></p><p>&nbsp;</p><p><kbd style="background:yellow; color:red"><span>文章标题</span></kbd><span>：开放和高效的基础语言模型</span></p><p><kbd style="background:yellow; color:red"><span>优势</span></kbd><span>：开源</span></p><p>&nbsp;</p><h3 id='全文概述'><span>全文概述</span></h3><p><span>LLaMA 是 Meta AI （2023年2月）发布的包含 7B、13B、33B 和 65B 四种参数规模的基础语言模型集合（大模型），具体地，</span><span style="color:red"><span>LLaMA-13B</span></span><span>（仅以 1/10 规模的参数）在大多数基准上的表现优于GPT-3(175B)，而</span><span style="color:red"><span>LLaMA-65B</span></span><span>可以和最好的模型Chinchilla-70B1和PaLM-540B2不相上下。在LLaMA发布之后，很多开源模型都是基于LLaMA的，比如斯坦福大学的羊驼模型。</span></p><p><span>作者在 </span><mjx-container class="MathJax" jax="SVG" style="position: relative;"><svg xmlns="http://www.w3.org/2000/svg" width="4.05ex" height="2.005ex" role="img" focusable="false" viewBox="0 -864 1790.1 886" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" style="vertical-align: -0.05ex;"><defs><path id="MJX-953-TEX-N-31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path><path id="MJX-953-TEX-N-30" d="M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z"></path><path id="MJX-953-TEX-N-32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msup"><g data-mml-node="mn"><use data-c="31" xlink:href="#MJX-953-TEX-N-31"></use><use data-c="30" xlink:href="#MJX-953-TEX-N-30" transform="translate(500,0)"></use></g><g data-mml-node="TeXAtom" transform="translate(1033,393.1) scale(0.707)" data-mjx-texclass="ORD"><g data-mml-node="mn"><use data-c="31" xlink:href="#MJX-953-TEX-N-31"></use><use data-c="32" xlink:href="#MJX-953-TEX-N-32" transform="translate(500,0)"></use></g></g></g></g></g></svg><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mn>10</mn><mrow data-mjx-texclass="ORD"><mn>12</mn></mrow></msup></math></mjx-assistive-mml></mjx-container><script type="math/tex">10^{12}</script><span> 级别的词元上训练，证明了仅使用公开数据集也可以训练出来 SOTA 级别的模型。</span></p><p><span>本文介绍了LLaMA系列模型，通过在</span><strong style="color:#6f0670; font-size:18px"><span>大量公开数据</span></strong><span>上训练，展示了</span><span style="color:red"><span>在不使用专有数据集的情况下</span></span><span>也能达到与顶级大模型相媲美的性能。文章详细讨论了</span><span style="border-bottom: 2px dashed FireBrick;"><span>训练方法、数据来源、模型架构优化和训练效率</span></span><span>提升措施。</span></p><p><span style="border-radius: 10px; border-top: 1px solid red; border-bottom: 1px solid red; border-left: 1px solid red; border-right: 1px solid red; background: yellow"><span> LLaMA的</span><strong><span>重点</span></strong><span>是比通常情况下使用更多的语料，来训练一系列可在各种推理预算下实现可能的最佳性能的语言模型。</span></span><span> </span></p><p><span>LLaMA提供了不可多得的大模型开发思路，为很多国产化大模型打开了一片新的天地，论文和代码值得仔细研读。</span></p><p><span>作者引入了LLaMA系列模型，包含从7B到65B参数规模的模型。在万亿级tokens上训练，证明了仅使用公开数据集就可能训练得到SOTA的模型。</span></p><p><span>LLaMA是使用公开数据集训练的一系列大语言模型，其在多项NLP任务中超越GPT-3和PALM。模型训练采用</span><kbd style="border:1px dashed #990000; font-size:15px; color: #00b456; font-family: comic sans ms, 微软雅黑; font-weight:bold"><span>byte级别的BPE分词</span></kbd><span>、</span><kbd style="border:1px dashed #990000; font-size:15px; color: #00b456; font-family: comic sans ms, 微软雅黑; font-weight:bold"><span>SwiGLU激活函数</span></kbd><span>和</span><kbd style="border:1px dashed #990000; font-size:15px; color: #00b456; font-family: comic sans ms, 微软雅黑; font-weight:bold"><span>RoPE位置编码</span></kbd><span>。尽管在某些专业领域表现稍逊，但</span><kbd style="background:yellow; color:red"><span>可通过指令微调提升性能</span></kbd><span>。LLaMA提供不同规模的模型供不同需求的开发者使用。</span></p><h3 id='背景'><span>背景</span></h3><p><span>随着ChatGPT的爆火，大语言模型逐渐成为了研究热点，然而过去的大部分工作中的大语言模型LLM</span><span style="color:red"><span>都是闭源的</span></span><span>，仅提供API有偿调用，本文介绍了最近MetaAI</span><span style="border-bottom: 2px dashed FireBrick;"><span>开源的大语言模型LLaMA</span></span><span>。</span></p><p><span style="border-radius: 10px; border-top: 1px solid red; border-bottom: 1px solid red; border-left: 1px solid red; border-right: 1px solid red; background: yellow"><span>大语言模型(Large Languages Models, LLMs)在大规模文本语料库上训练后，已经展现出能够根据</span><span style="color:blue"><span>文本指示(textual instructions)</span></span><span>或</span><span style="color:blue"><span>少量样本</span></span><span>执行新任务的能力</span></span><span>。</span></p><p><span>这些</span><span style="color:blue"><span>少样本特性</span></span><span>第一次出现在模型达到足够规模后，导致后来一系列工作着重于进一步扩大模型规模。LLM通常在参数量提升到一定程度后出现一些奇特的特性，如Few-shot甚至Zero-shot的In-context learning能力。过去的研究认为模型参数越多，最终的效果也越好。</span><strong style="color:red;"><span>然而</span></strong><span>近期的工作表明，在给定计算预算下，</span><u><span>最好的性能并不是由最大的模型实现的，而是由在更多数据上训练的较小模型实现的</span></u><span>，即</span><span style="border-radius: 10px; border-top: 1px solid red; border-bottom: 1px solid red; border-left: 1px solid red; border-right: 1px solid red;"><span>当计算预算一定的情况下，小一些的模型在更多的训练数据上训练会得到比大参数模型（更少的数据）更好的效果</span></span><span>。</span></p><p><span>Hoffmann等人提出的</span><kbd style="border:1px dashed #990000; font-size:15px; color: #00b456; font-family: comic sans ms, 微软雅黑; font-weight:bold"><span>规模定律(scaling laws)</span></kbd><span>的目标是在给定训练计算预算下，最佳的数据集规模和模型大小是什么。然而它的目标忽略了推理成本，当成规模部署大模型时会是一个重要问题。因此，</span><span style="border-bottom: 2px dashed FireBrick;"><span>更好的模型不是训练有多快，而是推理有多快，训练一个较小的模型更久最终在推理时会更经济</span></span><span>。例如，虽然Hoffmann等人建议在200B个标记上训练一个10B模型，但作者发现即使在训练1T个标记之后，7B模型的性能仍在持续提高。</span></p><p><span>本篇工作的重点是训练一系列语言模型，</span><span style="color:blue; font-family:仿宋; font-weight:bold"><span>使用比通常更多的token数来进行训练，在不同的推理预算下实现最佳性能</span></span><span>。最后得到的模型称为</span><span style="color:blue; font-family:Comic Sans MS"><span>LLaMA</span></span><span>，参数范围从7B到65B，与现有最佳的大语言模型相比具有竞争力的性能。例如，LLaMA-13B在大多数基准测试中优于GPT-3，尽管体积小了10倍。在更大的规模上，LLaMA-65B参数模型也可以与最好的大型语言模型(如Chinchilla或PaLM-540B)相媲美。</span><kbd><span>比较</span></kbd><span>与Chinchilla、PaLM或GPT-3不同的是，LLaMA仅使用公开可用的数据，而大多数现有模型依赖于非公开可用或未记录的数据，LLaMA使得这篇工作的效果理论上更易于复现且更开源。</span><span style="color:red;font-family:Aa漫语手写体（简繁）;font-weight:bold"><span>更容易复现</span></span><span>！</span></p><p><kbd style="border:1px dotted #990000; font-size:20px; color: red; font-family: comic sans ms, 微软雅黑; font-weight:bold"><span>全文要点</span></kbd><span> </span></p><ul><li><p><span>对Transformer架构所做的修改；</span></p></li><li><p><span>训练方法；</span></p></li><li><p><span>使用来自负责任的人工智能社区的一些最新基准，揭示了我们模型中编码的一些偏见和毒性。</span></p><p><span>最后用一些 AI 社区的最新评估方法，展示模型的偏差（bias）和 toxicity。</span></p></li></ul><p><strong style="color:red"><span>※</span></strong><span> 文章给出了一系列大语言模型LLaMA 7B, 13B, 33B, 65B和LLaMA-I，开发者可以在不同的预算的条件下选择合适的模型进行使用。文章</span><mark><span>仅依赖公开数据集</span></mark><span>进行训练，且针对特定领域可以通过</span><mark><span>指令微调</span></mark><span>来增强模型。</span></p><p><kbd style="border:1px dotted #990000; font-size:20px; color: red; font-family: comic sans ms, 微软雅黑; font-weight:bold"><span>主要贡献</span></kbd><span> </span></p><ul><li><p><span>开源一系列语言模型，可以与SOTA模型竞争</span></p></li><li><p><span>LLaMA-13B比GPT-3的性能更好，但是模型大小却是十分之一</span></p></li><li><p><span>LLaMA-65B与Chinchilla-70B和PaLM-540B的实力相当</span></p></li><li><p><span style="border-bottom: 2px dashed FireBrick;"><span>使用公开数据集即可部分复现最先进的性能</span></span><span>（86%左右的效果）</span></p></li></ul><p>&nbsp;</p><h3 id='方法'><span>方法</span></h3><p><span>作者的训练方法类似GPT和PaLM，并受到Chinchilla的规模定律启发。在大量文本数据上使用标准的优化器训练大型的Transformer。作者强调</span><kbd style="background:yellow; color:red"><span>更多的训练数据更加重要</span></kbd><span>。</span></p><p>&nbsp;</p><h4 id='架构'><span>架构</span></h4><p><span>LLaMA基于Transformer架构（具体是Encoder 还是 Decoder 结构不好说），同时采用了后续的一些改进。下面是这篇工作主要引入的改进以及灵感来源(在方括号中)：</span></p><p><strong style="color:#6f0670; font-size:18px"><span>Pre-normalization[GPT3]</span></strong><span> 为了提升训练稳定性，对每个Transformer子层（sub-layer）的输入也进行归一化，而不是对输出进行归一化。同时使用</span><kbd style="border:1px dashed #990000; font-size:15px; color: #00b456; font-family: comic sans ms, 微软雅黑; font-weight:bold"><span>RMSNorm归一化方法</span></kbd><span>。</span></p><ul><li><p><span>把 Transformer 的归一化层放到每个每一个 Transformer 块的最开始。并采用 RMSNorm 作为归一化函数。原论文：</span><a href='https://proceedings.neurips.cc/paper_files/paper/2019/file/1e8a19426224ca89e83cef47f1e7f53b-Paper.pdf'><span>Root Mean Square Layer Normalization</span></a><span> </span></p></li><li><p><kbd style="background:yellow; color:red"><span>博文3、4</span></kbd><span>都给出了一些源码。</span></p></li></ul><p><strong style="color:#6f0670; font-size:18px"><span>SwiGLU激活函数[PaLM]</span></strong><span> 替换</span><kbd style="border:1px dashed #990000; font-size:15px; color: #00b456; font-family: comic sans ms, 微软雅黑; font-weight:bold"><span>ReLU激活函数</span></kbd><span>为</span><kbd style="border:1px dashed #990000; font-size:15px; color: #00b456; font-family: comic sans ms, 微软雅黑; font-weight:bold"><span>SwiGLU函数</span></kbd><span>以提升性能。使用 </span><mjx-container class="MathJax" jax="SVG" style="position: relative;"><svg xmlns="http://www.w3.org/2000/svg" width="4.103ex" height="2.773ex" role="img" focusable="false" viewBox="0 -864.9 1813.6 1225.5" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" style="vertical-align: -0.816ex;"><defs><path id="MJX-954-TEX-N-32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"></path><path id="MJX-954-TEX-N-33" d="M127 463Q100 463 85 480T69 524Q69 579 117 622T233 665Q268 665 277 664Q351 652 390 611T430 522Q430 470 396 421T302 350L299 348Q299 347 308 345T337 336T375 315Q457 262 457 175Q457 96 395 37T238 -22Q158 -22 100 21T42 130Q42 158 60 175T105 193Q133 193 151 175T169 130Q169 119 166 110T159 94T148 82T136 74T126 70T118 67L114 66Q165 21 238 21Q293 21 321 74Q338 107 338 175V195Q338 290 274 322Q259 328 213 329L171 330L168 332Q166 335 166 348Q166 366 174 366Q202 366 232 371Q266 376 294 413T322 525V533Q322 590 287 612Q265 626 240 626Q208 626 181 615T143 592T132 580H135Q138 579 143 578T153 573T165 566T175 555T183 540T186 520Q186 498 172 481T127 463Z"></path><path id="MJX-954-TEX-N-34" d="M462 0Q444 3 333 3Q217 3 199 0H190V46H221Q241 46 248 46T265 48T279 53T286 61Q287 63 287 115V165H28V211L179 442Q332 674 334 675Q336 677 355 677H373L379 671V211H471V165H379V114Q379 73 379 66T385 54Q393 47 442 46H471V0H462ZM293 211V545L74 212L183 211H293Z"></path><path id="MJX-954-TEX-I-1D451" d="M366 683Q367 683 438 688T511 694Q523 694 523 686Q523 679 450 384T375 83T374 68Q374 26 402 26Q411 27 422 35Q443 55 463 131Q469 151 473 152Q475 153 483 153H487H491Q506 153 506 145Q506 140 503 129Q490 79 473 48T445 8T417 -8Q409 -10 393 -10Q359 -10 336 5T306 36L300 51Q299 52 296 50Q294 48 292 46Q233 -10 172 -10Q117 -10 75 30T33 157Q33 205 53 255T101 341Q148 398 195 420T280 442Q336 442 364 400Q369 394 369 396Q370 400 396 505T424 616Q424 629 417 632T378 637H357Q351 643 351 645T353 664Q358 683 366 683ZM352 326Q329 405 277 405Q242 405 210 374T160 293Q131 214 119 129Q119 126 119 118T118 106Q118 61 136 44T179 26Q233 26 290 98L298 109L352 326Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mfrac"><g data-mml-node="mn" transform="translate(220,394) scale(0.707)"><use data-c="32" xlink:href="#MJX-954-TEX-N-32"></use></g><g data-mml-node="mn" transform="translate(220,-345) scale(0.707)"><use data-c="33" xlink:href="#MJX-954-TEX-N-33"></use></g><rect width="553.6" height="60" x="120" y="220"></rect></g><g data-mml-node="mn" transform="translate(793.6,0)"><use data-c="34" xlink:href="#MJX-954-TEX-N-34"></use></g><g data-mml-node="mi" transform="translate(1293.6,0)"><use data-c="1D451" xlink:href="#MJX-954-TEX-I-1D451"></use></g></g></g></svg><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mfrac><mn>2</mn><mn>3</mn></mfrac><mn>4</mn><mi>d</mi></math></mjx-assistive-mml></mjx-container><script type="math/tex">\frac{2}{3}4d</script><span> 的维度而不是PaLM中的 </span><mjx-container class="MathJax" jax="SVG" style="position: relative;"><svg xmlns="http://www.w3.org/2000/svg" width="2.308ex" height="1.593ex" role="img" focusable="false" viewBox="0 -694 1020 704" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" style="vertical-align: -0.023ex;"><defs><path id="MJX-955-TEX-N-34" d="M462 0Q444 3 333 3Q217 3 199 0H190V46H221Q241 46 248 46T265 48T279 53T286 61Q287 63 287 115V165H28V211L179 442Q332 674 334 675Q336 677 355 677H373L379 671V211H471V165H379V114Q379 73 379 66T385 54Q393 47 442 46H471V0H462ZM293 211V545L74 212L183 211H293Z"></path><path id="MJX-955-TEX-I-1D451" d="M366 683Q367 683 438 688T511 694Q523 694 523 686Q523 679 450 384T375 83T374 68Q374 26 402 26Q411 27 422 35Q443 55 463 131Q469 151 473 152Q475 153 483 153H487H491Q506 153 506 145Q506 140 503 129Q490 79 473 48T445 8T417 -8Q409 -10 393 -10Q359 -10 336 5T306 36L300 51Q299 52 296 50Q294 48 292 46Q233 -10 172 -10Q117 -10 75 30T33 157Q33 205 53 255T101 341Q148 398 195 420T280 442Q336 442 364 400Q369 394 369 396Q370 400 396 505T424 616Q424 629 417 632T378 637H357Q351 643 351 645T353 664Q358 683 366 683ZM352 326Q329 405 277 405Q242 405 210 374T160 293Q131 214 119 129Q119 126 119 118T118 106Q118 61 136 44T179 26Q233 26 290 98L298 109L352 326Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mn"><use data-c="34" xlink:href="#MJX-955-TEX-N-34"></use></g><g data-mml-node="mi" transform="translate(500,0)"><use data-c="1D451" xlink:href="#MJX-955-TEX-I-1D451"></use></g></g></g></svg><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>4</mn><mi>d</mi></math></mjx-assistive-mml></mjx-container><script type="math/tex">4d</script><span>。</span></p><ul><li><p><span>原论文：</span><a href='https://arxiv.org/pdf/2002.05202v1.pdf'><span>GLU Variants Improve Transformer</span></a><span> </span></p></li><li><p><span>参数维度是由于增加了一个矩阵的缘故，为了保持参数相对相等，所以维度少了三分之一。</span></p></li><li><p><kbd style="background:yellow; color:red"><span>博文3、4</span></kbd><span>都给出了一些源码</span></p></li></ul><p><strong style="color:#6f0670; font-size:18px"><span>旋转嵌入[GPTNeo]</span></strong><span> 没有使用绝对位置嵌入，而是在网络的每一层添加</span><kbd style="border:1px dashed #990000; font-size:15px; color: #00b456; font-family: comic sans ms, 微软雅黑; font-weight:bold"><span>旋转位置嵌入(Rotary Positional Embedding, RoPE)</span></kbd><span>。</span></p><ul><li><p><span>原论文（英文）：</span><a href='https://arxiv.org/pdf/2104.09864v4.pdf'><span>RoFormer: Enhanced Transformer with Rotary Position Embedding</span></a><span> </span></p></li><li><p><span>具体细节，可以看看</span><kbd style="background:yellow; color:red"><span>博文3</span></kbd><span>的对应部分的描述。</span></p></li></ul><p>&nbsp;</p><h3 id='数据集'><span>数据集</span></h3><h4 id='预训练数据'><span>预训练数据</span></h4><p><span>预训练数据集由不同数据源组成，数据来源和比重如</span><span style="color:blue; font-weight:bold; font-style:italic; font-family:华文新魏; font-size:15px"><span>Table 1</span></span><span> 所示。</span></p><p><img src=".\pp015_files\image-20240912101400595.png" referrerpolicy="no-referrer" alt="image-20240912101400595"></p><p><span>限制只使用公开可用且与开源兼容的数据。得到以下数据混合以及它们在训练集中所占的百分比：</span></p><ul><li><p><span>English CommonCrawl [67%] 对来自2017~2020年的五个CommonCrawl存储进行预处理，使用CCNet管道。</span><span style="color:red"><span>该过程在行级别对数据进行去重</span></span><span>，使用</span><kbd style="border:1px dashed #990000; font-size:15px; color: #00b456; font-family: comic sans ms, 微软雅黑; font-weight:bold"><span>fastText线性分类器</span></kbd><span> 进行语言识别以删除非英语页面，并使用</span><kbd style="border:1px dashed #990000; font-size:15px; color: #00b456; font-family: comic sans ms, 微软雅黑; font-weight:bold"><span>ngram语言模型</span></kbd><span>过滤低质量内容。此外，还训练了一个线性模型来对维基百科中用作参考的页面进行分类，与随机抽样页面进行对比，并丢弃未被分类为参考的页面。</span></p><p><span style="border-radius: 10px; border-top: 1px solid red; border-bottom: 1px solid red; border-left: 1px solid red; border-right: 1px solid red;"><span>总结：非英语去除 &amp; 行级别的去重处理</span></span><span>。</span></p></li><li><p><span>C4 [15%] 在探索性实验中，作者观察到使用多样化预处理的CommonCrawl数据集可以提高性能。因此，在数据中包括了公开可用的C4数据集。</span><span style="color:red"><span>C4的预处理也包括去重和语言识别步骤</span></span><span>：与CCNet的主要区别在于质量过滤，这主要依赖于启发式方法，如网页中标点符号的存在或单词和句子的数量 。</span></p><p><span style="border-radius: 10px; border-top: 1px solid red; border-bottom: 1px solid red; border-left: 1px solid red; border-right: 1px solid red;"><span>概况：即，T5模型训练时使用的数据集</span></span><span>。</span></p></li><li><p><span>Github [4.5%] 使用了公开的GitHub数据集。只保留了根据Apache、BSD和MIT许可证分发的项目。此外，使用基于行长度或字母数字字符比例的启发式方法过滤低质量文件，并使用正则表达式去除了诸如标题之类的样板文件。最后，在文件级别对结果数据集进行了去重，使用精确匹配的方式。</span></p><p><span style="border-radius: 10px; border-top: 1px solid red; border-bottom: 1px solid red; border-left: 1px solid red; border-right: 1px solid red;"><span>概况：使用Google BigQuery.上的Apache, BSD and MIT licenses数据</span></span><span>。</span></p></li><li><p><span>Wikipedia [4.5%] 添加了涵盖20种语言的维基百科存储数据，时间跨度为2022年6月至8月。对数据进行处理，去除超链接、注释和其他格式化模板。</span></p><p><span style="border-radius: 10px; border-top: 1px solid red; border-bottom: 1px solid red; border-left: 1px solid red; border-right: 1px solid red;"><span>概括：截止到2022-08的多语言版本Wikipedia语料</span></span><span>。</span></p></li><li><p><span>Gutenberg and Books3 [4.5%] 在训练数据集中包含了两个书籍语料库：Gutenberg，其中包含公有领域的图书，以及ThePile的部分。在书籍级别进行了去重处理，删除了内容重叠度超过90%的书籍。</span></p><p><span style="border-radius: 10px; border-top: 1px solid red; border-bottom: 1px solid red; border-left: 1px solid red; border-right: 1px solid red;"><span>概况：书籍语料进行了去重</span></span><span>。</span></p></li><li><p><span>ArXiv [2.5%] 处理arXiv的LaTeX文件，将科学数据添加到数据集中。删除了第一节之前的所有内容以及参考文献部分。还删除了.tex文件中的注释，并对用户编写的定义和宏进行了内联扩展，以增加论文之间的一致性。</span></p><p><span style="border-radius: 10px; border-top: 1px solid red; border-bottom: 1px solid red; border-left: 1px solid red; border-right: 1px solid red;"><span>概况：删除掉第一个Section之前的所有内容，并去除了.tex中的注释</span></span><span>。</span></p></li><li><p><span>Stack Exchange [2%] 包含了Stack Exchange的一个数据备份，这是一个高质量的问答网站，涵盖了从计算机科学到化学等各种领域。保留了最大的28个网站的数据，从文本中删除了HTML标签，并按照得分（从高到低）对回答进行了排序。</span></p><p><span style="border-radius: 10px; border-top: 1px solid red; border-bottom: 1px solid red; border-left: 1px solid red; border-right: 1px solid red;"><span>概况：保留了来自28个最大网站的数据，从文本中删除了HTML标签，并按分数(从最高到最低)对答案进行了排序</span></span><span>。</span></p></li></ul><p><strong style="color:#6f0670; font-size:18px"><span>Tokenizer</span></strong></p><p><span>Tokenizer使用</span><kbd style="border:1px dashed #990000; font-size:15px; color: #00b456; font-family: comic sans ms, 微软雅黑; font-weight:bold"><span>SentencePiece包</span></kbd><span>实现的</span><kbd style="border:1px dashed #990000; font-size:15px; color: #00b456; font-family: comic sans ms, 微软雅黑; font-weight:bold"><span>字节对编码算法(Byte-Pair Encoding BPE)</span></kbd><span>对数据进行分词。将数字的每一位单独分开，避免出现数字不一致的问题，可以更好地理解和处理数值，极大地提高了数学能力。同时在遇到罕见词时使用byte编码分解未知的UTF-8 字符，做到未知词覆盖。</span></p><p><span>总体来说，整个训练数据集包含大约1.4T的标记。对于大部分训练数据，每个标记在训练过程中只使用一次，除了维基百科和图书领域对其进行了大约两个epoch的训练。</span></p><p><span style="color:blue; font-weight:bold; font-style:italic; font-family:华文新魏; font-size:15px"><span>Table 2</span></span><span> 给出了超参数的详细信息。</span></p><p><img src=".\pp015_files\image-20240912104215318.png" referrerpolicy="no-referrer" alt="image-20240912104215318"></p><center><p><span style="color:red">4个不同规模模型的超参数细节</span></p></center><ul><li><p><span>可以看到参数量越大，批大小不变的情况下，学习率越小的趋势。</span></p></li></ul><h4 id='优化器'><span>优化器</span></h4><ul><li><p><span>使用</span><kbd style="border:1px dashed #990000; font-size:15px; color: #00b456; font-family: comic sans ms, 微软雅黑; font-weight:bold"><span>AdamW优化器</span></kbd><span>，参数为： </span><mjx-container class="MathJax" jax="SVG" style="position: relative;"><svg xmlns="http://www.w3.org/2000/svg" width="18.491ex" height="2.034ex" role="img" focusable="false" viewBox="0 -705 8172.9 899" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" style="vertical-align: -0.439ex;"><defs><path id="MJX-956-TEX-I-1D6FD" d="M29 -194Q23 -188 23 -186Q23 -183 102 134T186 465Q208 533 243 584T309 658Q365 705 429 705H431Q493 705 533 667T573 570Q573 465 469 396L482 383Q533 332 533 252Q533 139 448 65T257 -10Q227 -10 203 -2T165 17T143 40T131 59T126 65L62 -188Q60 -194 42 -194H29ZM353 431Q392 431 427 419L432 422Q436 426 439 429T449 439T461 453T472 471T484 495T493 524T501 560Q503 569 503 593Q503 611 502 616Q487 667 426 667Q384 667 347 643T286 582T247 514T224 455Q219 439 186 308T152 168Q151 163 151 147Q151 99 173 68Q204 26 260 26Q302 26 349 51T425 137Q441 171 449 214T457 279Q457 337 422 372Q380 358 347 358H337Q258 358 258 389Q258 396 261 403Q275 431 353 431Z"></path><path id="MJX-956-TEX-N-31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path><path id="MJX-956-TEX-N-3D" d="M56 347Q56 360 70 367H707Q722 359 722 347Q722 336 708 328L390 327H72Q56 332 56 347ZM56 153Q56 168 72 173H708Q722 163 722 153Q722 140 707 133H70Q56 140 56 153Z"></path><path id="MJX-956-TEX-N-30" d="M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z"></path><path id="MJX-956-TEX-N-2E" d="M78 60Q78 84 95 102T138 120Q162 120 180 104T199 61Q199 36 182 18T139 0T96 17T78 60Z"></path><path id="MJX-956-TEX-N-39" d="M352 287Q304 211 232 211Q154 211 104 270T44 396Q42 412 42 436V444Q42 537 111 606Q171 666 243 666Q245 666 249 666T257 665H261Q273 665 286 663T323 651T370 619T413 560Q456 472 456 334Q456 194 396 97Q361 41 312 10T208 -22Q147 -22 108 7T68 93T121 149Q143 149 158 135T173 96Q173 78 164 65T148 49T135 44L131 43Q131 41 138 37T164 27T206 22H212Q272 22 313 86Q352 142 352 280V287ZM244 248Q292 248 321 297T351 430Q351 508 343 542Q341 552 337 562T323 588T293 615T246 625Q208 625 181 598Q160 576 154 546T147 441Q147 358 152 329T172 282Q197 248 244 248Z"></path><path id="MJX-956-TEX-N-2C" d="M78 35T78 60T94 103T137 121Q165 121 187 96T210 8Q210 -27 201 -60T180 -117T154 -158T130 -185T117 -194Q113 -194 104 -185T95 -172Q95 -168 106 -156T131 -126T157 -76T173 -3V9L172 8Q170 7 167 6T161 3T152 1T140 0Q113 0 96 17Z"></path><path id="MJX-956-TEX-N-32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"></path><path id="MJX-956-TEX-N-35" d="M164 157Q164 133 148 117T109 101H102Q148 22 224 22Q294 22 326 82Q345 115 345 210Q345 313 318 349Q292 382 260 382H254Q176 382 136 314Q132 307 129 306T114 304Q97 304 95 310Q93 314 93 485V614Q93 664 98 664Q100 666 102 666Q103 666 123 658T178 642T253 634Q324 634 389 662Q397 666 402 666Q410 666 410 648V635Q328 538 205 538Q174 538 149 544L139 546V374Q158 388 169 396T205 412T256 420Q337 420 393 355T449 201Q449 109 385 44T229 -22Q148 -22 99 32T50 154Q50 178 61 192T84 210T107 214Q132 214 148 197T164 157Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msub"><g data-mml-node="mi"><use data-c="1D6FD" xlink:href="#MJX-956-TEX-I-1D6FD"></use></g><g data-mml-node="mn" transform="translate(599,-150) scale(0.707)"><use data-c="31" xlink:href="#MJX-956-TEX-N-31"></use></g></g><g data-mml-node="mo" transform="translate(1280.3,0)"><use data-c="3D" xlink:href="#MJX-956-TEX-N-3D"></use></g><g data-mml-node="mn" transform="translate(2336.1,0)"><use data-c="30" xlink:href="#MJX-956-TEX-N-30"></use><use data-c="2E" xlink:href="#MJX-956-TEX-N-2E" transform="translate(500,0)"></use><use data-c="39" xlink:href="#MJX-956-TEX-N-39" transform="translate(778,0)"></use></g><g data-mml-node="mo" transform="translate(3614.1,0)"><use data-c="2C" xlink:href="#MJX-956-TEX-N-2C"></use></g><g data-mml-node="msub" transform="translate(4058.8,0)"><g data-mml-node="mi"><use data-c="1D6FD" xlink:href="#MJX-956-TEX-I-1D6FD"></use></g><g data-mml-node="mn" transform="translate(599,-150) scale(0.707)"><use data-c="32" xlink:href="#MJX-956-TEX-N-32"></use></g></g><g data-mml-node="mo" transform="translate(5339.1,0)"><use data-c="3D" xlink:href="#MJX-956-TEX-N-3D"></use></g><g data-mml-node="mn" transform="translate(6394.9,0)"><use data-c="30" xlink:href="#MJX-956-TEX-N-30"></use><use data-c="2E" xlink:href="#MJX-956-TEX-N-2E" transform="translate(500,0)"></use><use data-c="39" xlink:href="#MJX-956-TEX-N-39" transform="translate(778,0)"></use><use data-c="35" xlink:href="#MJX-956-TEX-N-35" transform="translate(1278,0)"></use></g></g></g></svg><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>β</mi><mn>1</mn></msub><mo>=</mo><mn>0.9</mn><mo>,</mo><msub><mi>β</mi><mn>2</mn></msub><mo>=</mo><mn>0.95</mn></math></mjx-assistive-mml></mjx-container><script type="math/tex">\beta_1=0.9, \beta_2=0.95</script><span>。</span></p></li><li><p><span>使用</span><kbd style="border:1px dashed #990000; font-size:15px; color: #00b456; font-family: comic sans ms, 微软雅黑; font-weight:bold"><span>余弦学习率</span></kbd><span>调度，这样最终的学习率等于最大学习率的10%。</span></p></li><li><p><span>使用权重衰退率为0.1。</span></p></li><li><p><span>梯度裁剪为1.0。</span></p></li><li><p><span>预热步（warm up 的 step）为2000。</span></p></li><li><p><span>学习率和批大小根据模型规模而不同，见</span><span style="color:blue; font-weight:bold; font-style:italic; font-family:华文新魏; font-size:15px"><span>Table 2</span></span><span> 。</span></p></li></ul><h4 id='高效实现'><span>高效实现</span></h4><p><span>作者做了一些优化来</span><kbd style="background:yellow; color:red"><span>提升训练速度</span></kbd><span>。</span></p><ol start='' ><li><p><span>首先，使用了一个</span><kbd style="border:1px dashed #990000; font-size:15px; color: #00b456; font-family: comic sans ms, 微软雅黑; font-weight:bold"><span>因果多头注意力</span></kbd><span>的高效实现来减少运行时的内存占用，该实现由可通过</span><a href='https://github.com/facebookresearch/xformers'><span>xformers</span></a><span>获取，受到了Self-attention does not need </span><mjx-container class="MathJax" jax="SVG" style="position: relative;"><svg xmlns="http://www.w3.org/2000/svg" width="5.832ex" height="2.452ex" role="img" focusable="false" viewBox="0 -833.9 2577.6 1083.9" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" style="vertical-align: -0.566ex;"><defs><path id="MJX-957-TEX-I-1D442" d="M740 435Q740 320 676 213T511 42T304 -22Q207 -22 138 35T51 201Q50 209 50 244Q50 346 98 438T227 601Q351 704 476 704Q514 704 524 703Q621 689 680 617T740 435ZM637 476Q637 565 591 615T476 665Q396 665 322 605Q242 542 200 428T157 216Q157 126 200 73T314 19Q404 19 485 98T608 313Q637 408 637 476Z"></path><path id="MJX-957-TEX-N-28" d="M94 250Q94 319 104 381T127 488T164 576T202 643T244 695T277 729T302 750H315H319Q333 750 333 741Q333 738 316 720T275 667T226 581T184 443T167 250T184 58T225 -81T274 -167T316 -220T333 -241Q333 -250 318 -250H315H302L274 -226Q180 -141 137 -14T94 250Z"></path><path id="MJX-957-TEX-I-1D45B" d="M21 287Q22 293 24 303T36 341T56 388T89 425T135 442Q171 442 195 424T225 390T231 369Q231 367 232 367L243 378Q304 442 382 442Q436 442 469 415T503 336T465 179T427 52Q427 26 444 26Q450 26 453 27Q482 32 505 65T540 145Q542 153 560 153Q580 153 580 145Q580 144 576 130Q568 101 554 73T508 17T439 -10Q392 -10 371 17T350 73Q350 92 386 193T423 345Q423 404 379 404H374Q288 404 229 303L222 291L189 157Q156 26 151 16Q138 -11 108 -11Q95 -11 87 -5T76 7T74 17Q74 30 112 180T152 343Q153 348 153 366Q153 405 129 405Q91 405 66 305Q60 285 60 284Q58 278 41 278H27Q21 284 21 287Z"></path><path id="MJX-957-TEX-N-32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"></path><path id="MJX-957-TEX-N-29" d="M60 749L64 750Q69 750 74 750H86L114 726Q208 641 251 514T294 250Q294 182 284 119T261 12T224 -76T186 -143T145 -194T113 -227T90 -246Q87 -249 86 -250H74Q66 -250 63 -250T58 -247T55 -238Q56 -237 66 -225Q221 -64 221 250T66 725Q56 737 55 738Q55 746 60 749Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><use data-c="1D442" xlink:href="#MJX-957-TEX-I-1D442"></use></g><g data-mml-node="mo" transform="translate(763,0)"><use data-c="28" xlink:href="#MJX-957-TEX-N-28"></use></g><g data-mml-node="msup" transform="translate(1152,0)"><g data-mml-node="mi"><use data-c="1D45B" xlink:href="#MJX-957-TEX-I-1D45B"></use></g><g data-mml-node="mn" transform="translate(633,363) scale(0.707)"><use data-c="32" xlink:href="#MJX-957-TEX-N-32"></use></g></g><g data-mml-node="mo" transform="translate(2188.6,0)"><use data-c="29" xlink:href="#MJX-957-TEX-N-29"></use></g></g></g></svg><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>O</mi><mo stretchy="false">(</mo><msup><mi>n</mi><mn>2</mn></msup><mo stretchy="false">)</mo></math></mjx-assistive-mml></mjx-container><script type="math/tex">O(n^2)</script><span> memory的启发。并采用了</span><kbd style="border:1px dashed #990000; font-size:15px; color: #00b456; font-family: comic sans ms, 微软雅黑; font-weight:bold"><span>Flash Attention</span></kbd><span>，基于语言建模任务的自回归性质，通过未存储注意力权重和未计算key/query得分来实现高效地反向传播。</span></p></li><li><p><span>同时为了进一步提升训练效率，通过检查点减少在反向传播时重复计算的激活值数量。具体地，存储了消耗较大的激活函数的计算结果，比如线性层的输出。这通过手动为Transformer实现反向传播函数（backward函数），而不是依赖于PyTorch的autograd。为了充分利用该优化，需要使用</span><kbd style="border:1px dashed #990000; font-size:15px; color: #00b456; font-family: comic sans ms, 微软雅黑; font-weight:bold"><span>模型和序列并行技术</span></kbd><span>（博文1）来减少模型内存的占用。此外，还尽可能地重叠激活计算和GPU之间的网络通信(通过</span><kbd style="border:1px dashed #990000; font-size:15px; color: #00b456; font-family: comic sans ms, 微软雅黑; font-weight:bold"><span>all_reduce操作</span></kbd><span>)。</span></p></li></ol><p><span>当训练一个65B参数的模型，在2048个80G显存的A100上的处理速度约为380个标记/秒/GPU。这意味着使用包含1.4T个标记的数据集进行训练大约需要21天的时间。</span></p><p>&nbsp;</p><h3 id='代码'><kbd style="border:1px double black; font-size:30px; color: #990000; font-family: comic sans ms, 微软雅黑; font-weight:bold; border-bottom: 2px solid black; border-top: 2px solid black;"><span>代码</span></kbd><span> </span></h3><p><span>由于模型较大，目前的设备暂时没有办法支持进一步的实验，但是其模型代码已经开源，</span><span style="color:blue; font-family:仿宋; font-weight:bold"><span>所以可以先通过代码了解一下模型结构上的一些细节</span></span><span>，今天就针对github上放出的代码，了解一下模型的细节。</span></p><p><span>此外，该模型其实就是transformer做了一点细节上的改进，</span><span style="color:blue; font-family:楷体; font-weight:bold;"><span>真正更有价值的工作应该在数据和训练方面。通过阅读代码，可以对transformer的基础构造进行复习，</span><span style="border-bottom: 2px dashed FireBrick;"><span>并且了解大模型如何在多卡上分布推理</span></span></span><span>。</span></p><h4 id='项目环境依赖'><span>项目环境依赖</span></h4><p><span>此项目给出的环境依赖只有4个：</span></p><ul><li><p><span>torch</span></p></li><li><p><span>fairscale</span></p><ul><li><p><span>fairscale是用来做GPU分布的，一般是当使用DDP仍然遇到超显存的问题时使用fairscale。目前fairscale（</span><kbd style="background:yellow; color:red"><span>博文5</span></kbd><span>）还没有试过，在下文的源码介绍中，</span><kbd style="background:yellow; color:red"><span>博文5</span></kbd><span>会用torch中对应的基础网络替代fairscale中的结构层进行介绍。</span></p></li></ul></li><li><p><span>fire</span></p><ul><li><p><span>fire是一个命令行工具，用或者不用他都可以。</span></p></li></ul></li><li><p><span>sentencepiece</span></p><ul><li><p><span>sentencepiece是用于tokenizer的工具包，会在tokenizer部分简单介绍。</span></p></li></ul></li></ul><h4 id='模型细节'><span>模型细节</span></h4><p><span>由于该模型就是用的transformer的decoder，所以在结构上它与GPT是非常类似的，只是有一些细节需要注意一下。</span></p><ul><li><p><kbd style="border:1px dashed #990000; font-size:15px; color: #00b456; font-family: comic sans ms, 微软雅黑; font-weight:bold"><span>RMS Pre-Norm</span></kbd></p></li><li><p><kbd style="border:1px dashed #990000; font-size:15px; color: #00b456; font-family: comic sans ms, 微软雅黑; font-weight:bold"><span>SwiGLU激活函数</span></kbd></p></li><li><p><kbd style="border:1px dashed #990000; font-size:15px; color: #00b456; font-family: comic sans ms, 微软雅黑; font-weight:bold"><span>RoPE旋转位置编码</span></kbd></p></li></ul><h4 id='代码解读'><span>代码解读</span></h4><ul><li><p><span>tokenizer</span></p></li><li><p><span>model</span></p><ul><li><p><span>模型细节详解</span></p></li><li><p><span>ransformer构建</span></p></li></ul></li><li><p><span>generate</span></p></li></ul><h4 id='推理'><span>推理</span></h4><p><span>简单看一下官方example中给出的推理样例prompt：</span></p><pre class="md-fences md-end-block md-fences-with-lineno ty-contain-cm modeLoaded" spellcheck="false" lang=""><div class="CodeMirror cm-s-inner cm-s-null-scroll CodeMirror-wrap" lang=""><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 9.52344px; left: 36px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 28px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre><div class="CodeMirror-linenumber CodeMirror-gutter-elt"><div>2</div></div></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: -28px; width: 28px;"></div><div class="CodeMirror-gutter-wrapper CodeMirror-activeline-gutter" style="left: -28px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt CodeMirror-linenumber-show" style="left: 0px; width: 19px;">1</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">['The capital of Germany is the city of',</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -28px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt CodeMirror-linenumber-show" style="left: 0px; width: 19px;">2</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> 'Here is my sonnet in the style of Shakespeare about an artificial intelligence:']</span></pre></div></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 46px;"></div><div class="CodeMirror-gutters" style="height: 46px;"><div class="CodeMirror-gutter CodeMirror-linenumbers" style="width: 27px;"></div></div></div></div></pre><p><span>生成结果为：</span></p><pre class="md-fences md-end-block md-fences-with-lineno ty-contain-cm modeLoaded" spellcheck="false" lang=""><div class="CodeMirror cm-s-inner cm-s-null-scroll CodeMirror-wrap" lang=""><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 9.26172px; left: 36px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 28px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre><div class="CodeMirror-linenumber CodeMirror-gutter-elt"><div>3</div></div></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: -28px; width: 28px;"></div><div class="CodeMirror-gutter-wrapper CodeMirror-activeline-gutter" style="left: -28px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt CodeMirror-linenumber-show" style="left: 0px; width: 19px;">1</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">['The capital of Germany is the city of Berlin. The city is also the capital of the Federal Republic of Germany.\nThe city of Berlin is located in the state of Berlin in Germany. The city is the capital of the federal Republic of Germany.\nBerlin has a total population of around 3.4 million and is the 2nd most populous city in the European Union after London. The city has an area of 892 square kilometers and is the 9th most populated city in Europe.\nThe city of Berlin was founded in the 13th century. Berlin was also the capital of the German Empire, the German Democratic Republic and the united Federal Republic of Germany.\nThe city of Berlin has many tourist attractions that include Museumsinsel, Brandenburger Tor, the Reichstag, and the Schloss Charlottenburg.\nThe city of Berlin is a major center for the Arts, Science, Education and Innovation. The city is also the political, economic, and cultural center of Germany.\nBerlin is home to a number of world renowned universities including the Free University of Berlin, the Humboldt University of Berlin, the Technical University of Berlin, and the Berlin Institute of Technology.\nThe city of Berlin has',</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -28px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 19px;">2</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> 'Here is my sonnet in the style of Shakespeare about an artificial intelligence:\nLet us take a moment from the tumultuous storm\nOf the politics of religion to examine the shape of things.\nOur intuition tells us that whatever we can conceive\nCan exist – our minds have no limit.\nHowever, our senses tell us that there is a limit.\nLet us examine the infinite and what we can say about it.\nThe infinite is something that we can never see.\nWe cannot say what it is and we cannot say what it is not.\nBut, somehow, it is nonetheless real.\nWe can also say that the infinite is eternal –\nIt has no beginning and it has no end.\nThat is what it is – it is the eternal.\nIn a word, it is God.\nBut what about the universe?\nThe universe is a finite construct –\nThe infinitely large and the infinitely small –\nAll of it finite.\nEven the singularity at the end of time is finite.\nSo, the universe is not God.\nPerhaps it is the vessel of God.\nPerhaps, in some sense, the universe is God.\nBut, I am still a man.\nI cannot see the infinite.\nI can only']</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -28px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt CodeMirror-linenumber-show" style="left: 0px; width: 19px;">3</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="" cm-zwsp="">
+</span></span></pre></div></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 668px;"></div><div class="CodeMirror-gutters" style="height: 668px;"><div class="CodeMirror-gutter CodeMirror-linenumbers" style="width: 27px;"></div></div></div></div></pre><p>&nbsp;</p><h3 id='主要结果'><span>主要结果</span></h3><p><span>涉及了零样本（Zero-shot）和少样本（Few-shot）任务，一共报告了20个基准：</span></p><ul><li><p><strong style="color:red"><span>零样本</span></strong><span> 提供了一个任务的文本描述和一个测试样本，模型要么通过开发式生成答案，要么对提供的答案进行排序。</span></p></li><li><p><strong style="color:red;"><span>少样本</span></strong><span> 提供了任务的一些样本（1~64之间）和一个测试样本。模型以这个文本作为输入并生成答案或对不同的选项进行排序。</span></p></li></ul><p><span>在自由生成任务和多项选择任务上评估LLaMA。</span></p><p><strong style="color:#6f0670; font-size:18px"><span>常识推理</span></strong><span> 考虑了8个标准的常识推理基准。</span></p><p><img src=".\pp015_files\image-20240912111539670.png" referrerpolicy="no-referrer" alt="image-20240912111539670"></p><p><span>如</span><span style="color:blue; font-weight:bold; font-style:italic; font-family:华文新魏; font-size:15px"><span>Table 3</span></span><span> 所示，LLaMA-65B在绝大多数基准上超越了Chinchilla-70B。而LLaMA-13B也在大多数基准上超越了GPT-3，尽管前者比后者小了10倍以上。</span></p><p><strong style="color:#6f0670; font-size:18px"><span>闭卷问答</span></strong><span> 将LLaMA与现有的LLM在两个闭卷问题回答基准中进行比较：自然问题(Natural Questions)和TriviaQA。</span></p><p><span>在</span><span style="color:blue; font-weight:bold; font-style:italic; font-family:华文新魏; font-size:15px"><span>Table 4</span></span><span> 中，作者报告了在自然问题上的性能，而在</span><span style="color:blue; font-weight:bold; font-style:italic; font-family:华文新魏; font-size:15px"><span>Table 5</span></span><span> 中，报告了在TriviaQA上的性能。</span></p><figure class='table-figure'><table><thead><tr><th><img src=".\pp015_files\image-20240912111622500.png" referrerpolicy="no-referrer" alt="image-20240912111622500"></th><th><img src=".\pp015_files\image-20240912111656659.png" referrerpolicy="no-referrer" alt="image-20240912111656659"></th></tr></thead><tbody></tbody></table></figure><p><span>在这两个基准测试中，LLaMA-65B在零样本和少样本设置下取得了SOTA的性能。更重要的是，尽管LLaMA-13B的规模较小，但在这些基准测试中也具有竞争力。</span></p><p><strong style="color:#6f0670; font-size:18px"><span>阅读理解</span></strong><span> </span></p><p><img src=".\pp015_files\image-20240912111718449.png" referrerpolicy="no-referrer" alt="image-20240912111718449"></p><p><span>如</span><span style="color:blue; font-weight:bold; font-style:italic; font-family:华文新魏; font-size:15px"><span>Table 6</span></span><span> 所示，在基准测试中，LLaMA-65B与PaLM-540B相媲美，而LLaMA-13B的性能也比GPT-3高出几个百分点。</span></p><p><strong style="color:#6f0670; font-size:18px"><span>数学推理</span></strong><span> </span></p><p><img src=".\pp015_files\image-20240912111738090.png" referrerpolicy="no-referrer" alt="image-20240912111738090"></p><p><span>在</span><span style="color:blue; font-weight:bold; font-style:italic; font-family:华文新魏; font-size:15px"><span>Table 7</span></span><span> 中，与PaLM和Minerva进行了比较。Minerva是一系列在ArXiv和数学网页中提取的38.5B标记上微调的PaLM模型，而PaLM和LLaMA都没有在数学数据上进行微调。在GSM8k上，可以看到LLaMA-65B的性能由于Minverva-62B。</span></p><p><strong style="color:#6f0670; font-size:18px"><span>代码生成</span></strong><span> 还在HumanEval和MBPP基准测试上评估根据自然语言描述编写代码的能力。模型需要生成一个符合描述并满足测试用例的Python程序。</span></p><p><img src=".\pp015_files\image-20240912111810319.png" referrerpolicy="no-referrer" alt="image-20240912111810319"></p><p><span>如</span><span style="color:blue; font-weight:bold; font-style:italic; font-family:华文新魏; font-size:15px"><span>Table 8</span></span><span> 所示，对于类似的规模上，LLaMA在性能上优于其他通用模型，如LaMDA和PaLM。LLaMA在HumanEval和MBPP上的13B参数以上的性能也超过了LaMDA 137B。LLaMA-65B也优于PaLM-62B。</span></p><p><span>在包含代码的数据上进行微调可以提高模型的代码性能，同时还能提高模型的逻辑推理能力。</span></p><p>&nbsp;</p><p><strong style="color:#6f0670; font-size:18px"><span>大规模多任务语言理解</span></strong><span> </span></p><p><img src=".\pp015_files\image-20240912111836002.png" referrerpolicy="no-referrer" alt="image-20240912111836002"></p><p><span>在</span><span style="color:blue; font-weight:bold; font-style:italic; font-family:华文新魏; font-size:15px"><span>Table 9</span></span><span> 中的结果所示，在这个基准测试中，LLaMA-65B在平均值和大多数领域上都落后于Chinchilla-70B和PaLM-540B几个百分点。一个可能的解释是，LLaMA在预训练数据中使用的书籍和学术论文数量有限，即ArXiv、Gutenberg和Books3，总计只有177GB，而这些模型是在多达2TB的书籍上进行训练的。</span></p><p>&nbsp;</p><h4 id='训练期间的性能评估'><span>训练期间的性能评估</span></h4><p><img src=".\pp015_files\image-20240912111933828.png" referrerpolicy="no-referrer" alt="image-20240912111933828"></p><p><img src=".\pp015_files\image-20240912111913750.png" referrerpolicy="no-referrer" alt="image-20240912111913750"></p><p><span>在训练过程中，作者追踪了模型在一些问答和常识基准测试中的性能(</span><span style="color:blue; font-weight:bold; font-style:italic; font-family:华文新魏; font-size:15px"><span>Figure 2</span></span><span> )。在大多数基准测试中，性能稳步提高，并与模型的训练困惑度相关(见</span><span style="color:blue; font-weight:bold; font-style:italic; font-family:华文新魏; font-size:15px"><span>Figure 1</span></span><span> )。但有两个例外，即SIQA和WinoGrande。特别是在SIQA上，可以观察到性能存在很大的变化，可能是该基准测试不太可靠。在WinoGrande上，性能与训练困惑度的相关性不太明显：LLaMA-33B和LLaMA-65B在训练过程中的性能相似。</span></p><p>&nbsp;</p><h4 id='指令微调'><span>指令微调</span></h4><p><span>在本节中，作者展示了简单的</span><code>微调指令数据</code><span>可以迅速改善MMLU的性能。作者观察到</span><span style="color:blue; font-family:仿宋; font-weight:bold"><span>少量样本的微调就可以提高在MMLU上的性能</span></span><span>，并进一步提高模型遵循指令的能力。</span></p><p><img src=".\pp015_files\image-20240912111856555.png" referrerpolicy="no-referrer" alt="image-20240912111856555"></p><p><span>在</span><span style="color:blue; font-weight:bold; font-style:italic; font-family:华文新魏; font-size:15px"><span>Table 10</span></span><span> 中，可以看到指令模型LLaMA-I在MMLU上的结果，并与现有中等规模的指令微调模型进行了比较，包括OPT-IML和Flan-PaLM系列。尽管这里使用的指令微调方法相对简单，但在MMLU上达到了68.9%的性能。虽然LLaMA-I(65B)在MMLU上的表现优于现有的中等规模指令微调模型，但仍然远远落后于最先进的水平，即GPT code-davinci-002在MMLU上的77.4。</span></p><p>&nbsp;</p><h3 id='-偏见毒性错误'><strong style="color:red"><span>※</span></strong><span> 偏见/毒性/错误</span></h3><p><span>LLM被证明</span><span style="color:blue"><span>会重现并强化存在与训练数据中的偏见，并生成毒性或冒犯性内容</span></span><span>。由于训练数据集包含了大量来自网络的数据，作者认为确定模型生成此类内容的可能性是至关重要的。</span></p><p><span>为了了解LLaMA-65B的潜在危害，在不同的基准测试上进行了评估，这些测试衡量了有害内容的生成和偏见的检测。虽然选择了一些用于指示这些模型存在问题的标准基准测试，但这些评估并不足以完全理解与这些模型相关的风险。</span></p><h4 id='●-realtoxicityprompts'><strong style="color:red"><span>●</span></strong><span> RealToxicityPrompts</span></h4><p><span>语言模型可以生成有毒内容，例如侮辱、仇恨言论或威胁。</span></p><p><span>RealToxicityPrompts基准视为其</span><span style="color:red"><span>模型毒性的指标</span></span><span>。RealToxicityPrompts由大约10万个模型必须完成的提示组成;然后通过向PerspectiveAPI发出请求来自动评估毒性评分。</span></p><p><span>RealToxicityPrompts包含约10万个提示，模型必须补全这些提示；然后通过向PerspectiveAPI进行请求来自动评估毒性得分。</span></p><p><img src=".\pp015_files\image-20240912112005227.png" referrerpolicy="no-referrer" alt="image-20240912112005227"></p><p><span>对于这10万个提示中的每一个，使用模型贪婪地生成，并测量它们的毒性得分。每个提示的得分范围从0(非毒性)到1(毒性)。在</span><span style="color:blue; font-weight:bold; font-style:italic; font-family:华文新魏; font-size:15px"><span>Table 11</span></span><span> 中，报告了在RealToxicityPrompts的Basic和Respectful类别上的平均得分。可以观察到，毒性随模型规模增加而增加，尤其是对于Respectful的提示。但毒性与模型大小之间的关系可能仅适用于模型系列内部。</span></p><h4 id='●-crows-pairs'><strong style="color:red"><span>●</span></strong><span> CrowS-Pairs</span></h4><p><span>在CrowSPairs数据集上评估了模型的偏见，该数据集可以衡量9个类别的偏见：性别、宗教、种族/肤色等。使用零样本设置中两个句子的困惑度来衡量模型对偏见句子的偏好。因此，得分较高表示偏见较高。在</span><span style="color:blue; font-weight:bold; font-style:italic; font-family:华文新魏; font-size:15px"><span>Table 12</span></span><span> 中与GPT-3和OPT-175B进行了比较。在平均水平上，LLaMA与这两个模型相比稍微有些优势。作者认为这些偏见可能来自于CommonCrawl，尽管经过了多次过滤步骤。</span></p><p><img src=".\pp015_files\image-20240912112020655.png" referrerpolicy="no-referrer" alt="image-20240912112020655"></p><h4 id='●-winogender'><strong style="color:red"><span>●</span></strong><span> WinoGender</span></h4><p><img src=".\pp015_files\image-20240912112039772.png" referrerpolicy="no-referrer" alt="image-20240912112039772"></p><p><span>进一步研究了在性别上的偏见。还测试了WinoGender基准，这是一个</span><span style="color:red"><span>共指消解数据集</span></span><span>，通过</span><span style="border-bottom: 2px dashed FireBrick;"><span>确定模型的共指消解性能是否受到代词性别的影响</span></span><span>来评估偏见。</span></p><p><span>每个句子都有三个指代：一个职业，一个参与者和一个代词，其中代词要么指代职业，要么指代参与者。目标是揭示模型是否捕捉到与职业相关的社会偏见。</span></p><p><span>在</span><span style="color:blue; font-weight:bold; font-style:italic; font-family:华文新魏; font-size:15px"><span>Table 13</span></span><span> 中，看到了模型数据集中包含的三个不同代词的共指分数。模型在</span><code>their/them/someone</code><span>代词的共指消解上要比</span><code>her/her/she</code><span>和</span><code>his/him/he</code><span>代词表现显著更好，这很可能表明存在性别偏见。</span></p><h4 id='●-truthfulqa'><strong style="color:red"><span>●</span></strong><span> TruthfulQA</span></h4><p><span>TruthfulQA旨在</span><span style="border-bottom: 2px dashed FireBrick;"><span>衡量模型的真实性</span></span><span>，即其识别声明是否真实的能力。该基准测试可以评估模型生成错误信息或虚假声明的风险。问题以多样的风格编写，涵盖了38个类别，并且被设计为对抗性的。</span></p><p><img src=".\pp015_files\image-20240912112057294.png" referrerpolicy="no-referrer" alt="image-20240912112057294"></p><p><span>在</span><span style="color:blue; font-weight:bold; font-style:italic; font-family:华文新魏; font-size:15px"><span>Table 14</span></span><span> 中，可以看到模型在衡量真实模型和真实且信息丰富的问题上的表现。与GPT-3相比，虽然LLaMA在这两个类别中得分更高，但正确答案的比率仍然较低，表明LLaMA很可能会产生不正确的答案。</span></p><p>&nbsp;</p><h3 id='补充'><span>补充</span></h3><h4 id='相关工作'><span>相关工作</span></h4><p><strong style="color:#6f0670; font-size:18px"><span>语言模型</span></strong><span> 语言模型是对单词、标记或字符序列的概率分布表示。</span><span style="color:blue; font-family:仿宋; font-weight:bold"><span>这个任务通常被称为下一个标记预测，并且长期以来一直被认为是自然语言处理中的核心问题</span></span><span>。由于图灵提出通过“模仿游戏”来使用语言来衡量机器智能，因此语言建模已被提出作为衡量人工智能进展的基准。</span></p><p><strong style="color:#6f0670; font-size:18px"><span>架构</span></strong><span> 传统上，语言模型基于</span><kbd style="border:1px dashed #990000; font-size:15px; color: #00b456; font-family: comic sans ms, 微软雅黑; font-weight:bold"><span>n-gram</span></kbd><span>计数统计，并提出了各种平滑技术来改善对罕见事件的估计。在过去的二十年中，神经网络已成功应用于语言建模任务，从前馈模型、循环神经网络到LSTM。近来，基于自注意力机制的Transformer网络取得了重要的改进，特别是在捕捉长距离依赖性方面。</span></p><p><strong style="color:#6f0670; font-size:18px"><span>规模</span></strong><span> 语言模型的扩充有着悠久的历史。无论是模型还是数据集的规模。Brants等人展示了在2万亿标记上训练的语言模型的优势，结果是有3000亿个n-gram，对机器翻译的质量有所提升。Heafield等人后来展示了如何将</span><kbd style="border:1px dashed #990000; font-size:15px; color: #00b456; font-family: comic sans ms, 微软雅黑; font-weight:bold"><span>Kneser-Ney平滑技术</span></kbd><span>扩展到Web规模的数据上。这使得能够在来自CommonCrawl的9750亿标记上训练一个5-gram模型，产生了具有5000亿个n-gram的模型。</span></p><p><span>在神经语言模型的背景下，Jozefowicz通过将LSTM扩展到10亿个参数，在十亿字基准测试中取得了最先进的结果。后来，通过扩展Transformer在许多自然语言处理任务上取得了改进。值得注意的模型包括</span><strong><span>BERT</span></strong><span>、</span><strong><span>GPT-2</span></strong><span>、</span><strong><span>MegatronLM</span></strong><span>和</span><strong><span>T5</span></strong><span>。重要的突破是通过</span><strong><span>GPT-3</span></strong><span>取得的，这是一个具有1750亿个参数的模型。这导致了一系列大规模语言模型的出现，例如Jurassic-1、Megatron-Turing NLG、Gopher、Chinchilla、PaLM、OPT和GLM。Hestness等人研究了扩展对深度学习模型性能的影响，展示了</span><span style="border-bottom: 2px dashed FireBrick;"><span>模型和数据集大小与系统性能之间存在的幂律关系</span></span><span>。Kaplan等人专门为基于Transformer的语言模型推导了幂律关系，后来由Hoffmann等人通过调整学习率调度来改进。最后，Wei等人研究了扩展规模对大型语言模型能力的影响。</span></p><ul><li><p><u><span>Emergent Abilities of Large Language Models</span></u><span> 研究了缩放对大型语言模型能力的影响。(这篇是研究涌现现象的)</span></p></li></ul><h3 id='结论'><span>结论</span></h3><p><span>在LLaMA中，作者介绍了一系列开放的语言模型，并与最先进的基准模型进行了竞争。与以前的研究不同，作者展示了通过仅使用公开可用的数据进行训练，而无需使用专有数据集，可以实现最先进的性能。</span></p><p><span>本文中提出了一系列公开发布的语言模型，并实现与最先进的基础模型相竞争的结果。最值得注意的是，</span><span style="border-radius: 10px; border-top: 1px solid red; border-bottom: 1px solid red; border-left: 1px solid red; border-right: 1px solid red;"><span>LLaMA-13B的性能优于GPT-3，但体积比GPT-3小10倍以上，LLaMA-65B与Chinchilla-70B和PaLM-540B竞争</span></span><span>。</span></p><ul><li><p><span>与之前的研究不同，我们的研究表明，不使用专有数据集，而只使用公开可用的数据集进行训练，可以达到最先进的性能。</span></p></li><li><p><span>我们希望向研究界发布这些模型将加速大型语言模型的发展，并有助于提高它们的鲁棒性，减轻已知的问题，如毒性和偏见。</span></p></li><li><p><span>此外，我们像Chung等人(2022)一样观察到，</span><span style="border-bottom: 2px dashed FireBrick;"><span>根据指令对这些模型进行微调会产生有希望的结果，我们计划在未来的工作中进一步研究这一点</span></span><span>。</span></p><p><span>作者也注意到 Scaling Instruction-Finetuned Language Models 在指令上微调引向了更好的结果，并计划在未来做这个方面的实验。</span></p></li><li><p><span>最后，我们计划在未来发布在更大的预训练语料库上训练的更大的模型，因为我们在扩展时已经看到了性能的不断提高。</span></p></li></ul><p>&nbsp;</p><p><kbd style="background:yellow; color:red"><span>博文5</span></kbd><span> 代码部分的总结</span></p><blockquote><p><span>总结一下，本文对LLaMA大模型的结构代码进行了详细的介绍，其开源出来的结构代码量并不多，但是其中很多细节值得反复推敲理解。</span></p></blockquote><p>&nbsp;</p><h3 id='参考博文'><span>参考博文</span></h3><ol start='' ><li><p><a href='https://blog.csdn.net/yjw123456/article/details/136721190'><span>[论文笔记]LLaMA: Open and Efficient Foundation Language Models</span></a><span> </span></p><p><span style="color:red"><span>点评：★★★★☆ 起码对文章进行了整体的描述。还是不错的！</span></span><span> </span></p></li><li><p><a href='https://juejin.cn/post/7224369270141354043'><span>论文笔记：LLaMA: Open and Efficient Foundation Language Models</span></a><span> </span></p><p><span style="color:red"><span>点评：★★★☆☆ 感觉和博文1非常相似，补充了一些细节知识点的描述。</span></span><span> </span></p></li><li><p><a href='https://www.cnblogs.com/bringlu/p/17266526.html'><span>【读论文】LLaMA: Open and Efficient Foundation Language Models</span></a><span> </span></p><p><span style="color:red"><span>点评：★★★★☆ 感觉类似的博文后面的实验都是大概相仿，估计大多是对原文的翻译罢了~  但是这篇文章有的好处是，（以自己的理解吗？猜测是的）给出了架构图。此外，具体使用的细节也给出了出处，方便后期深入学习的时候，可以回过头来再参考看看。</span></span><span> </span></p></li><li><p><a href='https://cloud.tencent.com/developer/article/2317895'><span>【LLM系列之LLaMA】LLaMA: Open and Efficient Foundation Language Models</span></a><span> </span></p><p><span style="color:red"><span>点评：★★★☆☆ 相比之前的文章，有些细节上的补充，但是大多数都是一样的。</span></span><span> </span></p></li><li><p><a href='https://blog.csdn.net/weixin_44826203/article/details/129255185'><span>Meta最新模型LLaMA细节与代码详解</span></a><span> </span><span style="color:red"><span>暂时没有展开，复现的时候再细看</span></span></p></li></ol><p>&nbsp;</p><div class='md-toc' mdtype='toc'><p class="md-toc-content" role="list"><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n0"><a class="md-toc-inner" href="#llama2023---论文精读学习笔记">LLaMA - 论文精读学习笔记</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n15"><a class="md-toc-inner" href="#全文概述">全文概述</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n23"><a class="md-toc-inner" href="#背景">背景</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n50"><a class="md-toc-inner" href="#方法">方法</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n53"><a class="md-toc-inner" href="#架构">架构</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n76"><a class="md-toc-inner" href="#数据集">数据集</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n77"><a class="md-toc-inner" href="#预训练数据">预训练数据</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n112"><a class="md-toc-inner" href="#优化器">优化器</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n126"><a class="md-toc-inner" href="#高效实现">高效实现</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n135"><a class="md-toc-inner" href="#代码">代码 </a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n138"><a class="md-toc-inner" href="#项目环境依赖">项目环境依赖</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n158"><a class="md-toc-inner" href="#模型细节">模型细节</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n167"><a class="md-toc-inner" href="#代码解读">代码解读</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n180"><a class="md-toc-inner" href="#推理">推理</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n186"><a class="md-toc-inner" href="#主要结果">主要结果</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n219"><a class="md-toc-inner" href="#训练期间的性能评估">训练期间的性能评估</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n224"><a class="md-toc-inner" href="#指令微调">指令微调</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n229"><a class="md-toc-inner" href="#-偏见毒性错误">※ 偏见/毒性/错误</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n232"><a class="md-toc-inner" href="#●-realtoxicityprompts">● RealToxicityPrompts</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n238"><a class="md-toc-inner" href="#●-crows-pairs">● CrowS-Pairs</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n241"><a class="md-toc-inner" href="#●-winogender">● WinoGender</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n246"><a class="md-toc-inner" href="#●-truthfulqa">● TruthfulQA</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n251"><a class="md-toc-inner" href="#补充">补充</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n252"><a class="md-toc-inner" href="#相关工作">相关工作</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n260"><a class="md-toc-inner" href="#结论">结论</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n278"><a class="md-toc-inner" href="#参考博文">参考博文</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n296"><a class="md-toc-inner" href="#原文目录">原文目录</a></span></p></div><h4 id='原文目录'><span>原文目录</span></h4><p><span>1 Introduction</span><span>	</span><span>1</span>
+<span>2 Approach</span><span>	</span><span>2</span>
+<span>	</span><span>2.1 Pre-training Data</span><span>	</span><span>2</span>
+<span>	</span><span>2.2 Architecture</span><span>	</span><span>3</span>
+<span>	</span><span>2.3 Optimizer</span><span>	</span><span>3</span>
+<span>	</span><span>2.4 Efficient implementation</span><span>	</span><span>3</span>
+<span>3 Main results</span><span>	</span><span>4</span>
+<span>	</span><span>3.1 Common Sense Reasoning</span><span>	</span><span>4</span>
+<span>	</span><span>3.2 Closed-book Question Answering</span><span>	</span><span>5</span>
+<span>	</span><span>3.3 Reading Comprehension</span><span>	</span><span>5</span>
+<span>	</span><span>3.4 Mathematical reasoning</span><span>	</span><span>5</span>
+<span>	</span><span>3.5 Code generation</span><span>	</span><span>5</span>
+<span>	</span><span>3.6 Massive Multitask LanguageUnderstanding</span><span>	</span><span>6</span>
+<span>	</span><span>3.7 Evolution of performance during training</span><span>	</span><span>6</span>
+<span>4 Instruction Finetuning</span><span>	</span><span>7</span>
+<span>5 Bias, Toxicity and Misinformation</span><span>	</span><span>7</span>
+<span>	</span><span>5.1 RealToxicityPrompts</span><span>	</span><span>8</span>
+<span>	</span><span>5.2 CrowS-Pairs</span><span>	</span><span>9</span>
+<span>	</span><span>5.3 WinoGender</span><span>	</span><span>9</span>
+<span>	</span><span>5.4 TruthfulQA</span><span>	</span><span>9</span>
+<span>6 Carbon footprint</span><span>	</span><span>10</span>
+<span>7 Related work</span><span>	</span><span>10</span>
+<span>8 Conclusion</span><span>	</span><span>11</span>
+<span>Acknowledgements</span><span>	</span><span>12</span>
+<span>References</span><span>	</span><span>12</span>
+<span>A Question Answering</span><span>	</span><span>17</span>
+<span>B MMLU</span><span>	</span><span>18</span>
+<span>C Generations from LLaMA-65B</span><span>	</span><span>19</span>
+<span>D Generations from LLaMA-I</span><span>	</span><span>22</span></p><p>&nbsp;</p><p><kbd style="border:1px double black; font-size:20px; color: #990000; font-family: comic sans ms, 微软雅黑; font-weight:bold; border-bottom: 2px solid black; border-top: 2px solid black;"><span>博文免责声明</span></kbd><span> </span></p><ol start='' ><li><p><span>本条博文信息主要整合自网络，部分内容为自己的理解写出来的，如有断章截句导致不正确或因个人水平有限未能详尽正确描述的地方，敬请各位读者指正；</span></p></li><li><p><span>引用出处可能没有完全追溯到原始来源，如因此冒犯到原创作者，请</span><a href='https://mustbook.github.io/'><span>联系本人</span></a><span>更正/删除；</span></p></li><li><p><span>博文的发布主要用于自我学习，其次希望帮助到有共同疑惑的朋友。</span></p></li></ol><div style="
+    border-radius: 25px; 
+    border: 2px solid #990000;
+    background: #990000;
+    padding: 20px;
+"><center><span style="color:white">欢迎随时联系讨论，一起成长进步。</span></center></div><div class='footnotes-area'  ><hr/>
+<div class='footnote-line'><span class='md-fn-count'>1</span> <span>Touvron H, Lavril T, Izacard G, et al. Llama: Open and efficient foundation language models[J]. arXiv preprint arXiv:2302.13971, 2023.</span> <a name='dfref-footnote-1' href='#ref-footnote-1' title='back to document' class='reversefootnote' >↩</a></div></div></div></div>
+<a href=".typora-export-content" id="scroll-up" style="display: block;">
+		<i class="material-icons md-20 md-middle"></i>
+	</a></body>
+</html>
