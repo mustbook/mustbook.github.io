@@ -1,0 +1,648 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<link rel="stylesheet" type="text/css" href="assets/markdownStyle/iconSetup.css">
+	
+	<!--右边底部的向上箭头，能够返回到文章最开始的地方2/2 动态效果-->
+	<script type="text/javascript" src="assets/blogJS/wp-includes.js.jquery.jquery.js"></script>
+	<script type="text/javascript" src="assets/blogJS/wp-content.themes.type-plus.js.main.js"></script>
+	
+	
+	<!--https://www.dofactory.com/html/rel/icon-->
+	<link rel="icon" href="images/ico/user.png" sizes="32x32">
+	<link rel="icon" href="images/ico/user.png" sizes="192x192">
+	<link rel="apple-touch-icon" href="images/ico/user.png">
+	
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color: #ffffff; --text-color: #333333; --select-text-bg-color: #B5D6FC; --select-text-font-color: auto; --monospace: "Lucida Console",Consolas,"Courier",monospace; --title-bar-height: 20px; }
+.mac-os-11 { --title-bar-height: 28px; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+h1, h2, h3, h4, h5 { white-space: pre-wrap; }
+body { margin: 0px; padding: 0px; height: auto; inset: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+.typora-export .task-list-item input { pointer-events: none; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+thead, tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror-linenumber { user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-fences-adv-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+svg { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li blockquote { margin: 1rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; border-color: transparent !important; padding-top: 0px !important; padding-bottom: 0px !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  .typora-export #write { break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+  #write > p:nth-child(1) { margin-top: 0px; }
+  .typora-export-show-outline .typora-export-sidebar { display: none; }
+  figure { overflow-x: visible; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+.MathJax_ref { fill: currentcolor; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.reversefootnote { font-family: ui-monospace, sans-serif; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.6; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+.md-expand mark .md-meta { opacity: 0.3 !important; }
+mark .md-meta { color: rgb(0, 0, 0); }
+@media print {
+  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+}
+.md-diagram-panel .messageText { stroke: none !important; }
+.md-diagram-panel .start-state { fill: var(--node-fill); }
+.md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
+.md-fences.md-fences-math { font-size: 1em; }
+.md-fences-advanced:not(.md-focus) { padding: 0px; white-space: nowrap; border: 0px; }
+.md-fences-advanced:not(.md-focus) { background: inherit; }
+.typora-export-show-outline .typora-export-content { max-width: 1440px; margin: auto; display: flex; flex-direction: row; }
+.typora-export-sidebar { width: 300px; font-size: 0.8rem; margin-top: 80px; margin-right: 18px; }
+.typora-export-show-outline #write { --webkit-flex: 2; flex: 2 1 0%; }
+.typora-export-sidebar .outline-content { position: fixed; top: 0px; max-height: 100%; overflow: hidden auto; padding-bottom: 30px; padding-top: 60px; width: 300px; }
+@media screen and (max-width: 1024px) {
+  .typora-export-sidebar, .typora-export-sidebar .outline-content { width: 240px; }
+}
+@media screen and (max-width: 800px) {
+  .typora-export-sidebar { display: none; }
+}
+.outline-content li, .outline-content ul { margin-left: 0px; margin-right: 0px; padding-left: 0px; padding-right: 0px; list-style: none; overflow-wrap: anywhere; }
+.outline-content ul { margin-top: 0px; margin-bottom: 0px; }
+.outline-content strong { font-weight: 400; }
+.outline-expander { width: 1rem; height: 1.42857rem; position: relative; display: table-cell; vertical-align: middle; cursor: pointer; padding-left: 4px; }
+.outline-expander::before { content: ""; position: relative; font-family: Ionicons; display: inline-block; font-size: 8px; vertical-align: middle; }
+.outline-item { padding-top: 3px; padding-bottom: 3px; cursor: pointer; }
+.outline-expander:hover::before { content: ""; }
+.outline-h1 > .outline-item { padding-left: 0px; }
+.outline-h2 > .outline-item { padding-left: 1em; }
+.outline-h3 > .outline-item { padding-left: 2em; }
+.outline-h4 > .outline-item { padding-left: 3em; }
+.outline-h5 > .outline-item { padding-left: 4em; }
+.outline-h6 > .outline-item { padding-left: 5em; }
+.outline-label { cursor: pointer; display: table-cell; vertical-align: middle; text-decoration: none; color: inherit; }
+.outline-label:hover { text-decoration: underline; }
+.outline-item:hover { border-color: rgb(245, 245, 245); background-color: var(--item-hover-bg-color); }
+.outline-item:hover { margin-left: -28px; margin-right: -28px; border-left: 28px solid transparent; border-right: 28px solid transparent; }
+.outline-item-single .outline-expander::before, .outline-item-single .outline-expander:hover::before { display: none; }
+.outline-item-open > .outline-item > .outline-expander::before { content: ""; }
+.outline-children { display: none; }
+.info-panel-tab-wrapper { display: none; }
+.outline-item-open > .outline-children { display: block; }
+.typora-export .outline-item { padding-top: 1px; padding-bottom: 1px; }
+.typora-export .outline-item:hover { margin-right: -8px; border-right: 8px solid transparent; }
+.typora-export .outline-expander::before { content: "+"; font-family: inherit; top: -1px; }
+.typora-export .outline-expander:hover::before, .typora-export .outline-item-open > .outline-item > .outline-expander::before { content: "−"; }
+.typora-export-collapse-outline .outline-children { display: none; }
+.typora-export-collapse-outline .outline-item-open > .outline-children, .typora-export-no-collapse-outline .outline-children { display: block; }
+.typora-export-no-collapse-outline .outline-expander::before { content: "" !important; }
+.typora-export-show-outline .outline-item-active > .outline-item .outline-label { font-weight: 700; }
+.md-inline-math-container mjx-container { zoom: 0.95; }
+mjx-container { break-inside: avoid; }
+.md-alert.md-alert-note { border-left-color: rgb(9, 105, 218); }
+.md-alert.md-alert-important { border-left-color: rgb(130, 80, 223); }
+.md-alert.md-alert-warning { border-left-color: rgb(154, 103, 0); }
+.md-alert.md-alert-tip { border-left-color: rgb(31, 136, 61); }
+.md-alert.md-alert-caution { border-left-color: rgb(207, 34, 46); }
+.md-alert { padding: 0px 1em; margin-bottom: 16px; color: inherit; border-left: 0.25em solid rgb(0, 0, 0); }
+.md-alert-text-note { color: rgb(9, 105, 218); }
+.md-alert-text-important { color: rgb(130, 80, 223); }
+.md-alert-text-warning { color: rgb(154, 103, 0); }
+.md-alert-text-tip { color: rgb(31, 136, 61); }
+.md-alert-text-caution { color: rgb(207, 34, 46); }
+.md-alert-text { font-size: 0.9rem; font-weight: 700; }
+.md-alert-text svg { fill: currentcolor; position: relative; top: 0.125em; margin-right: 1ch; overflow: visible; }
+.md-alert-text-container::after { content: attr(data-text); text-transform: capitalize; pointer-events: none; margin-right: 1ch; }
+
+
+:root {
+    --side-bar-bg-color: #fafafa;
+    --control-text-color: #bf0808;
+}
+
+@include-when-export url(https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext);
+
+/* open-sans-regular - latin-ext_latin */
+  /* open-sans-italic - latin-ext_latin */
+    /* open-sans-700 - latin-ext_latin */
+    /* open-sans-700italic - latin-ext_latin */
+  html {
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    font-family: "Open Sans","Clear Sans", "Helvetica Neue", Helvetica, Arial, 'Segoe UI Emoji', sans-serif;
+    color: rgb(51, 51, 51);
+    line-height: 1.6;
+}
+
+#write {
+    max-width: 860px;
+  	margin: 0 auto;
+  	padding: 30px;
+    padding-bottom: 100px;
+}
+
+@media only screen and (min-width: 1400px) {
+	#write {
+		max-width: 1024px;
+	}
+}
+
+@media only screen and (min-width: 1800px) {
+	#write {
+		max-width: 1200px;
+	}
+}
+
+#write > ul:first-child,
+#write > ol:first-child{
+    margin-top: 30px;
+}
+
+a {
+    color: #4183C4;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    line-height: 1.4;
+    cursor: text;
+}
+h1:hover a.anchor,
+h2:hover a.anchor,
+h3:hover a.anchor,
+h4:hover a.anchor,
+h5:hover a.anchor,
+h6:hover a.anchor {
+    text-decoration: none;
+}
+h1 tt,
+h1 code {
+    font-size: inherit;
+}
+h2 tt,
+h2 code {
+    font-size: inherit;
+}
+h3 tt,
+h3 code {
+    font-size: inherit;
+}
+h4 tt,
+h4 code {
+    font-size: inherit;
+}
+h5 tt,
+h5 code {
+    font-size: inherit;
+}
+h6 tt,
+h6 code {
+    font-size: inherit;
+}
+h1 {
+    font-size: 2.25em;
+    line-height: 1.2;
+    border-bottom: 1px solid #eee;
+}
+h2 {
+    font-size: 1.75em;
+    line-height: 1.225;
+    border-bottom: 1px solid #eee;
+}
+
+/*@media print {
+    .typora-export h1,
+    .typora-export h2 {
+        border-bottom: none;
+        padding-bottom: initial;
+    }
+
+    .typora-export h1::after,
+    .typora-export h2::after {
+        content: "";
+        display: block;
+        height: 100px;
+        margin-top: -96px;
+        border-top: 1px solid #eee;
+    }
+}*/
+
+h3 {
+    font-size: 1.5em;
+    line-height: 1.43;
+}
+h4 {
+    font-size: 1.25em;
+}
+h5 {
+    font-size: 1em;
+}
+h6 {
+   font-size: 1em;
+    color: #777;
+}
+p,
+blockquote,
+ul,
+ol,
+dl,
+table{
+    margin: 0.8em 0;
+}
+li>ol,
+li>ul {
+    margin: 0 0;
+}
+hr {
+    height: 2px;
+    padding: 0;
+    margin: 16px 0;
+    background-color: #e7e7e7;
+    border: 0 none;
+    overflow: hidden;
+    box-sizing: content-box;
+}
+
+li p.first {
+    display: inline-block;
+}
+ul,
+ol {
+    padding-left: 30px;
+}
+ul:first-child,
+ol:first-child {
+    margin-top: 0;
+}
+ul:last-child,
+ol:last-child {
+    margin-bottom: 0;
+}
+blockquote {
+    border-left: 4px solid #ffae22e3;
+    padding: 0 15px;
+    color: #777777;
+}
+blockquote blockquote {
+    padding-right: 0;
+}
+table {
+    padding: 0;
+    word-break: initial;
+}
+table tr {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 0;
+}
+table tr:nth-child(2n),
+thead {
+    background-color: #f8f8f8;
+}
+table th {
+    font-weight: bold;
+    border: 1px solid #dfe2e5;
+    border-bottom: 0;
+    margin: 0;
+    padding: 6px 13px;
+}
+table td {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 6px 13px;
+}
+table th:first-child,
+table td:first-child {
+    margin-top: 0;
+}
+table th:last-child,
+table td:last-child {
+    margin-bottom: 0;
+}
+
+.CodeMirror-lines {
+    padding-left: 4px;
+}
+
+.code-tooltip {
+    box-shadow: 0 1px 1px 0 rgba(0,28,36,.3);
+    border-top: 1px solid #eef2f2;
+}
+
+.md-fences,
+code,
+tt {
+    border: 1px solid #e7eaed;
+    background-color: #f8f8f8;
+    border-radius: 3px;
+    padding: 0;
+    padding: 2px 4px 0px 4px;
+    font-size: 0.9em;
+}
+
+code {
+    background-color: #3ff9ff7a;
+    padding: 0 2px 0 2px;
+}
+
+.md-fences {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding-top: 8px;
+    padding-bottom: 6px;
+}
+
+
+.md-task-list-item > input {
+  margin-left: -1.3em;
+}
+
+@media print {
+    html {
+        font-size: 13px;
+    }
+    pre {
+        page-break-inside: avoid;
+        word-wrap: break-word;
+    }
+}
+
+.md-fences {
+	background-color: #f8f8f8;
+}
+#write pre.md-meta-block {
+	padding: 1rem;
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: #f7f7f7;
+    border: 0;
+    border-radius: 3px;
+    color: #777777;
+    margin-top: 0 !important;
+}
+
+.mathjax-block>.code-tooltip {
+	bottom: .375rem;
+}
+
+.md-mathjax-midline {
+    background: #fafafa;
+}
+
+#write>h3.md-focus:before{
+	left: -1.5625rem;
+	top: .375rem;
+}
+#write>h4.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h5.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h6.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+.md-image>.md-meta {
+    /*border: 1px solid #ddd;*/
+    border-radius: 3px;
+    padding: 2px 0px 0px 4px;
+    font-size: 0.9em;
+    color: inherit;
+}
+
+.md-tag {
+    color: #a7a7a7;
+    opacity: 1;
+}
+
+.md-toc { 
+    margin-top:20px;
+    padding-bottom:20px;
+}
+
+.sidebar-tabs {
+    border-bottom: none;
+}
+
+#typora-quick-open {
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+}
+
+#typora-quick-open-item {
+    background-color: #FAFAFA;
+    border-color: #FEFEFE #e5e5e5 #e5e5e5 #eee;
+    border-style: solid;
+    border-width: 1px;
+}
+
+/** focus mode */
+.on-focus-mode blockquote {
+    border-left-color: rgba(85, 85, 85, 0.12);
+}
+
+header, .context-menu, .megamenu-content, footer{
+    font-family: "Segoe UI", "Arial", sans-serif;
+}
+
+.file-node-content:hover .file-node-icon,
+.file-node-content:hover .file-node-open-state{
+    visibility: visible;
+}
+
+.mac-seamless-mode #typora-sidebar {
+    background-color: #fafafa;
+    background-color: var(--side-bar-bg-color);
+}
+
+.mac-os #write{
+    caret-color: AccentColor;
+}
+
+.md-lang {
+    color: #b4654d;
+}
+
+/*.html-for-mac {
+    --item-hover-bg-color: #E6F0FE;
+}*/
+
+#md-notification .btn {
+    border: 0;
+}
+
+.dropdown-menu .divider {
+    border-color: #e5e5e5;
+    opacity: 0.4;
+}
+
+.ty-preferences .window-content {
+    background-color: #fafafa;
+}
+
+.ty-preferences .nav-group-item.active {
+    color: white;
+    background: #999;
+}
+
+.menu-item-container a.menu-style-btn {
+    background-color: #f5f8fa;
+    background-image: linear-gradient( 180deg , hsla(0, 0%, 100%, 0.8), hsla(0, 0%, 100%, 0)); 
+}
+
+
+
+</style><title>aboutMe</title>
+</head>
+<body class='typora-export os-windows'><div class='typora-export-content'>
+<div id='write'  class=''><center><h1>关于我（About Me）</h1></center><center><div><details style="background: #99000044; padding: 10px; border-radius: 25px; line-height:150%; color:white; width:50%; text-align:left"><summary>更新记录</summary><ul><li><a href="#" style="color:#990000">1th version</a> @2025年1月6日 09:59:27</li><li>...</li></ul></details></div></center><center><p style="font-size:20px; font-weight:bold; color:#4183C4;border-bottom: 1px solid #4183C4; width: 600px"> 目 录</p></center><div class='md-toc' mdtype='toc'><p class="md-toc-content" role="list"><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n5"><a class="md-toc-inner" href="#怎么称呼我呢">怎么称呼我呢？</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n47"><a class="md-toc-inner" href="#我是一个怎样的人">我是一个怎样的人？</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n164"><a class="md-toc-inner" href="#做自媒体的原因">做自媒体的原因</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n195"><a class="md-toc-inner" href="#-我的书单"><code>※</code> 我的书单</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n280"><a class="md-toc-inner" href="#----------------------------------------------------------">----------------------------------------------------------</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n229"><a class="md-toc-inner" href="#提及书单"><em>提及书单</em></a></span></p></div><h4 id='怎么称呼我呢'><span>怎么称呼我呢？</span></h4><blockquote><ul><li><p><span>I am </span><span style="color:red; font-size:20px; font-family:华文新魏; font-weight:bold"><span>Read</span></span><span>（</span><span style="color:red; font-size:20px; font-family:华文新魏; font-weight:bold"><span>里德</span></span><span>）, I am reading!</span></p></li></ul></blockquote><p><span>叫我</span><span style="color:red; font-size:20px; font-family:华文新魏; font-weight:bold"><span>里德</span></span><span> / </span><span style="color:red; font-size:20px; font-family:华文新魏; font-weight:bold"><span>Read</span></span><span> 都行，我很喜欢这个名字。</span></p><div style="
+    border-radius: 25px; 
+    border: 2px solid #990000;
+    padding: 20px;
+">之前用的是<span style="color:#990000; font-weight:bold">Cook</span>，取自我的slogan<sup style="color:blue; font-weight:bold"><span style="color:blue; font-family:华文隶书; font-style: italic">You are what you eat.</span> And I'm <strong style="color:#990000;">cooking</strong> what I eat!</sup>。但是我觉得它蕴含的含义还不够，直到我不断阅读，遇到了现在的名字...</div><p><kbd style="border:1px double black; font-size:20px; color: #990000; font-family: comic sans ms, 微软雅黑; font-weight:bold; border-bottom: 2px solid black; border-top: 2px solid black;"><span>称呼的由来</span></kbd><span> </span></p><blockquote><p><span>我想，每个人都有一个自己的真实名字。那个是父母长辈给的，大多数都承载了某种涵义或希望。</span></p></blockquote><p><span>选择做自媒体有很多</span><a href='#做自媒体的原因'><span>原因</span></a><span>，但是我不想直接用自己的真名，只是希望造一个记录自己生活的place。</span></p><p><span>经过辗转反侧和不断修正，我现在把自己的名字定为了“</span><span style="color:red; font-size:20px; font-family:华文新魏; font-weight:bold"><span>里德·Read</span></span><span>”，为什么是这个？</span></p><ul><li><p><span>这源于一本书</span><sup class='md-footnote'><a href='#dfref-footnote-1' name='ref-footnote-1'>1</a></sup><span>中的一位案例的主人公。</span></p><blockquote><p><span>... 罗纳德·詹姆斯·</span><strong><span>里德</span></strong><span>（Ronald James </span><strong><span>Read</span></strong><span>），美国慈善家、投资者、门卫和加油站工作人员。</span></p><p><span>......</span></p><p><span>里德于2014年去世，享年92岁。就在那时，这位来自乡下的普普通通的门卫</span><strong><span>登上了全世界的新闻头条</span></strong><span>。</span></p><p><span>......</span></p><p><span>在遗嘱中，这位曾经的门卫将200万美元留给了自己的继子女，而把剩下的600多万捐献给了当地的医院和图书馆。</span></p><p><span>那些熟悉里德的人对此感到困惑。他这么多的钱是从哪儿来的？</span></p><p><span>最后，人们发现，里德的财富并没有什么秘密来源。他没有中巨额彩票，也没有继承大笔遗产。里德将能攒的每一分钱都积攒起来，然后去买了蓝筹股，接下来便是漫长的等待。</span><span style="color:blue; font-family:仿宋; font-weight:bold"><span>等到几十年后，这些微小的积蓄通过日积月累的</span><span style="color:red; font-size:20px; font-family:华文新魏; font-weight:bold"><span>复利</span></span><span>，最终滚雪球般地变成了800多万</span></span><span>。</span></p><p><span>他从一个门卫到一个慈善家的过程就是这么简单。</span></p></blockquote></li><li><p><span>另外我自己也对这个名字赋予了一些自己的期望：</span><span style="border-bottom: 2px dotted FireBrick;"><span>指导我的行动（阅读）</span></span><span>和</span><span style="border-bottom: 2px dotted FireBrick;"><span>成长（博学的君子）</span></span><span>。</span></p><ul><li><p><span>首先，是read本身的意义。</span></p><blockquote><p><span style="color:red; font-size:25px; font-family:华文隶书; font-weight:bold"><span>read</span></span></p><p><span style="color:red; font-size:20px; font-family:华文隶书; font-weight:bold;"><span>v.</span></span><span> </span><span style="color:#990000; font-size:20px; font-family:华文隶书; font-weight:bold"><span>阅读，读懂</span></span><span>；朗读；（在书籍、报纸等中）读到，看到；解读，（按某种方式）理解；看透（想法或心思）；读起来（给人以某种印象）；有……的字样，写着；换用，改作（用于订正讹误）；读取（磁盘中的信息）；（通过无线电）收听到，听明白；（测量仪器）指示，显示；看（度量仪器显示的数字）；攻读；将（议案或其他法令）提交立法机构</span></p><p><span style="color:red; font-size:20px; font-family:华文隶书; font-weight:bold;"><span>n.</span></span><span> &lt;英，非正式&gt;阅读，阅读时间；&lt;英，非正式&gt;读物；&lt;美&gt;解释，阐明</span></p><p><span style="color:red; font-size:20px; font-family:华文隶书; font-weight:bold"><span>adj.</span></span><span> </span><span style="color:#990000; font-size:20px; font-family:华文隶书; font-weight:bold"><span>博学的，有学问的</span></span><span> </span></p></blockquote></li><li><p><span>其次，我想根据《原子习惯》</span><sup class='md-footnote'><a href='#dfref-footnote-2' name='ref-footnote-2'>2</a></sup><span>中身份设定的技巧，让自己更加认同自己热爱读书这个身份。</span></p></li><li><p><span>再者，</span><span style="color:red; font-size:20px; font-family:华文新魏; font-weight:bold"><span>里德</span></span><span>，我的解读是</span><span style="color:red; font-family:楷体; font-weight:bold;"><span>内在的品德，契合成语“秀外慧中”后2个字“慧中”的含义</span></span><span>。而孔子曾在《论语·雍也》记载了的一段论述：“</span><code>质胜文则野，文胜质则史。文质彬彬，然后君子。</code><span>”意思是说</span><span style="color:blue; font-family:仿宋; font-weight:bold;"><span>一个人如果过于质朴胜过文采，就显得粗浅鄙陋，但是文采多于质朴，又会显得华而不实。只有把两者均衡结合，才能称得上是君子</span></span><span>。</span></p><ul><li><p><span>古时候的君子，我认为就是当代社会所说的那种内外兼修的</span><code>型男</code><span>吧，所以我想要做一个</span><span style="border-radius: 10px; border-top: 1px solid red; border-bottom: 1px solid red; border-left: 1px solid red; border-right: 1px solid red;"><span>“秀外慧中”的型男</span></span><span>，而</span><span style="color:red; font-size:20px; font-family:华文新魏; font-weight:bold"><span>里德</span></span><span>这个名字恰好承载了这个含义。</span></p></li></ul></li></ul></li></ul><p>&nbsp;</p><h4 id='我是一个怎样的人'><span>我是一个怎样的人？</span></h4><p><kbd style="background:#f8e272"><span>1</span></kbd><span> 爱读书！</span></p><p><kbd style="background:#a8e195"><span>2</span></kbd><span> 不认为自己是一个聪明的人，但一定是一个能坚持的人！</span></p><p><kbd style="background:#a5c4ff"><span>3</span></kbd><span> 爱记录！</span></p><p><kbd style="background:#ffaabf"><span>4</span></kbd><span> 爱分享！</span></p><p><kbd style="background:#cebbfc"><span>5</span></kbd><span> 我的信息输入：书籍、播客。</span></p><p><kbd style="background:#990000; color:white"><span>6</span></kbd><span> 其他兴趣：咖啡、乒乓球</span></p><p>&nbsp;</p><p>&nbsp;</p><p><kbd style="background:#f8e272"><span>1</span></kbd><span> 爱读书</span></p><blockquote><p><span>纳瓦尔（Naval Ravikant）</span><sup class='md-footnote'><a href='#dfref-footnote-3' name='ref-footnote-3'>3</a></sup><span>：“我精读的书其实并不多。我会略读很多书，但精读的只有几本，而这几本书构成了我知识的基础。”</span></p></blockquote><ul><li><p><span>不错，我读的也不多，后期会不断更新主页（以及主页介绍中的书单），把我读过的书单列出来给大家参考~ 也欢迎关注和交友~</span></p></li></ul><p>&nbsp;</p><p><kbd style="background:#a8e195"><span>2</span></kbd><span> 我认为我不是一个很聪明的人，尤其是读博之后感觉更强烈，因为周围都是很聪明的同学。但是我会在一些认定是正确的事情上反复去践行（我对自己的这种性格的理解是：略微有些固执，但是目前已经感知到了这点的情况下，我也正在积极学习如何把自己的这股劲更好地用在一些值得做好的事情上）。</span></p><blockquote><p><span>例如：</span></p><ul><li><p><span>之前看论文的时候，我会一头扎进几篇论文里，把论文的思维导图、笔记等等都详细地做出来，其实那只是用战术上的勤奋掩盖战略上的懒惰。我知道，我应该在过程中尽早跳出来看看自己在做什么，但是拗不过自己的固执，所以常常会在一段无效的学习过程（也不能说是完全无效，用“收效甚微”可能更贴切些）结束后，感到懊悔不已。</span></p></li><li><p><span>如果生活中有一个想法在我的脑袋里，比如给书桌装一个自己用竹竿简单缠绕形成的简陋的台灯，我会一直惦记着这个事情，然后最终做完了之后，会拍脑袋说“早知道不如直接买个新的，这个真丑...”。</span></p></li><li><p><span>...</span></p></li></ul></blockquote><p><span>但是，我也会在一本书上反复阅读，每次都收获很多！就像我可能会执拗地去做一些没有仔细思考过的事情，但是同样地，我也会在仔细思考并认可的书上反复下功夫，做笔记、反复读。</span><span style="color:red; font-size:20px; font-family:华文新魏; font-weight:bold"><span>这也让我收获很多</span></span><span>。</span></p><p>&nbsp;</p><p><kbd style="background:#a5c4ff"><span>3</span></kbd><span>  我爱记录。</span></p><ul><li><p><span>同时也非常热爱把记录的内容分享出来。但，</span><span style="color:blue"><span>似乎我自认为记录的很有价值的东西实际的价值都有待商榷</span></span><span>。所以我会选择做自媒体，用自媒体的观众来检验我的工作</span><sup style="color:red"><span>🧮</span><mark style="background:black; color:white;border-radius: 10px;"><span> 想要做自媒体原因+1 </span></mark></sup><span>。</span></p></li><li><p><span>我用过的记录软件包括很多，后面也希望在自己的内容中陆续分享出来。</span></p><ul><li><p><span>Typora </span><strong style="color:red"><span>※</span></strong><span> （个人评分：★★★★☆）</span></p></li><li><p><span>Obsidian </span><strong style="color:red"><span>※</span></strong><span> （个人评分：★★★★☆）</span></p></li><li><p><span>语雀 </span><strong style="color:red"><span>※</span></strong><span> （个人评分：★★★☆☆）</span></p></li><li><p><span>OneNote</span></p></li><li><p><span>Notion</span></p></li><li><p><span>flomo</span></p></li><li><p><span>...</span></p></li></ul><p><span>标记</span><strong style="color:red"><span>※</span></strong><span>的是我目前常用的！评分的原因以后我会单独用一期关于“记录/笔记”的vlog来分享，不过需要提前说明的是，这个评分是来自个人的，即，对于我个人来说应用场景或许不太适合，并不是说软件本身不好，</span><strong style="color:red;"><span>特此声明</span></strong><span>。</span></p></li></ul><p>&nbsp;</p><p><kbd style="background:#ffaabf"><span>4</span></kbd><span> 因为我自己对设计和分享有一种独特的喜欢，性格中更多偏向于服务型，所以，如果在学习过程有了一些中间的收获，我会制作成可以分享的形式，然后po到网上，一方面是供自己反复阅读、复习，另一方面也想为同样困惑的朋友提供到我的帮助~ 属于一举两得~ 我很喜欢这种感觉。</span></p><blockquote><p><em><span>在网络用语中，po是post的缩写，可翻译为上传、公开、贴出去，</span><strong><span>一般是“上传到网上”的意思</span></strong><span>，例如：把图片po到网上。 而po主是一种微博用语，指某条微博内容的发布者。</span></em></p></blockquote><ul><li><p><span>比如，我曾经备考托福的时候，做了</span><code>TPO01-TPO54的Reading部分的精析</code><span>，在参加托福考试的时候阅读得分26/30（可惜，总分并不高，感觉自己没有抓到其他section的技巧吧~）。后来也通过这种分享结识了一些志同道合的朋友，感觉很开心。</span></p></li><li><p><span>后期，我也会将自己在专业方面学的通用技能分享出来，例如：</span><code>分享一些好用的软件</code><span>、</span><code>分享一些Windows操作技巧</code><span>等等。</span></p></li></ul><p>&nbsp;</p><p><kbd style="background:#cebbfc"><span>5</span></kbd><span> 截止2025年1月5日的主要信息输入源是：书籍、播客。</span></p><p><span>不过，受到“</span><a href='https://zh.wikipedia.org/wiki/共时性'><span>宇宙共时性</span></a><span>”的启发以及对自己特有“固执”的感知，最近我也开始尝试从只言片语的网页、公众号或者纪录片里学些内容，我认为好的信息其实不需要从一个完整的资料获取，或许偶尔一次的翻书，也能看到一句改变自己的话也不一定呢？</span></p><p><span>👍推荐一些优质的资源吧：</span></p><ul><li><p><span>好书</span></p><ul><li><p><span>一些好书就不用说了，这个介绍页面的末尾就已经附上了我自己认可的很好的书（也是我精读的书）；</span></p></li><li><p><span>后续我也会在自己的主页分享出我的阅读书单和对应的收获；</span></p></li></ul></li><li><p><span>播客</span></p><ul><li><p><span>（Spotify）The Knowledge Project with Shane Parrish</span></p></li><li><p><span>（Spotify）創作者的創業筆記</span></p></li><li><p><span>（Spotify）下一本讀什麽？</span></p></li><li><p><span>（Spotify）電扶梯走左邊 with Jacky (Left Side Escalator)</span></p></li><li><p><span>（小宇宙）肥话连篇</span></p></li><li><p><span>...持续探索中</span></p></li></ul></li><li><p><span>纪录片</span></p><ul><li><p><span>《至少还有书籍》</span><span style="color:blue; font-family:楷体; font-weight:bold; font-size:10px"><span>没看完</span></span></p></li><li><p><span>《大国崛起》</span><span style="color:blue; font-family:楷体; font-weight:bold; font-size:10px"><span>据说不错，但我还没看...</span></span></p></li><li><p><span>...</span></p></li></ul></li><li><p><span>其他节目</span></p><ul><li><p><span>百家讲坛</span></p></li><li><p><span>...</span></p></li></ul><p>&nbsp;</p></li></ul><p>&nbsp;</p><p><kbd style="background:#990000; color:white"><span>6</span></kbd><span> 其他兴趣 —— 咖啡</span></p><ul><li><p><span>目前正在学，并借了一本书</span><sup class='md-footnote'><a href='#dfref-footnote-4' name='ref-footnote-4'>4</a></sup><span>在读，所以，或许我的自媒体里会有些零碎的学习过程分享出来。</span></p></li><li><p><span>自己已经尝试过的咖啡：</span></p><ul><li><p><span>纯牛奶（特仑苏、金典） + 挂耳（Luckin、Manner）</span></p></li><li><p><span style="border-radius: 10px; border-top: 1px solid red; border-bottom: 1px solid red; border-left: 1px solid red; border-right: 1px solid red; background: yellow"><span>燕麦奶（OATLY）+ 挂耳（Manner）</span></span><span>👍这个真的很赞哦！</span></p></li></ul></li></ul><p>&nbsp;</p><p>&nbsp;</p><h4 id='做自媒体的原因'><span>做自媒体的原因</span></h4><blockquote><p><span>我选择创作（自媒体）的原因</span><sup style="color:red"><span>🧮</span><mark style="background:black; color:white;border-radius: 10px;"><span> 想要做自媒体原因++ </span></mark></sup><span>（</span><strong style="color:red;"><span>↓ 重要性排序</span></strong><span>）</span></p></blockquote><p>&nbsp;</p><ul><li><p><strong style="color:#6f0670; font-size:18px"><span>记录生活</span></strong><span> </span></p><ul><li><p><span>《最优解人生》</span><sup class='md-footnote'><a href='#dfref-footnote-5' name='ref-footnote-5'>5</a></sup><span>中说，人的一生是积累“体验”的一生。当我回首往事的时候，看到以前的生活，应该本身就是一种“回忆福利”；</span></p></li><li><p><span>...</span></p></li></ul></li><li><p><strong style="color:#6f0670; font-size:18px"><span>影响他人</span></strong><span> </span></p><ul><li><p><span>关注我的人；</span></p><ul><li><p><span>可能并没有很多人关注，10个、20个？10w？20w？都可以。但是我选择输出我的价值，希望能够正向影响到一些希望提高个人能力的人。</span></p></li></ul></li><li><p><span>我关注的人；</span></p><ul><li><p><span>之前的一个骑行博主的vlog，帮助了一个卖葡萄的农民爷爷。（不管内容的真实性如何）我想要用自己的力量助力我关注的群体/现象。</span></p></li></ul></li><li><p><span>...</span></p></li></ul></li><li><p><strong style="color:#6f0670; font-size:18px"><span>累积“财富”之“开源”</span></strong></p><ul><li><p><span>自媒体的收入算是一种“开源”；</span></p></li><li><p><span>结交朋友才是我真正想做的！</span><span style="color:blue; font-family:Comic Sans MS, 微软雅黑"><span>ps. 如果1个人你觉得不值得结交，那就换1个人</span></span><span>。这个世界上人很多，不要被个别人影响到自己的心情。</span></p></li><li><p><span>...</span></p></li></ul></li></ul><p>&nbsp;</p><h4 id='-我的书单'><code>※</code><span> 我的书单</span></h4><p><kbd style="border:1px double black; font-size:20px; color: #990000; font-family: comic sans ms, 微软雅黑; font-weight:bold; border-bottom: 2px solid black; border-top: 2px solid black;"><span>已读未记（笔记）</span></kbd><span> </span></p><ul><li><p><span>《非暴力沟通》</span><sup class='md-footnote'><a href='#dfref-footnote-6' name='ref-footnote-6'>6</a></sup></p></li><li><p><span>《金钱心理学》</span><sup class='md-footnote'><a href='#dfref-footnote-1-1' name='ref-footnote-1-1'>1</a></sup></p></li><li><p><span>...</span></p></li><li><p><span style="color:red; font-size:20px; font-family:华文隶书; font-weight:bold"><span>持续更新中</span></span></p></li></ul><p><kbd style="border:1px dotted #990000; font-size:20px; color: red; font-family: comic sans ms, 微软雅黑; font-weight:bold"><span>已读已记</span></kbd><span> </span></p><ul><li><p><span>《麦肯锡工作法》</span><sup class='md-footnote'><a href='#dfref-footnote-7' name='ref-footnote-7'>7</a></sup><span>读书笔记</span></p></li><li><p><span>《做最好的自己》</span><sup class='md-footnote'><a href='#dfref-footnote-8' name='ref-footnote-8'>8</a></sup><span>节选读书笔记</span></p></li><li><p><span>《费曼学习法》</span><sup class='md-footnote'><a href='#dfref-footnote-9' name='ref-footnote-9'>9</a></sup><span>读书笔记</span></p></li><li><p><span>《学会写作》</span><sup class='md-footnote'><a href='#dfref-footnote-10' name='ref-footnote-10'>10</a></sup><span>读书笔记</span></p></li><li><p><span>...</span></p></li></ul><p><kbd style="border:1px solid #990000; font-size:20px; color: blue; font-family: comic sans ms, 微软雅黑; font-weight:bold"><span>最近在读</span></kbd><span> </span></p><ul><li><p><span>《斯坦福大学人生设计课》</span><sup class='md-footnote'><a href='#dfref-footnote-11' name='ref-footnote-11'>11</a></sup></p></li><li><p><span>《自学大全》</span><sup class='md-footnote'><a href='#dfref-footnote-12' name='ref-footnote-12'>12</a></sup></p></li><li><p><span>《不可打扰》</span><sup class='md-footnote'><a href='#dfref-footnote-13' name='ref-footnote-13'>13</a></sup></p></li><li><p><span>《重新思考》</span><sup class='md-footnote'><a href='#dfref-footnote-14' name='ref-footnote-14'>14</a></sup></p></li><li><p><span>...</span></p></li></ul><p>&nbsp;</p><h4 id='----------------------------------------------------------'><span>----------------------------------------------------------</span></h4><p>&nbsp;</p><h4 id='提及书单'><em><span>提及书单</span></em></h4><div class='footnotes-area'  ><hr/>
+<div class='footnote-line'><span class='md-fn-count'>1</span> <span>[美] 摩根 · 豪泽尔, 李青宗 (译). </span><strong style="color:red;"><span>金钱心理学：财富、人性和幸福的永恒真相</span></strong><span>[M]. 北京: 民主与建设出版社, 2023.6: 1-328.</span> <a name='dfref-footnote-1' href='#ref-footnote-1' title='back to document' class='reversefootnote' >↩</a> <a name='dfref-footnote-1-1' href='#ref-footnote-1-1' title='back to document' class='reversefootnote' >↩</a></div>
+<div class='footnote-line'><span class='md-fn-count'>2</span> <span>[美] 詹姆斯．克利爾, 蔡世偉 (译). </span><strong style="color:red;"><span>原子習慣：細微改變帶來巨大成就的實證法則</span></strong><span>[M]. 方智出版社股份有限公司, 2019.6: 1-304.</span> <a name='dfref-footnote-2' href='#ref-footnote-2' title='back to document' class='reversefootnote' >↩</a></div>
+<div class='footnote-line'><span class='md-fn-count'>3</span> <span>[美] 埃里克·乔根森, 赵灿 (译). </span><strong style="color:red"><span>纳瓦尔宝典：财富与幸福指南</span></strong><span>[M]. 北京: 中信出版社, 2022.4:1-256.</span> <a name='dfref-footnote-3' href='#ref-footnote-3' title='back to document' class='reversefootnote' >↩</a></div>
+<div class='footnote-line'><span class='md-fn-count'>4</span> <span>[法] 伊波利特·库尔蒂. </span><strong style="color:red;"><span>咖啡全书：深度解读关于精品咖啡的一切</span></strong><span>[M]. 北京: 中信出版社, 2022.10: 1-320.</span> <a name='dfref-footnote-4' href='#ref-footnote-4' title='back to document' class='reversefootnote' >↩</a></div>
+<div class='footnote-line'><span class='md-fn-count'>5</span> <span>[美] 比尔·帕金斯, 聂亚舫 (译). </span><strong style="color:red;"><span>最优解人生：如何花钱，才能无憾</span></strong><span>[M]. 上海: 文汇出版社, 2023.2: 1-224.</span> <a name='dfref-footnote-5' href='#ref-footnote-5' title='back to document' class='reversefootnote' >↩</a></div>
+<div class='footnote-line'><span class='md-fn-count'>6</span> <span>[美] 马歇尔·卢森堡, 刘轶 (译). </span><strong style="color:red;"><span>非暴力沟通</span></strong><span>[M]. 北京: 华夏出版社, 2021.5: 1-256.</span> <a name='dfref-footnote-6' href='#ref-footnote-6' title='back to document' class='reversefootnote' >↩</a></div>
+<div class='footnote-line'><span class='md-fn-count'>7</span> <span>[日] 大岛祥誉, 朱悦玮 (译). </span><strong style="color:red;"><span>麦肯锡工作法：麦肯锡精英的39个工作习惯</span></strong><span>[M]. 北京：北京时代华文书局, 2015.6: 1-175.</span> <a name='dfref-footnote-7' href='#ref-footnote-7' title='back to document' class='reversefootnote' >↩</a></div>
+<div class='footnote-line'><span class='md-fn-count'>8</span> <span>李开复. </span><strong style="color:red;"><span>做最好的自己</span></strong><span>[M]. 北京: 人民出版社, 2005.9: 1-260.</span> <a name='dfref-footnote-8' href='#ref-footnote-8' title='back to document' class='reversefootnote' >↩</a></div>
+<div class='footnote-line'><span class='md-fn-count'>9</span> <span>尹红心, 李伟. </span><strong style="color:red;"><span>费曼学习法：用输出倒逼输入</span></strong><span>[M]. 江苏: 江苏凤凰文艺出版社, 2021.3: 1-224.</span> <a name='dfref-footnote-9' href='#ref-footnote-9' title='back to document' class='reversefootnote' >↩</a></div>
+<div class='footnote-line'><span class='md-fn-count'>10</span> <span>粥左罗. </span><strong style="color:red;"><span>学会写作：自我进阶的高效方法</span></strong><span>[M]. 北京: 人民邮电出版社, 2019.5: 1-280.</span> <a name='dfref-footnote-10' href='#ref-footnote-10' title='back to document' class='reversefootnote' >↩</a></div>
+<div class='footnote-line'><span class='md-fn-count'>11</span> <span>[美] 比尔•博内特, [美]戴夫•伊万斯, 周芳芳 (译). </span><strong style="color:red;"><span>斯坦福大学人生设计课：如何设计充实且快乐的人生</span></strong><span>[M]. 北京: 中信出版社, 2017.12: 1-280.</span> <a name='dfref-footnote-11' href='#ref-footnote-11' title='back to document' class='reversefootnote' >↩</a></div>
+<div class='footnote-line'><span class='md-fn-count'>12</span> <span>[日] 读书猴, 滕小涵 (译). </span><strong style="color:red;"><span>自学大全：送给所有不想放弃学习的人55个自学方法</span></strong><span>[M]. 上海: 文汇出版社, 2022.9: 1-736.</span> <a name='dfref-footnote-12' href='#ref-footnote-12' title='back to document' class='reversefootnote' >↩</a></div>
+<div class='footnote-line'><span class='md-fn-count'>13</span> <span>尼尔·埃亚尔, 肖志清 (译). </span><strong style="color:red;"><span>不可打扰</span></strong><span>[M]. 北京: 中信出版社, 2021.11: 1-308.</span> <a name='dfref-footnote-13' href='#ref-footnote-13' title='back to document' class='reversefootnote' >↩</a></div>
+<div class='footnote-line'><span class='md-fn-count'>14</span> <span>[美] 亚当·格兰特, 张晓萌, 曹理达, 付静仪 (译). </span><strong style="color:red;"><span>重新思考：知所未知的力量</span></strong><span>[M]. 北京: 中信出版社, 2022.9: 1-300.</span> <a name='dfref-footnote-14' href='#ref-footnote-14' title='back to document' class='reversefootnote' >↩</a></div></div></div></div>
+<a href=".typora-export-content" id="scroll-up" style="display: block;">
+		<i class="material-icons md-20 md-middle"></i>
+	</a></body>
+</html>
