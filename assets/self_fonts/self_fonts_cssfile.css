@@ -1,0 +1,60 @@
+/* fallback */
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/materialicons/v81/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2) format('woff2');
+}
+
+
+@font-face {
+	font-family: 'Aa漫语手写体（简繁）';
+	src:url('AaManYuShouXieTi（JianFan）-2.ttf');
+}
+
+@font-face {
+	font-family: 'Ubuntu Mono';
+	src:url('UbuntuMono-Bold.ttf'),
+	url('UbuntuMono-BoldItalic.ttf'),
+	url('UbuntuMono-Italic.ttf'),
+	url('UbuntuMono-Regular.ttf');
+}
+
+@font-face {
+	font-family: 'Comic Sans MS';
+	src:url('comic.ttf'),
+	url('comicbd.ttf'),
+	url('comici.ttf'),
+	url('comicz.ttf');
+}
+
+@font-face {
+	font-family: 'Whitney';
+	src:url('Whitney-Bold.otf'),
+	url('Whitney-Semibold.otf');
+}
+
+@font-face {
+	font-family: '华文新魏';
+	src:url('STXINWEI.TTF');
+}
+
+@font-face {
+	font-family: '华文新魏';
+	src:url('STXINGKA.TTF');
+}
+
+@font-face {
+	font-family: '华文隶书';
+	src:url('STLITI.TTF');
+}
+
+@font-face {
+	font-family: '楷体';
+	src:url('simkai.ttf');
+}
+
+@font-face {
+	font-family: '仿宋';
+	src:url('simfang.ttf');
+}
