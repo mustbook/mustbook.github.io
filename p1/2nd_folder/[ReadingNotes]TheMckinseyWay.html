@@ -1,0 +1,916 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<link rel="stylesheet" type="text/css" href="../../assets/markdownStyle/iconSetup.css">
+	
+	<!--右边底部的向上箭头，能够返回到文章最开始的地方2/2 动态效果-->
+	<script type="text/javascript" src="../../assets/blogJS/wp-includes.js.jquery.jquery.js"></script>
+	<script type="text/javascript" src="../../assets/blogJS/wp-content.themes.type-plus.js.main.js"></script>
+	
+	
+	<!--https://www.dofactory.com/html/rel/icon-->
+	<link rel="icon" href="../../images/ico/signature.png" sizes="32x32">
+	<link rel="icon" href="../../images/ico/signature.png" sizes="192x192">
+	<link rel="apple-touch-icon" href="../../images/ico/signature.png">
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; --title-bar-height:20px; }
+.mac-os-11 { --title-bar-height:28px; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+h1, h2, h3, h4, h5 { white-space: pre-wrap; }
+body { margin: 0px; padding: 0px; height: auto; inset: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+.typora-export .task-list-item input { pointer-events: none; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+thead, tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror-linenumber { user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-fences-adv-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+svg { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li blockquote { margin: 1rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; border-color: transparent !important; padding-top: 0px !important; padding-bottom: 0px !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  .typora-export #write { break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+  #write > p:nth-child(1) { margin-top: 0px; }
+  .typora-export-show-outline .typora-export-sidebar { display: none; }
+  figure { overflow-x: visible; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+.MathJax_ref { fill: currentcolor; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.reversefootnote { font-family: ui-monospace, sans-serif; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.6; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+.md-expand mark .md-meta { opacity: 0.3 !important; }
+mark .md-meta { color: rgb(0, 0, 0); }
+@media print {
+  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+}
+.md-diagram-panel .messageText { stroke: none !important; }
+.md-diagram-panel .start-state { fill: var(--node-fill); }
+.md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
+.md-fences.md-fences-math { font-size: 1em; }
+.md-fences-advanced:not(.md-focus) { padding: 0px; white-space: nowrap; border: 0px; }
+.md-fences-advanced:not(.md-focus) { background: inherit; }
+.typora-export-show-outline .typora-export-content { max-width: 1440px; margin: auto; display: flex; flex-direction: row; }
+.typora-export-sidebar { width: 300px; font-size: 0.8rem; margin-top: 80px; margin-right: 18px; }
+.typora-export-show-outline #write { --webkit-flex:2; flex: 2 1 0%; }
+.typora-export-sidebar .outline-content { position: fixed; top: 0px; max-height: 100%; overflow: hidden auto; padding-bottom: 30px; padding-top: 60px; width: 300px; }
+@media screen and (max-width: 1024px) {
+  .typora-export-sidebar, .typora-export-sidebar .outline-content { width: 240px; }
+}
+@media screen and (max-width: 800px) {
+  .typora-export-sidebar { display: none; }
+}
+.outline-content li, .outline-content ul { margin-left: 0px; margin-right: 0px; padding-left: 0px; padding-right: 0px; list-style: none; overflow-wrap: anywhere; }
+.outline-content ul { margin-top: 0px; margin-bottom: 0px; }
+.outline-content strong { font-weight: 400; }
+.outline-expander { width: 1rem; height: 1.42857rem; position: relative; display: table-cell; vertical-align: middle; cursor: pointer; padding-left: 4px; }
+.outline-expander::before { content: ""; position: relative; font-family: Ionicons; display: inline-block; font-size: 8px; vertical-align: middle; }
+.outline-item { padding-top: 3px; padding-bottom: 3px; cursor: pointer; }
+.outline-expander:hover::before { content: ""; }
+.outline-h1 > .outline-item { padding-left: 0px; }
+.outline-h2 > .outline-item { padding-left: 1em; }
+.outline-h3 > .outline-item { padding-left: 2em; }
+.outline-h4 > .outline-item { padding-left: 3em; }
+.outline-h5 > .outline-item { padding-left: 4em; }
+.outline-h6 > .outline-item { padding-left: 5em; }
+.outline-label { cursor: pointer; display: table-cell; vertical-align: middle; text-decoration: none; color: inherit; }
+.outline-label:hover { text-decoration: underline; }
+.outline-item:hover { border-color: rgb(245, 245, 245); background-color: var(--item-hover-bg-color); }
+.outline-item:hover { margin-left: -28px; margin-right: -28px; border-left: 28px solid transparent; border-right: 28px solid transparent; }
+.outline-item-single .outline-expander::before, .outline-item-single .outline-expander:hover::before { display: none; }
+.outline-item-open > .outline-item > .outline-expander::before { content: ""; }
+.outline-children { display: none; }
+.info-panel-tab-wrapper { display: none; }
+.outline-item-open > .outline-children { display: block; }
+.typora-export .outline-item { padding-top: 1px; padding-bottom: 1px; }
+.typora-export .outline-item:hover { margin-right: -8px; border-right: 8px solid transparent; }
+.typora-export .outline-expander::before { content: "+"; font-family: inherit; top: -1px; }
+.typora-export .outline-expander:hover::before, .typora-export .outline-item-open > .outline-item > .outline-expander::before { content: "−"; }
+.typora-export-collapse-outline .outline-children { display: none; }
+.typora-export-collapse-outline .outline-item-open > .outline-children, .typora-export-no-collapse-outline .outline-children { display: block; }
+.typora-export-no-collapse-outline .outline-expander::before { content: "" !important; }
+.typora-export-show-outline .outline-item-active > .outline-item .outline-label { font-weight: 700; }
+.md-inline-math-container mjx-container { zoom: 0.95; }
+mjx-container { break-inside: avoid; }
+
+
+:root {
+    --side-bar-bg-color: #fafafa;
+    --control-text-color: #777;
+}
+
+@include-when-export url(https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext);
+
+/* open-sans-regular - latin-ext_latin */
+  /* open-sans-italic - latin-ext_latin */
+    /* open-sans-700 - latin-ext_latin */
+    /* open-sans-700italic - latin-ext_latin */
+  html {
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    font-family: "Open Sans","Clear Sans", "Helvetica Neue", Helvetica, Arial, 'Segoe UI Emoji', sans-serif;
+    color: rgb(51, 51, 51);
+    line-height: 1.6;
+}
+
+#write {
+    max-width: 860px;
+  	margin: 0 auto;
+  	padding: 30px;
+    padding-bottom: 100px;
+}
+
+@media only screen and (min-width: 1400px) {
+	#write {
+		max-width: 1024px;
+	}
+}
+
+@media only screen and (min-width: 1800px) {
+	#write {
+		max-width: 1200px;
+	}
+}
+
+#write > ul:first-child,
+#write > ol:first-child{
+    margin-top: 30px;
+}
+
+a {
+    color: #4183C4;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    line-height: 1.4;
+    cursor: text;
+}
+h1:hover a.anchor,
+h2:hover a.anchor,
+h3:hover a.anchor,
+h4:hover a.anchor,
+h5:hover a.anchor,
+h6:hover a.anchor {
+    text-decoration: none;
+}
+h1 tt,
+h1 code {
+    font-size: inherit;
+}
+h2 tt,
+h2 code {
+    font-size: inherit;
+}
+h3 tt,
+h3 code {
+    font-size: inherit;
+}
+h4 tt,
+h4 code {
+    font-size: inherit;
+}
+h5 tt,
+h5 code {
+    font-size: inherit;
+}
+h6 tt,
+h6 code {
+    font-size: inherit;
+}
+h1 {
+    font-size: 2.25em;
+    line-height: 1.2;
+    border-bottom: 1px solid #eee;
+}
+h2 {
+    font-size: 1.75em;
+    line-height: 1.225;
+    border-bottom: 1px solid #eee;
+}
+
+/*@media print {
+    .typora-export h1,
+    .typora-export h2 {
+        border-bottom: none;
+        padding-bottom: initial;
+    }
+
+    .typora-export h1::after,
+    .typora-export h2::after {
+        content: "";
+        display: block;
+        height: 100px;
+        margin-top: -96px;
+        border-top: 1px solid #eee;
+    }
+}*/
+
+h3 {
+    font-size: 1.5em;
+    line-height: 1.43;
+}
+h4 {
+    font-size: 1.25em;
+}
+h5 {
+    font-size: 1em;
+}
+h6 {
+   font-size: 1em;
+    color: #777;
+}
+p,
+blockquote,
+ul,
+ol,
+dl,
+table{
+    margin: 0.8em 0;
+}
+li>ol,
+li>ul {
+    margin: 0 0;
+}
+hr {
+    height: 2px;
+    padding: 0;
+    margin: 16px 0;
+    background-color: #e7e7e7;
+    border: 0 none;
+    overflow: hidden;
+    box-sizing: content-box;
+}
+
+li p.first {
+    display: inline-block;
+}
+ul,
+ol {
+    padding-left: 30px;
+}
+ul:first-child,
+ol:first-child {
+    margin-top: 0;
+}
+ul:last-child,
+ol:last-child {
+    margin-bottom: 0;
+}
+blockquote {
+    border-left: 4px solid #ec962a;
+    padding: 0 15px;
+    color: #777777;
+}
+blockquote blockquote {
+    padding-right: 0;
+}
+table {
+    padding: 0;
+    word-break: initial;
+}
+table tr {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 0;
+}
+table tr:nth-child(2n),
+thead {
+    background-color: #f8f8f8;
+}
+table th {
+    font-weight: bold;
+    border: 1px solid #dfe2e5;
+    border-bottom: 0;
+    margin: 0;
+    padding: 6px 13px;
+}
+table td {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 6px 13px;
+}
+table th:first-child,
+table td:first-child {
+    margin-top: 0;
+}
+table th:last-child,
+table td:last-child {
+    margin-bottom: 0;
+}
+
+.CodeMirror-lines {
+    padding-left: 4px;
+}
+
+.code-tooltip {
+    box-shadow: 0 1px 1px 0 rgba(0,28,36,.3);
+    border-top: 1px solid #eef2f2;
+}
+
+.md-fences,
+code,
+tt {
+    border: 1px solid #e7eaed;
+    background-color: #f8f8f8;
+    border-radius: 3px;
+    padding: 0;
+    padding: 2px 4px 0px 4px;
+    font-size: 0.9em;
+}
+
+code {
+	color: red;
+    background-color: rgb(255, 255, 0)
+    padding: 0 2px 0 2px;
+}
+
+.md-fences {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding-top: 8px;
+    padding-bottom: 6px;
+}
+
+
+.md-task-list-item > input {
+  margin-left: -1.3em;
+}
+
+@media print {
+    html {
+        font-size: 13px;
+    }
+    pre {
+        page-break-inside: avoid;
+        word-wrap: break-word;
+    }
+}
+
+.md-fences {
+	background-color: #f8f8f8;
+}
+#write pre.md-meta-block {
+	padding: 1rem;
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: #f7f7f7;
+    border: 0;
+    border-radius: 3px;
+    color: #777777;
+    margin-top: 0 !important;
+}
+
+.mathjax-block>.code-tooltip {
+	bottom: .375rem;
+}
+
+.md-mathjax-midline {
+    background: #fafafa;
+}
+
+#write>h3.md-focus:before{
+	left: -1.5625rem;
+	top: .375rem;
+}
+#write>h4.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h5.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h6.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+.md-image>.md-meta {
+    /*border: 1px solid #ddd;*/
+    border-radius: 3px;
+    padding: 2px 0px 0px 4px;
+    font-size: 0.9em;
+    color: inherit;
+}
+
+.md-tag {
+    color: #a7a7a7;
+    opacity: 1;
+}
+
+.md-toc { 
+    margin-top:20px;
+    padding-bottom:20px;
+}
+
+.sidebar-tabs {
+    border-bottom: none;
+}
+
+#typora-quick-open {
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+}
+
+#typora-quick-open-item {
+    background-color: #FAFAFA;
+    border-color: #FEFEFE #e5e5e5 #e5e5e5 #eee;
+    border-style: solid;
+    border-width: 1px;
+}
+
+/** focus mode */
+.on-focus-mode blockquote {
+    border-left-color: rgba(85, 85, 85, 0.12);
+}
+
+header, .context-menu, .megamenu-content, footer{
+    font-family: "Segoe UI", "Arial", sans-serif;
+}
+
+.file-node-content:hover .file-node-icon,
+.file-node-content:hover .file-node-open-state{
+    visibility: visible;
+}
+
+.mac-seamless-mode #typora-sidebar {
+    background-color: #fafafa;
+    background-color: var(--side-bar-bg-color);
+}
+
+.md-lang {
+    color: #b4654d;
+}
+
+/*.html-for-mac {
+    --item-hover-bg-color: #E6F0FE;
+}*/
+
+#md-notification .btn {
+    border: 0;
+}
+
+.dropdown-menu .divider {
+    border-color: #e5e5e5;
+    opacity: 0.4;
+}
+
+.ty-preferences .window-content {
+    background-color: #fafafa;
+}
+
+.ty-preferences .nav-group-item.active {
+    color: white;
+    background: #999;
+}
+
+.menu-item-container a.menu-style-btn {
+    background-color: #f5f8fa;
+    background-image: linear-gradient( 180deg , hsla(0, 0%, 100%, 0.8), hsla(0, 0%, 100%, 0)); 
+}
+
+u {
+    text-decoration: red underline; 
+	font-weight: bold;
+    font-style: italic;
+  }
+  
+
+
+</style><title>麦肯锡工作法</title>
+</head>
+<body class='typora-export os-windows'><div class='typora-export-content'>
+<div id='write'  class=''><h1 style="text-align:center; font-size:40px; font-weight:bold;"> 《麦肯锡工作法》 <strong style="color:brown; font-size:15px;"> [日]<strong style="color:black; font-size:20px;">大岛祥誉</strong>著 <strong style="color:black; font-size:20px;">朱悦玮</strong>译 </strong></h1>
+<p style="text-align:center; font-style:italic" > 麦肯锡精英的39个工作习惯 </p><blockquote><p><span>Edited by </span><strong><a href='https://mustbook.github.io/'><span>Read</span></a></strong><span>.</span>
+</p><p><i style="color:brown"><span>Get the knowledge flowing and circulating!  </span><strong><span>:)</span></strong><span> </span></i></p></blockquote><p style="text-align:center; font-size:20px; font-weight:bold;"> 目录 </p><div class='md-toc' mdtype='toc'><p class="md-toc-content" role="list"><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n1451"><a class="md-toc-inner" href="#麦肯锡工作法麦肯锡工作法">麦肯锡工作法</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n11"><a class="md-toc-inner" href="#序言">序言</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n30"><a class="md-toc-inner" href="#实现品质x效率的39个习惯">实现“品质X效率”的39个习惯</a></span><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n49"><a class="md-toc-inner" href="#第①章-重视成果">第①章 重视“成果”</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n54"><a class="md-toc-inner" href="#问题究竟是什么">问题究竟是“什么”？</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n87"><a class="md-toc-inner" href="#习惯1-保持从零开始">习惯1. 保持“从零开始”</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n99"><a class="md-toc-inner" href="#传单真的是必不可少的吗">传单真的是必不可少的吗?</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n118"><a class="md-toc-inner" href="#习惯2-用鹰眼进行分析找出最佳的解决方法">习惯2. 用“鹰眼”进行分析找出最佳的解决方法</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n133"><a class="md-toc-inner" href="#如何使自己拥有俯瞰视点">如何使自己拥有“俯瞰视点”</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n150"><a class="md-toc-inner" href="#为什么她不选择飞机而是选择新干线">为什么她不选择飞机，而是选择新干线?</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n162"><a class="md-toc-inner" href="#习惯3-学会批判思考">习惯3. 学会“批判思考”</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n169"><a class="md-toc-inner" href="#进行自我批判">进行自我批判</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n192"><a class="md-toc-inner" href="#思考所有的原因和结果">思考所有的原因和结果</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n211"><a class="md-toc-inner" href="#习惯4-在下雨之前准备伞">习惯4. 在“下雨”之前，准备“伞”</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n222"><a class="md-toc-inner" href="#第二次约会就遇上堵车">第二次约会就遇上堵车</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n245"><a class="md-toc-inner" href="#习惯5-去现场">习惯5. 去“现场”</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n247"><a class="md-toc-inner" href="#第一步是明确情报收集的目的">第一步是明确“情报收集的目的”</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n249"><a class="md-toc-inner" href="#第二步是海量调查">第二步是“海量”调查</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n264"><a class="md-toc-inner" href="#第三步是去现场">第三步是去“现场”</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n270"><a class="md-toc-inner" href="#找出竞争对手之间的不同"><u>找出竞争对手之间的不同</u></a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n274"><a class="md-toc-inner" href="#卫生间非常干净"><u>卫生间非常干净</u></a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n282"><a class="md-toc-inner" href="#习惯6-从假设开始">习惯6. 从假设开始</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n292"><a class="md-toc-inner" href="#工作有效率的人必然是主动的">工作有效率的人，必然是主动的</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n304"><a class="md-toc-inner" href="#避免执迷不悟">避免执迷不悟</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n317"><a class="md-toc-inner" href="#习惯7-重视成果">习惯7. 重视“成果”</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n326"><a class="md-toc-inner" href="#6点下班的合伙人">6点下班的合伙人</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n341"><a class="md-toc-inner" href="#习惯8-分清重视效率还是重视思考">习惯8. 分清“重视效率”还是“重视思考”</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n354"><a class="md-toc-inner" href="#应该花时间的时候不要吝啬">应该花时间的时候不要吝啬</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n368"><a class="md-toc-inner" href="#习惯9-建立紧急度和重要度的模型">习惯9. 建立“紧急度”和“重要度”的模型</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n376"><a class="md-toc-inner" href="#如果只剩下一年的寿命">如果只剩下一年的寿命</a></span><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n388"><a class="md-toc-inner" href="#第②章--将要点分为三部分">第②章 / 将要点分为“三部分”</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n393"><a class="md-toc-inner" href="#争取上司的时间">争取“上司的时间”</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n407"><a class="md-toc-inner" href="#习惯10-保持pma">习惯10. 保持“PMA”</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n428"><a class="md-toc-inner" href="#如果上司在facebook上加你好友该怎么办">如果上司在Facebook上加你好友该怎么办</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n438"><a class="md-toc-inner" href="#习惯11-摸清上司的类型">习惯11. 摸清上司的类型</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n445"><a class="md-toc-inner" href="#1-情感型还是理智型">1. 情感型还是理智型?</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n459"><a class="md-toc-inner" href="#2-单独型还是复合型">2. 单独型还是复合型?</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n477"><a class="md-toc-inner" href="#习惯12-用只占用您1分钟时间可以吗作为开头">习惯12. 用“只占用您1分钟时间可以吗”作为开头</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n489"><a class="md-toc-inner" href="#被上司拒绝的三个原因">被上司拒绝的三个原因</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n509"><a class="md-toc-inner" href="#习惯13-用30秒时间提出3个要点">习惯13. 用30秒时间提出3个要点</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n522"><a class="md-toc-inner" href="#如何总结出3个要点">如何总结出“3个”要点？</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n567"><a class="md-toc-inner" href="#习惯14-以事实为基础提出假设">习惯14. 以“事实”为基础提出“假设”</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n576"><a class="md-toc-inner" href="#首先说事实然后说由此导出的假设">首先说“事实”，然后说由此导出的“假设”</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n596"><a class="md-toc-inner" href="#习惯15-观察上司的桌子">习惯15. 观察上司的桌子</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n605"><a class="md-toc-inner" href="#便签技巧①-贴在哪">便签技巧① 贴在哪?</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n608"><a class="md-toc-inner" href="#便签技巧②-用什么颜色的便签">便签技巧② 用什么颜色的便签？</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n613"><a class="md-toc-inner" href="#便签技巧③-写什么内容">便签技巧③ 写什么内容?</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n621"><a class="md-toc-inner" href="#习惯16-邮件主题应该写什么">习惯16. 邮件主题应该写什么</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n648"><a class="md-toc-inner" href="#麦肯锡的邮件标准">麦肯锡的邮件标准</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n669"><a class="md-toc-inner" href="#习惯17-工作过程中与上司进行确认">习惯17. 工作过程中与上司进行确认</a></span><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n702"><a class="md-toc-inner" href="#第③章-将任务可视化">第③章 将“任务”可视化</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n707"><a class="md-toc-inner" href="#明星主厨也不能让顾客等待3小时">明星主厨也不能让顾客等待3小时</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n720"><a class="md-toc-inner" href="#习惯18-确认委托人的意图">习惯18. 确认“委托人”的意图</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n728"><a class="md-toc-inner" href="#考试不出的内容学了也没用">考试不出的内容学了也没用</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n748"><a class="md-toc-inner" href="#习惯19-任模型上安排任务">习惯19. 任模型上安排任务</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n761"><a class="md-toc-inner" href="#让工作和生活都可视化">让工作和生活都可视化</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n770"><a class="md-toc-inner" href="#习惯20-保持办公桌整洁">习惯20. 保持办公桌整洁</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n779"><a class="md-toc-inner" href="#毫不犹豫地扔掉过去的成果">毫不犹豫地扔掉过去的成果</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n794"><a class="md-toc-inner" href="#习惯21-战略性地使用cc与bcc">习惯21. 战略性地使用CC与BCC</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n807"><a class="md-toc-inner" href="#让不善于安排工作的前辈配合你工作的邮件技巧">让不善于安排工作的前辈配合你工作的邮件技巧</a></span><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n824"><a class="md-toc-inner" href="#第④章-将自己的主张放在疑问里">第④章 将自己的主张放在疑问里</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n829"><a class="md-toc-inner" href="#顾客不知道自己想要什么"><u>顾客不知道自己想要什么</u></a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n842"><a class="md-toc-inner" href="#习惯22-灵活运用面谈邮件和电话">习惯22. 灵活运用面谈、邮件和电话</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n853"><a class="md-toc-inner" href="#火灾时给消防队打电话还是发邮件"><u>火灾时给消防队打电话，还是发邮件?</u></a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n866"><a class="md-toc-inner" href="#习惯23-诱导对方自己找出共同点">习惯23. 诱导对方自己找出“共同点”</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n872"><a class="md-toc-inner" href="#寻找共同点的方法">寻找共同点的方法</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n879"><a class="md-toc-inner" href="#个人简介的书写方法和递交方法">个人简介的书写方法和递交方法</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n893"><a class="md-toc-inner" href="#习惯24-选择对方容易说出心里话的场所">习惯24. 选择对方容易说出心里话的“场所”</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n910"><a class="md-toc-inner" href="#像记者一样取材">像记者一样取材</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n936"><a class="md-toc-inner" href="#习惯25-不要和对方站在相同的立场上">习惯25. 不要和对方站在相同的立场上</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n971"><a class="md-toc-inner" href="#习惯26-将自己的主张放在疑问里">习惯26. 将自己的主张放在疑问里</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n978"><a class="md-toc-inner" href="#让对方来思考答案"><u>让对方来思考答案</u></a></span><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n995"><a class="md-toc-inner" href="#第⑤章-认可共鸣激励">第⑤章 认可！共鸣！激励！</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n1000"><a class="md-toc-inner" href="#提高部下的工作效率才是一流的上司">提高部下的工作效率才是<u>一流的上司</u></a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n1013"><a class="md-toc-inner" href="#习惯27-称呼部下为xx先生女士">习惯27. 称呼部下为“XX先生/女士”</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n1022"><a class="md-toc-inner" href="#麦肯锡不存在上下级关系"><u>麦肯锡不存在上下级关系</u></a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n1036"><a class="md-toc-inner" href="#习惯28-认可共鸣激励">习惯28. 认可！共鸣！激励！</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n1051"><a class="md-toc-inner" href="#有能力的上司懂得认可别人">有能力的上司懂得认可别人</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n1070"><a class="md-toc-inner" href="#习惯29-让部下提出假设">习惯29. 让部下提出“假设”</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n1078"><a class="md-toc-inner" href="#训斥时的3个铁则">训斥时的3个铁则</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n1080"><a class="md-toc-inner" href="#1-控制情绪">1. 控制情绪。</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n1083"><a class="md-toc-inner" href="#2-不要当着他人的面训斥部下">2. 不要当着他人的面训斥部下。</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n1086"><a class="md-toc-inner" href="#3-让部下建立假设思考具体的工作方法">3. 让部下<u>建立假设</u>，思考具体的工作方法。</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n1098"><a class="md-toc-inner" href="#习惯30-与部下交流消除困惑">习惯30. 与部下交流，消除困惑</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n1116"><a class="md-toc-inner" href="#上司坦诚的态度使团队更加团结">上司坦诚的态度使团队更加团结</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n1127"><a class="md-toc-inner" href="#习惯31-毫不犹豫地布置任务">习惯31. 毫不犹豫地布置任务</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n1138"><a class="md-toc-inner" href="#委任工作可以提高部下的能力加强彼此之间的信赖关系">委任工作可以提高部下的能力，加强彼此之间的信赖关系</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n1153"><a class="md-toc-inner" href="#习惯32-会议分为4种">习惯32. 会议分为4种</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n1170"><a class="md-toc-inner" href="#为了提高团队凝聚力而开会">为了提高团队凝聚力而开会</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n1188"><a class="md-toc-inner" href="#习惯33-明确会议的目的与目标状态">习惯33. 明确会议的“目的”与“目标状态”</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n1198"><a class="md-toc-inner" href="#使会议有意义的3个要素">使会议有意义的3个要素</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n1220"><a class="md-toc-inner" href="#对会议的贡献有许多种形式">对会议的贡献有许多种形式</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n1229"><a class="md-toc-inner" href="#习惯34-会议中也可以闲聊">习惯34. 会议中也可以“闲聊”</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n1251"><a class="md-toc-inner" href="#主持人要认可参加者">主持人要认可参加者</a></span><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n1258"><a class="md-toc-inner" href="#第⑥章-控制感情">第⑥章 控制感情</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n1263"><a class="md-toc-inner" href="#问题在于被谁被什么刺激">问题在于“被谁”“被什么”刺激</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n1276"><a class="md-toc-inner" href="#习惯35-寻找良师">习惯35. 寻找“良师”</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n1308"><a class="md-toc-inner" href="#习惯36-向专业高尔夫球选手学习高尔夫">习惯36. 向专业高尔夫球选手学习高尔夫</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n1315"><a class="md-toc-inner" href="#成为良师的三个条件">成为良师的三个条件</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n1332"><a class="md-toc-inner" href="#商谈的技巧">商谈的技巧</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n1348"><a class="md-toc-inner" href="#习惯37-书不用读到最后">习惯37. 书不用读到最后</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n1363"><a class="md-toc-inner" href="#同时阅读许多本书边阅读边画线">同时阅读许多本书，边阅读边画线</a></span><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n1376"><a class="md-toc-inner" href="#习惯38-用5分钟时间自省">习惯38. 用<u>5分钟</u>时间自省</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n1390"><a class="md-toc-inner" href="#让自己像葡萄酒一样熟成">让自己像葡萄酒一样<u>熟成</u></a></span><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n1405"><a class="md-toc-inner" href="#终章习惯39）">终章（习惯39）</a></span></p></div><h1 id='麦肯锡工作法麦肯锡工作法'><span>麦肯锡工作法</span><sup class='md-footnote'><a href='#dfref-footnote-1' name='ref-footnote-1'>1</a></sup></h1><hr style="background:brown"/><p style="text-align:center; font-weight:bold;">“解决问题的基本在于保持疑问。怀疑这个结论是不是最佳的结论。这样一来就能够找到解决问题的线索。”<br/>— 大前研一（经营顾问/原麦肯锡日本支社长）</p><hr style="background:brown"/><p>&nbsp;</p><h2 id='序言'><span>序言</span></h2><p><span>直线，是连接两点的最短距离。但是，这并不意味着任何时候都应该直线前行。</span></p><p><span>河流当遇到阻碍时就会改变前进的方向。尽管从空中看去，河流的形状蜿蜒曲折，但这却是将河水从上游运到河口的最短距离。</span></p><p><span>登山时也是如此。从山麓到山顶的过程不可能是一条直线，而是要根据斜坡的角度、岩石的形状，以及天气等诸多因素，来选择一条迂回前行的道路。这才是最有效率的登山方法。</span></p><p><span>我们的工作也一样。就好像是以某处为起点，到另一个地方为终点的旅程，连接这两点的就是工作。</span></p><p><span>绝大多数的工作，都是为了解决“某种问题“。</span></p><ul><li><p><span>商品的销量上不去→提高商品的销量</span></p></li><li><p><span>业绩不好→提高业绩</span></p></li><li><p><span>遭到顾客的投诉→应对投诉，改善服务以减少投诉</span></p></li><li><p><span>公司经营不善→改善经营状况</span></p></li><li><p><span>部下的工作负担过重→减轻负担</span></p></li></ul><p><span>也就是说，“某种问题”是起点，“解决问题”是终点。</span></p><p><span>在保证品质和效率的前提下，将这两点以最短的距离连接起来，这就是专家们的工作。</span></p><h3 id='实现品质x效率的39个习惯'><span>实现“品质X效率”的39个习惯</span></h3><p><span>我曾经在被称为世界上最顶尖的经营咨询公司一一麦肯锡公司工作。在那里，有很多能够将两点完美结合在一起的专家。</span></p><p><span>他们有时采取正攻法，有时采取谁都意想不到的方法来解决客户的问题。</span></p><p><span>为了连接两点，需要一个严密的过程。</span></p><p><span>首先，是确认需要解决的问题。</span></p><p><span>接着为了解决这个问题提出一个假设。</span></p><p><span>假设提出完成后，研究具体的行动。</span></p><p><span>在采取行动时需要与上司交流并且得到确认。</span></p><p><span>如果发现假设不成立，那么就需要重新提出假设。</span></p><p><span>新的假设提出完成后，研究具体的行动……</span></p><p><span>在这个过程中，蕴含着许多麦肯锡优秀的经营顾问们非常重要的“习惯”。</span></p><p><span>在确认需要解决的问题时，采用的是“从零开始”的方法，目的在于分析“这个问题是不是真正的问题，问题是否存在于别处”。</span></p><p><span>而在提出假设的时候，不仅要掌握全部的资料，更重要的是一定要去“现场”调查，在对问题点进行整理的时候使用“逻辑树”。</span></p><p><span>在占用上司时间的时候，用“只占用您1分钟时间可以吗”作为开头，然后“用30秒的时间列举出3个要点”进行说明。</span></p><p><span>就是这些简单的习惯，构成了一条连接两点的最短路程。</span></p><p><span>如果想让自己的工作更上一层楼，首先要改变自己的行动，然后将这种改变作为自己的习惯。麦肯锡的精英们，早已将从零开始和假设思考法变成了和洗脸、刷牙一样的日常习惯。</span></p><p><span>本书以实现“品质x效率”为主题，为大家介绍麦肯锡最重要的“39个习惯”。为了将两点完美地连接起来，希望大家尝试一下。</span></p><p><span>— 大岛祥誉</span></p><p>&nbsp;</p><h1 id='第①章-重视成果'><span>第①章 重视“成果”</span></h1><p><u><span>“解决问题”的习惯</span></u></p><p>&nbsp;</p><hr style="background:brown"/><p style="text-align:center; font-weight:bold;">“解决问题的基本在于保持疑问。怀疑这个结论是不是最佳的结论。这样一来就能够找到解决问题的线索。”<br/>— 大前研一（经营顾问/原麦肯锡日本支社长）</p><hr style="background:brown"/><p>&nbsp;</p><h2 id='问题究竟是什么'><span>问题究竟是“什么”？</span></h2><p><span>麦肯锡的经营顾问，都是“解决问题的专家”。</span></p><p><span>实际上我们绝大多数的工作都是为了“解决问题”，因为如果做不到这一点，那么就无法取得任何进步。现在你所从事的工作，一定也是在寻找某种“方法”，为了去解决某种“问题”。</span></p><p><span>交给你这项工作的上司、在你身旁从事类似工作的同事、给你们提供订单的客户，都在为了解决问题而工作。</span></p><p><span>在麦肯锡，通常用以下的流程来解决问题。</span></p><blockquote><ol start='' ><li><p><span>掌握真正的问题。</span></p></li><li><p><span>对问题逬行整理。</span></p></li><li><p><span>收集情报。</span></p></li><li><p><span>提出假设。</span></p></li><li><p><span>验证假设。</span></p></li><li><p><span>思考解决办法。</span></p></li><li><p><span>实行解决办法。</span></p></li></ol></blockquote><p><span>经过上述七个步骤，我们就能找出答案。麦肯锡的经营顾问们深知这一流程的重要性，所以他们才拥有极高的解决问题的能力，并且能够保证工作的品质与效率。</span></p><p><span>在这个解决问题的流程中，有两点特别重要：</span></p><blockquote><ol start='' ><li><p><span>准确把握发生的问题，并且对其进行分析。</span></p></li><li><p><span>尽可能快速地解决问题。</span></p></li></ol></blockquote><p><span>首先我们要注意的是第一点：必须要准确地把握发生的问题。</span></p><p><span>如果连发生的问题都搞错，那么不管提出怎样的解决方法都是毫无意义的。最终不但无法解决任何问题，更不会取得什么成果，等回过神来发现只是浪费了大量的时间。所以，我们首先应该准确地找到问题。</span></p><p><span>为了实现这一目标，麦肯锡的经营顾问们所采用的思考方法被称为“从零开始”。具体来说这是一种怎样的方法——请看下一页。</span></p><p>&nbsp;</p><h2 id='习惯1-保持从零开始'><span>习惯1. 保持“从零开始”</span></h2><p><span>麦肯锡解决问题流程的第一步，就是“从零开始”。</span></p><p><span>当我们遇到问题的时候，要保持从零开始的思考，回到原点。</span></p><p><span>“本公司的XX事业连续两年出现赤字，找不到挽回的方法。问题究竟出在哪里？怎么解决才好？请帮帮我们吧。”</span></p><p><span>麦肯锡的经营顾问们，经常会从客户那里收到这样的请求。</span></p><p><span>如果按照一般的问题解决流程，首先要找出这项事业的问题，对其进行分析和了解，然后思考解决的方法。</span></p><p><span>但是，“思考如何将XX事业变成黑字”的方法，</span></p><p><span>并不是最好的解决方法。</span></p><p><span>为什么？因为这种方法并不是“从零开始”。这只是根据顾客提出的问题给出相应的意见，并不是从“原点”出发的观点。</span></p><p><span>“从零开始”的思考方法，要考虑什么才是真正的问题，这项事业今后还有没有继续的必要。从这样的角度来进行思考。</span></p><p><span>比如说，不管这项事业是多么著名的品牌，在历史和传承上有过怎样的辉煌，但今后如果没有什么发展的话，彻底放弃或许才是最好的选择。</span></p><p><span>那么真正的问题就不是解决这项事业的赤字，而是在放弃了这项事业之后，如何提高剩余事业的利润。</span></p><h3 id='传单真的是必不可少的吗'><span>传单真的是必不可少的吗?</span></h3><p><span>像这样“从零开始”的思考方法，还可以应用于我们平时的生活中。</span></p><p><span>比如有朋友找你商量烦心事。</span></p><p><span>“最近，我和男朋友相处得不好，应该怎么办呢？”</span></p><p><span>在这种情况下，你可以从“应该怎么办”的视点出发，做出“多倾听他的话，多沟通一下比较好”这样的回答。</span></p><p><span>但是，如果她的男朋友本身就是一个人品有问题的家伙。</span></p><p><span>分手比较好”这样的提议才是最重要的。就算你的朋友完全没有分手的意思，但你的提议或许会给她提供一个改变思考角度的机会。</span></p><p><span>商业中也是一样。</span></p><p><span>假设在发了传单之后，仍然没有顾客来。</span></p><p><span>这时候应该继续发更多的传单吗？</span></p><p><span>还是应该做更大规模的宣传？</span></p><p><span>或者改变传单的设计样式？</span></p><p><span>这些思考都是不全面的。</span></p><p><span>我们应该考虑的是，在报纸上刊登广告效果是否比发传单更好？甚至开店的位置本身是否就存在问题?</span></p><p><span>当接到上司或客户交代的工作时，多考虑一下问题究竟是什么，保持从原点出发的思考方法是最重要的。因为如果搞错了真正的问题，那么一切努力都将是徒劳的。</span></p><p><span>让“从零开始”成为自己的习惯，这样你才能抓住真正的问题点，从而找出解决问题的线索。这样一来，你就会少走很多弯路，从而更有效率地解决问题。</span></p><div style="
+            border-radius: 25px; 
+            border: 2px solid #990000;
+            padding: 20px;
+            ">
+    <strong>总结</strong><br/>
+    做好工作的第一步，把握问题究竟是“什么”。<br/>
+    用从零开始的思考方法接近问题的本质。
+</div><p>&nbsp;</p><h2 id='习惯2-用鹰眼进行分析找出最佳的解决方法'><span>习惯2. 用“鹰眼”进行分析找出最佳的解决方法</span></h2><p><span>那么，怎样才能让“从零开始”的思考方法成为自己的习惯呢？</span></p><p><span>首先我们必须要习惯的是“俯瞰视点”。</span></p><p><span>也就是拥有从上方观察一切的“鹰眼”。有点类似于“Zoom out”的感觉。</span></p><p><span>或许你认为这很简单。但实际上要做到是非常难的。</span></p><p><span>我们在潜意识中，都被“自我视点”或者“自我评价基准”所束缚。也就是说我们都被约束在自己创建的条条框框之中。</span></p><p><span>“我休息日的早上完全起不来……结果，星期天的晚上就会睡不着，导致周一睡过头，上班迟到。有没有让我顺利起床的方法？”</span></p><p><span>当有人向你提出这样的问题时，你心中的第一反应是什么呢？</span></p><p><span>（啊，我明白！休息日的时候心情放松，很容易就睡个回笼觉了呢！）</span></p><p><span>（什么啊？我休息日的时候也和平时一样的时间起床。）</span></p><p><span>（这个白痴。休息日的时候也定个闹钟不就行了嘛！）</span></p><p><span>实际上，这些反应都是错误的。因为这些都是“自我视点”。</span></p><p><span>都是你对“休息日睡多了导致周一早晨睡过头”的朋友，通过你个人的视点所作出的评价。</span></p><p><span>如果不站在对方的立场上进行思考，你就无法摆脱自己的思考方法、经验，以及常识基准的影响，无法拥有公正的视点，也就无法发现真正的问题。</span></p><p><span>那么，怎样的反应才是“俯瞰视点”呢?</span></p><h3 id='如何使自己拥有俯瞰视点'><span>如何使自己拥有“俯瞰视点”</span></h3><p><span>还是刚才那个例子，如果产生以下的反应，就算是拥有“鹰眼”的俯瞰视点。</span></p><p><span>为什么这个人休息日的时候起不来？是周五玩得太晩吗？还是她本来就不愿去上班？要不然是生病了身体不舒服？她这样总迟到，公司的同事怎么看？如果只有她一个人迟到，会不会使其他同事感到不公平，影响团队的士气？</span></p><p><span>这是包含了自己的视点、对方的视点、第三方视点的全方位视点。站在这种俯瞰视点的角度，才能够提出真正有建设性的问题。</span></p><p><span>“你周五都是怎么过的？”</span></p><p><span>“工作干的开心吗？”</span></p><p><span>“身体情况如何？”</span></p><p><span>“公司同事都怎么想？”</span></p><p><span>当你提出这些问题时，得到的回答是：</span></p><p><span>“其实，我和上司的关系不太好，工作上非常压抑……”</span></p><p><span>这就不仅仅是周一早晨睡过头的问题了，而是因为对上司的厌恶感，导致周一上班时身体产生了抗拒反应。也就是说，真正的问题并非“睡懒觉”而是“与上司之间的人际关系”。</span></p><p><span>如果你对她提出“休息日的时候也定个闹钟不就行了嘛”这样的建议，解决不了任何问题，也无法消除她同事的不公平感。</span></p><p><span>要想解决这个问题，调动一下工作岗位或许是个好方法，也可以去找个心理专家咨询一下。</span></p><p><span>要想摆脱自我视点，有一个锻炼的方法。</span></p><p><span>那就是经常检查自己是否在用自我视点看问题，并且站在一个更高的角度来审视自己“为什么我现在会用自我视点看问题”。这样一来，你就会保持“Zoomout”的感觉，并且拥有更加广阔的视野。</span></p><p><span>对于“周一早晨迟到”的问题，如果轻易地做出“真是白痴”的判断，那么就应该将自我视角先放在一边，思考“为什么我刚才认为她是个白痴”。</span></p><p><span>不断进行这样的锻炼，你就会摆脱自我视点，不再轻易地对别人提出的问题做出判断，并且使俯瞰视点成为自己的习惯。</span></p><h3 id='为什么她不选择飞机而是选择新干线'><span>为什么她不选择飞机，而是选择新干线?</span></h3><p><span>我在麦肯锡工作时，有一个非常优秀的秘书同事。她的上司（相当于日本企业的负责人）非常繁忙，每天都奔走于全国各地，而行动时的安排都由这个秘书负责。</span></p><p><span>有一次，她的上司要去广岛出差。一般情况下，为了尽快抵达目的地，秘书都会选择“飞机”作为交通工具，但是她却安排了时间更长的“新干线”。</span></p><p><span>这是为什么呢？</span></p><p><span>因为她非常了解自己的上司。</span></p><p><span>她的上司需要写很多东西，但每天太繁忙以至于拿不出完整的时间来进行写作。</span></p><p><span>于是她在和上司沟通后，为了给上司提供写作的时间而选择了新干线。因为在新干线里面可以不受干扰地进行写作。</span></p><p><span>这样一来不但她的上司有时间写作，对整个公司的发展也是有益的。</span></p><p><span>她并没有站在“出差一选择飞机尽快抵达目的地”的自我视点，而是站在更高一层的俯瞰视点上，所以更好地完成了自己的工作。</span></p><div style="
+            border-radius: 25px; 
+            border: 2px solid #990000;
+            padding: 20px;
+            ">
+    <strong>总结</strong><br/>
+    停止条件反射般地用“自我视点”进行判断。<br/>
+    用鹰眼来进行观察，选择对自己、对方，以及公司都有好处的方法。
+</div><p>&nbsp;</p><h2 id='习惯3-学会批判思考'><span>习惯3. 学会“批判思考”</span></h2><p><span>与分析别人的问题相比，用“从零开始”的方法分析自己的问题更加困难。</span></p><p><span>正如前文所述，当别人提出“想要改善与恋人之间的关系”这个问题时，即便按照“自我视点”来进行分析，也可能提出“不如分手吧”这种非常干脆的建议。</span></p><p><span>可以说正因为站在旁观者的立场上，所以才能抓住问题的关键。</span></p><p><span>但是，当面对自己的问题时，我们还能够那么干脆地做出“分手”这种选择吗？</span></p><p><span>如果我们自己面对“我为什么和恋人的关系不好呢？我应该怎么办？”这个问题时，很难做出“对了，不如分手吧！”这样的选择。（但是看到朋友做出这样果断的选择时，心中往往会感慨她很了不起。）</span></p><p><span>因为面对自己的问题我们很难摆脱自我视点，所以无法深入地进行思考。在进行判断的时候往往犹豫再三，导致问题迟迟得不到解决。</span></p><h3 id='进行自我批判'><span>进行自我批判</span></h3><p><span>在商业中也经常出现类似的情况。无法深入思考，想法不够广阔。</span></p><p><span>这种情况下，麦肯锡的“逻辑思考法”将发挥重要的作用。</span></p><p><span>所谓逻辑思考，简单说就是针对当前面对的问题以及自己提出的假设，仔细地思考“原因是什么，结果将会如何”。</span></p><p><span>为什么客户的事业发展不顺?</span></p><p><span>因为销售额无法提高。</span></p><p><span>为什么销售额无法提高?</span></p><p><span>因为海外竞争企业的价格更低。</span></p><p><span>为什么海外竞争企业的价格更低。</span></p><p><span>因为我们的成本太高。</span></p><p><span>为什么成本太高。</span></p><p><span>因为原料价格高。</span></p><p><span>为什么……</span></p><p><span>为什么自己和恋人总是吵架?</span></p><p><span>因为互不相让。</span></p><p><span>为什么互不相让。</span></p><p><span>因为双方都认为自己的想法是正确的。</span></p><p><span>为什么双方都认为自己的想法是正确的？</span></p><p><span>因为相互之间缺乏了解。</span></p><p><span>为什么相互之间缺乏了解？</span></p><p><span>因为各自的工作都太忙，在一起相处的时间不多。</span></p><p><span>为什么……</span></p><p><span>将整体事件中的每一个小事件都逐一地分解出来。</span></p><h3 id='思考所有的原因和结果'><span>思考所有的原因和结果</span></h3><p><span>在这一过程中为了使思考更加深入，就必须采取批判的思考方法。</span></p><p><span>为什么?</span></p><p><span>真的吗?</span></p><p><span>真正的问题是什么？</span></p><p><span>有没有更好的解决办法？</span></p><p><span>通过这种批判的思考方法和不断地对自我提问，可以使你一步一步地逼近问题的本质。</span></p><p><span>前文中所举的例子，只是一条线的简单分析。而我们实际上遇到的问题，可能会出现许多原因与结果的分歧。</span></p><p><span>“销售额无法提高”的原因，真的是与海外竞争企业的价格差吗?</span></p><p><span>会不会是自己公司的商品缺乏魅力呢?</span></p><p><span>还是说这件商品本身的市场需求越来越少了?</span></p><p><span>“相互之间缺乏了解”的原因，真的是在一起相处的时间不多吗?</span></p><p><span>时间只要肯挤总是会有的。其实是两个人相互之间都不尊重对方，只是形式上在交往而已吧？</span></p><p><span>通过对自己提出这些批判性的问题，可以使思考更加深入，提高视点（成为俯瞰视点），看问题更加全面。批判的思考可以看清问题的本质。</span></p><p><span>如果能够养成批判思考的习惯，那么就可以自然而然地进行“从零开始”的思考，明确地判断出明陛事情应该做，明陛事情没必要做。</span></p><p><span>这样就可以实现工作的效率化和高速化。</span></p><div style="
+            border-radius: 25px; 
+            border: 2px solid #990000;
+            padding: 20px;
+            ">
+    <strong>总结</strong><br/>
+    不断地问自己“为什么”。<br/>
+    进行批判性思考，分析原因与结果。
+</div><p>&nbsp;</p><h2 id='习惯4-在下雨之前准备伞'><span>习惯4. 在“下雨”之前，准备“伞”</span></h2><p><span>在寻找解决问题的方法时，麦肯锡有一个非常贴切的比喻。那就是被称为“空、雨、伞”的思考方法(frame work)。</span></p><p><span>当我们准备出门时看一看天空，好像就要下雨的样子。所以我们会选择带伞出门，这样就算一会儿真的下起雨来，也不至于被淋湿。</span></p><p><span>当我们将这一过程分为空、雨、伞进行思考后，就会发现如下的关系性。</span></p><p><img src=".\..\..\images\typora-user-images\空雨伞.jpg" alt="空雨伞" style="zoom:50%;" /></p><p><span>“空”表示的是“如今处于怎样的状况”这一“事实”。如果“天空中全都是乌云，那么很快就会下雨”。</span></p><p><span>“雨”表示的是“如今的状况表示怎样的含义”这一“解释”。也就是说，根据事实会得出何种结论。随时可能下雨的状况，得出如果被淋湿会影响心情的解释。</span></p><p><span>“伞”表示的是在了解事实与解释之后所应该实际采取的行动，也就是“解决办法”。只要带伞出门就不会被雨淋湿。</span></p><p><span>也就是说，只要掌握“空、雨、伞”思考方法的人，就不会被雨淋湿。</span></p><p><span>事实、解释，以及解决办法，这三点必须环环相扣。</span></p><p><span>问题必须得到解决。不管收集到多少情报和数据（事实），如果无法对其进行解释并且找到解决办法，那么这项工作就是毫无意义的，而且也永远无法结束。</span></p><h3 id='第二次约会就遇上堵车'><span>第二次约会就遇上堵车</span></h3><p><span>使用“空、雨、伞”的思考方法时最重要的一点在于整体的节奏。</span></p><p><span>在下雨之前做出可能会下雨的判断，并且带伞出门，才能够避免被淋湿。但如果没能及时找出“应该带伞出门力的解决办法，等到下雨后才想起来找伞，那要么被淋湿，要么就得找个地方避雨。</span></p><p><span>天气不会因为我们的个人意志发生改变。所以在做出选择时必须要快。</span></p><p><span>如果没能在下雨前做出带伞出门的决定，那就只能找个地方避雨，结果白白浪费时间。</span></p><p><span>“空、雨、伞”是一个非常简单的例子。几乎所有人都知道下雨时应该带伞。所以，我们会抬头看天，或者听天气预报来确认当前的状况，如果有必要的话就带伞出门。有的人会一直随身携带一把折叠伞以防万一。</span></p><p><span>但是，实际生活中的情况却比这要复杂得多。</span></p><p><span>假设你和一位或许会成为恋人的女性进行第二次约会。这是决定你们两人今后关系的非常重要的一天。</span></p><p><span>虽然你们的第一次约会聊得很开心，比较成功。但是，如果今天不顺利的话，恐怕很难有进一步的发展。</span></p><p><span>本来你打算开车带她去郊外玩，结果当天高速公路因为发生了事故而堵得水泄不通。车子停在路上纹丝不动。接下来的行动计划都不得不做出改变，对方的心情也越来越差。</span></p><p><span>在这种情况下，如果是一个真正“会工作的人”，那么他肯定会针对高速公路出行这一事实，提前做好应对一切风险的准备。因为高速公路的交通情况，是完全不以你的个人意志发生改变的。</span></p><p><span>你应该对第一次约会时收集到的大量“数据”进行分析，提前准备解决办法。</span></p><p><span>为了应对堵车的风险，你可以提前准备对方喜欢的音乐，或者在手机和平板电脑里拷贝一些双方都感兴趣的、可以打发时间的内容。</span></p><p><span>别忘了根据上一次约会时悄悄打听到的情报，在车里藏一个对方喜欢的小礼物。</span></p><p><span>如果因为堵车而不得不取消约会计划之后才想起“应该在车里准备一些她喜欢的音乐”则为时已晚。</span></p><p><span>这就是在已经下起雨来的时候，还为了买伞而四处奔走的悲惨局面。</span></p><p><span>在工作上也是一样。我们周围的环境都不受我们意志的控制而不断地发生着改变，就好像高速公路上的交通情况一样。</span></p><p><span>如果我们在收集大量信息，并且对其进行分析后，不能够及时地找出切实有效的解决办法，那么这些时间就都将白白浪费，而工作却一事无成。</span></p><p><span>解决问题是“灵活”的。</span></p><p><span>首先要把握这个问题需要在什么时间点之前解决，然后利用逆推法收集数据并且进行分析，最终找出解决办法，这才是最重要的。</span></p><div style="
+            border-radius: 25px; 
+            border: 2px solid #990000;
+            padding: 20px;
+            ">
+    <strong>总结</strong><br/>
+    事实、解释、解决方法，这三点都要在有限的时间内及时完成。<br/>
+    事前准备是解决问题的重要条件。
+</div><p>&nbsp;</p><h2 id='习惯5-去现场'><span>习惯5. 去“现场”</span></h2><p><span>绝大多数的工作，都是从最基础的</span><u><span>情报收集“research”</span></u><span>开始的。这其中</span><u><span>最重要的是收集的质量。如果质量高则工作效率会迅速提升，品质也同样会得到提高</span></u><span>。接下来我将为大家介绍麦肯锡的情报收集三部曲，掌握了这个方法你也可以成为情报收集的专家。</span></p><h3 id='第一步是明确情报收集的目的'><span>第一步是明确“情报收集的目的”</span></h3><p><span>当麦肯锡要为A公司提供建议时，首先会以找出“对A公司来说最重要的课题是什么”为目的进行收集。因为只有了解了这一点，才能够提出真正有建设性的建议。</span><u><span>而盲目地进行情报收集，只是在浪费时间罢了</span></u><span>。当情报收集的目的明确之后，收集的目标才会清晰地显现出来。</span></p><h3 id='第二步是海量调查'><span>第二步是“海量”调查</span></h3><p><u><span>目的明确之后，就要开始“海量”调查。</span></u><span>业界的市场发生了什么变化？A公司的强项和弱项是什么？竞争企业都有什么商品？这些信息都需要收集。</span></p><p><span>首先买上几十本与这些内容相关的书，只读目录和最开头的20页，然后只保留那些内容有用的书。</span></p><p><span>资料也要海量收集，但只保留有用的资料。</span></p><p><span>利用互联网收集情报也是如此。</span><u><span>不要只看搜索排行靠前的网站，尽量浏览更多的网站</span></u><span>。</span></p><p><span>检索时需要注意，进行检索的关键词一定要恰当。特别是使用“</span><u><span>多个关键词</span></u><span>”的</span><u><span>组合</span></u><span>进行检索时，更容易找到相关的内容。</span></p><p><span>比如说想要调查企业人事战略的动向时，利用“人才动向”“人才趋势”“人事战略”“人事成功”之类的关键词进行组合，可以大幅提高检索的速度和检索信息的品质。</span></p><p><span>这里需要大家注意的一点是，绝对</span><u><span>不要只依赖</span></u><span>网络调查。</span></p><p><span>网络上的内容是大家都知道的公开情报，绝大多数都是二次情报。也就是说，这是经过别人加工的情报，其中混杂着加工者的主观意见。</span><mark style="background:#f8e272;"><span>虽然网络能够很有效率地提供情报，但情报的内容却不够新鲜。</span></mark></p><p><span>通过网络调查出的情报，并不是为了验证什么，或者是为了得出某种结论，</span><u><span>只是“为了掌握应该调查哪些内容”而已</span></u><span>。</span></p><p><span>利用网络调查数据时还需要注意的一点是：</span><u><span>一定要找到最新的数据</span></u><span>。</span></p><p><span>如果调查是按照一定的频度进行，那么一定要使用当时所能够获取的最新数据。放着新数据不用而特意使用旧数据，会使我们无法准确地把握现状，对工作产生影响。</span></p><p><u><span>过去的数据主要用来了解趋势和规律</span></u><span>。如果我们能够掌握数据变化的周期，那么对于随后建立假设和验证也是大有帮助的。</span></p><p><span>之所以要在一开始就进行海量的调查，主要是为了防止自我视角。</span></p><p><span>因为收集资料的人是自己，所以肯定会处于</span><mark style="background:#f8e272;"><span>自我视角</span></mark><span>之中。这时可以通过海量的调查资料，来发现那些自己没有注意到的内容，从而获取</span><mark style="background:#a8e195;"><span>俯瞰视角</span></mark><span>。</span></p><h3 id='第三步是去现场'><span>第三步是去“现场”</span></h3><p><u><span>通过书籍、资料和网络获取大量数据并进行分析</span><mark><span>后</span></mark><span>，就可以建立假设</span></u><span>。为了验证假设，就必须毫不犹豫地前往现场一探究竟。没错，情报收集第三步的关键词就是“现场”。</span></p><p><span>麦肯锡在对官方的统计数据进行调查时，甚至会约见政府和地方自治体的负责人，请他们说明数据的收集方法和相关定义。</span></p><p><span>对竞争企业的调查，也可以用相同的方法。在不影响调查的范围内表明自己的身份（当然客户的情报是不能泄露的），对情报进行调查。</span></p><p><span>还有就是到现场收集第一手的情报。比如零售业和餐饮业，店铺的大小、位置、客户群体、价格、服务态度、店内装修、经营方法，等等，每一个都是值得收集的情报，如果得到对方允许还可以拍摄一些照片。</span></p><p><span>将盈利的店铺与亏损的店铺的商品配置、传单、POP等情况进行对比，可以一目了然地看出两者的区别。我身为零售业经营顾问团队一员的时候，会亲自前往客户的店铺和竞争对手的店铺，比较两家店铺分别是什么客户群体，他们会买什么样的东西。对此进行彻底的调查。</span></p><h3 id='找出竞争对手之间的不同'><u><span>找出竞争对手之间的不同</span></u></h3><p><u><span>去现场一定会给你带来意外的收获</span></u><span>，使你了解到隐藏在统计和数据背后的真相。</span></p><p><span>以前，我接受某家餐饮企业的委托，从各个角度对他的竞争企业进行了分析。</span></p><p><span>但是，无论怎么分析，我都找不出客户企业与竞争企业之间的差别。于是我亲自到现场看了看。结果，这次现场之行令我有了惊人的发现。</span></p><h3 id='卫生间非常干净'><u><span>卫生间非常干净</span></u></h3><p><span>不仅打扫得干干净净，气味也非常清新，完全是一个令人感觉十分舒适、安心的空间。</span></p><p><span>随后的调查还发现，绝大多数三十多岁的女性来这家店的理由是“卫生间很干净”。如果不去现场，是绝对不会发现这一点的。</span></p><p><span>如果你</span><u><span>多去几次现场</span></u><span>，对方甚至会主动告诉你一些“有意思 的情报”。不断地积累这些情报，总会对你的工作有所帮助。</span></p><p><span>我认为再也没有什么比去现场更有趣、更能吸引我的了。虽 然乍看上去很麻烦，而且浪费时间，</span><u><span>但去现场取得的结果一定能够派上用场</span></u><span>。</span></p><div style="
+            border-radius: 25px; 
+            border: 2px solid #990000;
+            padding: 20px;
+            ">
+    <strong>总结</strong><br/>
+    情报收集的第一步是明确“目的”。<br/>
+    第二步是“海量”调查。<br/>
+    第三步是去“现场”。<br/>
+    得情报者得天下。
+</div><blockquote><p><mark><strong><span>感受</span></strong></mark></p><p><span>掮客！</span></p></blockquote><h2 id='习惯6-从假设开始'><span>习惯6. 从假设开始</span></h2><p><span>通过“从零开始” “俯瞰视点” “空 • 雨 • 伞”等思考方法掌握了问题的本质后，接下来需要做的就是分别思考“事象”与“要因”。也就是分出重要度的高低。</span></p><p><span>当我们实际解决问题时，事象与要因会逐渐展开变得越来越复杂，使我们难以把握整体的情况。而且，什么问题应该优先解决，什么问题应该暂且搁置，很难做出判断。</span></p><p><span>为了避免出现这种情况，麦肯锡会采用被称为</span><u><span>“逻辑树”</span></u><span>的思考方法，将问题进行分解和分类。</span></p><p><span>如下图所示，将问题从左向右树状细分。这样一来我们就能够掌握问题的整体情况，并且找出解决问题的核心课题。这被称为</span><mark style="background:#ffaabf;"><span>“假设”</span></mark><span>。</span></p><p><span>以图为例进行说明，假设“原材料购入价格过高”是导致“销售额无法提高”</span><u><span>最有力的假设</span></u><span>。那么，通过降低原材料的购逻辑树的例子入价格来控制商品的价格，就可以使问题得到改善。</span></p><p><img src=".\..\..\images\typora-user-images\逻辑树.jpg" alt="逻辑树" style="zoom:40%;" /></p><p><span>但是，因为我们处于问题解决的过程之中，无法判断这一假设是否正确。要是一开始便什么都知道的话也不用这么麻烦了。</span></p><p><span>如果我们成功地降低了原材料的购入价格使商品价格也随之下降，但销售额仍然没有得到提高，那就说明真正的问题存在于别处。</span></p><p><span>这样一来，我们就需要</span><u><span>建立新的假设</span></u><span>。问题是不是出在“功能少”上面？然后调查消费者需要的功能，并且使之反映在商品上……就像这样逐步地展开工作。</span></p><h3 id='工作有效率的人必然是主动的'><span>工作有效率的人，必然是主动的</span></h3><p><span>在麦肯锡，对于交给你的问题，必须自己思考解决办法。当然，迅速且准确地找出答案的人会得到更高的评价。</span></p><p><span>有一点必须说明，那就是在麦肯锡，上司或顾客不会对你说“请验证这个假设”。他们所提出的只会是“销售额无法提高”这个最大的问题。</span></p><p><span>但是，在实际的调查过程中，“销售额无法提高”或许并不是真正的问题。如果这一产品的市场本身就在缩小，那么继续这一事业本身才是问题所在。</span></p><p><span>像这样用“从零开始”的思考方法建立自己的逻辑树，才能够找出什么是最本质的假设。</span></p><p><span>只确认别人交代的事，工作是不会取得进展的。当然，或许别人会在某种程度上为你提供一些灵感和建议。特别是在你做助理的时候。</span></p><p><span>但如果你一直这样，将会永远停留在助理的层次上。</span></p><p><u><span>麦肯锡的上司们深知，要想使部下得到提高，就要让他们用自己的头脑来建立假设，并且亲自实行。</span></u></p><p><mark style="background:#f8e272;"><span>工作有效率的人，必然是主动的。虽然交代给他的工作只有作为大前提的问题，但只要他能够完成这份工作，自然而然地就会掌握找出真正问题的方法。</span></mark></p><p><span>总是问“应该怎么做”“请告诉我接下来应该怎么做”，证明你没有能力自己建立假设。</span></p><p><mark style="background:#a8e195;"><span>自己建立假设和征求他人的意见，具有决定性的区别。在麦肯锡，如果上司交代你工作，那么你首先要提出自己的假设然后再与上司商量这个假设是否可行。</span></mark></p><p><span>为了提高工作效率，</span><mark style="background:#f8e272;"><span>使用逻辑树来建立假设进行思考</span></mark><span>，然后按照重要顺序依次解决问题，是非常重要的。</span></p><h3 id='避免执迷不悟'><span>避免执迷不悟</span></h3><p><span>另一方面，假设也有一个非常可怕的</span><u><span>弊端</span></u><span>。</span></p><p><span>建立假设全凭自己的直觉。所以，</span><u><span>自己的意识很容易被自己建立的假设所迷惑，对其深信不疑</span></u><span>。</span></p><p><span>特别是对于一知半解的领域，或者非常有自信的领域，这种情况就更加明显。</span></p><p><span>其结果会导致我们对假设验证的不够严格，被先入为主的观点所束缚而</span><u><span>失去了俯瞰视点和公平性</span></u><span>。也就是所谓的执迷不悟。</span></p><p><span>所以，在对假设进行验证时，公平性是最重要的。</span></p><p><span>“我想到了一个非常棒的假设。”</span></p><p><span>“这是我很擅长的领域。”</span></p><p><span>“这个工作我曾经做过，非常简单。”</span></p><p><span>当你这样想的时候，其实就已经陷入了泥潭。</span><u><span>未经验证的假设，只是“脑海中的想法”。一旦在实行中发现错误，请立刻建立下一个假设进行验证</span></u><span>。</span></p><div style="
+            border-radius: 25px; 
+            border: 2px solid #990000;
+            padding: 20px;
+            ">
+    <strong>总结</strong><br/>
+    使用逻辑树建立假设。<br/>
+    依次实行。
+</div><p>&nbsp;</p><h2 id='习惯7-重视成果'><span>习惯7. 重视“成果”</span></h2><p><span>在日本的企业之中，越是工作效率低下的人，越容易抱怨“这个月工作了X小时”“今天又加班X小时”。</span></p><p><span>有时候，因为外界因素的限制，或者不凑巧的突发状况，确实会不可避免地延长我们的工作时间。</span></p><p><span>但是，在麦肯锡，就算你因此发出抱怨，也不会得到任何人的附和。</span></p><p><span>绝大多数情况下，别人都会这样说。</span></p><p><span>“是啊，真辛苦啊。那么，最后取得了什么成果？”</span></p><p><span>所谓成果，就是指你是否给客户提出了解决问题的方法，是否使客户感到满意。进一步细分的话，就是你作为项目组的一员，对整个项目组取得的成果做出了多少贡献。</span></p><p><span>不管你在办公室待多久，或者每天只睡3小时，其余时间都在工作，</span><mark style="background:#a5c4ff;"><span>但只要你没能取得成果，就无法得到别人的好评。</span></mark></p><p><span>相反，</span><mark style="background:#a5c4ff;"><span>就算你每天只工作8小时，但取得了完美的成果，那么也没有任何的问题</span></mark><span>。</span></p><h3 id='6点下班的合伙人'><span>6点下班的合伙人</span></h3><p><span>麦肯锡是</span><u><span>只重视工作成果</span></u><span>的公司，在这里有一个原则：“长时间工作不是好事。”</span></p><p><u><span>提高工作技能，减少工作时间才是最好。</span></u></p><p><span>工作的成果不是以时间的长短来衡量的。</span></p><p><mark style="background:#f8e272;"><span>我们应该做的是最大限度提高工作所能够取得的成果。</span></mark></p><p><span>这样一来，不仅能够提高工作的品质，还可以使工作效率得到提高。</span></p><p><span>曾经有一位外国合伙人芋每天早晨8点之前就出现在办公室，一边吃早饭一边开会。当然他已经身居高位，所以不用再向什么人提交工作成果，只需要对自己负责。</span></p><p><span>不过，他</span><u><span>每到晚上6点下班的时候就准时消失</span></u><span>。不管遇到什么问题，</span><mark style="background:#f8e272;"><span>最晚</span></mark><span>他也只加班到晚上八九点钟。</span><u><span>这大概就是他使自己的工作成果最大化的方法</span></u><span>。</span></p><p><span>有人临近中午才来上班，然后一直加班到深夜，也有人在办公室的时间比在家还长。</span></p><p><mark style="background:#a8e195;"><span>至于我则属于遇到自己喜欢的工作，就会专注于提高工作的品质，通过不断地工作来取得成果的类型</span></mark><span>。</span></p><p><span>但是，任何人都不可能因为自己工作的时间长来获得好评。</span></p><p><mark style="background:#ffaabf;"><span>如果能够取得自己满意的成果，那么工作时间的长短都无所谓。对此进行管控的正是你自己。只要理解了这一点，那么你对时间的规划方法将发生根本性的改变。</span></mark></p><p><span>关键不在于劳动时间的长短，而在于成果的大小。</span></p><div style="
+            border-radius: 25px; 
+            border: 2px solid #990000;
+            padding: 20px;
+            ">
+    <strong>总结</strong><br/>
+    最重要的是成果的大小，与劳动时间没有关系。<br/>
+    自己来管控时间。
+</div><p>&nbsp;</p><h2 id='习惯8-分清重视效率还是重视思考'><span>习惯8. 分清“重视效率”还是“重视思考”</span></h2><p><span>工作能力强的人，往往擅长平衡“应该追求的效率”与“从零开始”。也就是说，他们知道什么工作应该重视效率，什么工作应该花时间去探求本质。</span></p><p><span>而工作能力不强的人，则经常本末倒置。在别人看来，往往不理解“为什么他要在这样的工作上浪费那么多时间”。</span></p><p><mark style="background:#f8e272;"><span>所谓“应该追求的效率”，指的是那些花费时间也毫无意义，越快做完越能够提高生产效率的工作。</span></mark></p><p><span>比如组装产品，在保证安全性和品质的前提下，速度越快生产效率越高。</span></p><p><span>汽车制造业就是一个很好的例子。在工作现场，所有人考虑的都是如何在更短的时间内生产更多的汽车。甚至可以说，全世界的制造业都在考虑如何减少哪怕1秒钟的生产时间来提高自己的竞争力。</span></p><p><span>在办公室之中，也同样存在着“应该追求的效率”。</span></p><p><span>比如发邮件时需要填写的地址，还有邮件末尾的“签名档”，大概没有人每次都完整地写一遍吧?</span></p><p><span>我们都</span><u><span>习惯设置常用的签名档</span></u><span>，或者只用一张写有对方名字和留言的卡片来代替邮件。这可以节约几分钟的时间。</span></p><p><span>办公桌上的文具和资料的摆放，也与提高工作效率有很大的关系。经常使用的文具和当前项目的资料，必须放在随手就可以拿到的地方。</span></p><p><span>就像制造业工厂的流水线一样，我们也应该对办公桌进行整理和整顿，使取出资料、拿出文具这样的动作变成自动化作业。</span><u><span>使自己在办公桌周围的状态如同流水线一样高效。</span></u></p><p><span>电话被埋在资料下面，重要的发票找不到了，如果每次都要找上半天，那么将浪费大量的时间，至少在这个问题上存在“应该追求的效率”O</span></p><p><span>为了尽可能地减少问题，</span><u><span>改善一下办公桌上物品的摆放位置或许是比较好的选择</span></u><span>。</span></p><h3 id='应该花时间的时候不要吝啬'><span>应该花时间的时候不要吝啬</span></h3><p><mark style="background:#ffaabf;"><span>我们通过追求效率所节省下来的时间应该怎么使用呢？答案是用在“从零开始”的思考上，这将大幅提高我们的工作质量。</span></mark></p><p><span>想象一下与上司交流时候的情景。</span></p><p><span>如果只是单纯地汇报情况，那应该总结出要点，尽可能简短地说完，这对你们双方都有好处。（详细内容将在下一章中为大家介绍。）</span></p><p><span>但是，与上司共同商讨问题的时候又如何呢？</span></p><p><u><span>为了让头脑能够自由地思考，并且相互碰撞产生出新的灵感，时间应该是越长越好。</span></u></p><p><span>即便整个过程看起来好像在东一句西一句地闲聊也无所谓，最终“是否想到了好的创意”才是最重要的。</span></p><p><span>“应该追求的效率”和“从零开始”的思考，乍看上去好像是矛盾的两个要素，</span><u><span>但若能完美地平衡两者，就可以实现“品质”与“效率”的双重提高</span></u><span>。</span></p><blockquote><p><span>现在的时间应该如何利用？</span></p><p><span>应该更有效地完成手头的工作？还是应该仔细地进行思考?</span></p></blockquote><p><span>总是保持这样的意识，</span><u><span>就能够更好地管控自己的时间。</span></u></p><div style="
+            border-radius: 25px; 
+            border: 2px solid #990000;
+            padding: 20px;
+            ">
+    <strong>总结</strong><br/>
+     经常思考自己现在所做的工作，是应该“重视效率”还是“重视思考”。
+</div><p>&nbsp;</p><h2 id='习惯9-建立紧急度和重要度的模型'><span>习惯9. 建立“紧急度”和“重要度”的模型</span></h2><p><u><span>工作能力差的人，都有一个共同的缺点。</span></u></p><p><u><span>那就是他们不会区分工作的优先顺序。</span></u></p><p><span>绝大多数人都有许多必须处理的工作。</span></p><p><span>一项工作刚开始不久，下一项工作又接踵而来，在别人的催促下开始新的工作，心里却又惦记着没做完的上一项工作。</span></p><p><span>那个也要做，这个也要做！结果不知道哪项工作是最重要的……在这种情况下，由于来来回回地处理不同的工作，导致效率大幅下降。结果，应该完成的工作一件也没有完成。</span></p><p><span>越是忙的时候，越是分不清哪样工作应该优先完成，但要是掌握了区分的方法，就能够完美地安排工作顺序。</span></p><p><span>接下来为大家介绍的思考方法，被称为“紧急度与重要度模型”。</span></p><h3 id='如果只剩下一年的寿命'><span>如果只剩下一年的寿命</span></h3><p><span>当你要做的事情太多，不知道应该从何做起的时候，就像右图一样建立一个以“重要度”为纵轴，“紧急度”为横轴的模型，然后将你要做的工作填入其中。</span></p><p><img src=".\..\..\images\typora-user-images\紧急度与重要度.jpg" alt="紧急度与重要度" style="zoom:40%;" /></p><p><span>比如今天有很多事情必须做完，那就将这些事情填入这个模型里面。然后从左上“重要且紧急”的事情开始处理。</span></p><p><u><span>但是在使用这个模型的时候，与重要度相比，我们更倾向于先完成紧急度高的工作。</span></u></p><p><span>特别是在以一天或者一周为单位的时间很短的模型中，那些关系到未来职业规划，或者在未来两三年中可能发挥重要作用的内容，更容易被延后。</span></p><p><span>在这种时候你可以问自己“如果只剩下一年的寿命该怎么办？”</span></p><p><u><span>当你这样想的时候，那些“重要度”较高的事情，“紧急度”也会随之提高。</span></u></p><p><u><span>越是忙的时候，越是不应该错过那些对自己的人生真正重要的事情。所以我们应该定期这样问自己，然后对模型中的内容进行调整。</span></u></p><div style="
+            border-radius: 25px; 
+            border: 2px solid #990000;
+            padding: 20px;
+            ">
+    <strong>总结</strong><br/>
+    权衡今天要做的事和对自己重要的事，排除先后顺序。
+</div><p>&nbsp;</p><h1 id='第②章--将要点分为三部分'><span>第②章 / 将要点分为“三部分”</span></h1><p><u><span>“精英部下”的习惯</span></u></p><p>&nbsp;</p><hr style="background:brown"/><p style="text-align:center; font-weight:bold;">“总是表现出积极的态度，是精英部下的特征，上司最喜欢这样的部下。就算能力稍差一些，只要有积极向上的进取心，自然能够得到上司的好评。”<br/>— 小山俊哉（经营学家/麦肯锡出身）</p><hr style="background:brown"/><p>&nbsp;</p><h2 id='争取上司的时间'><span>争取“上司的时间”</span></h2><p><span>阅读这本书的人，应该都是年轻有为，发展前景广阔的商业精英吧？那么，你们中的绝大多数应该都在企业或组织之中工作。</span></p><p><span>组织之中一定有很多人，工作经验丰富的人，或者具有组织才能的人，往往担任“上司”的职位。</span></p><p><span>你一定也有上司吧。</span></p><p><u><span>那么，你喜欢你的上司吗？</span></u></p><p><span>你和上司之间建立起良好的关系了吗?</span></p><p><span>能够自信地回答“是”的人，一定工作能力很强，而且人际关系也非常融洽。相反，回答“不是”的人，工作一定不太顺利，在职场上的状况也不太好，经常加班，面临各种各样的问题。</span></p><p><u><span>上司会对部下做出工作的指示，部下需要确认上司的意向，一边与上司商量一边完成工作。在这一过程中，与上司的良好沟通是必不可少的。</span><mark style="background:#f8e272;"><span>如果这一点做不好，那么就会产生许许多多的问题</span></mark><span>。</span></u></p><p><span>要想与上司之间的沟通更加顺畅，最好的办法就是“多争取上司的时间”。</span></p><p><span>如果你能够争取到上司的时间，那么不管是中途确认上司的意向，商量担心的事情，还是解决问题，都会非常顺利。或许还会得到许多有帮助的建议。</span></p><p><span>许多工作都需要得到上司的许可才能够有所进展。工作能力强的人，总是能够及时地得到上司的首肯。所以，他们的工作效率也很高。</span></p><p><span>如果总是无法得到上司的认可，不但工作无法取得进展，甚至还会遭到差评。</span></p><p><mark style="background:#f8e272;"><span>改善的方法在于沟通的技巧</span></mark><span>。</span><u><span>为了使双方都能够高效、舒适地进行工作，本章将为大家介绍“精英部下”所应该掌握的工作习惯。</span></u></p><p>&nbsp;</p><h2 id='习惯10-保持pma'><span>习惯10. 保持“PMA”</span></h2><p><span>如果你是只有几年工作经验的年轻人，那么与上司的交流基本就是“认真服从”。这样你工作的品质和效率都会得到提高。</span></p><p><span>对上司保持尊敬，并且绝对服从，做一个听话的好员工。</span></p><p><mark style="background:#a8e195;"><span>不管上司说什么，只要保持回答“是”就好</span></mark><span>。</span></p><p><span>“但是……”</span></p><p><span>“哎？”</span></p><p><span>“可是……”</span></p><p><span>“有困难！”</span></p><p><span>“做不到。”</span></p><p><span>从现在开始，把这些回答都从你的字典里</span><u><span>删掉</span></u><span>。</span></p><p><u><span>老老实实地回答“是”</span></u><span>，然后按照上司的指示进行工作，把一切精力都集中在工作上，努力取得超出上司期待的成果。</span></p><p><mark style="background:#a5c4ff;"><span>“真诚、正直、明朗的人”是无敌的！</span></mark></p><p><span>或许有人认为，这岂不是和奴隶一样吗？那说明他不理解“积极的态度，本身就有价值”这句话。</span></p><p><span>麦肯锡经常教育新人要保持“PMA (</span><u><span>Positive Mental Attitude</span></u><span>)”。</span></p><p><span>所谓PMA，指的就是时刻“</span><u><span>保持积极向上的工作态度</span></u><span>”。只为成功找方法，不为失败找理由，将全部精力都集中在完成工作上。时刻保持PMA的状态来进行工作是非常重要的。</span></p><p><span>在麦肯锡，对自己的工作全力以赴并且取得成果的人，必然会得到大家的好评。这样的人就好像完全融入到自己的工作之中，你甚至会被他这种不被任何因素影响的集中力折服。</span></p><p><u><span>新人和年轻的员工没有任何业绩，就算有再强的工作热情，但如果没有发挥的机会，那也无法取得任何成果。</span></u></p><p><u><span>为了取得成果，积攒实力，厚积薄发当然是必要的，但向上司毛遂自荐更加重要。</span></u></p><p><u><span>坦诚、努力的人，容易获得上司和前辈的好感。如果再加上真诚和明朗的性格，以及虚心接受指导的态度，肯定会获得更多的机会。</span></u></p><p><span>“真诚、正直、明朗的人”是无敌的！</span></p><p><span>耍小聪明或者歪门邪道，不会取得真正的成功。而只要做一个听话的部下和后辈，自然会得到别人的帮助，并且获得成功的机会。</span></p><h3 id='如果上司在facebook上加你好友该怎么办'><span>如果上司在Facebook上加你好友该怎么办</span></h3><p><span>让我们考虑一下这样的情况。</span></p><p><span>上司在Facebook上申请了你的好友。</span></p><p><span>虽然不想添加他为好友，但无视的话显得不太好。</span></p><p><span>为了避免出现这种情况，你应该一开始就将Facebook的公开范围设定为“仅朋友可见”，为防万一还可以在个人说明中明确地写上“朋友（私人）专用”。如果这样还是被上司发现了，那就坦诚地道歉“非常对不起，这是我和朋友联系专用的账号，不能添加您为好友，对不起”。</span></p><p><u><span>总之，绝对不能对上司的好友请求置之不理。</span></u></p><p><span>不管是与上司交流，还是请求或者拒绝的时候，都要时刻牢记“</span><u><span>真诚</span></u><span>、</span><u><span>正直</span></u><span>、</span><u><span>明朗</span></u><span>”的态度。“勾心斗角、嘴不饶人、意志消沉”的话，是抓不住机会的。</span></p><div style="
+            border-radius: 25px; 
+            border: 2px solid #990000;
+            padding: 20px;
+            ">
+    <strong>总结</strong><br/>
+    与上司交流时，保持回答“是”。<br/>
+    真诚、正直、明朗的人是无敌的！
+</div><p>&nbsp;</p><h2 id='习惯11-摸清上司的类型'><span>习惯11. 摸清上司的类型</span></h2><p><span>有时候你难免会被安排在一个和你性格不合的上司手下。不过，如果可能的话，你应该做一个不管什么样的上司都喜欢的部下，这样你与上司的交流会更加融洽，而且工作也会更加顺利。用积极的态度来取得成果，每天的工作都十分愉悦。</span></p><p><u><span>深受上司喜爱的部下都有一个共同点，那就是具有摸清上司类型的能力。</span></u></p><p><span>工作能力差的人，不管跟随怎样的上司都是“以我为主”。结果，他和上司之间的配合就会很不搭调，工作难以取得进展。</span></p><p><span>虽然像大热的电视剧《半泽直树》那样坚持“以我为主”看起来很酷，但在现实的工作中却并非如此。</span></p><p><span>在现实工作中，</span><u><span>我们应该从中立的视角观察上司属于什么类型，然后做出相应的配合。这样的话你的工作肯定会变得非常顺利。</span></u></p><p><span>接下来为大家介绍几个比较有代表性的类型，以及配合的方法。看看你的上司属于什么类型吧？</span></p><h3 id='1-情感型还是理智型'><span>1. 情感型还是理智型?</span></h3><p><span>【情感型】直率、感情丰富、有气势、重视共鸣、容易感动，不只追求结果同样重视过程，用自己的感性来描述自己的经验和方法。</span></p><p><span>对于这种类型的上司应该采取如下的配合方法。</span></p><p><u><span>谈话准备</span></u><span>：在开始正式对话之前，用“今天天气不错”“您的孩子身体怎么样”“今天我也会努力的”之类的寒暄来拉近与对方的关系。</span></p><p><u><span>谈话节奏</span></u><span>：把节奏交给对方，配合对方的节奏来进行交流。</span></p><p><u><span>谈话内容</span></u><span>：可以坦白地说出自己的请求或者让对方决定。对于自己不懂的内容可以直接说“不清楚”，然后请对方解释。时间允许的情况下也可以闲聊一些工作之外的内容。</span></p><p><u><span>感情表现</span></u><span>：采用“非常感谢”“很高兴”“没问题”等具有共鸣的感情词语，配合适当的身体语言来让对方感受到你的感情。</span></p><p><span>【理智型】自制、重视理论、准备周全、沉着冷静、讨厌借口和浪费时间，对逻辑讨论有反应。</span></p><p><span>对于这种类型的上司应该采取如下的配合方法。</span></p><p><u><span>谈话准备</span></u><span>：不需要。无关的话题都是浪费时间。首先说出事情的内容和结论，例如“关于XX的事，刚才遭到了客户的投诉”，开门见山地直入主题。</span></p><p><u><span>谈话节奏</span></u><span>：除非得到特殊的指示，否则必须由自己决定节奏。</span></p><p><u><span>谈话内容</span></u><span>：全部由自己展开内容。尽可能详细地按照顺序进行描述。“应该怎么办”“请告诉我”之类的求助不会得到回应。应该询问“这样做可以吗”“有没有什么遗漏的地方”，寻求对方的评价和指示。不要闲聊。</span></p><p><u><span>感情表现</span></u><span>：不需要。过多表现出个人的感情，容易导致上司对你的评价下降。</span></p><p><span>虽然在麦肯锡中几乎都是理智型的上司，但客户企业，尤其是日本的企业中有不少情感型的上司。还有很多创业经营者也都是属于情感型的。</span></p><h3 id='2-单独型还是复合型'><span>2. 单独型还是复合型?</span></h3><p><span>【单独型】这种类型的上司，基本上会集中于一件工作。当一件工作结束后才会开始接下来的工作。他们会准确地逐一完成工作。不擅长同时处理多个工作。</span></p><p><span>对于这种类型的上司应该采取如下的配合方法。</span></p><p><span>集中在一件工作上进行商讨和汇报。特别是面对无法控制的事态时，如果同时提出多个问题，很容易引起上司的愤怒，甚至使其陷入混乱。因为这种类型的上司并不在意花费时间，</span><u><span>所以你可以诚恳地找他商量问题</span></u><span>。</span></p><p><span>【复合型】这种类型的上司</span><u><span>擅长同时处理多项工作</span></u><span>，就算遇到新的工作也不会产生压力。但他们由于同时开展的工作太多,所以很容易遗忘，出现问题处理一半就不了了之的情况。</span></p><p><span>对于这种类型的上司应该采取如下的配合方法。</span></p><p><span>可以一下子提出多个问题。就算你频繁地找他商量也不会嫌你烦。</span><u><span>他们时常会提出很好的创意，非常适合作为咨询和激发灵感的对象</span></u><span>。</span></p><p><span>乍看上去复合型的上司似乎比单独型的上司要优秀得多，但根据我的经验，不管哪一种类型，在工作上都有各自的长处，而且对最终取得成果几乎没什么影响。可以说唯一的区别只在于类型不同罢了。</span></p><p><span>关键在于找出自己与上司的类型，一边发挥自己的长处，同时配合上司的类型进行工作。</span></p><p><span>我和那个人在工作上不合适”所产生的摩擦，</span><u><span>就是由于类型不同所引起的</span></u><span>。</span></p><p><span>对情感型的上司一味强调理由，只会使对方觉得你是一个“不近人情的家伙”。</span></p><p><span>而对理智型的上司一味强调自己的“干劲”，也无法得到对方的好评。</span></p><p><span>如果上司属于单独型，在他埋头于一件工作的时候你去询问其他的问题，得到的只能是敷衍了事的回复。如果你真的按照这个回复展开工作，那么事后肯定还会遭到上司的训斥“谁让你这么干的”。</span></p><p><span>尽管部下心里想“我都是按你说的去做”，但最终还是要按照上司的指示，把工作重新来过。这只会浪费时间，使工作一拖再拖。</span></p><p><mark style="background:#f8e272;"><u><span>摸清类型，在任何人际关系中都是有效的</span></u></mark><span>。</span><u><span>首先</span></u><span>你应该搞清楚自己是什么类型，</span><u><span>然后</span></u><span>在与不同类型的对象接触时，尽可能地配合对方采取行动，这样双方的沟通一定会变得非常顺畅。</span></p><div style="
+            border-radius: 25px; 
+            border: 2px solid #990000;
+            padding: 20px;
+            ">
+    <strong>总结</strong><br/>
+    上司也是人，有自己的性格和类型。<br/>
+    只要配合对方的类型来采取行动就可以建立起良好的关系！
+</div><p>&nbsp;</p><h2 id='习惯12-用只占用您1分钟时间可以吗作为开头'><span>习惯12. 用“只占用您1分钟时间可以吗”作为开头</span></h2><p><span>上司与部下之间，最容易产生摩擦的就是“报、联、商”。也就是报告、联络、商谈。甚至可以说这三种情景的沟通方式，决定了今后工作的顺畅程度。</span></p><p><span>在组织中进行工作时，“报、联、商”是必不可少的，但如果不在“报、联、商”上下工夫，那么很有可能会浪费大家的时间。</span></p><p><span>首先让我们来思考一下正确的方式。</span></p><p><span>比如说你的上司负责多个项目，每天都很忙。他经常不在办公桌前，回来时要么在打电话，要么在处理文件，然后就开始用电脑进行工作。</span></p><p><span>而你现在的工作必须占用上司的时间，请他明确地做出判断，否则便无法取得进展。你的上司想必也不愿看到这个结果。</span></p><blockquote><p><span>所以你趁着上司回来的时候立刻走上前去，说出这样一句话。</span></p><p><span>“部长！明天下午两点有时间吗？”</span></p><p><span>趁现在提前约好明天下午2点的时间。只要有30分钟就足够把“报、联、商”全部消化完毕。你心里是这么打算的。</span></p><p><span>但上司的回答却完全出乎你的意料，甚至感觉冷冰冰的。</span></p><p><span>“没时间，下次吧！”</span></p></blockquote><h3 id='被上司拒绝的三个原因'><span>被上司拒绝的三个原因</span></h3><p><span>为什么你的上司会表现出如此冷漠的态度？</span></p><p><span>首先，最关键的失误之处在于，你身为部下却安排了上司的时间。好一点的情况是被上司批评“我的时间一分一秒都很宝贵，你是不是搞错了啊”，如果换成“情感单独型”的上司可能瞬间就发火了。</span></p><p><span>	</span><span>“你凭什么给我安排时间啊？”</span></p><p><span>第二个问题在于，你没有明确占用的时间长短。究竟要占用5分钟还是30分钟？你的上司完全无法判断。</span></p><p><span>第三个问题在于，你没有说出问题是什么。</span></p><p><span>你突然询问“明天有没有时间”，上司会想“难道说他要辞职吗？”“是不是遇到了什么难事”，精神也会随之紧张起来。</span></p><p><span>这时上司为了表现得平静一些，也会采取冷漠的态度。</span></p><p><span>那么，怎么问才好呢？</span></p><p><span>这种情况下</span><u><span>标准的答案</span></u><span>是：</span></p><blockquote><p><span>“部长，关于XX的事，我可以占用您1分钟的时间吗？”问题是什么，需要多少时间，全都表达得清清楚楚。因为这项工作本身就是上司布置给你的，所以由他来决定是否应该在百忙之中拿出时间来接受你的商谈。如果他有更重要的事情要做，那么他会提出“不好意思，我10分钟后叫你”或者“晚上行么？” “给我发邮件”等替代方案。</span></p></blockquote><p><span>“只占用1分钟”的说法，可以给上司一种“很快结束”的安心感。</span></p><p><span>虽然尽可能简短、清楚地进行“报、联、商”是部下的责任，但上司一旦接受了你的商谈，肯定会让你把话说完。所以实际上不用真的在1分钟之内结束。</span></p><p><span>也就是说，一旦开始进行对话，那么持续几分钟都没关系。</span><u><span>“1分钟”这个说法，只是为了让上司不管多么繁忙都无法拒绝你的请求而采用的说辞而已。</span></u></p><p><span>当然有时候确实只要1分钟就说完了，但也有持续5分钟或10分钟的情况。在这个过程中，你可以得到很多有帮助的建议，工作的品质将得到大幅的提高，上司对你也会做出更高的评价。</span></p><p><span>只要改变一下说话的方式，上司和部下都能够顺畅地进行工作。如果不能顺利地争取到上司的时间，工作可能会被耽误一周甚至一个月之久。为了避免出现这种情况，</span><u><span>请一定要掌握说话的方法，顺利地争取到与上司交流的时间</span></u><span>。</span></p><div style="
+            border-radius: 25px; 
+            border: 2px solid #990000;
+            padding: 20px;
+            ">
+    <strong>总结</strong><br/>
+    对上司说“关于 X X 的事，我可以占用您1分钟的时间吗？”<br/>
+    更容易争取到交流的时间。
+</div><p>&nbsp;</p><h2 id='习惯13-用30秒时间提出3个要点'><span>习惯13. 用30秒时间提出3个要点</span></h2><p><span>当你用“可以占用您1分钟的时间吗”成功地争取到上司的时间之后，接下来就必须简洁地完成“</span><u><span>报</span></u><span>、</span><u><span>联</span></u><span>、</span><u><span>商</span></u><span>”。</span></p><p><span>据说在美国的硅谷，有一位年轻的经营者在电梯前等待一位著名的投资人，趁着和他共同搭乘电梯的30秒时间介绍自己的事业，从而成功地获得了巨额的资金援助，</span><u><span>这就是著名的“电梯游说”</span></u><span>。</span></p><p><span>先不管这个成功的创业故事是否真实，但这个方法确实是出自麦肯锡的“电梯测试”。</span></p><p><mark style="background:#f8e272;"><span>所谓“电梯测试”，就是在搭乘电梯的30秒内，必须向顾客完美地说明现存的问题以及解决方案</span></mark><span>。</span></p><p><span>也就是说，在麦肯锡工作的员工，用“可以占用您1分钟的时间吗”得到与上司交谈的许可之后，要用30秒的时间说明重点，然后给上司30秒的时间做出判断。</span></p><p><span>或许有人认为30秒的时间太短。但习惯之后你会发现30秒的时间已经绰绰有余。请思考一下，30秒的时间足够播放两段的电视广告！</span></p><p><span>一段电视广告只有短短15秒，却足以使消费者产生购买的欲望，或者提出具体的解决办法和需要广而告之的事情，给人留下强烈的印象。当然我们没有电视广告那样准备充足的素材和背景音乐，但却多出一倍的时间。</span></p><blockquote><p><span>为了在30秒内简洁地向对方说明情况，麦肯锡的优秀经营顾问们经常使用被称为“3个要点”的技巧。从心理学上来说，2个给人的感觉太少，4个则太多，所以3个的数量刚刚好。</span></p></blockquote><p><span>他们在平时思考的时候就养成了将要点分成3部分的习惯。所以，越是在短时间内，他们所传达的内容越清晰、简洁、接近本质。</span></p><p><span>反之，如果是持续30秒以上的交流，那么最想传达的内容可能变得不那么明确了。</span></p><p><span>那么，应该如何总结出3个要点呢？</span></p><h3 id='如何总结出3个要点'><span>如何总结出“3个”要点？</span></h3><p><span>不管是说明还是“报、联、商”，首先都要将想要传达的内容分为以下3个要素。</span></p><ol start='' ><li><p><span>现状的掌握情况。</span></p></li><li><p><span>对现状的解释，以及理由。</span></p></li><li><p><span>结论，以及解决方法。</span></p></li></ol><p><span>最简单的例子就是第一章中提到过的“空、雨、伞”。假设你要劝一个准备出门的人带雨伞，那么过程应该是这样的。</span></p><blockquote><p><span>【例1. 建议对方带雨伞】</span></p><ol start='' ><li><p><span>现状的掌握情况。</span></p><p><span>“XX先生，请等一下！抬头看一看，满天都是乌云。”</span></p></li><li><p><span>对现状的解释，以及理由。</span></p><p><span>“这说明一会儿很有可能突然下雨。可能会被淋湿。”</span></p></li><li><p><span>结论，以及解决方法。</span></p><p><span>“请带上这把雨伞。”</span></p></li></ol></blockquote><p><span>在实际应用中，顺序应该变更为“结论一理由”。特别是在商业领域，一般情况下都应该首先告诉对方结论，然后再告诉理由。</span></p><p><span>“请带上这把雨伞。抬头看一看，满天都是乌云，这说明一会儿很有可能突然下雨。”</span></p><p><span>像这样先说出结论，然后补充理由。</span></p><blockquote><p><span>【例2. 与上司商谈客户投诉】</span></p><p><span>假设你接到客户负责人的投诉，必须立刻向上司报告。</span></p><ol start='' ><li><p><span>现状的掌握情况。</span></p><p><span>“xX公司的负责人xx先生，认为我们工作的进展缓慢。”</span></p></li><li><p><span>对现状的解释，以及理由。</span></p><p><span>“我们是按照当初的预定进行的，可能是什么地方发生了误会。但这样下去可能会影响到整体的进展。”</span></p></li><li><p><span>结论，以及解决方法。</span></p><p><span>“我觉得应该和对方的负责人重新确认一下整个流程，我们先在公司内部开个会，然后定个时间去和对方见面吧？”</span></p></li></ol></blockquote><p><span>在实际应用中也和例I一样，将顺序变更为“</span><strong><span>结论→理由</span></strong><span>”。</span></p><p><span>“部长，可以在这几天公司内部开个会，定一下与xx公司的负责人见面的时间吗？虽然我们是按照当初的预定进行的，但好像什么地方出现了误会，xx公司的负责人xx先生认为我们工作的进展速度过于缓慢。这样下去可能会影响到整体的进展。”</span></p><p><span>这种程度的信息，就算慢慢地说，也只需要30秒。当然30秒只是一个标准，并不意味着一定要限制在这么短的时间之内。</span><mark style="background:#f8e272;"><span>关键在于将传达的信息集中在真正重要的内容上，并且将内容分为3个要点，这样更容易使对方理解。</span></mark></p><p><span>不如明天就找一个在电梯上碰到的人做一下练习吧！</span></p><div style="
+            border-radius: 25px; 
+            border: 2px solid #990000;
+            padding: 20px;
+            ">
+    <strong>总结</strong><br/>
+    用30秒的时间提出3个要点。<br/>
+    练习进行分解说明。
+</div><p>&nbsp;</p><h2 id='习惯14-以事实为基础提出假设'><span>习惯14. 以“事实”为基础提出“假设”</span></h2><p><span>在麦肯锡，有一个人人皆知的说话方法。</span></p><p><span>那就是明确所说内容的种类。也就是说，明确表示所说的内容，</span><mark style="background:#f8e272;"><span>究竟是客观的“事实”，还是自己的“意见”。</span></mark></p><p><span>假设有A与B两个人，同时对某餐饮连锁企业用同一种方法进行了调查，并且向上司做出汇报。</span></p><blockquote><p><span>A：“平时空荡荡的，但周六的时候人就会变得很多。人均消费也是周六的时候比较高。他们家的咖啡很好喝。”</span></p><p><span>B：“平时各店的客流量平均为200人，周六时增加1.6倍达到320人，人均消费也增长到1.3倍。进行分析后发现，周六全家一起开车来的顾客更多，所以客流量大幅增加。”</span></p></blockquote><p><span>哪一个是更优秀的调查报告，想必不用我说了吧。即便是花费了大量时间进行的调查，但A的调查成果几乎为零。</span></p><p><span>即便采集同样的数据，前往同样的现场，</span><mark style="background:#f8e272;"><span>但关键在于对调查到的情况有怎样的认识，是否排除了自我视点站在公正的立场上做出汇报。这决定了调查和验证假设以及解决方案的品质。</span></mark></p><h3 id='首先说事实然后说由此导出的假设'><span>首先说“事实”，然后说由此导出的“假设”</span></h3><p><span>我们没必要完全排斥自己内心的感受。</span></p><p><span>但要理解这只是自我视点，更重要的是在此基础上补充客观的事实。如果不注意这一点，</span><u><span>那么在汇报时很容易提出一些毫无价值的“意见”</span></u><span>。</span></p><p><span>长此以往，</span><mark style="background:#ffaabf;"><span>你会被禁锢在自己的意见之中，结果不但会拖累自己，还会拖累你所属的组织</span></mark><span>。</span></p><p><span>不管调查还是报告，最重要的都是</span><strong><span>“事实”</span></strong><span>。</span></p><p><span>上司需要的不是“看起来空荡荡”“一下子顾客爆满”“咖啡很好喝”这些“意见”，而是基于数字的“事实”。</span><u><span>否则上司也无法做出正确的判断</span></u><span>。</span></p><p><span>在“事实”的基础上，补充自己的“意见”。</span></p><p><span>当你汇报“事实”之后，上司几乎都会询问“</span><u><span>那么，你怎么看</span></u><span>”。这时候再说出自己的“意见”就好。</span></p><p><span>而且，在这种时候提出以“事实”为基础的“假设”，更容易得到上司的信任。</span></p><p><span>比如前面提到的B。</span></p><blockquote><p><span>“竞争对手，平时各店的客流量平均为200人，周六时增加1.6倍达到320人，人均消费也增长到1.3倍。进行分析后发现，周六全家一起开车来的顾客更多，所以客流量大幅增加。</span><u><span>那么我们也可以在周六的时候增加面向家庭的活动，吸引更多全家一起来的顾客</span></u><span>。”</span></p></blockquote><p><span>后面的部分就是基于“事实”提出的“假设”。</span></p><p><span>或者也可以提出这样的“假设”。</span></p><p><span>“那么，我们可以在周六的时候推出面向单身群体的活动,吸引单身的年轻人前来就餐，避免与竞争对手的正面冲突。”</span></p><p><span>你的上司要“事实”还是“意见”？</span></p><p><span>在搞清楚这一点之后再进行汇报，可以使你与上司之间的交流更加顺畅。</span></p><div style="
+            border-radius: 25px; 
+            border: 2px solid #990000;
+            padding: 20px;
+            ">
+    <strong>总结</strong><br/>
+    首先应该汇报“事实”。<br/>
+    在此基础上，如果上司询问“意见”的时候再提出自己的“假设”。
+</div><p>&nbsp;</p><h2 id='习惯15-观察上司的桌子'><span>习惯15. 观察上司的桌子</span></h2><p><span>上司不只管理你一个人。他还有其他的部下，同时上司也有自己的上司，还要应对客户，所以他所进行的工作要比你复杂得多。</span></p><p><span>那么在这种情况下，应该如何让上司优先处理你的问题呢？</span></p><p><span>前面已经介绍过与上司的“说话方式”，但上司不在办公桌前的时候，你就需要</span><u><span>利用便签或者邮件来进行“报、联、商”</span></u><span>。</span></p><p><span>通常，上司不在办公桌前的时候，如果是比较复杂的业务联络可以使用邮件，也可以利用便签来进行留言。</span></p><p><span>但是，发送邮件可能无法立即得到上司的回复。如果上司迟迟不给你回复，那么你的工作就会陷入停滞。</span></p><p><mark style="background:#f8e272;"><span>这里为大家介绍一个“灵活运用便签的方法”</span></mark><span>。</span></p><p><span>对于上司来说，看到部下发来的邮件，很容易只看一眼标题，而内容则以后再说。但如果是贴在桌子上的便签，他们则会拿起来看一看。</span></p><p><u><span>不过，留下标签并不意味着万事大吉。如何让上司看到标签，认真阅读，并且最终对你做出回复才是最重要的。关键就在于上司的“桌子”</span></u><span>。</span></p><h3 id='便签技巧①-贴在哪'><span>便签技巧① 贴在哪?</span></h3><p><span>贴标签时最重要的就是观察上司桌子的状态。如果你的上司不擅长整理桌子，东西扔得乱七八糟，那么标签只能贴在两个地方。</span></p><p><span>电脑显示器的边框和电话听筒的上面。只有这两个地方容易被上司注意到。</span></p><h3 id='便签技巧②-用什么颜色的便签'><span>便签技巧② 用什么颜色的便签？</span></h3><p><span>如果上司的桌面非常整齐，便签就可以随便贴了吗？答案是否定的。这种类型的上司为了时刻提醒自己工作进程，肯定已经在桌子上贴了很多便签。如果你也随便地贴个便签上去，或许会被埋没在原来的便签之中，不容易被上司发现。</span></p><p><span>这里有一个小技巧。那就是</span><u><span>贴一张和上司使用的便签颜色不同的便签</span></u><span>。别看这个方法很简单，但在全是蓝色的便签里，突然出现一张粉色的，肯定很引人注目吧？所以说这个方法虽然简单，却十分有效。</span></p><p><span>这个方法不只可以对上司使用。对部下、后辈或者同事都可以。事先准备好几种颜色的便签，到时候根据对方办公桌的状态选择合适的颜色。</span></p><p><span>如果别人注意不到你的便签，那么就不会对你的问题做出回应。所以，如何让标签引人注目是最重要的。</span></p><h3 id='便签技巧③-写什么内容'><span>便签技巧③ 写什么内容?</span></h3><p><span>最后是写什么内容。这里就需要用到前文中提到过的“3个要点”。就像在电梯里用30秒的时间简洁地做出说明一样，在小小的便签中简洁地写明要点。</span></p><p><span>麦肯锡有一种带有</span><mark style="background:#f8e272;"><span>“From（发信人）/To（收信人）”</span></mark><span>的联络便签。可以在这种便签上写下3个要点，贴在上司的办公桌上。</span></p><p><span>顺带一提，观察上司的桌子，不只在贴便签的时候有帮助。</span></p><p><span>你可以根据他放在桌子上的书本来了解上司的喜好，如果上司的桌面非常杂乱，那么应该可以推测出他现在非常繁忙。所以当你要找上司交谈，或者贴便签之前，</span><u><span>都应该仔细地观察上司的桌子</span></u><span>。</span></p><div style="
+            border-radius: 25px; 
+            border: 2px solid #990000;
+            padding: 20px;
+            ">
+    <strong>总结</strong><br/>
+    观察上司的桌子，可以看出他的喜好和是否繁忙。<br/>
+    在找上司交谈或者贴便签之前，一定要先仔细地观察他的桌子。
+</div><p>&nbsp;</p><h2 id='习惯16-邮件主题应该写什么'><span>习惯16. 邮件主题应该写什么</span></h2><p><span>说完了“便签”，接下来让我们说一说“邮件”。</span></p><p><span>忙碌的上司每天都会收到大量的邮件。那么，上司如何区分阅读邮件的先后顺序呢？</span></p><p><span>首先是“发信人的名字”。</span></p><p><span>如果是重要人物发来的邮件，那么不管是什么内容，上司都会打开看一遍。没有人会对社长发来的邮件置之不理吧？有的人还会将重要人物的邮件专门分类在一个文件夹下面。</span></p><p><span>但是，下级与上司和客户相比，优先顺序肯定很低。</span></p><p><span>也就是说，给上司发送邮件的时候，无法通过“发信人的名字”来提高自己的优先顺序。</span></p><p><span>那么，如何让自己发送的邮件被上司优先阅读呢？答案只有一个。</span></p><p><span>那就是取一个好的</span><mark style="background:#f8e272;"><span>“名称”</span></mark><span>。</span></p><p><span>即便是不会立即阅读的邮件，仍然有一个内容会首先被看到，那就是邮件的“名称”。</span></p><p><mark style="background:#f8e272;"><span>“吸引人的名称”</span></mark><span>和</span><mark style="background:#f8e272;"><span>“不吸引人的名称”</span></mark><span>有哪些区别？</span></p><p><span>假设你现在要发送一封邮件给非常繁忙的上司。</span></p><p><span>如果这封邮件得不到上司的阅读和回复，那么你的工作就会停滞不前，浪费大量的时间。</span></p><p><span>但是你的名字在上司那里的阅读优先顺序很低。</span></p><p><span>为了强调这封邮件的重要性，需要在名称上下工夫。你认为下面这两个名称哪一个更容易引起注意呢?</span></p><blockquote><p><span>A【商谈】A公司的进展情况……</span></p><p><span>B【重要！】A公司的进展情况……</span></p></blockquote><p><span>答案是A。</span></p><p><span>只要前面加上</span><u><span>“商谈”</span></u><span>这两个字，那么就足够吸引人的目光，甚至让人想要阅读里面的内容。</span><u><span>这个词会给上司留下“是不是发生了什么问题”“不能错过”的印象。</span></u></p><p><span>但是，这个词只能在真正非常重要，急切需要和上司商谈的时候才能使用。如果总用的话，上司就不会上当了。</span></p><p><span>那么，B的“重要！”为什么不行呢？</span></p><p><u><span>决定这封邮件是否重要的，是阅读它的人</span></u><span>。况且，阅读这封邮件的人，比你工作经验更加丰富，而且在立场上更是你的上司。</span></p><p><span>如果你在邮件前面加上“</span><u><span>重要</span></u><span>”的字样，就好像是在对上司说“这封邮件很重要，所以快点看！”，肯定会让上司感到很不爽。</span></p><p><span>同样，“</span><u><span>紧急</span></u><span>”“</span><u><span>请在今日内回复</span></u><span>”之类的字眼也要避免。因为决定这封邮件在时间上重要性的人也是你的上司。如果是真的紧急和重要的事情，应该在口头上传达，而不是选择邮件。</span></p><p><span>如果你的邮件能够及时得到回复，那么你的工作效率也会得到提高。与半强迫式地让上司阅读你的邮件相比，采取诱导的方法效果更好。</span></p><p><span>只需要在名称上添加“【商谈】关于XX的事…”就可以引起上司的注意。</span></p><h3 id='麦肯锡的邮件标准'><span>麦肯锡的邮件标准</span></h3><p><span>在麦肯锡有一条铁则，那就是</span><mark style="background:#f8e272;"><span>邮件要尽可能的简洁</span></mark><span>。</span></p><p><span>为了使对方在最短的时间内了解邮件的要点，必须将邮件内容控制在一页之内。比如下面这样的内容。</span></p><p><span>名称：【商谈】关于XX的事。</span></p><blockquote><p><span>正文：现状有以下3点</span></p><ol start='' ><li><p><span>x x x x </span></p></li><li><p><span>x x x x x x</span></p></li><li><p><span>x x x x x</span></p></li></ol></blockquote><p><span>在此基础上，将向XX方向发展，有什么问题吗？</span></p><p><span>另外，对邮件的回复也应该尽快完成。如果对于回复内容需要一些时间考虑的话，也应该马上回复一封邮件说明“</span><u><span>我要考虑一下，明天给你回复</span></u><span>”。</span></p><p><span>麦肯锡的前日本支社长大前研一先生曾经这样说过。</span></p><p><span>“在给别人安排工作之前，应该事先了解这个人的工作效率。要想知道他的反应时间，最好的办法就是给他发一封邮件。</span><u><span>根据我的经验，回复邮件越快的人工作效率越高</span></u><span>。”</span></p><p><span>邮件的回复速度，可以体现出这个人的工作效率。</span></p><div style="
+            border-radius: 25px; 
+            border: 2px solid #990000;
+            padding: 20px;
+            ">
+    <strong>总结</strong><br/>
+    由上司判断是否“重要”。<br/>
+    在名称上写“商谈”可以引起上司的注意。
+</div><p>&nbsp;</p><h2 id='习惯17-工作过程中与上司进行确认'><span>习惯17. 工作过程中与上司进行确认</span></h2><p><span>身为部下的你，在接到上司安排的工作时，必须在规定的时间内，保质保量地完成任务。</span></p><p><span>因此，你必须和上司确认以下三点。</span></p><blockquote><ol start='' ><li><p><span>这份工作的期限。</span></p></li><li><p><span>工作的意图和方向性。</span></p></li><li><p><span>要求的品质。</span></p></li></ol></blockquote><p><span>很多人都容易忘记确认&quot;1&quot;的期限。</span></p><p><span>他们以为只要上司记得工作期限就够了。但由于上司十分繁忙，所以他们会更多地把时间都用在说明工作内容上。如果你认为这是“没有时间限制，只要空闲时完成的工作”，那就大错特错了。</span></p><p><u><span>等过几天上司想起来，问你“那件事怎么样了”，结果你根本没有做，上司肯定会勃然大怒吧。因为他的小组没有取得成果，肯定让他也感到十分苦恼。对于这种部下的评价，怎么可能好呢？</span></u></p><p><span>你的努力得到回报了吗？</span></p><p><mark style="background:#a8e195;"><strong><span>在工作的过程中</span></strong><span>，应该与上司逐一确认工作的意图和方向性，以及品质是否合格。</span></mark></p><p><span>如果你在接受工作后，中途没有和上司做进一步的确认，就按照自己的想法埋头工作，两星期后参加会议。</span></p><p><span>当你做工作报告时，上司的脸色一下子就变了。</span></p><p><span>“我之前说的话你都没听到吗？完全不是这样的！”</span></p><p><span>这说明上司的指示与你所理解的内容出现了偏差，你付出的一番辛苦，结果却和上司的指示背道而驰。</span></p><p><span>为了避免出现这种情况，越是复杂且期限较长的工作，越应该</span><mark style="background:#a8e195;"><span>在过程中</span></mark><span>与上司进行确认。这将对你的工作成果起决定，性的作用。</span></p><p><mark style="background:#a8e195;"><span>在进行庞大的数据处理和非常复杂的调查之前</span></mark><span>，一定要和上司确认，最好还能得到上司的建议。</span></p><p><span>我在麦肯锡工作的时候，上司交给我一个“调查金融机构现状与动向”的工作。</span></p><p><u><span>我当场就确认了这项工作的目的性是什么</span></u><span>，还有这项工作的期限。</span></p><p><span>然后，我第二天又和上司确认了这项工作应该从什么方向开始调查，并且建立了调查计划。</span></p><p><span>“这次，我准备从各金融机构的经营战略与收益之间的关系入手，调查金融机构成功的关键。对各银行的规模、收益结构、经营战略、财务状况进行分析，您看这样行吗？”</span></p><p><span>上司的回答是“可以”，于是我就这样展开了调查。</span></p><p><span>当你自己确定前进方针的时候，</span><mark style="background:#a8e195;"><span>一定要</span></mark><span>和上司进行确认，得到肯定的答复后再开始工作。如果发现自己的方针有误，那么一定要尽早做出改正。</span></p><p><u><span>总之，越早与上司确认越好。如果可能的话，应该在接到工作任务的半天之内就进行确认</span></u><span>。</span><strong><span>上午接到的任务，下午就马上确认。午后接到的任务，傍晚或者第二天一早进行确认</span></strong><span>。这可以保证你的上司也没有忘记这件事的详细内容，更容易做出判断。</span></p><p><span>与其他公司进行邮件交流时，记得要“CC”（</span><strong><span>抄送</span></strong><span>）上司。前文中介绍的争取上司时间的方法、便签和邮件的应用方法，目的</span><mark style="background:#a8e195;"><strong><span>都是为了及时与上司进行确认</span></strong></mark><span>。越早得到上司的确认，你的工作成果才不会出现偏差。这样你才能没有失误，高效地完成工作。</span></p><div style="
+            border-radius: 25px; 
+            border: 2px solid #990000;
+            padding: 20px;
+            ">
+    <strong>总结</strong><br/>
+    及时做出修正就不会浪费时间。<br/>
+    在工作过程中及时与上司沟通可以使工作更加轻松。
+</div><p>&nbsp;</p><h1 id='第③章-将任务可视化'><span>第③章 将“任务”可视化</span></h1><p><u><span>“善于安排工作过程”的习惯</span></u></p><p>&nbsp;</p><hr style="background:brown"/><p style="text-align:center; font-weight:bold;">““最重要的是亲身体验。只在脑海里想，实际操作时很容易出现偏差。被现场的人认为’这个人根本不懂啊，就是纸上谈兵造成的。<br/>另一方面，具有优秀直觉的人，会根据自己在现场学到的经验，经过逻辑的思考做出决定。”<br/>— 小暮真久（社会企业家/麦肯锡出身）</p><hr style="background:brown"/><p>&nbsp;</p><h2 id='明星主厨也不能让顾客等待3小时'><span>明星主厨也不能让顾客等待3小时</span></h2><p><u><span>任何工作都无法挣脱时间的束缚。</span></u><span>除非是非常著名的艺术家，否则都不能随心所欲地安排工作时间。</span></p><p><span>即便是著名料理店的主厨，也不能让顾客等待3小时。不能说“我对做的这道菜不满意，要重新做。请你再等一下”。</span></p><p><span>足球运动员也是一样。</span><u><span>必须在上下半场共90分钟的时间内，发挥出自己最佳的表现。不能说“我终于来状态了，再加时10分钟吧”。</span></u></p><p><span>所有的工作都是为了别人而做的。工作的委托人肯定会提出一个时限。在规定的时间内做出最佳的表现，这才是专家的绝对条件。</span></p><p><span>期限、截止日、发表日……在确认了时间的限制后，接下来应该思考的，就是从现在开始到工作期限的最后一天为止应该做什么。</span></p><p><span>如何有效利用有限的时间？这就需要我们进行“安排”。</span></p><p><span>“安排”还有另外一个作用。</span></p><p><span>我们可能会同时进行多项工作。而这些工作又都有各自的进度。</span></p><p><span>在一天的时间内，应该如何处理不同类型的工作？面对这些错综复杂的工作，应该如何进行管理才能减少失误，提高效率？这些都是工作“安排”的重要作用。</span></p><p><span>工作安排得当，就能获得充足的时间。原本需要1小时的工作只要30分钟就能做完，原本需要1周的工作只要3天就能做完，这样节省出来的时间，既可以用来休息，也可以用来进一步提高工作的品质。而且你的工作自由度也会提高。</span></p><p><span>即便你身处一个组织之中，也可以通过良好的安排来使自己的工作得到大幅的改善。</span><u><span>在麦肯锡有很多善于工作安排的人。接下来，我将为大家介绍优秀的安排习惯。</span></u></p><p>&nbsp;</p><h2 id='习惯18-确认委托人的意图'><span>习惯18. 确认“委托人”的意图</span></h2><p><span>安排工作的方法其实并不难。</span></p><p><span>回忆一下上学时的考前复习吧。</span></p><p><span>牺牲玩游戏的时间和真正想学的内容，只为了通过考试而</span><u><span>进行针对性的复习</span></u><span>。</span></p><p><span>那么，用最短的时间达到合格线就是最有效率的方法。应该选择哪家补习班、需要用到什么参考书、学习的方法，一切都是为了“最短时间”通过考试。</span></p><p><span>首先我们要知道“考试日期”，否则没法建立学习计划。</span></p><p><span>然后确认“考试科目”都有什么。</span></p><p><span>接下来我们可以从历年的考试真题入手，通过网络和补习班来收集情报，找出考试的“出题倾向”。因为英语考试的分数是语文考试分数的一倍，所以只复习语文显然没有效率。而且考试中几乎不会考汉字，所以一味地学习汉字也是没效率的，只是在浪费时间罢了。</span></p><h3 id='考试不出的内容学了也没用'><span>考试不出的内容学了也没用</span></h3><p><span>让我们把这种情况转换到工作中来。</span></p><p><span>“考试日期”就是“工作的截止日期”。</span></p><p><span>“考试科目”就是“工作目的”。</span></p><p><span>“出题倾向”就是“工作的背景和意图”。</span></p><p><span>关键在于，决定这些问题答案的，并不是你，而是交代你工作的上司或者客户。</span></p><p><mark style="background:#f8e272;"><span>所以，你必须和对方进行确认。</span></mark></p><p><span>比如你的上司让你去调查客户企业的竞争对手的现状。</span></p><p><span>结果你没有确认这项工作的截止日期、意图、目的，以及背景，就贸然地前往现场胡乱地进行调查。</span></p><p><span>也许你的客户想要知道的是竞争对手的店铺设计和服务方式。</span></p><p><span>或者想要知道对方原料的来源、料理方法、独特的进货渠道、开店战略、人才培训，等等。</span></p><p><span>你在没有和上司进行确认的情况下，擅自选择了自己关注的问题，即便废寝忘食地进行调查，并且提出了自认为非常完美的报告。</span></p><p><span>结果你的上司只是一句话，你的工作全要从头再来。</span></p><p><span>“不，我想知道的是竞争对手的价格政策。以及他们在定价时的考量和基准。”</span></p><p><span>那么你之前的时间就全都白白浪费了。截止日期、工作目的、背景和意图，</span><mark style="background:#f8e272;"><span>这些问题都要在开始工作之前确认。</span></mark></p><p><span>在搞清楚这些问题之后再安排工作时间，那么你的工作效率和品质都将得到大幅度的提高。</span></p><p><span>另外，</span><u><span>在进行调查的过程中</span></u><span>，</span><u><span>也应该经常向上司确认工作的方向性是否出现了偏差，这样的工作安排才是最完美的。</span></u></p><div style="
+            border-radius: 25px; 
+            border: 2px solid #990000;
+            padding: 20px;
+            ">
+    <strong>总结</strong><br/>
+    首先要确认委托人的意图和工作的背景。<br/>
+    其次思考如何安排才能有效地完成工作。
+</div><p>&nbsp;</p><h2 id='习惯19-任模型上安排任务'><span>习惯19. 任模型上安排任务</span></h2><p><span>擅长安排工作的人，就是</span><u><span>擅长安排工作先后顺序的人</span></u><span>。</span></p><p><span>繁忙的人，手头往往有很多工作。这个要做，那个也不能忘记，在这种情况下，往往需要自己安排工作的先后顺序。</span></p><p><span>在这里我为大家介绍一个非常基础的工作安排的方法。</span></p><p><span>关键词就是</span><u><span>“可视化”</span></u><span>。</span></p><p><span>最简单的方法是用便签或者笔记，一个一个地将工作列举出来，制成一个“ToDo列表”。</span></p><p><span>但仅仅写出来还算不上可视化，为什么呢？</span></p><p><span>因为我们看不出哪些工作是紧急的，哪些工作是重要的。</span></p><p><span>在这里我们就需要利用前文中提到过的“紧急度与重要度的模型”。在一张纸上画出这个模型，然后将写有工作内容的便签，依次贴到相应的格子里。</span></p><p><span>这样一来，只要按照“重要且紧急” → “紧急但不重要” → “重要但不紧急” → “不重要也不紧急”的顺序来进行处理。</span></p><p><img src=".\..\..\images\typora-user-images\紧急度与重要度-1692724359165-4.jpg" alt="紧急度与重要度" style="zoom:40%;" /></p><p><span>工作完成后就可以将便签撕下来，或者用笔把上面的内容划掉。</span></p><p><span>在每天工作结束时对模型上的内容进行确认。通过随时的确认，模型上的内容也会不断地增加或者减少。</span></p><h3 id='让工作和生活都可视化'><span>让工作和生活都可视化</span></h3><p><span>你还可以制作1周、1个月，甚至1年的模型，并且在上面添加工作内容，使中长期的工作都可视化。如果在其中加入与个人生活相关的内容，那么你的生活将全部可视化。</span></p><p><span>比如，论文的截止日期和发表日、参加社团活动的日期、孩子的生日、结婚纪念日、搬家日期、驾照年检的日期，等等。</span></p><p><span>虽然上述这些都是与工作无关的任务，但我们的人生并非只有工作。生活也是必不可少的。</span></p><p><span>工作任务与生活任务，虽然属于完全不同的两种任务，但任务的完成人都是你。既然都是要做的事，不如全都将其可视化更加方便吧。</span></p><p><u><span>越是复杂的内容，可视化的效果越明显</span></u><span>。</span><u><mark style="background:#f8e272;"><span>埋头于短期的任务时，很容易失去时间感</span></mark><span>，等回过神来的时候发现完全忘记为结婚纪念日做准备，想必每个人都不愿意发生这“事故”吧</span></u><span>。</span></p><div style="
+            border-radius: 25px; 
+            border: 2px solid #990000;
+            padding: 20px;
+            ">
+    <strong>总结</strong><br/>
+    将全部任务视觉化，做一个工作和生活“两不误”的人。
+</div><p>&nbsp;</p><h2 id='习惯20-保持办公桌整洁'><span>习惯20. 保持办公桌整洁</span></h2><p><mark style="background:#f8e272;"><span>工作上取得优异成果的人都有一个共同点，那就是“不管工作多忙都保持桌面整洁”。虽然听起来很简单，但实际上这一点却非常重要。</span></mark></p><p><span>在麦肯锡，优秀的前辈的桌面一定也非常干净整洁。在我的印象里，几乎没有桌面乱成一团却从来不进行整理的人。因此，如果他们的桌面很杂乱，说明他们现在一定非常繁忙。</span></p><p><span>我在麦肯锡工作的时候有一位前辈（历任多家著名企业的经营者），每次我经过他的办公桌，都会</span><mark style="background:#f8e272;"><span>惊叹于那整洁的状态，他在办公桌前聚精会神地默默工作的样子也给人留下深刻的印象。</span></mark></p><p><span>要想做出最佳的表现，一个整洁的环境是必不可少的。</span><mark style="background:#f8e272;"><span>办公桌的状态可以说代表了这个人头脑里的状态。</span></mark></p><p><span>麦肯锡从不教育新进员工整理办公桌。</span></p><p><span>但当他们开始工作，深入的思考，不断地建立假设并且进行验证时，就会发现如果自己周围的环境杂乱，那么思考也会变得杂乱。仅仅是视野中出现多余的东西，就会使精神无法集中。所以在麦肯锡，下班时将所有东西都收入抽屉里，桌面上只留下电脑，是最基本的行为准则。</span></p><p><mark style="background:#a8e195;"><span>另外，为了缩短时间提高工作效率，一个整洁的办公环境也是必不可少的。需要用到的资料、等待处理的数据，还有参考资料和书籍，如果不能够及时地找出来，必然会造成时间上的浪费。</span></mark></p><p><span>不管从品质的角度上，还是效率的角度上来说，一个整洁的办公桌，更容易使人集中精神，取得更大的成果。</span></p><h3 id='毫不犹豫地扔掉过去的成果'><span>毫不犹豫地扔掉过去的成果</span></h3><p><span>整理的基础，就是“断舍离”。总之，要进行一次彻底的大清洗。</span></p><p><span>虽然现在已经基本进入无纸化办公的时代，但仍然有许多工作依旧充斥着大量的纸质资料。</span></p><p><strong><span>首先</span></strong><span>，我们要将已经结束的工作和项目资料，除了最终的报告书之外，全部处理掉。</span></p><p><span>从客户那里得到的资料，要全部返还。至于其他的资料则全部扔进碎纸机。在建立假设和进行验证的过程中所产生的资料，充满机密和数据，具有非常重要的意义。所以在对其进行处理的时候，必须保证没有泄露机密的风险。</span></p><p><span>在这种时候可能会产生出“好不容易完成的工作，这份资料还是留下吧”或者“这份资料或许之后还能派上用场”之类的想法。</span></p><p><mark style="background:#a8e195;"><span>根据我的经验，这些资料今后再次利用的可能性几乎为零。</span></mark></p><p><span>现在收集到的数据，经过一两年之后就变得毫无价值。况且这种经验主义的想法本身就是错误的，</span><mark style="background:#a5c4ff;"><span>会影响我们“从零开始”进行思考。</span></mark></p><p><span>从更加宏观的角度来看，经过的时间越长，商场的环境，以及世界的局势所发生的变化越大。所以我从来不会参考自己两三年之前思考过的内容。</span></p><p><span>不只纸质资料，保存在电脑中的数据也是一样。</span></p><p><span>最好每隔几个月进行一次彻底的整理，每周进行一次也是可以的。</span></p><p><mark style="background:#f8e272;"><span>可以养成在周五下班之前丢掉那些不需要的书籍和数据的习惯。这样你在周一上班时就可以以清爽的心情来开始工作。</span></mark></p><div style="
+            border-radius: 25px; 
+            border: 2px solid #990000;
+            padding: 20px;
+            ">
+    <strong>总结</strong><br/>
+    办公桌的状态，代表你头脑中的状态。<br/>
+    善于安排工作的人，办公桌都非常整洁。
+</div><p>&nbsp;</p><h2 id='习惯21-战略性地使用cc与bcc'><span>习惯21. 战略性地使用CC与BCC</span></h2><p><span>不管多么善于安排工作，如果上司和前辈不配合，那么你的工作仍然无法取得进展。为了避免出现这种情况，我们需要掌握一些技巧。</span></p><p><span>那就是战略性地使用邮件的CC与BCC功能。</span></p><p><span>首先我们要了解，一般的</span><u><span>邮件收件人分为3种</span></u><span>。</span></p><blockquote><p><span>【TO】邮件的主要收件人。</span></p><p><span>【CC】虽然不是主要收件人，但也希望其能够了解这封邮件内容的人。也能够看到To的收件人。</span></p><p><span>【BCC】功能与CC相同，但只能看到发件人和BCC的收件人。</span></p></blockquote><p><span>这3种方式都有各自的用途和使用方法。</span><u><span>因为邮件在工作中的应用非常频繁，所以如果善于运用这三种方式那么你肯定会成为一个“有能力的人”而得到大家的信赖。</span></u></p><p><span>使用CC的时候，就相当于对To的收件人说“这个人也知道这封邮件的内容”。</span></p><p><span>当你给客户发送邮件的时候</span><u><span>CC了自己的上司</span></u><span>，那么可以使客户产生出</span><u><span>安心感和信赖感</span></u><span>，因为“这件事他的上司也知道”。</span></p><p><span>但是，切记</span><u><span>不要将邮件本来的收件人也加入CC之中。特别是在回复邮件的时候，更容易出现这种情况</span></u><span>。</span></p><p><span>或许有人认为这种小事不必在意，但这种失误很容易让对方认为你是一个“</span><u><span>不够仔细的人</span></u><span>”。</span></p><h3 id='让不善于安排工作的前辈配合你工作的邮件技巧'><span>让不善于安排工作的前辈配合你工作的邮件技巧</span></h3><p><span>要想使工作能够顺利地展开，灵活运用CC与BCC是非常有效的手段。</span></p><p><mark style="background:#f8e272;"><span>你有没有遇到过这样的情况：“前辈夹在我和上司之间，但前辈的工作效率太差导致进展缓慢。回头我也会受牵连”。</span></mark></p><p><span>当你给前辈发送邮件传达自己的不安和疑问时，如果将上司放在CC列表里，显得太不圆滑。感觉就好像是你在打小报告一样，容易影响彼此的心情。</span></p><p><span>但是,如果对这一情况置之不理可能会影响整个项目的进展情况，趁早将此事汇报给上司也是对客户负责的表现。这时，你可以瞒着前辈，在与上司沟通之后，将发送给前辈的邮件BCC给上司。</span></p><p><span>这样一来，上司可以参考你的报告，然后好像“自己注意到”一样，对前辈进行指导。</span></p><p><span>如果上司再当着前辈的面对你说“以后发送报告邮件都CC给我”，那就更完美了。</span></p><p><span>从此以后你就可以堂堂正正地将上司加入CC列表。</span></p><p><span>简单说就是三个步骤。</span></p><blockquote><p><span>给前辈发送邮件时BCC给上司。</span></p><p><span>上司装作自己发现了问题，对前辈进行指导。</span></p><p><span>之后的邮件都CC给上司。</span></p></blockquote><p><span>尽量不引起摩擦，又能够及时地解决问题，这种技巧一定要掌握。</span></p><div style="
+            border-radius: 25px; 
+            border: 2px solid #990000;
+            padding: 20px;
+            ">
+    <strong>总结</strong><br/>
+    灵活运用CC与BCC，可以圆满地解决工作上的问题。
+</div><p>&nbsp;</p><h1 id='第④章-将自己的主张放在疑问里'><span>第④章 将自己的主张放在疑问里</span></h1><p><u><span>抓住“顾客心理”的习惯</span></u></p><p>&nbsp;</p><hr style="background:brown"/><p style="text-align:center; font-weight:bold;">“Oisix的经营出发点就是让顾客感到满意。我每天不断地努力工作，为的是让社员也都具这种意识。”<br/>— 高岛宏平（Oisix创业者/麦肯锡出身）</p><hr style="background:brown"/><p>&nbsp;</p><h2 id='顾客不知道自己想要什么'><u><span>顾客不知道自己想要什么</span></u></h2><p><span>绝大多数的工作都是为了某个人而进行的。也就是存在“委托人”。</span></p><p><span>对于麦肯锡来说，委托人就是客户。对于普通的企业，委托人既可能是交易方的负责人，也可能是普通的消费者。</span></p><p><span>考虑到现在的工作都是分工合作，那么上司或者其他部门的负责人，就是你工作的委托人。</span></p><p><mark style="background:#f8e272;"><span>如果你没有领会到委托人的真实意图，那么不管多么努力工作都无法取得成果。只有在了解对方真实的意图之后，你才能正确地回应委托人的期待，并且做出最佳的提案。</span></mark></p><p><span>任何时候，对你的工作结果进行判断的人，都不是你，而是委托人，是客户。</span></p><p><span>如果客户说“不行”，那你必须重新做。这样一来就会浪费大量的时间。</span><mark style="background:#f8e272;"><span>所以为了提高工作效率，必须准确地掌握客户的意图。</span></mark></p><p><span>探寻客户的真实意图并不容易。</span></p><p><span>客户可能不善于说出自己的真实想法，不会表现自己的真实喜好，不懂应该如何进行说明。</span></p><p><span>甚至还有很多顾客不知道自己究竟想要的是什么。所以你必须找出他们的真实想法，通过工作来使其可视化。这确实非常困难。</span></p><p><mark style="background:#ffaabf;"><span>正因为如此，当客户说出“这正是我想要的结果”时，那份喜悦感才更加珍贵。</span></mark></p><p><span>为了找出对方的真实意图，有很多值得注意的习惯。邮件的书写方法、介绍自己的方法、商谈场所的选择，等等，接下来就让我们一起看一看用这些方法抓住顾客心理的秘诀吧。</span></p><p>&nbsp;</p><h2 id='习惯22-灵活运用面谈邮件和电话'><span>习惯22. 灵活运用面谈、邮件和电话</span></h2><p><span>商业活动中与对方传递信息的方法大概有三种，面谈、邮件和电话。灵活运用这三种方法，可以提高工作的品质与效率。</span></p><p><span>首先，</span><u><span>负面的</span></u><span>问题千万不要用邮件和电话，</span><u><span>一定要当面解决</span></u><span>。</span><u><span>紧急的</span></u><span>事情也应该</span><u><span>当面</span></u><span>（根据具体情况也可以用电话）解决。邮件无法传达紧张感和迫切感。</span></p><p><span>当与别人进行联络的时候，年轻人过于依赖邮件，老员工则过于依赖电话。</span></p><p><span>不管是缺乏工作经验的年轻人，还是工作多年的老员工，很多人都不清楚“电话的正确用法”。</span></p><p><span>如今的联络手段已经以邮件为主，并且还有Line和Facebook等SNS软件的辅助。</span></p><p><span>在这种情况下特意选择占用双方时间的“电话”，对于现在的商业环境来说是非常奢侈的。</span></p><p><span>会让对方以为“特意给我打电话，是不是发生了什么事”。</span></p><p><span>资历浅的年轻人，几乎所有的联络都用邮件。但是，邮件常常无法传达你的真实意图，而且也无法准确地揣摩对方的意图，这一点非常不好。</span></p><p><mark style="background:#f8e272;"><span>所以，当遇到比较重要的问题时，还是应该打电话，一边根据对方的声音进行判断，一边继续进行沟通。当然，如果能够当面进行交流，还是面谈最好。</span></mark></p><p><span>在打电话时可以慢点说话，等待对方的反应，一边思考一边交流，这样才能准确地传达双方的真实意图。</span></p><h3 id='火灾时给消防队打电话还是发邮件'><u><span>火灾时给消防队打电话，还是发邮件?</span></u></h3><p><span>另一方面，混迹职场多年的老员工，即便遇到不太紧急的事情，也会突然打电话。</span></p><p><span>大家应该都有这样的经历吧，正在集中精神进行思考的时候，突然电话响起，打乱了自己的节奏。</span></p><p><span>或许打电话的人立刻达成了自己的目的，但却给对方造成了极大的困扰。所以，在打电话之前应该思考“这件事真的有打电话的必要吗”0</span></p><p><span>不习惯打电话的职场新人，轻易就打电话的职场老手，其实这两种人应该折衷一下才好吧。</span></p><p><mark style="background:#f8e272;"><span>只有在真正紧急的情况下才打电话。如果出现问题的时候，不可能慢悠悠地发邮件来告知对方。出现火灾的时候，没有人会给消防队发邮件吧?</span></mark></p><p><span>另外，如果不知道应该打电话还是发邮件的时候，或者虽然不是很紧急但想通过电话联系的时候，可以首先给对方发送一封邮件“我有点事可以给你打个电话吗”</span><u><span>进行询问。</span></u></p><p><span>如果在邮件里简单地说一下要说的事和想要了解的情况，以及打电话大概需要多少时间，那么不但可以让自己整理一下思路，也可以让对方有所准备。</span></p><p><span>比如可以发送以下内容的邮件来与对方进行确认一一“关于XX的事，我想占用5分钟的时间给您打个电话，您现在方便吗？”</span></p><p><span>这样一来，你们的对话会非常顺畅，不容易产生误会。如果你突然打电话，对方也被你搞得措手不及，没时间进行整理，可能难以传达自己的真实意图。</span><mark style="background:#a8e195;"><span>要想引出对方的真实意图，应该灵活地组合运用邮件和电话。</span></mark></p><div style="
+            border-radius: 25px; 
+            border: 2px solid #990000;
+            padding: 20px;
+            ">
+    <strong>总结</strong><br/>
+    对电话的使用要恰到好处。<br/>
+    组合使用邮件与电话发现对方的真实意图。
+</div><p>&nbsp;</p><h2 id='习惯23-诱导对方自己找出共同点'><span>习惯23. 诱导对方自己找出“共同点”</span></h2><p><span>工作效率低的人，</span><mark style="background:#f8e272;"><span>不善于打探对方的底细</span></mark><span>。他们总是无法拉近自己与对方之间的距离，在相互了解上花费了太多的时间。所以，他们无法了解对方的真实意图，工作内容总是和对方的要求有偏差。这样不但难以使对方满意，他自己也不知道究竟问题出在哪里。</span></p><p><mark style="background:#a8e195;"><span>反之，工作效率高的人，则能够很快地拉近与对方之间的距离。</span></mark></p><p><span>尽早了解对方的兴趣爱好，并将其应用在工作中，做出令对方满意的成果。</span></p><p><span>那么，应该怎样做，才能够最快地拉近与对方之间的距离呢？关键在于最开始的“</span><u><span>自我介绍</span></u><span>”。在商业活动中，初次见面的时候，</span><u><span>大家都会交换名片并且进行简单的自我介绍。</span></u></p><p><span>拉近与对方距离的技巧，</span><u><span>在于自我介绍时找出与对方的“共同点”</span></u><span>。</span></p><h3 id='寻找共同点的方法'><span>寻找共同点的方法</span></h3><p><span>说起“寻找共同点”，很多人的第一反应都是了解对方的简历，然后从中找出共同点，但实际上创造出一个让双方都能够互相寻找共同点的状况才是关键。</span></p><p><span>首先，你应该简单地介绍一下自己，给对方提供一个从中找出共同点的机会。共同点其实并不一定是什么特另啲内容。年龄、出生地、母校、兴趣、喜欢的食物和电视节目、音乐和体育，等等都可以。</span></p><blockquote><p><span>为了让对方能够更容易地找出与你之间的共同点，你应该从多个角度来介绍自己。不过，内容要尽可能地简短。关键还是要多听对方说。</span></p></blockquote><p><span>人们在遇到“老乡”的时候会很自然地拉近距离。如果你很好地向对方介绍了自己，那么对方就会说“啊，我也是”。</span></p><p><span>不过，如果在交换名片的时候，忽然长篇大论地向对方介绍你自己的兴趣和经历，会给对方造成困扰，甚至对你产生反感。</span></p><p><span>比较推荐的</span><u><span>做法是</span></u><span>，将自我介绍、工作经历、兴趣等内容总结在一张纸上做成一个“个人简介”交给对方，还可以印在名片的背面。</span></p><h3 id='个人简介的书写方法和递交方法'><span>个人简介的书写方法和递交方法</span></h3><p><span>简介的写法非常自由。关键要将内容控制在一张纸以内便于对方阅读。A4纸大小和明信片大小都可以。考虑到对方可能是年纪较大的老人，字体应该稍微大一些才好。</span></p><p><span>个人简介的内容不必像求职简历那样死板。除了出身地和兴趣等共同点的提示之外，工作经历也可以简单地介绍一下，如果再加上座右铭和尊敬的伟人之类可以使对方了解到你人格魅力的内容就更好了。</span></p><p><u><span>初次见面互相打招呼的时候，可以将自己的简介递给对方说“我准备了对我个人的一些介绍，有时间的话请看一下”。</span></u></p><p><span>因为是初次见面，所以对方可能也会有些拘谨，不可能当场就把整个简介都看完，但应该会简单地扫一眼，这样就能够看到部分内容。</span></p><p><span>“哦，你也喜欢打高尔夫吗？我每个月都会去打一圈。”</span></p><p><span>你是AB型吗？我也是AB型呢，这种血型的人很少见，我们交个朋友吧。</span></p><p><span>“你也养狗啊。犬种是什么？我家有两只吉娃娃……”</span></p><p><span>像这样，对方主动说出了与你之间的共同点。那么下次见面时你可以针对性地准备一个高尔夫球、AB血型的性格分析书、吉娃娃穿的小衣服之类的物品作为礼品送给对方，一下子拉近双方的距离。</span></p><p><mark style="background:#f8e272;"><span>我认识一个经营顾问，他的名片是折叠式的，打开之后里面有他的座右铭、喜欢读的书、出身地、兴趣，还有他自己的照片。</span></mark></p><p><span>这种名片的效果非常好。不但体积小巧不占地方，而且还可以让对方充分地了解自己。</span></p><div style="
+            border-radius: 25px; 
+            border: 2px solid #990000;
+            padding: 20px;
+            ">
+    <strong>总结</strong><br/>
+    “共同点”可以消除双方之间的隔阂。<br/>
+    给对方提示，诱导对方自己找出“共同点”。
+</div><p>&nbsp;</p><h2 id='习惯24-选择对方容易说出心里话的场所'><span>习惯24. 选择对方容易说出心里话的“场所”</span></h2><p><span>麦肯锡的经营顾问们在探寻客户的真实意图和需求时，最常用的方法就是“倾听”。</span><u><span>所谓“倾听”</span></u><span>，就是将自己的主张和意图放在一旁，专心倾听对方的讲述。</span></p><p><span>当对方在听完你的自我介绍开始说话时，你就要专心地“倾听”对方所说的话，找出对方的需求。在倾听的过程中下意识地思考“这个人的真实需求是什么”。</span></p><p><span>等对方把话都说完之后，自己再开口。</span></p><p><span>我们平时的交谈，都是你一言我一语的穿插式交流。所以要想专心地倾听其实是很难的。</span></p><p><span>那么你应该谨记这一点，</span><mark style="background:#f8e272;"><span>“只有倾听才能够做出回答，不倾听的话无法提出自己的意见”。</span></mark></p><p><mark style="background:#a8e195;"><span>倾听时的关键在于注视着对方的眼睛，并且不时地点头。</span></mark></p><p><u><span>另外，适当重复对方的发言也很重要。</span></u></p><blockquote><p><span>顾客：“这个时钟，是十年前在伦敦买的。”</span></p><p><span>你：“是吗，十年前在伦敦买到的！真是个好东西啊。”</span></p></blockquote><p><span>这样会使对方感觉“这个人有认真地听我说话”，更愿意和你交流。</span></p><p><span>你在逛商场的时候是否遇到过根本不听你说话，只是一味地宣传自己商品的营业员？你会从这样的营业员手里买东西吗？</span></p><p><span>答案是否定的吧。因为这样的营业员根本就没有询问你的需求和喜好。</span></p><p><span>给人感觉“只是在一个劲地推销自己想要卖的商品”。</span></p><p><span>向一个喜欢吃酸味的人推荐甜味的点心，对方肯定不会喜欢。</span></p><p><span>优秀的营业员，会先倾听顾客的讲述并且从中找出与自己的共同点。一旦知道对方喜欢酸味，那么就投其所好地从自己公司的产品里选择酸味的产品推销给顾客。</span></p><p><span>如果自己公司的产品里没有酸味的，那就推荐其他公司的商品。就算没能立刻提高销售额，但会给顾客留下“这个人很为我着想”的印象，更容易使对方成为</span><u><span>回头客。</span></u></p><h3 id='像记者一样取材'><span>像记者一样取材</span></h3><p><span>倾听客户的话之前，准备一个</span><u><span>采访表</span></u><span>将事半功倍。</span></p><p><span>在采访表上写下你</span><u><span>想询问</span></u><span>对方和</span><u><span>向对方确认</span></u><span>的内容。</span></p><p><span>因为要想解决对方提出的问题，首先要从对方那里收集情报。</span></p><p><span>为了找到问题的核心，你应该根据目前提出的假设，事先准备好要向对方提出的问题。</span><u><span>提出的问题质量越高，收集到的情报就越关键，交流也就越成功</span></u><span>。</span></p><p><span>比如客户对你说：“员工的工作热情不高，请想办法提高员工的工作积极性”。</span></p><p><u><span>这时你需要提出几个疑问来找出什么才是真正的问题所在。</span></u></p><blockquote><p><span>工作热情不高的原因什么？</span></p><p><span>哪个工作小组出现了问题？</span></p><p><span>上司与部下的关系好吗？</span></p><p><span>工作的内容是什么？</span></p></blockquote><p><span>从多个角度全面地进行分析。</span></p><p><span>这样一来你就会发现，“上司缺乏与部下交流的能力”，导致年轻人的工作热情不高。</span></p><p><span>也就是说，客户所说的“员工的工作热情不高”并不是真正的问题，“上司缺乏与部下交流的能力”</span><u><span>才是真正的问题</span></u><span>。</span></p><p><span>在麦肯锡，为了使交流更有效，经营顾问与客户见面之前一定会</span><u><span>制作采访表</span></u><span>。这可以</span><u><span>提高工作的品质和效率</span></u><span>。</span></p><p><mark style="background:#f8e272;"><span>优秀的经营顾问会像记者一样对目标进行深入的取材，找出对方真正的需求。</span></mark></p><p><span>对方容易说出心里话的“场所”在哪？</span></p><p><span>要想引出对方的心里话，找一个容易使其说出心里话的“场所”非常关键。</span></p><p><span>一般情况下，可以选择对方的</span><u><span>办公室</span></u><span>或者</span><u><span>家里</span></u><span>，主要在于营造一个可以使对方放松，容易说出心里话的环境。</span></p><p><span>有人在办公室因为在意上司的目光而不敢轻易开口，有人在家里因为怕老婆而显得十分拘谨。对于这样的人，最好选择一个能够让他放松心情、畅所欲言的地方。</span></p><p><span>我就经常选择办公室之外的场所来和客户见面，目的在于营造一个使人感觉</span><u><span>非常舒适的环境</span></u><span>。宾馆的休息室和餐厅都是推荐的地方。</span></p><p><span>不过，要想了解对方的详细情况，最好还是去一次对方的公司或家里。公司的气氛、员工的状态，都可以为你了解对方的需求提供灵感。</span></p><p><span>有时客户也会来你的公司，所以应该在自己的公司里准备一个容易让对方说出心里话的舒适的空间。</span></p><div style="
+            border-radius: 25px; 
+            border: 2px solid #990000;
+            padding: 20px;
+            ">
+    <strong>总结</strong><br/>
+    准备一个“舒适”的场所。<br/>
+    仔细倾听对方的讲话。
+</div><p>&nbsp;</p><h2 id='习惯25-不要和对方站在相同的立场上'><span>习惯25. 不要和对方站在相同的立场上</span></h2><p><span>“日本有多少个邮筒？”</span></p><p><span>这是某家咨询公司在面试时最著名的提问。</span></p><p><span>当你在跳槽时接受面试，对方忽然提出这个问题，你应该怎么回答呢？</span></p><p><span>马上拿出手机，登录日本邮政的官方网页，然后回答“大概18万”，这样能通过面试吗？</span></p><p><span>面试负责人当然不是想知道邮箱的数量。如果他真想知道的话，自己去查一下就可以了。所以按照他提问的字面意思回答邮筒的数量是无法通过面试的。</span></p><p><span>面试负责人想知道的是，应聘者对于这个看上去很奇怪的问题究竟会做出怎样的反应，是否能够站在俯瞰视点上进行分析。</span></p><p><mark style="background:#f8e272;"><u><span>“站在俯瞰视点上倾听对方的话，并且建立假设进行回答”</span></u><span>对于咨询公司来说是非常重要的技能。</span></mark></p><p><span>视点分为以下三种。</span></p><blockquote><ol start='' ><li><p><span>自己的视点。</span></p></li><li><p><span>对方的视点。</span></p></li><li><p><span>俯瞰的视点。</span></p></li></ol></blockquote><p><span>在带着自己的假设倾听客户的话时，适当地变换这三种视点来倾听效果更佳。</span></p><p><span>比如说下面这样的情况。</span></p><p><span>【对方：白色的杯子卖不动。怎么办才好呢？】</span></p><p><span>自己的视点“白色的杯子卖不动，粉色的杯子更可爱一些，会不会好点”。</span></p><p><span>对方的视点“应该做怎样的宣传才能提高白色杯子的销量”。</span></p><p><span>俯瞰的视点“是否应该在杯子的市场缩小之前，卖掉相关事业”。</span></p><p><span>你在用什么视点倾听对方的话？</span></p><p><span>正如前文所述，我们在无意识中都会用自己的视点来倾听别人的话。当然，自己视点提出的假设有时也是正确的，但切换视点来对假设进行验证，才能建立起更接近本质的假设。</span></p><p><span>在上面的例子中，就算“粉色或许比白色销量更好”的自己视点的假设是正确的，但对方很有可能已经生产了很多白色的杯子。</span></p><p><span>但是，如果从更长远的角度考虑，“应该卖掉相关事业”的俯瞰视点或许也是正确的。</span></p><p><span>如果你能够意识到自己在用什么视点倾听对方说话，那么就可以站在与对方不同的立场上，更加全面地审视问题，找出最佳的答案。</span></p><p><span>特别是在对方十分焦急和愤怒的情况下，如果和他站在相同的立场上是很危险的。</span></p><p><span>如果被积压了大量白色杯子的客户那种焦急的心情所影响，自己也跟着急躁起来，那么建立的假设就会越来越受限制。</span><mark style="background:#f8e272;"><span>所以就算倾听对方的话，也不要被对方的情绪所影响。</span></mark></p><p><u><span>这时如果你拥有“为什么他会如此焦急”这样的视点，或许能够意外地找到提高白色杯子销量的办法。</span></u></p><p><u><span>倾听对方讲话的时候，不要和对方站在相同的立场上，用另外的视点来进行思考，可以更好地解决对方的问题。</span></u></p><div style="
+            border-radius: 25px; 
+            border: 2px solid #990000;
+            padding: 20px;
+            ">
+    <strong>总结</strong><br/>
+    不要和对方站在相同的立场上。<br/>
+    用其他的视点来思考解决办法。
+</div><p>&nbsp;</p><h2 id='习惯26-将自己的主张放在疑问里'><span>习惯26. 将自己的主张放在疑问里</span></h2><p><span>仍然以刚才的“白色杯子”为例，这次让我们从另外的角度来进行思考。</span></p><p><span>比如客户方的负责人很热情地对你描述白色杯子的魅力。为什么要选择白色的杯子，如何表现这种白色，其中蕴含了对方企业怎样的想法。</span></p><p><span>但这个时候你的脑海中浮现出的是现在白色的杯子在整个市场中的竞争力很低，应该多推出不同颜色的款式，或者将眼光放在其他商品上才好。你不但已经建立了相应的假设，还拥有可靠的数据，所以假设的正确性很高。</span></p><p><span>那么，继续纠结于白色杯子的话题只是在浪费时间。于是你对客户方的负责人直截了当地这样说道。</span></p><p><span>“很遗憾，我认为贵公司的白色杯子没有市场需求。这些数据可以表明……”</span></p><p><span>听到你这样说，对方的表情肯定会显得非常尴尬。因为自己的工作被彻底否定了。</span></p><h3 id='让对方来思考答案'><u><span>让对方来思考答案</span></u></h3><p><span>麦肯锡的经营顾问面对这样的情况，会巧妙地让对方自己来思考解决问题的答案。就算要提出否定的意见，也不会突然正面提出。</span></p><p><span>这样做的理由很简单，为了不与对方产生摩擦。这和与上司之间的交流之道一样。</span></p><p><u><span>就算白白浪费一天的会议时间，也要小心翼翼地配合对方的节奏。</span></u><span>如果不问方法地强行让对方了解到自己的失误，不但会破坏双方的感情，还会使双方的沟通出现障碍，反而浪费更多的时间，导致问题迟迟无法得到解决。</span></p><p><span>那么，应该怎么做才好呢？在这种情况下，麦肯锡的经营顾问会提出这样的问题。</span></p><blockquote><p><span>“贵公司坚持生产白色的杯子很了不起，那么市场对白色杯子的反响如何？”</span></p><p><span>“顾客喜欢什么颜色的杯子？”</span></p><p><span>“现在销量最好的杯子是哪一款？”</span></p><p><span>“如果您是顾客的话，想要什么样的杯子？”</span></p><p><span>“您都在什么时候使用杯子？”</span></p><p><span>“您吃饭的时候经常喝什么？喝东西的时候使用什么容器？”</span></p></blockquote><p><span>将自己的意见和假设，放在这样的疑问之中向对方提出。</span></p><p><span>在听完对方的讲述之后，向对方提出这些问题，让对方自己思考问题的答案。</span><mark style="background:#f8e272;"><span>如果你的提问足够巧妙，对方自然会被你的意见所吸引。</span></mark></p><p><span>这种方法还可以应用于其他许多方面。</span></p><p><span>保险推销员在给顾客推销商品的时候，汽车销售员询问顾客喜欢的汽车类型时，都可以使用这种方法。顾客一般情况下都不知道自己真正想要的是什么。</span><u><span>如果你的提问足够巧妙，就可以帮助顾客整理自己的想法，从而自发地选择商品。</span></u></p><div style="
+            border-radius: 25px; 
+            border: 2px solid #990000;
+            padding: 20px;
+            ">
+    <strong>总结</strong><br/>
+    善于运用“疑问”，让对方自己找出答案。
+    </div><p>&nbsp;</p><h1 id='第⑤章-认可共鸣激励'><span>第⑤章 认可！共鸣！激励！</span></h1><p><span> </span><u><span>“精英上司”的习惯</span></u></p><p>&nbsp;</p><hr style="background:brown"/><p style="text-align:center; font-weight:bold;">“领导有三种责任：<br/>第一，给部下自信，让部下拥有荣誉感。<br/>第二，约束部下的行为规范，提高部下的道德水平。<br/>第三，让部下成长为拥有使命感的人。”<br/>— 马文 • 鲍尔（麦肯锡创始人）</p><hr style="background:brown"/><p>&nbsp;</p><h2 id='提高部下的工作效率才是一流的上司'><mark style="background:#f8e272;"><span>提高部下的工作效率</span></mark><span>才是</span><u><span>一流的上司</span></u></h2><p><span>在第二章中为大家介绍了“与上司交流的方法”，那么在这一章中将为大家介绍“与部下和后辈交流的方法”。让我们一起来思考一下使你的部下与后辈成长的方法吧。</span></p><p><span>当你成为上司之后，不只要承担自己的工作，还要关心部下的工作，</span><u><span>让自己领导的团体拿出成果</span></u><span>。如何有效地管理部下成为你最大的课题之一。</span></p><p><span>也就是说，你身上所肩负的责任更重。</span><mark style="background:#f8e272;"><span>不能只考虑提高自己的工作效率和质量。</span></mark></p><p><mark style="background:#f8e272;"><span>你还必须提高部下的工作效率和质量。</span></mark></p><p><span>这样做的</span><u><span>最终目的是提高你的团队工作效率</span></u><span>，至于结果如何完全由上司的能力决定。甚至可以说，你对部下的管理成果，就是你的工作成果。</span></p><p><mark style="background:#a8e195;"><span>你今后的工作成果会不会有飞跃性的提高，完全在于你部下的工作效率与质量是否有所提高。</span></mark></p><p><span>或许有人认为自己并没有成为上司所以不用看这一章，但请稍微等一下。</span></p><p><span>由于现在的雇佣关系比较灵活，尤其在餐饮业和零售业，经常会雇佣一些临时工来帮助工作。当人事出现变动的时候，你作为唯一的正式员工可能会被突然派到现场进行管理工作。</span></p><p><span>如果你在临时担任管理岗位的时候取得了优异的成绩，那么很快就会得到提拔吧？</span></p><p><span>或许你自己都没想到会那么早就成为上司。</span></p><p><span>因此，就算你现在还不是上司，但总有一天会用得上这一章所说的内容，所以请一定要看完。</span></p><p>&nbsp;</p><h2 id='习惯27-称呼部下为xx先生女士'><span>习惯27. 称呼部下为“XX先生/女士”</span></h2><p><span>首先让我们来说一下“职位”。</span></p><p><span>我在麦肯锡工作时，那里的员工从上到下大致可以分为四种职位，分别是“合伙人”“经理”“助理”“分析师”。</span></p><p><span>合伙人相当于负责人。他们的主要工作是管理日本分社，开拓客户以及维持客户关系。</span></p><p><span>经理负责对应具体的客户，管理项目，相当于中层管理人员。</span></p><p><span>刚刚大学毕业的新员工，首先会作为“分析师”在具体的项目组中进行最基础的调查和数据收集，偶尔也会为客户做讲解。当积累了一定的工作经验之后，取得成果的人会升级为助理，更进一步升级为经理。</span></p><p><span>这样看来，麦肯锡和日本绝大多数的公司组织架构没什么不同。但麦肯锡却拥有与日本企业完全不同的文化背景。</span></p><p><span>对于在麦肯锡工作的人来说，职位只是一个称呼罢了。不同的职位只意味着他们承担不同的工作。而与“地位高低”没有任何关系。</span></p><p><span>新入职的分析师对身为经营者的合伙人，也只称呼“先生/女士”。</span></p><h3 id='麦肯锡不存在上下级关系'><u><span>麦肯锡不存在上下级关系</span></u></h3><p><span>麦肯锡的上司绝对不会因为自己的职位高而狂妄自大、指手画脚，他们不会将自己的意志强加于人。可以说在麦肯锡是不存在“上下级关系”的。</span></p><p><span>担任上司的人，是因为他取得了相应的成果所以才站在上司的位置，自然会得到部下的尊重。为了尽可能地提高自己的项目组乃至整个麦肯锡日本分社所取得的成果，他们将激励和刺激部下发挥出最大潜能作为自己最优先的工作目标。</span></p><blockquote><p><span>上司与部下之间评价的基准只有成果。</span></p><p><span>取得成果的人会被刮目相看，受人尊敬。</span></p><p><span>谁也不会提及成果之外的要素。</span></p></blockquote><p><span>这就是麦肯锡的上下级关系。</span></p><p><span>在麦肯锡，员工即便因为安排部署和项目的不同而分为多个小组，却不存在派系之争。</span><mark style="background:#f8e272;"><span>所有人都是为了成果而工作。</span></mark></p><p><span>当然，有时候就算没有直接成果，但间接地提高他人工作成果的人也会得到重用，从结果上来说都是一样的。</span></p><p><span>在麦肯锡也不存在所谓的“拍马屁”。</span><mark style="background:#f8e272;"><span>对于一个专心于工作的组织来说，职位只具有其本来的作用。</span></mark></p><div style="
+            border-radius: 25px; 
+            border: 2px solid #990000;
+            padding: 20px;
+            ">
+    <strong>总结</strong><br/>
+    职位只是一个称呼。<br/>
+    一切都是为了取得成果。
+</div><p>&nbsp;</p><h2 id='习惯28-认可共鸣激励'><span>习惯28. 认可！共鸣！激励！</span></h2><p><span>对于上司来说，最重要的工作之一就是激发出部下的能力。</span></p><p><span>在麦肯锡，管理和监督自己的项目，为客户提高整体的成果，是上司的职责。</span></p><p><u><span>让在现场进行实际工作的部下充分地发挥出自己的能力，上司也能够取得更大的成果。</span></u></p><p><span>那么，麦肯锡的“优秀上司”们，都具有怎样的特征呢？</span></p><p><span>我认为他们具有三个共同点。</span></p><blockquote><ol start='' ><li><p><span>认可部下。</span></p></li><li><p><span>与部下产生共鸣。</span></p></li><li><p><span>激励部下。</span></p></li></ol></blockquote><p><span>一个团队，如果能够在</span><u><span>欢快活跃</span></u><span>的气氛下展开工作，一定能够取得巨大的成果。</span><u><span>上司需要考虑的就是自己怎样做才能够使团队具有这样的氛围</span></u><span>。</span></p><h3 id='有能力的上司懂得认可别人'><span>有能力的上司懂得认可别人</span></h3><p><span>要想最大限度地激发出部下的潜力，最好的方法就是“认可”部下。虽然与“称赞”很相似，但实际上有很大的区别。</span></p><p><span>所谓</span><u><span>“认可”</span></u><span>，指的是</span><u><span>承认这个人的存在本身</span></u><span>。了解这个人的过人之处。而“称赞”则应该在部下达成自己的期待时进行，也就是有条件限制的。与有条件的“称赞”相比，人们更重视承认自身存在的“认可”。一旦得到别人的认可，很容易充满干劲，并且能够快速地成长。使部下成长的上司，就是“认可”部下的上司。</span></p><p><u><span>认可部下、与部下产生共鸣、激励部下，有一个非常简单的方法。</span></u></p><p><span>那就是绝对认可部下。</span></p><p><span>找出“这个部下的优点是什么”。任何部下，都有其与生俱来的特质。</span></p><p><u><span>给你的每一个部下列出至少10个优点。然后将这些优点传达给部下本人。</span></u></p><p><span>”xx君总是很有精神，带动周围的气氛也跟着活跃起来。这就是你的才能。”</span></p><p><span>听到这句话的部下，知道自己得到了上司的认可和共鸣，心情自然很好，潜力也会被激发出来。并且对认可自己的上司充满信赖。</span></p><p><u><span>关键在于让部下知道，上司并不是因为他的成果对他进行“称赞”，而是“认可”他的存在本身。</span></u></p><p><span>容易激怒的上司，首先应该尽量对部下做出“认可”。</span></p><p><span>就算这位部下暂时没有取得任何成果，但是他肯定有那么一两个擅长的事情，或者努力的地方。</span></p><p><span>回答很有活力、</span><u><span>总是面带笑容</span></u><span>、</span><u><span>穿着品位不错</span></u><span>……找出他的优点，认可他的优点。至于缺点则先放在一旁不要考虑。</span><u><span>得到认可的部下，工作热情也会随之提高，有助于提高整体的工作成果。</span></u></p><p><span>一个只知道冲部下发脾气的上司，是无法取得任何成果的。</span></p><p><span>首先认可你的部下。</span></p><p><u><span>这是成为精英上司的第一步。</span></u></p><div style="
+            border-radius: 25px; 
+            border: 2px solid #990000;
+            padding: 20px;
+            ">
+    <strong>总结</strong><br/>
+    精英上司要认可部下，与部下产生共鸣，激励部下。<br/>
+    认可部下才能激发部下的工作热情。
+</div><p>&nbsp;</p><h2 id='习惯29-让部下提出假设'><span>习惯29. 让部下提出“假设”</span></h2><p><span>前文中说过，精英上司会尽可能地认可部下。</span></p><p><span>但是……仅仅认可是不够的，部下有可能会在工作之中碰壁。</span><mark style="background:#f8e272;"><span>所以适当地进行“训斥”也是必要的。</span></mark><span>而很多上司对于“训斥”都有些烦恼。</span></p><p><span>他们的烦恼大致可以分为两种。</span></p><blockquote><p><span>一种是，有的人并不擅长训斥别人，就算真的有必要对部下做出提醒，他们也希望能够尽可能地避免。</span></p><p><span>另一种是，本来自己也知道应该控制情绪，可是一遇到问题就感到焦急，训斥部下时不由自主地变得非常激动。虽然他们事后也对自己的行为感到后悔，</span><u><span>但发火之后才想起补救为时已晚。</span></u></p></blockquote><p><span>实际上，</span><mark style="background:#a8e195;"><span>“愤怒”</span></mark><span>和</span><mark style="background:#a8e195;"><span>“训斥”</span></mark><span>是完全不同的行为。</span><mark style="background:#a8e195;"><span>“愤怒”只是单纯地发泄自己的感情，“训斥”则是希望对方能够做出改善。</span></mark></p><h3 id='训斥时的3个铁则'><span>训斥时的3个铁则</span></h3><p><span>针对上述两种情况的</span><u><span>解决方法</span></u><span>十分相似。我认为有以下3种解决方法。</span></p><h4 id='1-控制情绪'><span>1. 控制情绪。</span></h4><p><span>之所以要控制情绪，是因为即便你大发雷霆，也对创造成果没有任何帮助。</span></p><p><span>当工作进展缓慢的时候，就算你对员工大声叫骂，也不会有任何改变。</span><u><span>只会使员工更加畏缩，甚至对你产生恨意。部下的工作效率不但无法提高，品质还会有所下降。</span></u></p><h4 id='2-不要当着他人的面训斥部下'><span>2. 不要当着他人的面训斥部下。</span></h4><p><span>尽量避免当着他人的面训斥部下。被训斥的人对他人的目光很敏感。因为毕竟那是自己受到评价的一瞬间。就算上司的语言很冷静，部下也会感到很难为情，甚至对上司产生怨念。</span></p><p><span>反之，如果你在单独的场合训斥部下，那么部下会认为你也在为他着想。</span><mark style="background:#a8e195;"><span>所以在训斥部下的时候，一定要考虑周全</span></mark><span>。为了让工作能够取得成果，为了让部下得到成长，采取有效的训斥方法是非常重要的。</span></p><h4 id='3-让部下建立假设思考具体的工作方法'><span>3. 让部下</span><u><span>建立假设</span></u><span>，思考具体的工作方法。</span></h4><p><span>麦肯锡的上司在训斥部下的时候，不会感情用事。</span><u><span>而是让部下自己去思考问题是什么，应该怎么做才好</span></u><span>。他们关心的是今后应该做出怎样的改善，应该怎样做才能使部下得到成长。</span></p><blockquote><p><span>“为什么做不好？”</span></p><p><span>“你认为改善点和能够进一步成长的地方在哪里？”</span></p><p><span>“如果你是上司，希望怎样对待像你这样的员工？”</span></p><p><span>“今后应该采取怎样的行动？应该如何推进？”</span></p></blockquote><p><span>使用这样的问题促使部下自己进行思考，督促他们的行动。</span></p><p><span>就像经营顾问在解决客户问题的时候不能提出抽象的解决方案一样，</span><u><span>上司在解决部下问题的时候也应该注意，必须将内容彻底地“具体化”</span></u><span>。如果不能够提出具体的解决办法，那么说明这个上司本身的能力不足。</span></p><p><mark style="background:#f8e272;"><span>让部下自己整理问题点，建立假设，并且采取具体的行动</span></mark><span>。使用第一章中介绍过的</span><u><span>“从零开始”</span></u><span> </span><u><span>“俯瞰视点”</span></u><span> </span><u><span>“假设思考”</span></u><span>等方法，并且对部下的具体行动进行指导，这就是“上司”的职责所在。</span></p><div style="
+            border-radius: 25px; 
+            border: 2px solid #990000;
+            padding: 20px;
+            ">
+    <strong>总结</strong><br/>
+    在训斥部下时要考虑周全，更有助于部下发挥潜力。<br/>
+    让部下自己建立假设，采取具体的行动。
+</div><p>&nbsp;</p><h2 id='习惯30-与部下交流消除困惑'><span>习惯30. 与部下交流，消除困惑</span></h2><p><span>你之所以被提拔为上司，一定是因为取得的成绩得到了公司的认可吧。如果你比同期的员工升迁更快，那你一定是个工作能力出众的人。</span></p><p><span>但是，这样优秀的人成为上司之后，经常会出现一个问题。</span></p><p><span>那就是“没有人可以商谈”。</span></p><p><span>越是拥有很强的责任感，工作能力出众、工作效率高的人，</span><u><span>自尊心也越高</span></u><span>。当部下遇到困难的时候，这样的人</span><u><span>往往会自己动手亲自解决问题</span></u><span>。这样的上司当然会得到众人的尊敬和羡慕。</span></p><p><span>但是，因为责任感和自尊心，当他们遇到问题和困难的时候，却不愿找别人商谈，而是</span><u><span>独自承受</span></u><span>。</span></p><p><span>这样很容易导致整个团队的工作进展缓慢。本来是一个“工作高质又高效的人”，</span><u><span>但成为上司后却带出了一个“工作缓慢品质差”的团队</span></u><span>。</span></p><p><span>这种情况一定要避免。</span></p><p><u><span>在麦肯锡，经常会整个团队一起讨论课题。项目经理负责整个项目的统筹安排，各个小组长分担项目任务。</span></u></p><p><span>这时，身为上司的项目经理会和部下进行各种各样的商谈。</span></p><p><span>身为部下的成员，也会尽职尽责地</span><u><span>贡献自己的聪明才智</span></u><span>。</span></p><p><span>假设当你左右为难的时候，召集部下开会讨论。你应该采取怎样的方式与部下交流呢？哪一种方法能够</span><u><span>提高工作效率和速度</span></u><span>，使成果最大化呢?</span></p><blockquote><p><span>A：不说出自己的困惑，全凭自己的直觉蛮干。</span></p><p><span>B：对部下说出自己的困惑，适当地提出问题，激发部下的聪明才智。</span></p></blockquote><p><span>现实中，绝大多数的上司都选择A。</span></p><p><span>这种方法看似很有效率，但实际上是因为自尊心作祟，不敢吐露自己的心声。很多人都认为“身居高位者，必须战胜孤独”。</span></p><p><span>但是，我认为应该选择</span><u><span>B</span></u><span>。</span></p><h3 id='上司坦诚的态度使团队更加团结'><span>上司坦诚的态度使团队更加团结</span></h3><p><span>你可以对部下提出这样的问题。</span></p><blockquote><p><span>“我是这样想的，坦白地说，只是我的直觉。我想听一听大家的看法，正面的和负面的都可以。”</span></p></blockquote><p><span>关键在于要坦诚。你的坦白和诚实，可以提高部下们的团结意识。</span></p><p><span>部下会知道，上司也是人，面对问题有时候也会难以做出判断。</span><mark style="background:#f8e272;"><span>因为商业活动中没有绝对的正确答案，所以会产生“迷惑”也是正常的。</span></mark></p><p><span>当上司将自己的“迷惑”诚实地向部下们展现出来时，部下会对上司产生</span><u><span>亲近感</span></u><span>，同时也会激发部下的</span><u><span>自主意识</span></u><span>和</span><u><span>责任感</span></u><span>。</span><mark style="background:#f8e272;"><span>最重要的是，可以使部下更加信赖上司。</span></mark></p><p><span>适当地用这样的提问来征求部下的意见，还可以发现自己遗漏的关键点，以及新的灵感和创意。</span></p><p><mark style="background:#a8e195;"><span>为了使团队更加有活力，试着将自己的困惑告诉大家吧</span></mark><span>。</span><u><span>适当的提问可以促进团队成员的思考，使整个团队变得更有活力。这样一来，你的团队的工作效率和品质都会得到提高。</span></u></p><div style="
+            border-radius: 25px; 
+            border: 2px solid #990000;
+            padding: 20px;
+            ">
+    <strong>总结</strong><br/>
+    适当地与部下交流，提出问题。<br/>
+    用这种方法使团队变得更有活力。
+</div><p>&nbsp;</p><h2 id='习惯31-毫不犹豫地布置任务'><span>习惯31. 毫不犹豫地布置任务</span></h2><p><span>除了“没有人可以商谈”之外，工作能力强的人还有另外一个问题。</span></p><p><mark style="background:#f8e272;"><span>那就是“没有人可以委任”。</span></mark></p><p><span>身为上司的人，肯定有其身居此位的理由。</span></p><p><span>在麦肯锡，是因为这个人在过去的工作中取得了巨大的成果，现在也仍然保持着</span><u><span>“顾客利益至上”</span></u><span>的麦肯锡的“核心价值观”。</span></p><p><span>正因为其具有如此优秀的能力，所以公司才提拔他作为上司承担更大的责任，当然也会给予他相应的报酬。</span></p><p><span>日本的企业也是如此，基本上都由有能力和相应工作经验的人来担当上司。</span></p><p><span>但这样的人经常不愿意将工作委任给部下。</span></p><p><span>因为他们坚信</span><u><span>“自己来做比较快”</span></u><span>，不愿意将工作安排给部下，</span><mark style="background:#a8e195;"><span>结果自己承受着超出想象的负担，导致工作效率越来越差。</span></mark></p><p><span>虽然他们比部下更有能力，经验更丰富，可以更有效率和质量地完成工作。</span></p><p><span>但若沉溺于其中无法自拔，后果却是非常严重的。</span></p><h3 id='委任工作可以提高部下的能力加强彼此之间的信赖关系'><span>委任工作可以提高部下的能力，加强彼此之间的信赖关系</span></h3><p><mark style="background:#a5c4ff;"><span>麦肯锡的上司们都非常善于给部下安排工作</span></mark><span>。他们会明确各人的分工，并且清楚地说明工作目标和期限，激发出每一个员工的工作热情。</span></p><p><u><span>上司最重要的工作之一，就是给部下安排工作</span></u><span>。</span></p><p><span>尽管自己处理效率更高，品质更好。但仍然应该把工作委任给部下。</span></p><p><span>而且不必事无巨细地对部下进行指导，应该根据部下的能力，安排他能够胜任的工作。</span></p><p><span>如果在安排工作的时候，</span><u><span>能够提供一些意见和建议就更好了</span></u><span>。这可以加强你们之间的信赖关系。</span></p><p><span>最初肯定需要花费大量的时间，因为对工作品质和部下进行管理都需要时间。</span></p><p><mark style="background:#a8e195;"><span>但是，如果不经历这个过程，就不可能成为真正优秀的上司。</span></mark></p><p><span>同时你的部下会失去成长的机会，你的团队也无法取得成果。从长远的角度考虑，为了完成工作反而需要花费更多的时间，甚至会降低别人对你的评价。</span></p><p><span>越是处于优秀团队之中的年轻人，</span><u><span>越是隐藏着没有表现出来的才能与特性</span></u><span>。他们对安排下来的工作，往往能够交出八九十分的成绩。这对于工作来说也已经足够了。</span></p><p><span>但是，只有在他们取得一百分以上的成绩，取得超出期待的成果时，你的团队才能够更上一层楼。为了实现这一目标，只有你一个人的努力是远远不够的，这需要你的团队得到成长。</span></p><p><u><span>激发出部下的潜力，这才是真正的精英上司。</span></u></p><div style="
+            border-radius: 25px; 
+            border: 2px solid #990000;
+            padding: 20px;
+            ">
+    <strong>总结</strong><br/>
+    成为上司之后就要彻底放弃“自己做比较快”的想法。
+</div><p>&nbsp;</p><h2 id='习惯32-会议分为4种'><span>习惯32. 会议分为4种</span></h2><p><span>工作时有一件事是绝对无法避免的，那就是</span><mark style="background:#f8e272;"><span>开会</span></mark><span>。</span><u><span>有主持人，有参加者，有议题</span></u><span>。</span></p><p><span>特别是身为上司的人，总是要主持各种各样的会议。如果会议计划能够得以顺利实施，那么工作的品质和效率都会得到飞跃性的提高。</span></p><p><u><span>所以，身为上司必须懂得“设计”会议</span></u><span>。</span><mark style="background:#a8e195;"><span>所谓设计，就是按照计划，在合适的时间，召开必要的会议。</span></mark></p><p><span>接下来让我们将会议分为4种，分别按照目的和必要性来进行一下设计吧。</span></p><blockquote><ol start='' ><li><p><span>报告。</span></p></li><li><p><span>评审（工作进展情况、分析和探讨、人事考察，等等）o</span></p></li><li><p><span>为了寻找灵感而召开的讨论会。</span></p></li><li><p><span>提高团队的凝聚力。</span></p></li></ol></blockquote><p><span>当你要开会之前，请思考一下即将召开的会议属于上述4种的哪一种。</span></p><p><u><span>其中最没有用的是1。因为报告应该尽可能地简洁，用邮件就可以解决，应该把1的时间安排在2和3上。</span></u></p><h3 id='为了提高团队凝聚力而开会'><span>为了提高团队凝聚力而开会</span></h3><p><span>日本企业很少召开提高团队凝聚力的会议，但实际上这是非常有用的。</span></p><p><span>麦肯锡经常有公司内部的欢迎会、经理主办的家庭派对，还有包括客户在内的晚宴和酒会，等等。上司会借助这样的机会来进行团队建设，提高团队的凝聚力。</span></p><p><span>组建新的工作小组或者团队成员工作热情不高的时候，提高团队的凝聚力可以激发出团队成员的工作热情，使大家了解今后团队发展的方向性。</span></p><p><span>一旦发现团队成员的工作热情出现问题，团队凝聚力不高的时候，</span><u><span>就应该想办法提高一下团队的凝聚力</span></u><span>。</span><u><span>项目组加入新同事的时候，也应该找个机会使其明确团队的共同目标，提高他的归属感。</span></u></p><p><span>提高员工的凝聚力基本上都是在公司内部进行，但有时候为了改变一下气氛，也可以选择风景好的地方，或者环境优雅的咖啡馆和餐厅之类。</span></p><blockquote><p><span>会议是由</span><u><span>“过程”</span></u><span>和</span><u><span>“内容”</span></u><span>组成的。</span></p><p><u><span>过程</span></u><span>指的就是会议内容之外的部分。地点、气氛、参加者的态度、进展方式，等等。</span></p><p><span>而</span><u><span>内容</span></u><span>指的是会议本身，也就是讨论的内容。</span></p></blockquote><p><span>过程和内容是会议的两个重要组成部分，要想使会议顺利进行，这两点都不可忽视。</span></p><p><span>特别是对过程的管控尤为关键。如果在一个舒适的地点，参加者都带着积极的心态，气氛也很和谐，那么很有可能讨论出更好的结果。</span></p><p><span>所以，不管是会议的主持人还是参加者都应该重视过程。“FRISK”曾经有一个电视广告，针对“创意都在哪里产生”的提问，回答是</span><u><span>“床上22%、公园17%、厕所32%、会议室0%”</span></u><span>。虽然这是对普通会议枯燥乏味的一种讽刺，但也从另一个侧面说明，在一个容易激发灵感的气氛中进行会议是多么重要。</span></p><p><span>会议最好是圆桌型的，特别是对于前述的2、3、4会议尤为推荐。因为圆桌会议可以使所有的参加者处在平等的位置上，使所有参加者的意见都能够得到尊重。</span></p><p><span>第四种会议，还可以不放桌子，只用椅子围成一圈，更容易引起参加者心理上的共鸣。</span></p><div style="
+            border-radius: 25px; 
+            border: 2px solid #990000;
+            padding: 20px;
+            ">
+    <strong>总结</strong><br/>
+    好的会议全靠主持人的设计。<br/>
+    不要浪费时间，注意引起参加者的共鸣。
+</div><p>&nbsp;</p><h2 id='习惯33-明确会议的目的与目标状态'><span>习惯33. 明确会议的“目的”与“目标状态”</span></h2><p><span>你印象中的会议是什么样的？</span></p><p><span>只知道开始的时间，却不知道结束时间。</span></p><p><span>浪费了不少时间却没有什么结果。</span></p><p><span>在繁忙的时候被会议占用了宝贵的时间。</span></p><p><mark style="background:#f8e272;"><span>应该做决定的时候，实际上却什么都没定下来。</span></mark></p><p><u><span>都是一些用邮件就能解决的报告事项。</span></u></p><p><span>肯定有很多人认为这样的会议根本没必要定期召开吧。</span></p><p><span>如果员工们的这种情绪爆发出来，那么一定会引发很大的问题。</span></p><p><span>不过一般来说，在这种不满情绪爆发出来之前，总会有人提出“会议就是这样的”或者“每周开会很正常”之类的言论来使大家的心情平静下来，结果会议还是照常进行。</span></p><p><u><span>不知不觉地，会议变成了一种形式，毫无价值的会议成为大家“工作”的一部分，每个人对会议的感觉都变得麻木了。</span></u></p><h3 id='使会议有意义的3个要素'><span>使会议有意义的3个要素</span></h3><p><span>会议的主持人应该清楚自己主持的会议属于哪一种，</span><mark style="background:#f8e272;"><span>并且在会议前和会议中，时刻明确会议的“目的”与“目标状态”。</span></mark></p><p><span>为了使会议变得有意义，需要让会议的参加者都进行事前准备。主持人应该在会议开始前对参加者说明以下内容。</span></p><blockquote><ol start='' ><li><p><span>会议目的。</span></p></li><li><p><span>目标状态（会议想要实现的目标，想要实现的状态）。</span></p></li><li><p><span>参加会议的原因。</span></p></li></ol></blockquote><p><span>任何会议都一样。</span></p><p><span>如果参加者中有很多老员工，那么只要说明目的和目标状态即可。但对新员工和一起共事时间不长的参加者，应该说明要求其参加会议的原因。</span></p><p><u><span>开会之前大致地说明期待的目标，可以提高参加者的积极性。</span></u></p><p><span>如果在会议开始之后还没有一个</span><mark style="background:#f8e272;"><span>明确的会议目标</span></mark><span>，甚至需要向参加者询问目标状态，那么这样的会议就是失败的。</span></p><p><span>会议正式开始后，主持人要保证会议的目的性不要出现偏离。如果所有参加者都能够时刻明确会议的目的还好，</span><u><span>但有时会出现参加者过于激动导致会议偏离本来目的的情况，以至于会议最终没有取得任何成果。</span></u></p><p><span>要想解决这个问题，方法也很简单，那就是在会议室的白板上</span><u><span>明确地写下会议的目的和目标状态</span></u><span>。措辞尽量简洁。</span></p><blockquote><p><strong><span>【例】</span></strong></p><p><span>目的：关于XX问题的解决</span></p><p><span>目标状态：XX问题的解决办法，以及由谁在什么期限内完成。</span></p></blockquote><p><span>有时候就连会议的主持人也会过于激动，所以应该时刻确认会议的话题是否偏离了目的，并且保证参加者的讨论也在正确的方向上。</span></p><p><span>一旦发现讨论偏离了目的，可以让大家看白板，然后询问“这次会议的目的是什么”O这样就可以将参加者的意识拉回到正确的“目的”上来。</span></p><h3 id='对会议的贡献有许多种形式'><span>对会议的贡献有许多种形式</span></h3><p><u><span>会议的主持人在对参加者，特别是年轻的参加者进行评价时，不应只看他们对会议讨论的贡献度，而应该观察他们对会议的顺利进行和调动气氛是否有所贡献。</span></u></p><p><u><span>收拾垃圾</span></u><span>、</span><u><span>擦桌子</span></u><span>、</span><u><span>擦白板</span></u><span>，这些细节都对会议有很大的帮助。一个干净的会场有助于大家更好地进行讨论。特别是有外人参加的时候，更不能让无谓的因素影响会议的进行。</span></p><p><span>事先准备好茶水，提前5到10分钟进入会议室检查用品，</span><u><span>这些行为都间接地对会议的顺利进行做出了贡献。</span></u></p><p><u><span>如果一个参加者“思考自己能做什么，并且认真准备”，那么就算他没有对会议做出直接的贡献，我也会对其给予很高的评价。</span></u></p><p><mark style="background:#ffaabf;"><span>因为这样的人总有一天会随着自身能力的不断提高，而最终做出巨大的贡献。能够为提升团队的整体表现做出贡献的人，理应得到肯定。</span></mark></p><div style="
+            border-radius: 25px; 
+            border: 2px solid #990000;
+            padding: 20px;
+            ">
+    <strong>总结</strong><br/>
+    一个好的会议，离不开主持人与参加者双方的努力。
+</div><p>&nbsp;</p><h2 id='习惯34-会议中也可以闲聊'><span>习惯34. 会议中也可以“闲聊”</span></h2><p><span>质量高、时间短才是好会议，这确实不假。但我认为只追求这一点也是不对的。</span></p><p><span>比如在会议一开始的时候，主持会议的上司拿出10分钟左右的时间询问</span><u><span>“大家最近干得怎么样啊”</span></u><span>，然后参加者各自汇报自己的近况，虽然看起来好像是在浪费时间，但实际上却鼓舞了团队的士气，对于会议的参加者们来说也放松了心情，更容易在会议中畅所欲言，使整个会议的质量都有所提高。</span></p><p><span>现在我的业务之一是为私营业主做培训。每次在正式开始之前我都会问他们“最近怎么样”。然后还会让他们相互之间进行对话。</span></p><p><span>这个步骤用术语来说叫作</span><mark style="background:#f8e272;"><span>“check in”</span></mark><span>。</span></p><blockquote><p><span>通过“check in”可以达到以下两种目的。</span></p><ol start='' ><li><p><span>在会议开始时就引出“个人的情况”，可以提高讨论的集中度。从而更早得出有效的结论。</span></p></li><li><p><u><span>通过加深相互之间的了解，建立一个“安全的场所”</span></u><span>，营造一个使大家更容易进行交流和讨论的气氛。</span></p></li></ol></blockquote><p><span>谈话的内容非常简单。</span><u><span>“你现在比较重视什么”</span></u><u><span>“最近自己在做什么”</span></u><span>等等。话题可以是工作上的也可以是生活上的。可以说你现在心里的想法，也可以只是随便的闲聊。</span></p><p><span>“最近天气不那么热了，我开始慢跑。”</span></p><p><span>“有点感冒了……“</span></p><p><span>狠狠地批评了孩子。最近他好像有些迷失了自己。”</span></p><p><mark style="background:#ffaabf;"><span>至于倾听的一方，不必针对对方的讲话内容思考解决办法，也不用提出意见和建议。</span><u><span>只需要点头做出回应即可</span></u><span>。只是这样就可以使大家的心情变得更加轻松。在会议的一开头就让大家拥有一个“良好的心态”是非常关键的。</span></mark></p><p><span>在“check in”之后，确认会议的“目的与目标状态”，然后就可以进入正题了。</span></p><p><span>也有不少人虽然不知道“check in”这个词，却能够自然而然地做到类似的事。</span></p><p><span>如果在进入正题之前的闲聊中得知“昨天我妻子出了交通事故住院”，那么这个人在接下来的会议中也提不出什么建设性的意见。不如会议改天再说吧。</span></p><p><span>除了check in之外还有与之相对的check out。</span></p><p><u><span>所谓check out，就是在会议结束前由参加者对本次会议的评价、课题、反省点等内容进行简单地交流</span></u><span>。这有助于提高大家参加下次会议的热情，并且加深彼此之间的关系。</span></p><h3 id='主持人要认可参加者'><span>主持人要认可参加者</span></h3><p><span>在公司内部的会议中，身为上司的人一定要记住一点，那就是下意识地“认可”参加者。关于认可的重要性在前文中已经有过详细的讲解。更进一步的话，应该让参加者互相认可。</span></p><p><u><span>我认为，有时甚至可以单纯以相互认可为目的召开会议。让每一个参加者有三分钟左右的时间，接受其他参加者的称赞和感谢。</span></u></p><p><span>虽然从会议的角度来看，好像只是在浪费时间。但这样可以使你的团队变得非常团结。</span><u><span>从长远来看，可以提高团队整体的表现和生产效率</span></u><span>。</span></p><div style="
+            border-radius: 25px; 
+            border: 2px solid #990000;
+            padding: 20px;
+            ">
+    <strong>总结</strong><br/>
+    优质的闲聊可以提高会议的品质。<br/>
+    在会议中要互相“认可”。
+</div><p>&nbsp;</p><h1 id='第⑥章-控制感情'><span>第⑥章 控制感情</span></h1><p><u><span>提高“工作热情”的习惯</span></u></p><p>&nbsp;</p><hr style="background:brown"/><p style="text-align:center; font-weight:bold;">“每当看到那些拥有很好的创意，并且将注意力完全集中在工作上的人，我的心情就会变得非常舒畅。只要团队中有一个这样的人，那种一定要实现某种目标的气氛也会随之高涨起来。”<br/>—南场智子（DeNA创始人/麦肯锡出身）</p><hr style="background:brown"/><p>&nbsp;</p><h2 id='问题在于被谁被什么刺激'><span>问题在于“被谁”“被什么”刺激</span></h2><p><span>只要有</span><u><span>“热情”</span></u><span>，做任何工作都可以高质高效地完成。</span><u><span>如果没有工作热情的话，工作则很难取得进展</span></u><span>。</span></p><p><span>但别人很难对我们提高工作热情提出什么建议。因为每个人发热情的方法都是不同的自律能力强的人，总是能够保持高昂的工作热情。</span></p><p><span>而普通人要想保持工作热情却没那么简单。好不容易有了工作的热情，但很快这股热情就冷却下去了。</span></p><p><span>被上司训斥、对评价不服气、客户提出令人烦恼的要求……在工作中有许多降低我们工作热情的因素。甚至还有因为家庭烦恼而无心工作的情况。</span></p><p><span>在这种情况下，要想正常工作，必须控制自己的感情，提高工作热情。</span></p><p><mark style="background:#f8e272;"><span>要想提高工作热情，需要从根本上解决问题。</span></mark></p><p><span>提高工作热情并不是为了眼前的工作，或者你现在所属的团体，而是出于更加长远的考虑，为了你今后的人生。</span></p><p><span>在最后一章中，</span><u><span>我将为大家介绍提高工作热情和保持工作热情的方法。</span></u></p><p><mark style="background:#a8e195;"><span>关键问题在于“被谁”“被什么”刺激。</span></mark></p><p><span>好的刺激可以使我们成长，提高我们的工作热情，还可能提高我们的工作技能。</span></p><p><span>首先让我们从“被谁”这个问题开始。</span></p><p>&nbsp;</p><h2 id='习惯35-寻找良师'><span>习惯35. 寻找“良师”</span></h2><p><span>为什么这么多企业都来麦肯锡寻求帮助？因为这些企业都存在着某些“问题”。</span></p><p><span>而且他们认为</span><u><span>借助专家们的力量更容易找出有效的解决办法</span></u><span>。那么，让我们将同样的问题转换到个人身上。</span></p><p><span>首先以我为例。</span></p><p><span>我这个人存在着很多问题。就算我写了这本书，但有时我也会动摇，有时也会迷茫，有时也会感觉自己能力不足、努力不足，并且不断地反省、发奋。</span></p><p><span>你又是怎样呢？</span></p><p><span>当然，我不知道你存在着什么样的问题。但是，既然你将这本书看到了最后一章，那你肯定也有“想要解决的烦恼”。</span></p><p><span>怎样才能更有效地完成工作？</span></p><p><span>怎样才能提高工作的生产效率?</span></p><p><span>怎样才能提高工作的质量？</span></p><p><span>怎样才能对自己前进的方向坚信不疑。</span></p><p><span>有没有一个专家能够帮助你解决这些问题呢？</span></p><p><u><span>答案就是“良师”</span></u><span>。一个能够为你提供帮助，进行指导的人。</span></p><p><span>要想提高工作热情需要“被谁”刺激吗？没错，需要被“良师”刺激。</span></p><p><span>你有良师吗？</span></p><p><u><span>我认为，如果你感觉自己存在问题，那么不要有任何迟疑，首先去找一个良师。</span></u></p><p><span>虽然这无法立即解决你的问题，</span><mark style="background:#f8e272;"><span>但可以使你减少许多烦恼，而且从长远来看会提高你的工作品质。</span></mark></p><p><span>不仅如此，你还会发现自己之前从未意识到的素质和能力，激发出更大的潜能，过去自己一个人苦苦研究数年也没能解决的问题，</span><u><span>或许会一下子得到解决</span></u><span>。</span></p><p><mark style="background:#f8e272;"><span>自问自答的能力，自己收集知识和情报并且进行整理的能力，对于提高工作的品质与效率是必不可少的。</span></mark></p><p><mark style="background:#a8e195;"><span>在此基础上，如果你还能够通过他人的视角来发现问题，思考解决办法，那么接触到问题核心与本质的可能性必将大幅提高。</span></mark></p><blockquote><p><span>倾听自己说话的人。</span></p><p><span>能够俯瞰自己的人。</span></p><p><span>给自己提供灵感的人。</span></p><p><span>激发自己潜能的人。</span></p><p><span>给自己提供刺激的人。</span></p><p><span>提醒自己错误的人。</span></p><p><span>与自己一起思考假设和解决办法的人。</span></p></blockquote><p><span>这些都是我所说的</span><u><span>“良师”</span></u><span>。你一定也要找一个自己的“良师”。</span><u><span>如果你们能够长时间地相互之间保持这种关系，你们的人生都会变得更加丰富多彩。</span></u></p><p><span>那么，要怎样去寻找良师呢？我将在下一节中详细说明。</span></p><div style="
+            border-radius: 25px; 
+            border: 2px solid #990000;
+            padding: 20px;
+            ">
+    <strong>总结</strong><br/>自己思考，他人分析。<br/>
+    良师可以帮你解决烦恼。
+</div><p>&nbsp;</p><h2 id='习惯36-向专业高尔夫球选手学习高尔夫'><span>习惯36. 向专业高尔夫球选手学习高尔夫</span></h2><p><span>我总是下意识地寻找良师，甚至可以立刻说出5个以上的名字。这些人的性别、居住地、国籍，以及与我相遇的方式各不相同。多亏了现在通信手段的发达，我可以和他们用</span><u><span>邮件</span></u><span>或者</span><u><span>skype</span></u><span>联络。</span></p><p><span>其中有认识十年以上的老朋友。也有认识不久便相谈甚欢的新朋友。有工作上认识的，也有通过兴趣爱好认识的。</span></p><p><span>通过工作关系认识的人，只在一开始是工作上的往来，之后就全是作为良师的交流。</span></p><p><span>其中有一些专业的培训师和心理咨询师。</span></p><p><span>我与他们之间的关系，除了最重要的朋友之外，</span><u><span>还包括智囊团和参谋的要素</span></u><span>。</span></p><p><span>关键在于，从哪些经常见面的人之中，找出真挚、有才华、可以成为你良师的人，</span><u><span>然后通过具体的行动来验证你的直觉是否正确</span></u><span>。</span></p><h3 id='成为良师的三个条件'><span>成为良师的三个条件</span></h3><p><span>如果你现在正处于</span><u><span>为了解决某个问题而思考假设的状态，那么将很容易找到良师</span></u><span>。</span></p><p><span>只要找一个看上去值得信赖的人诉说内心的困扰即可。然后看其中</span><u><span>有没有人</span></u><span>符合以下三个条件。</span></p><ol start='' ><li><p><mark><span>不人云亦云。</span></mark></p></li></ol><p><span>不人云亦云，拥有独特思考的人适合作为良师。首先排除说出“一般情况下”“普遍来说”这样话的人。</span></p><ol start='2' ><li><p><mark><span>直觉敏锐。</span></mark></p></li></ol><p><span>直觉敏锐、感性透明、纯粹不含杂质的人适合作为良师。这样的人不受他人因素和先入为主观念的影响，能够很快地看出你所拥有的问题。那些没等你说完详细内容就立刻做出准确回答的人，是作为良师的合适人选。</span></p><ol start='3' ><li><p><mark><span>专业性强的人。</span></mark></p></li></ol><p><span>为了解决工作上的问题或者激发灵感，有时候必须找相应领域的专家来进行咨询。</span></p><p><span>法律相关的事宜，只能找法律专家；健康方面的烦恼，只能找医生。</span></p><p><u><span>但很多人却向专家以外的人寻求帮助。</span></u><span>找一个不会打高尔夫的人请教高尔夫球的技巧，那么永远也不可能得到提高。</span><u><span>如果解决你的烦恼和问题需要专业的知识，那么一定要寻求相应领域的专家作为良师。</span></u></p><h3 id='商谈的技巧'><span>商谈的技巧</span></h3><p><mark style="background:#a8e195;"><span>良师不止一人</span></mark><span>。针对不同的烦恼和问题，可以找不同的良师来进行商谈。</span></p><p><u><span>如果你在公司里工作，那么最好在公司内部寻找良师</span></u><span>。不但离得近比较方便，而且也省去了交流企业文化的时间。</span></p><p><span>我在麦肯锡工作时，找了一位憧憬的前辈作为自己的良师。我经常趁着一起吃午饭的时间，和他商谈关于工作进展的方法和职业发展相关的事情。</span></p><p><span>另外，麦肯锡里有很多不同行业跳槽来的同事，比如市场营销的问题，可以找曾经在市场部工作过的XX先生做良师，关于金融的问题，可以找在金融机构工作过的X先生做良师。</span><u><span>根据工作领域的不同，找对相应领域比较了解的人做良师最好。</span></u></p><p><u><span>可能的话，最好不要找直属上司和前辈作为良师</span></u><span>。曾经的上司和曾经的前辈，谦虚而且值得信赖的人是良师最佳人选。没必要给自己添加多余的障碍。</span></p><p><span>另外，即便部门和工作完全不同，只要是在该领域内受人尊敬的专家，也是公司内部良师的最佳人选。与其他部门值得信赖的专家建立起良师关系是相当好的选择。</span></p><p><span>如果你是刚入职的年轻员工，</span><u><span>那么一定要记住自己拥有“被人照顾”的特权。</span></u></p><p><span>尊敬对方，与对方</span><u><span>真诚地</span></u><span>交流。对于前辈们来说你的这种行为本身就是一种礼物，是对他们的支持。</span></p><p><span>与良师进行商谈时，</span><u><span>应该下意识地放松心情，真诚地寻求帮助。</span></u></p><p><span>你越坦诚越容易得到对方的帮助。如果得到了你想要的回答和有用的建议，那么之后你的工作热情一定会大幅提高。</span></p><p><span>如果一直找不到合适的良师，那么可以找专业的咨询师来进行商谈。</span><u><span>虽然要花点钱，但至少会帮助你提高工作的品质。</span></u></p><p><span>关键在于，良师可以为你提供解决烦恼的灵感，帮助你打开提高工作热情的开关。</span><u><span>所以，请一定要下意识地去寻找良师。</span></u></p><div style="
+            border-radius: 25px; 
+            border: 2px solid #990000;
+            padding: 20px;
+            ">
+    <strong>总结</strong><br/>
+    不人云亦云、直觉敏锐、专业性强的人，发现这样的良师，提高工作热情！
+</div><p>&nbsp;</p><h2 id='习惯37-书不用读到最后'><span>习惯37. 书不用读到最后</span></h2><p><span>能够帮助你提高工作热情的，不只是</span><mark style="background:#ffaabf;"><span>“人”</span></mark><span>。</span></p><p><mark style="background:#ffaabf;"><span>“书”</span></mark><span>也是很重要的。</span><u><span>特别是年轻时，可以花大量的时间来阅读那些优秀的作品和文学名著。</span></u></p><p><u><span>书有两种阅读方法。</span></u></p><blockquote><p><span>一个是仔细品味的阅读方法。</span></p></blockquote><p><u><span>将优秀的作品反复阅读，认真思考，仔细品味</span></u><span>。如果自己是书中的主人公会做出怎样的选择？从这个思想中能够学到什么？带着这样的问题进行阅读，可以加深你的思考。</span></p><blockquote><p><span>还有一个是为了收集情报而大量快速地阅读。</span></p></blockquote><p><span>正如前文中提到过的一样，</span><u><span>我们这些经营顾问在进行调查的时候，或者为了建立假设的时候，都会进行海量的阅读。</span></u></p><p><span>我一般在超大型书店选购图书。每次去书店都要花上2〜3个小时的时间，经常一次购买十几本书。</span></p><p><span>虽然图书也可以通过网络购买，但我还是喜欢</span><u><span>去书店</span></u><span>。</span></p><p><u><span>首先直奔自己需要的类目，把那些吸引自己的书都拿出来，翻阅目录和作者信息。如果在目录中找到感兴趣的内容，就翻到相应的页面看一看，决定是不是要把这本书买下来。</span></u></p><p><span>然后其他书架上的书也应该看一看。不同领域的书可能会给你提供一些新的想法和创意。</span></p><p><mark style="background:#f8e272;"><span>关键在于，要安排专门的时间，而不是在做其他事情的时候顺便去书店。</span></mark></p><h3 id='同时阅读许多本书边阅读边画线'><span>同时阅读许多本书，边阅读边画线</span></h3><p><span>我在麦肯锡的时候，通过书籍学习了</span><mark style="background:#a8e195;"><span>战略论</span></mark><span>、</span><mark style="background:#a8e195;"><span>金融</span></mark><span>，以及市场营销等经营顾问必不可少的知识。我在读研究生的时候，学的是经营学和人文学。总之我阅读了大量的书籍。</span></p><p><mark style="background:#f8e272;"><span>这使我认识到深入掌握知识的重要性</span></mark><span>。对知识掌握得越深入，了解得越广泛，所能够建立的假设就越接近本质，想出的创意就越有趣。知识上的细微差距，将导致完全不同的结果。</span></p><p><span>经常有人问看书是不是应该看原文的，如果你经常用</span><u><span>母语</span></u><span>来进行思考的话，</span><u><span>那么阅读翻译过来的书更容易理解内容的本质</span></u><span>。</span></p><p><u><span>当然能看懂原文的话还是推荐看原文</span></u><span>。但如果你虽然能够看懂原文，但仍然是母语的思考习惯，那么最好在阅读原文的同时也参考阅读翻译过来的版本。这样可以加深你的理解。</span></p><p><span>当决定要阅读的种类之后，最好同时阅读许多本书。不必拘泥于畅销书排行榜和亚马逊上的评论。</span><u><span>在选择书籍的时候最重要的是自己的感觉</span></u><span>。</span></p><p><mark style="background:#a8e195;"><span>最好一边在书上画线一边阅读。</span></mark></p><p><span>在画线的页面上贴便签，便于以后再次翻阅查找。</span></p><p><span>画线的部分可以是作为参考的内容，也可以是能够激发灵感的内容。</span><mark style="background:#a5c4ff;"><span>最好根据不同的目的使用不同颜色的笔。重复阅读的时候只阅读画线的内容，可以节省大量时间。</span></mark></p><p><mark style="background:#ffaabf;"><span>读到一半发现没有用的书，就毫不犹豫地扔到一旁。没必要彻底读完。好不容易花钱买的应该读完这种想法，完全是在浪费时间。</span></mark></p><div style="
+            border-radius: 25px; 
+            border: 2px solid #990000;
+            padding: 20px;
+            ">
+    <strong>总结</strong><br/>
+    书籍是提高工作热情的重要工具。<br/>
+    买大量的书，一边阅读一边画线，之后再重新阅读一遍。
+</div><p>&nbsp;</p><h1 id='习惯38-用5分钟时间自省'><span>习惯38. 用</span><u><span>5分钟</span></u><span>时间自省</span></h1><p><span>假如你在等电车、候诊，或者提前抵达约定的场所而对方还没来，</span><u><span>有5分钟左右的空闲时间，你会做什么？</span></u></p><p><span>在这个时间里，隐藏着一个控制感情的技巧。</span></p><p><span>恐怕绝大多数的人都会在这5分钟的时间里用手机查阅邮件或者看新闻吧。如果这些行为可以提高工作效率的话，我也会这样做。</span></p><p><span>但如果没有什么紧急情况，最好不要浪费时间去看手机。</span></p><p><span>如果有5分钟的空闲时间，首先将手机放到一旁，然后闭上眼睛深呼吸。</span></p><p><u><span>接下来进行“自省”。</span></u></p><blockquote><p><span>“我现在最关心的问题是什么？”</span></p><p><span>“最近最刺激我的话是什么？”</span></p><p><span>“为什么我最近心情浮躁？”</span></p><p><span>“为什么我那个时候会生气？”</span></p></blockquote><p><span>或许有人认为只有5分钟的时间，根本想不出什么结果，或者就算想到了好的创意，也没时间继续展开进行更加深入的思考。</span></p><p><span>但实际上并非如此。</span></p><p><span>特别是你感到“心情浮躁”的时候，或许会发现打破僵局的机会。</span></p><h3 id='让自己像葡萄酒一样熟成'><span>让自己像葡萄酒一样</span><u><span>熟成</span></u></h3><blockquote><p><span>向良师寻求帮助。</span></p><p><span>阅读优秀的书籍和名著，学习知识。</span></p></blockquote><p><u><span>当你不断重复这些行动，脑海里就会逐渐出现“创意的雏形”。</span></u></p><p><mark style="background:#f8e272;"><span>不考虑具体内容，完全凭借兴趣随心所欲的思考被称为</span><u><span>“发散性思考”</span></u><span>。</span></mark></p><p><span>而将学到的内容变为自省，与自己的工作和生活结合起来，会使你的脑海中</span><u><span>出现意想不到的联系</span></u><span>。就好像两个完全不同的领域被联系到了一起，</span><u><span>可以为你提供崭新的假设和视角。这被称为“聚集性思考”。</span></u></p><p><u><span>5分钟左右的空闲时间，最适合用来进行聚集性思考的训练。</span></u></p><p><span>5分钟后或者3分钟后你等的人出现了，你的思考在没有得出任何结论的情况下</span><mark style="background:#ffaabf;"><span>被迫中断</span></mark><span>。乍看上去好像浪费了时间，但实际上却存在着只有通过这种方法才能够取得的</span><u><span>“收获”</span></u><span>。</span></p><p><span>3天后或者1周后，你可以试着进行同样的自省。</span></p><p><span>在思考的途中你会突然发现，</span><u><span>你的视点一下子变高了，思考也变得更加深入</span></u><span>。</span></p><p><u><span>这就是经过一段时间后继续进行自省才会出现的熟成现象。</span></u></p><p><span>葡萄酒需要经过一段时间的熟成才能变得更加美味。</span><mark style="background:#f8e272;"><span>我们的思考也需要时间的沉淀才会变得更加深入</span></mark><span>。所以，请一定要有效地利用这5分钟。</span></p><div style="
+            border-radius: 25px; 
+            border: 2px solid #990000;
+            padding: 20px;
+            ">
+    <strong>总结</strong><br/>不断地自省，思考就会变得越来越成熟！
+</div><p>&nbsp;</p><h1 id='终章习惯39）'><span>终章（习惯39）</span></h1><p><span>我在麦肯锡的时候，有一个美国合伙人，他经常早晨8点一边吃早餐一边开会。</span></p><p><span>对他来说，“早晨”是非常宝贵的，他经常说早起工作“进展非常顺利”。</span></p><p><span>当时的日本支社长也说过：“早晨精神最为集中，工作进展顺利。请珍惜早晨的时间”。</span></p><p><span>工作能力强的人，换句话说就是“自我管理能力强的人”。</span></p><p><span>早睡早起。</span></p><p><span>不酗酒。</span></p><p><span>慢跑、健身、保持健康。</span></p><p><span>为了应对工作，自己的身体和心理都必须处于最佳的状态。</span></p><p><span>绝对不能因为前一天晚上酗酒而影响到第二天的工作。</span></p><p><span>我在麦肯锡的时候也会每周去游泳池锻炼身体。</span></p><p><span>“休息的时候好好休息”对于调整身体和心理状态也是非常重要的。</span></p><p><span>麦肯锡的优秀员工都非常善于利用自己的假期。一个项目结束后他们都会休假，出国旅行、登山、摄影。</span></p><p><span>大家都会充分地享受休息的时光，去做自己喜欢的事。</span></p><p><span>而当他们结束假期回来工作时，则会一下将状态切换到工作模式，发挥出超人般的集中力。</span></p><p><span>我在本书的最后想告诉大家的最重要的习惯，就是“调整身体与心理”。</span><mark style="background:#f8e272;"><span>这也是第三十九个习惯</span></mark><span>。</span></p><p><span>只有身体和心理都调整到最佳状态，才能够做好工作。过度劳累导致心情焦躁的话，就无法有最佳的表现。如果人际关系出现问题，就不会有积极的想法。</span></p><p><span>每天同一时间就寝，同一时间起床。</span></p><p><span>好好休息，消除疲劳。</span></p><p><span>锻炼身体，保持健康。</span></p><p><span>时刻保持身体与心理都在最佳状态，才能够实现工作上的“品质 X 效率”。</span></p><p><span>现在你的身体是最佳状态吗?</span></p><p><span>现在你的心理是最佳状态吗?</span></p><p><span>如果答案是否定的，那么请深呼吸，让自己冷静下来。然后，用崭新的心情去迎接人生。这样的话，一切都会变得顺利起来。</span></p><p><span>衷心希望你的人生能够更加精彩。</span></p><p><span>期待与你再次的见面。</span></p><p>&nbsp;</p><p><a href='#序言'><span>返回目录</span></a></p><p>&nbsp;</p><p>&nbsp;</p><div class='footnotes-area'  ><hr/>
+<div class='footnote-line'><span class='md-fn-count'>1</span> <span>大岛祥誉. </span><strong><span>麦肯锡工作法：麦肯锡精英的39个工作习惯</span></strong><span>[M]. 北京：北京时代华文书局, 2015.6: 1-175.</span> <a name='dfref-footnote-1' href='#ref-footnote-1' title='回到文档' class='reversefootnote' >↩</a></div></div></div></div>
+<a href=".typora-export-content" id="scroll-up" style="display: block;">
+		<i class="material-icons md-20 md-middle"></i>
+	</a></body>
+</html>
