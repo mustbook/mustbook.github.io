@@ -1,0 +1,26 @@
+
+
+
+放在<head>here</head>中的内容：
+
+
+	<!--字体-->
+
+	<link rel="stylesheet" type="text/css" href="assets/self_fonts/self_fonts_cssfile.css">
+
+
+	<!--资助-->
+
+
+	<link rel="stylesheet" type="text/css" href="./assets/donateConfig/donateiconSetup.css">
+	<script type="text/javascript" src="./assets/donateConfig/donatewp-includes.js.jquery.jquery.js"></script>
+	<script type="text/javascript" src="./assets/donateConfig/donatewp-content.themes.type-plus.js.main.js"></script>
+
+	
+
+放在主体<div id="main"><section id="one">here</section></div>中的内容：
+
+
+	<a href="./components/sponsorpage/index.html">
+		<img src="./assets/donateConfig/donatecoffeeicon.png" id="scroll-up" title="Like this! &#10;Would you buy me a coffee or book? &#10;:)"/>
+	</a>
