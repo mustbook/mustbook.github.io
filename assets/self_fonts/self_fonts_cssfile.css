@@ -12,6 +12,12 @@
 	src:url('AaManYuShouXieTi（JianFan）-2.ttf');
 }
 
+
+@font-face {
+	font-family: 'Arial Rounded MT';
+	src:url('Arial Rounded MT Bold.ttf');
+}
+
 @font-face {
 	font-family: 'Ubuntu Mono';
 	src:url('UbuntuMono-Bold.ttf'),

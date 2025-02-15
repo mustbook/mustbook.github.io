@@ -18,7 +18,10 @@
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.5.0/dist/semantic.min.css">
 	-->
 	<!--离线-->
+	
 	<link rel="stylesheet" href="assets/semantic_ui/cdn.jsdelivr.net_npm_semantic-ui@2.5.0_dist_semantic.min.css">
+	
+	
 	
 	<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
 	<link rel="stylesheet" href="assets/css/main.css">
@@ -46,6 +49,27 @@
 	<link rel="stylesheet" type="text/css" href="./assets/donateConfig/donateiconSetup.css">
 	<script type="text/javascript" src="./assets/donateConfig/donatewp-includes.js.jquery.jquery.js"></script>
 	<script type="text/javascript" src="./assets/donateConfig/donatewp-content.themes.type-plus.js.main.js"></script>
+	
+	<style>
+        /* 按钮样式 */
+        #toggleButton {
+            cursor: pointer;
+            border: dashed;
+			border-color: #990000;
+            color: #990000;
+            border-radius: 5px;
+        }
+		#listView {
+            display: none;
+			padding: 20px;
+
+            border: dashed;
+            border-radius: 5px;
+			border-color: #990000;
+        }
+    </style>
+	
+	
 
 	
 </head>
@@ -98,22 +122,114 @@
 					</div>
 				</footer>
 			</header>
+			
 
 		<!-- Main -->
 			<div id="main">
-
+				
+				
+				
+				
 				<!-- One -->
 				<section id="one">
 				
 						<h3>Slogan <a href="aboutMe.html" target="_blank"><i class="fa fa-user" style="color:#990000"></i></a></h3> 
 							<blockquote>
 							
-								<span style="color:#ac293b; font-family:Comic Sans MS; font-size:20px">You are what you eat. </span><br/><br/><span style="font-family: Comic Sans MS; font-style: normal; font-size:20px">And I'm cooking what I eat! </span>
+								<span style="color:#ac293b; font-family:Arial Rounded MT; ">You are what you eat. </span><br/><br/><span style="font-family: Comic Sans MS; font-style: normal; ">And I'm cooking what I eat! </span>
 							
 							</blockquote>
-						<h3>Focus <a href="menu.html" target="_blank"><i class="fa fa-list-alt" style="color:#990000"></i></a></h3> 
-						<h3>
+						<!--注释语句<h3>Focus <a href="menu.html" target="_blank"><i class="fa fa-list-alt" style="color:#990000"></i></a></h3> 
+						<h3>-->
 						
+						<h3>Focus 
+						<button id="toggleButton">
+							<i class="fa fa-toggle-off"></i>
+						</button></h3>
+							
+						<div id="listView" >
+						<h4 style="color:black; font-family:Aa漫语手写体（简繁）;"><span style="color:red; font-size:20px; font-family:华文新魏; font-weight:bold">最近更新</span>（↑滑动<span style='color:red'>切换视图</span>）</h4>
+								<article class="6u$ 12u$(xsmall) work-item">
+								<span style="color:#990000">【置顶】</span>
+								<a href="aboutMe.html" target="_blank">
+									关于我
+								</a>
+								<p class="posted-on" style="margin: 5px 0;">
+									<time class="icon fa-calendar-check-o">
+										<span style="color:#990000"> 2025.01.06 </span>
+									</time>
+								</p>
+								<!--<p class="icon fa-anchor"> 类别</p>-->
+								
+								
+								<!--
+								<p class="icon fa-tags"> 
+									<span style="color:#990000"> HomePage </span>
+								</p>
+								-->
+								
+								<p class="icon fa-info-circle"> 
+								
+									<span style="color:#990000"> 个人介绍 </span>
+								
+								</p>
+							</article>
+							
+										
+							<article class="6u$ 12u$(xsmall) work-item">
+								<a href="p1/2nd_folder/[ReadingNotes]StickWithIt.html" target="_blank">
+									如何想到又做到
+									<i style="color:#990000; font-size:15px;">[中文读书笔记]</i>. 
+									带来持久改变的7种武器
+								</a>
+								<p class="posted-on" style="margin: 5px 0;">
+										<time class="icon fa-calendar-check-o"> 2025.01.15
+										<span style="color:#a5c4ff">
+											历史更新：(
+											...
+											2024.05.07)
+										</span>
+										</time>
+								</p>
+								<p class="icon fa-info-circle"> 学会行动！</p>
+							</article>
+							
+							
+							<article class="6u$ 12u$(xsmall) work-item">
+								<a href="p1/2nd_folder/[ReadingNotes]FeynmanTechnique.html" target="_blank">
+									费曼学习法
+									<i style="color:#990000; font-size:15px;">[中文读书笔记]</i>. 
+									用输出倒逼输入
+								</a>
+								<p class="posted-on" style="margin: 5px 0;">
+										<time class="icon fa-calendar-check-o"> 2025.01.08
+										<span style="color:#a5c4ff">
+											历史更新：(
+											...
+											2024.04.23 <span style="color:red"> | </span> 
+											2024.04.19 <span style="color:red"> | </span> 
+											2024.04.14)
+										</span>
+										</time>
+								</p>
+								<p class="icon fa-info-circle"> 学会学习！</p>
+							</article>
+							
+							<article class="6u$ 12u$(xsmall) work-item">
+								<a href="p1/2nd_folder/[ReadingNotes]TheMckinseyWay.html" target="_blank">
+									麦肯锡工作法
+									<i style="color:#990000; font-size:15px;">[中文电子稿]</i>. 
+									The Mckinsey Way
+								</a>
+								<p class="posted-on" style="margin: 5px 0;">
+										<time class="icon fa-calendar-check-o"> 2025.01.08
+										</time>
+								</p>
+								<p class="icon fa-info-circle"> 学会沟通；高效工作！</p>
+							</article>					
+						</div>
+						
+						<div id="tableView" style="padding: 20px;">
 						<ul class="actions">
 								<li style="display: flex; justify-content: left;">
 									<!--<a href="#" target="_blank" class="button icon fa-book">-->
@@ -297,11 +413,12 @@
 								
 							</ul>
 							
+							</div>
 						</h3>
 						
 						
 						
-						<h3>Connection</h3>
+						<h3>Connection <span style='color:red; font-family:Aa漫语手写体（简繁）; font-weight:bold; font-size:10px'>点一下账号试试看？</span></h3>
 						<ul class="labeled-icons">
 							<div class="table-wrapper">
 								<table>
@@ -312,7 +429,7 @@
 												<!-- QRCode 主页跳出二维码 id="WeChat" -->
 												<li id="WeChat">
 													<h3 class="icon fa-wechat" style="color:#04BE02"><span class="label">WeChat</span></h3>
-													MustBook	
+													mustbook	
 												</li>
 											</td>
 											<!-- QRCode 主页跳出二维码 id="contactBox2" -->
@@ -367,20 +484,26 @@
 				</a>
 				
 				<!--busuanzi:访客记录-->
+				<!-- 访客记录不用了~ 页面加载太慢了~
+				
 				<script async src="assets/busuanzi/busuanzi.pure.mini.js"></script>
 				<center>
 					<span id="busuanzi_container_site_pv" style="font-size:11px">本站总访问量<span id="busuanzi_value_site_pv" style="color:#ac293b"></span>次</span>
 				</center>
 				
+				-->
 				
 				<!-- clustrmaps 	
 				<script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=007cae&w=268&t=tt&d=ZxBzmQb8IynmXTzEd2BG4A4DGw62VHbc9ud-bYvVuhM&co=f0f0f0&cmo=bf1717&cmn=fca70b&ct=007cae'></script>
 
 				-->
 				
-			
+				
+				
+				
+				<!-- 访客记录不用了~ 页面加载太慢了~
+				
 				<div style="text-align:center; font-size:18px;margin-top:30px; margin-top:5px">
-					<!-- InstanceBeginEditable name="EditRegion5" -->
 					<script language="JavaScript">
 
 					var caution = false
@@ -441,6 +564,7 @@
 					</script>
 
 
+				-->
 
 					<!-- InstanceEndEditable -->
 
@@ -480,6 +604,45 @@
 			<link rel="stylesheet" href="./assets/home_popPic/style.css">
 			<script src="./assets/home_popPic/script.js"></script>
 			<!-- QRCode 主页跳出二维码 end -->
+			
+			
+    <script>
+        // 获取按钮元素
+        const toggleButton = document.getElementById('toggleButton');
+				
+        // 获取div元素
+        const div1 = document.getElementById('listView');
+        const div2 = document.getElementById('tableView');
+		
+		
+        // 定义两个图标的类名
+        const icon1 = 'fa-toggle-on'; // 第一个图标
+        const icon2 = 'fa-toggle-off'; // 第二个图标
+
+        // 监听按钮点击事件
+        toggleButton.addEventListener('click', function () {
+            const iconElement = toggleButton.querySelector('i'); // 获取图标元素
+            // 切换图标
+            if (iconElement.classList.contains(icon1) && div1.style.display !== 'none') {
+                iconElement.classList.remove(icon1);
+                iconElement.classList.add(icon2);
+				
+				
+                // 如果 div1 是显示的，隐藏 div1，显示 div2
+                div1.style.display = 'none';
+                div2.style.display = 'block';
+            } else {
+                iconElement.classList.remove(icon2);
+                iconElement.classList.add(icon1);
+				
+				
+                // 如果 div2 是显示的，隐藏 div2，显示 div1
+                div1.style.display = 'block';
+                div2.style.display = 'none';
+            }
+			
+        });
+    </script>
 
 </body>
 
